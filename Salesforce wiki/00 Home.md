@@ -70,6 +70,15 @@ Salesforce Flow — 자동화, Screen Flow, Autolaunched Flow, Apex 액션
 | [[RestClient 패턴]] | virtual class, PATCH 우회 |
 | [[Custom REST Endpoint]] | @RestResource, RestContext |
 
+### [[Release MOC|Release Notes]]
+Salesforce 연 3회 릴리즈 추적 — 신규 기능, Deprecated, 거버너 한도 변경
+
+| 릴리즈 | API 버전 | 상태 |
+|---|---|---|
+| [[Winter '26]] | v64.0 | 🔲 미작성 |
+| [[Summer '25]] | v63.0 | 🔲 미작성 |
+| [[Spring '25]] | v62.0 | 🔲 미작성 |
+
 ---
 
 ## 🔖 태그 인덱스
@@ -81,6 +90,10 @@ Salesforce Flow — 자동화, Screen Flow, Autolaunched Flow, Apex 액션
 - `#async` — 비동기 처리
 - `#testing` — 테스트 패턴
 - `#integration` — 외부 연동
+- `#release/apex` — Apex 릴리즈 변경
+- `#release/lwc` — LWC 릴리즈 변경
+- `#release/flow` — Flow 릴리즈 변경
+- `#release/deprecated` — Deprecated 항목
 
 ---
 

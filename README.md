@@ -49,6 +49,20 @@ Salesforce 공식 오픈소스 프로젝트를 직접 분석해 추출한 검증
 | `Flow/` vs `Apex/` 종합 매트릭스 | "언제 Flow, 언제 Apex, 언제 LWC" 한 장 의사결정 가이드 |
 | `Agentforce/` 섹션 신설 | agent-script-recipes 분석 후 생성 |
 
+### 🔲 릴리즈 노트 (상시 추가)
+
+Salesforce 연 3회(Spring/Summer/Winter) 릴리즈마다 `Release/` 폴더에 추가.  
+템플릿: `Release/_릴리즈 노트 템플릿.md`
+
+| 릴리즈 | API 버전 | 상태 |
+|---|---|---|
+| Winter '26 | v64.0 | 🔲 미작성 |
+| Summer '25 | v63.0 | 🔲 미작성 |
+| Spring '25 | v62.0 | 🔲 미작성 |
+| Winter '25 | v61.0 | 🔲 미작성 |
+| Summer '24 | v60.0 | 🔲 미작성 |
+| Spring '24 | v59.0 | 🔲 미작성 |
+
 ### 🔲 심화 단계 — 공식 문서 PDF 분석 (프로젝트 분석 완료 후)
 
 `Salesforce Documents/` 폴더의 공식 레퍼런스 PDF를 기반으로 위키 보강.  
