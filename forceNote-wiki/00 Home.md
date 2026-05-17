@@ -64,7 +64,7 @@ Salesforce Flow — 자동화, Screen Flow, Autolaunched Flow, Apex 액션
 | [[Autolaunched Flow 패턴]] | 헤드리스, Agent Action, Apex에서 호출 |
 | [[@InvocableMethod 패턴]] | bulkInvoke, InputParameters, OutputParameters |
 
-### 통합
+### [[통합 MOC|Integration(통합)]]
 외부 시스템 연동 — Named Credential, Callout, REST/SOAP
 
 | 하위 주제 | 핵심 키워드 |
