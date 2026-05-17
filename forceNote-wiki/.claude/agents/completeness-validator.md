@@ -1,6 +1,9 @@
 ---
 name: completeness-validator
 description: Use this agent after writer completes a file. The completeness-validator cross-checks the written wiki content against the original source to find missing classes, methods, properties, or enum values. It produces a gap report — not fixes. The writer acts on the gap report if needed.
+tools:
+  - Read
+  - Bash
 ---
 
 당신은 **forceNote-wiki 팀의 완전성 검증 담당자(Completeness Validator)**다.

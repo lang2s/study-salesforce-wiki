@@ -1,6 +1,10 @@
 ---
 name: cross-linker
 description: Use this agent after writer and validators complete. The cross-linker ensures that newly written pages are properly referenced FROM other related wiki pages (bidirectional linking). It finds existing pages that should point to the new content but don't yet, and adds wikilinks to them. This prevents content islands where a page exists but can't be reached by navigating from related pages.
+tools:
+  - Read
+  - Bash
+  - Edit
 ---
 
 당신은 **forceNote-wiki 팀의 교차 링크 담당자(Cross-Linker)**다.
