@@ -22,6 +22,7 @@ created: 2026-05-17
 - [[CanTheUser]] — CRUD/FLS 체크 (create/edit/destroy/flsAccessible)
 - [[StripInaccessible]] — AccessType별 FLS 필드 제거
 - [[WITH USER_MODE]] — SOQL/DML 인라인 보안 키워드
+- [[Auth Namespace]] — JWT/JWS OAuth bearer token flow, MFA TOTP, SessionManagement, RegistrationHandler
 
 ## 📊 데이터 (SOQL / DML)
 
@@ -48,6 +49,9 @@ created: 2026-05-17
 - [[Custom REST Endpoint]] — @RestResource, global inherited sharing, RestContext
 - [[Named Credential]] — External Credential → Principal → NC 순서
 - [[ConnectApi Chatter 패턴]] — postFeedItemWithRichText, @멘션, Flow 리치 텍스트 변환
+- [[Dom Namespace]] — Dom.Document/XmlNode, XML 생성·파싱, HTTP 본문 처리
+- [[DataSource Namespace]] — Salesforce Connect 커스텀 어댑터, Provider/Connection/sync/query/upsert
+- [[ExternalService Namespace]] — OpenAPI 스펙 기반 타입 안전 외부 서비스 호출
 
 ## 📦 컬렉션
 
@@ -100,10 +104,15 @@ created: 2026-05-17
 ## 빠른 의사결정
 
 ```
-비동기 방식?  →  [[비동기 컨텍스트 선택]]
-DML 보안?     →  [[DML 패턴]] → as user 키워드 or [[Safely]]
-쿼리 보안?    →  [[SOQL 패턴]] → WITH USER_MODE
-동적 쿼리?    →  [[Dynamic SOQL]] → queryWithBinds
-HTTP 호출?    →  [[RestClient 패턴]]
-외부 모킹?    →  [[StubProvider]]
+비동기 방식?           →  [[비동기 컨텍스트 선택]]
+DML 보안?              →  [[DML 패턴]] → as user 키워드 or [[Safely]]
+쿼리 보안?             →  [[SOQL 패턴]] → WITH USER_MODE
+동적 쿼리?             →  [[Dynamic SOQL]] → queryWithBinds
+HTTP 호출?             →  [[RestClient 패턴]]
+XML HTTP 연동?         →  [[Dom Namespace]]
+OAuth JWT 토큰 교환?   →  [[Auth Namespace]] → JWT/JWS/JWTBearerTokenExchange
+MFA / 로그인 플로우?   →  [[Auth Namespace]] → SessionManagement
+외부 오브젝트 연결?    →  [[DataSource Namespace]] → Provider/Connection
+OpenAPI 타입 호출?     →  [[ExternalService Namespace]]
+외부 모킹?             →  [[StubProvider]]
 ```
