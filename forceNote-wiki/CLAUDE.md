@@ -19,10 +19,24 @@
 
 | ❌ 금지 | ✅ 올바른 형식 |
 |---|---|
+| `보안` | `Security(보안)` |
 | `비동기` | `Async(비동기)` |
+| `데이터` | `Data(데이터)` |
+| `통합` | `Integration(통합)` |
 | `테스트` | `Testing(테스트)` |
+| `트리거` | `Trigger(트리거)` |
+| `컬렉션` | `Collections(컬렉션)` |
+| `아키텍처` | `Architecture(아키텍처)` |
+| `실행컨텍스트` | `ExecutionContext(실행컨텍스트)` |
+| `로깅` | `Logging(로깅)` |
+| `플랫폼이벤트` | `PlatformEvents(플랫폼이벤트)` |
+| `플랫폼캐시` | `PlatformCache(플랫폼캐시)` |
 | `Apex통합` | `ApexIntegration(Apex통합)` |
+| `컴포넌트API` | `ComponentAPI(컴포넌트API)` |
+| `이벤트` | `Events(이벤트)` |
+| `네비게이션` | `Navigation(네비게이션)` |
 | `UI패턴` | `UIPatterns(UI패턴)` |
+| `모바일` | `Mobile(모바일)` |
 
 순수 한글, 영어+한글 혼합 모두 금지. 새 폴더 생성 시 즉시 적용.
 
