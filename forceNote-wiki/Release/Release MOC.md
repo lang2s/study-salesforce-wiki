@@ -7,7 +7,7 @@ aliases: [Release MOC, 릴리즈 노트, Salesforce 버전]
 # Release — Map of Content
 
 > Salesforce 연 3회 릴리즈 (Spring → Summer → Winter) 추적.  
-> 각 릴리즈별 Apex/LWC/Flow 변경사항, 신규 API, Deprecated 항목 기록.
+> 각 릴리즈별 전체 Salesforce 변경사항 — Apex/LWC/Flow/Admin/Agentforce/Security/DevOps 포함.
 
 ---
 
@@ -15,12 +15,15 @@ aliases: [Release MOC, 릴리즈 노트, Salesforce 버전]
 
 | 릴리즈 | API 버전 | 시기 | 상태 |
 |---|---|---|---|
-| [[Winter '26]] | v64.0 | 2025.10 | 🔲 미작성 |
-| [[Summer '25]] | v63.0 | 2025.06 | 🔲 미작성 |
-| [[Spring '25]] | v62.0 | 2025.02 | 🔲 미작성 |
-| [[Winter '25]] | v61.0 | 2024.10 | 🔲 미작성 |
-| [[Summer '24]] | v60.0 | 2024.06 | 🔲 미작성 |
-| [[Spring '24]] | v59.0 | 2024.02 | 🔲 미작성 |
+| [[Summer '26]] | v67.0 | 2026.06 | ✅ 작성완료 |
+| [[Spring '26]] | v66.0 | 2026.02 | 🔲 미작성 |
+| [[Winter '26]] | v65.0 | 2025.10 | ✅ 작성완료 |
+| [[Summer '25]] | v64.0 | 2025.06 | ✅ 작성완료 |
+| [[Spring '25]] | v63.0 | 2025.02 | 🔲 미작성 |
+| [[Winter '25]] | v62.0 | 2024.10 | 🔲 미작성 |
+| [[Summer '24]] | v61.0 | 2024.06 | ✅ 작성완료 |
+| [[Spring '24]] | v60.0 | 2024.02 | ✅ 작성완료 |
+| [[Winter '24]] | v59.0 | 2023.10 | ✅ 작성완료 |
 
 > 새 릴리즈 추가 시: 표에 행 추가 → 파일 생성 → 상태를 ✅로 변경
 

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ---
 
-이 디렉토리는 Salesforce 개발 패턴을 정리한 개인 학습 wiki다.
+이 디렉토리는 **Salesforce 백과사전**이다. Apex·LWC·Flow에 국한하지 않고 Salesforce 개발자와 어드민이 알아야 할 모든 것 — Admin/Setup, Sales Cloud, Service Cloud, Experience Cloud, Data Cloud, Slack, Agentforce/Einstein, DevOps/CLI, Security, Release Updates — 을 다룬다.
 새 자료 추가·수정 시 아래 규칙을 반드시 따른다.
 
 ---
