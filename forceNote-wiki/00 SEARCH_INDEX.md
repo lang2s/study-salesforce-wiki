@@ -146,6 +146,10 @@
 | Messaging.sendEmail, SingleEmailMessage, 이메일 발송 Apex, setToAddresses, setHtmlBody, setTemplateId, setTargetObjectId, EmailFileAttachment, 첨부파일 이메일 | `Apex/Messaging(메시징)/SingleEmailMessage.md` |
 | CustomNotification, 커스텀 알림, 인앱 알림, Messaging.CustomNotification, setNotificationTypeId, send 알림, 알림 발송 Apex | `Apex/Messaging(메시징)/CustomNotification.md` |
 | Flow.Interview, createInterview, 플로우 Apex 호출, Apex에서 Flow 실행, getVariableValue, Flow.Interview.start | `Flow/Flow Interview API.md` |
+| SaveResult, UpsertResult, DeleteResult, MergeResult, UndeleteResult, EmptyRecycleBinResult, DML 결과, Database.Error, isSuccess, getErrors, getId, isCreated | `Apex/Data(데이터)/Database Namespace 상세.md` |
+| Database.Cursor, getCursor, fetch, getNumRecords, PaginationCursor, fetchPage, CursorFetchResult, QueryLocator, QueryLocatorIterator, DMLOptions, LeadConvert, convertLead | `Apex/Data(데이터)/Database Namespace 상세.md` |
+| Search.find, SOSL Apex, dynamic SOSL, SearchResult, SearchResults, getSObject, Search.suggest, SuggestionResult, KnowledgeSuggestionFilter, QuestionSuggestionFilter | `Apex/Data(데이터)/Search Namespace.md` |
+| DescribeSObjectResult, DescribeFieldResult, getDescribe, getFields, isAccessible, isCreateable, getLabel, getKeyPrefix, getPicklistValues, RecordTypeInfo, getRecordTypeInfosByDeveloperName, ChildRelationship, getChildRelationships, Schema.getGlobalDescribe, DisplayType | `Apex/Architecture(아키텍처)/Schema Namespace 상세.md` |
 | Collections, CollectionUtils, 컬렉션 유틸 | `Apex/Collections(컬렉션)/CollectionUtils.md` |
 | Comparator, 정렬, List.sort, 커스텀 정렬, 리스트 정렬, 오름차순 내림차순 | `Apex/Collections(컬렉션)/Comparator 인터페이스.md` |
 | Iterable, Iterator, 커스텀 이터레이터 | `Apex/Collections(컬렉션)/Iterable Iterator.md` |
@@ -296,6 +300,12 @@
 | 사용자에게 알림 보내는 방법 Apex | `Apex/Messaging(메시징)/CustomNotification.md` |
 | 승인 프로세스 Apex로 제어 | `Apex/Architecture(아키텍처)/Approval Namespace.md` |
 | CDC 트리거 변경 필드 확인 | `Apex/PlatformEvents(플랫폼이벤트)/ChangeEventHeader.md` |
+| DML 결과 에러 처리 방법 | `Apex/Data(데이터)/Database Namespace 상세.md` |
+| 리드 전환 Apex | `Apex/Data(데이터)/Database Namespace 상세.md` |
+| SOSL 검색 결과 Apex에서 | `Apex/Data(데이터)/Search Namespace.md` |
+| 오브젝트 메타데이터 필드 목록 조회 | `Apex/Architecture(아키텍처)/Schema Namespace 상세.md` |
+| 레코드 타입 ID 코드에서 조회 | `Apex/Architecture(아키텍처)/Schema Namespace 상세.md` |
+| 피클리스트 값 Apex에서 가져오기 | `Apex/Architecture(아키텍처)/Schema Namespace 상세.md` |
 | 시스템 간 이벤트 연동 | `Integration(통합)/Platform Event 통합 패턴.md` |
 | 레코드 삭제 LWC에서 | `LWC/LDS/uiRecordApi.md` |
 | 정렬 Apex에서 | `Apex/Collections(컬렉션)/Comparator 인터페이스.md` |

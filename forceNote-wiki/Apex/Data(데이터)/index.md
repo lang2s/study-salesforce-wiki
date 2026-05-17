@@ -20,6 +20,8 @@ created: 2026-05-17
 | [[Dynamic SOQL]] | queryWithBinds, SOQL 인젝션 방어 | #pattern |
 | [[PagedResult 패턴]] | 페이지네이션 DTO, LIMIT+OFFSET, ?? null coalescing | #pattern |
 | [[BusinessHours 패턴]] | BusinessHours.diff(), 영업시간 경과 계산, SLA 초과 여부 | #pattern |
+| [[Database Namespace 상세]] | SaveResult/UpsertResult/MergeResult/Cursor/PaginationCursor/QueryLocator/DMLOptions/LeadConvert 전체 | #reference |
+| [[Search Namespace]] | SOSL Apex API — Search.find(), Search.suggest(), SearchResult, KnowledgeSuggestionFilter | #reference |
 
 ---
 
@@ -30,6 +32,8 @@ created: 2026-05-17
 - 레코드 삽입/수정/삭제? → [[DML 패턴]]
 - 목록 페이지에 페이지네이션? → [[PagedResult 패턴]]
 - SLA 경과 시간 / 영업시간 기준 계산? → [[BusinessHours 패턴]]
+- DML 결과 처리, Cursor, LeadConvert 상세? → [[Database Namespace 상세]]
+- SOSL 검색, 자동완성 제안? → [[Search Namespace]]
 
 ## 보안 연동
 

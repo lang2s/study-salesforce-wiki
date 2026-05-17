@@ -30,6 +30,8 @@ created: 2026-05-17
 - [[Dynamic SOQL]] — queryWithBinds, SOQL 인젝션 방어
 - [[PagedResult 패턴]] — 페이지네이션 DTO, scope='global', ?? null coalescing, LIMIT+OFFSET
 - [[BusinessHours 패턴]] — BusinessHours.diff(), isWithin(), nextStartDate(), SLA 경과 시간 계산
+- [[Database Namespace 상세]] — SaveResult/UpsertResult/MergeResult/Cursor/PaginationCursor/QueryLocator/DMLOptions/LeadConvert
+- [[Search Namespace]] — Search.find(), Search.suggest(), SearchResult, KnowledgeSuggestionFilter
 
 ## ⚡ 비동기
 
@@ -84,9 +86,10 @@ created: 2026-05-17
 - [[SingleEmailMessage]] — Apex에서 단일 이메일 발송, setToAddresses, setTemplateId, 첨부파일
 - [[CustomNotification]] — 인앱 알림, setNotificationTypeId, send(), Actionable Notification
 
-## 🏗 승인 프로세스
+## 🏗 승인 프로세스 / 스키마
 
 - [[Approval Namespace]] — ProcessSubmitRequest, ProcessWorkitemRequest, lock/unlock, LockResult
+- [[Schema Namespace 상세]] — DescribeSObjectResult/DescribeFieldResult/RecordTypeInfo/PicklistEntry/ChildRelationship
 
 ## 📖 레퍼런스
 
