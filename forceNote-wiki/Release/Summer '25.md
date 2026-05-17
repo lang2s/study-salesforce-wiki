@@ -334,6 +334,26 @@ FormulaEval.FormulaInstance ff = Formula.builder()
 
 ---
 
+## Architecture
+
+> 플랫폼 구조, 메타데이터 모델, 인프라, 패키징 관련 변경
+
+- **Hyperforce 신규 리전 — 인도 하이데라바드** — 2025년 4월 Hyperforce가 인도 하이데라바드에 신규 오픈. 총 17개국에서 Hyperforce 사용 가능. Tableau·Data Cloud도 추가 리전에서 사용 가능하여 글로벌 데이터 레지던시 옵션 확대
+- **Pub/Sub API 글로벌 엔드포인트** — Pub/Sub API가 모든 Hyperforce 리전에서 글로벌 엔드포인트 사용 가능 (2025년 4월부터). 리전별 별도 엔드포인트 불필요
+- **CDN 단일 도메인 인증서 전환 (Release Update)** — 공유 도메인 인증서를 단일 도메인 인증서로 전환 필요. 미전환 시 Spring '26 강제 적용 시 사이트 non-HTTPS로 변경됨. 전환 시 다운타임 없음
+- **Update Instanced URLs in API Traffic (Release Update)** — Instanced URL 사용 API 트래픽을 My Domain 로그인 URL로 전환. Sandbox는 Winter '26, Production은 Spring '26 강제 적용
+- **DX Inspector — Scratch Org 메타데이터 빠른 접근** — Scratch org 상단에 DX Inspector 패널 제공. 현재 org 확인 및 Changes 탭에서 메타데이터 변경 내역 조회 가능. `Customize Application` 권한 필요
+- **2GP 패키지 마이그레이션 GA (Package Migrations)** — 기존 1GP 패키지를 2GP로 변환하고 구독자 org를 1GP에서 2GP로 마이그레이션하는 기능 정식 출시. 패키지 메타데이터·구독자 데이터 변경 없음. Asia Pacific 인스턴스는 향후 릴리즈에 적용 예정
+- **에이전트 템플릿 패키지화** — 1GP·2GP 관리 패키지에 에이전트 템플릿 포함 가능. Agentforce DX로 scratch org에서 개발·테스트
+- **CLI로 패키지 업그레이드 푸시** — Unlocked·2GP 관리 패키지 push upgrade를 4개 신규 CLI 명령(`schedule`, `abort`, 상세 조회, 목록 조회)으로 관리. 구독자가 직접 설치하지 않아도 업그레이드 배포 가능
+- **패키지 메타데이터 사용량 확인** — `sf package version report` 명령으로 패키지의 메타데이터 파일 크기·수량 한도 대비 현황 확인 가능
+- **FlowActionCall — `createFlowApprovalProcess` / `requestApproval`** — Flow 메타데이터 타입의 FlowActionCall subtype에 Flow Approval Process 관련 신규 `actionType` 값 추가 (Flow Approval Process GA와 연계)
+- **`IdentityUserRegistrationFlow` ProcessType** — SSO 등록 핸들러를 Flow Builder로 구성하는 신규 ProcessType 값. Apex 코드 없이 등록 핸들러 설정 가능
+- **Salesforce Functions 퇴직** — 더 이상 구매·갱신 불가. 기존 구독 기간까지만 사용 가능
+- **Salesforce Connect Hyperforce 한도 제거** — OData 2.0/4.0/4.01, Custom, GraphQL, DynamoDB, Athena, Snowflake 어댑터의 신규 행·콜아웃 한도 Hyperforce에서 제거
+
+---
+
 ## Agentforce / Einstein
 
 ### Agentforce 3 플랫폼

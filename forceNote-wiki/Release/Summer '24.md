@@ -457,6 +457,27 @@ this[NavigationMixin.Navigate]({
 
 ---
 
+## Architecture
+
+> 플랫폼 구조, 메타데이터 모델, 인프라, 패키징 관련 변경
+
+- **Partitioned Domains 확대** — 신규 Developer Edition org, patch org, scratch org, demo org, Trailhead Playground에 My Domain 파티션 도메인 적용. 파티션 도메인은 org 유형 관련 키워드를 URL에 포함하여 Salesforce가 서비스 변경을 점진적으로 배포할 수 있도록 함. 샌드박스는 Enhanced Domains 활성화 시 항상 파티션 적용. Salesforce Edge Network 사용 scratch org는 scratch 파티션 신규 지원
+- **Scratch org on Salesforce Edge Network — 파티션 도메인** — Edge Network 상의 scratch org에서 파티션 도메인 사용 시작 (기존 non-Edge scratch org와 URL 구조 상이)
+- **New Setup Domain (`*.salesforce-setup.com`)** — Setup 페이지가 `salesforce-setup.com` 도메인으로 이전. 방화벽/허용 목록 사용 환경은 해당 도메인 추가 필요. 일반 인터넷 접근 환경은 조치 불필요
+- **이전 Salesforce 도메인 참조 종료 예고** — Winter '25에 non-Enhanced Domain 레거시 호스트명 리다이렉션 종료. 사이트 URL 및 인스턴스 기반 URL 참조를 My Domain URL로 업데이트 필요
+- **Instanced My Domain Hostname 리다이렉션 감지** — `Hostname Redirects` 이벤트 타입에서 하드코딩된 instanced My Domain URL 리다이렉션 추적 가능
+- **DevHubSettings — `enableScratchOrgSnapshotPref`** — Scratch Org Snapshots(GA) 활성화를 위한 신규 메타데이터 필드. Dev Hub org의 DevHubSettings 메타데이터 타입에 추가
+- **SearchOrgWideObjectConfig 메타데이터 타입 신규** — org 전체 검색 인덱스 구성을 위한 신규 메타데이터 타입 추가 (Search Manager GA와 연계)
+- **SearchCustomization 메타데이터 타입 신규** — Search Manager 구성을 org 간 마이그레이션하는 신규 메타데이터 타입
+- **PlatformEventChannel — `eventType` 필드** — Real-Time Event Monitoring 이벤트를 커스텀 채널에 추가하는 신규 필드. 채널당 최대 10개 이벤트 유형 구독 가능
+- **2GP for Data Cloud Apps** — 2세대 관리 패키지(2GP)로 Data Cloud 앱 배포 지원 신규 추가
+- **External Client Apps in 2GP** — External Client App을 2GP 관리 패키지에 포함 가능
+- **API v21.0–30.0 폐기 예고** — Summer '25에 SOAP/REST/Bulk API v21–30 차단 예정. 해당 버전 사용 통합 즉시 업그레이드 필요
+- **Standard-Volume Platform Events 폐기 예고** — Summer '25에 폐기. High-Volume Platform Events로 마이그레이션 필요
+- **Salesforce Functions 폐기** — 2025년 1월 31일 서비스 종료. 대안 솔루션으로 마이그레이션 필요
+
+---
+
 ## Einstein / AI
 
 ### Einstein Copilot

@@ -168,6 +168,26 @@ public without sharing class MySystemClass {
 
 ---
 
+## Architecture
+
+> 플랫폼 구조, 메타데이터 모델, 인프라, 패키징 관련 변경
+
+- **Hyperforce 리전 확장 — Cape Town 신규** — 2026년 5월 남아프리카(케이프타운) 신규 Hyperforce 리전 오픈. 현재 18개국에서 제공
+- **Hyperforce — B2C Commerce US 추가** — Salesforce B2C Commerce가 Hyperforce 미국 리전에서 제공 시작
+- **ACRC EU 지원 및 RTO/RPO 개선** — Advanced Cross-Region Continuity가 EU에서 제공 시작. 전체 리전에서 복구 목표(RTO 12시간, RPO 4시간)로 개선
+- **Salesforce Edge Network 강제 적용 (7월 11일부터)** — My Domain URL을 Salesforce Edge Network를 통해 라우팅하는 것이 필수화. 2026년 7월 11일부터 단계적 적용 (샌드박스 → 프로덕션 순). Setup → My Domain → Routing and Policies에서 "Use Salesforce Edge Network" 활성화 필요. 활성화 후 7일 롤백 가능
+- **TLS 인증서 수명 단축 시행** — 2026년 3월 15일부터 신규 TLS 인증서 최대 수명 200일 적용 (기존 398일에서 단축). Salesforce는 2026년 7월 6일부터 1P 프로덕션 org 인증서 변경 공지 중단. 인증서 핀닝(certificate pinning) 중단 권장
+- **Domain Control Validation 주기 단축** — TLS 인증서 도메인 유효성 재사용 기간이 200일로 단축 (2026년 3월 15일 시행). 자체 인증서 사용 시 DCV 주기 조정 필요
+- **mTLS 인증서 전환 필요** — Chrome Trusted Root List의 Public Root CA를 사용하는 mTLS 인증서를 별도 PKI 계층 구조로 전환 필요. Google Chrome이 2027년 3월 15일부터 이중 사용 인증서 제한 적용
+- **IPv6 준비 단계 진행** — Government Cloud org 대상 2026년 중 IPv6 지원 예정. 기타 org는 2027년 이후 예상. IP 허용 목록 → 도메인 허용 목록으로 전환 권장
+- **Chatter — 신규 org 기본 비활성화** — Summer '26 이후 생성된 Enterprise/Unlimited/Developer org에서 Chatter 기본값 OFF. Slack 채널이 기본 협업 수단으로 대체. Case Feed·Experience Cloud 등 Chatter 의존 기능 사용 시 Setup → Chatter Settings에서 수동 활성화 필요 (기존 org 미영향)
+- **Scratch Org 데이터 스토리지 한도 증가** — 200MB → 500MB (Developer, Group, Professional, Enterprise 에디션 적용)
+- **비Preview Sandbox 생성 옵션 추가** — 릴리즈 전환 기간 중 기본값인 Preview Sandbox 대신 Non-Preview Sandbox를 고객지원팀을 통해 선택 생성 가능. 프로덕션과 동일 환경에서 테스트 가능
+- **Own Archive Managed Package 은퇴** — Own Archive 관리 패키지 갱신이 2026년 5월 4일 종료. Legacy Archive 갱신은 2027년 2월 2일 종료. Archive 2.0으로 마이그레이션 필요 (확장성·성능 개선)
+- **Managed Package Push Upgrade 만료 기간 설정** — 커스텀 Push Upgrade에 만료 일수 설정 가능 (1GP/2GP 모두 적용). `PushUpgradeCustomizationRepository.create()` 메서드로 설정
+
+---
+
 ## Agentforce / Einstein
 
 - **MCP Servers (GA)** — Hosted MCP Server로 AI 에이전트가 Salesforce에 안전하게 연결

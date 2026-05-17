@@ -335,6 +335,24 @@ const el = this.template.createComponent(ctor);
 
 ---
 
+## Architecture
+
+> 플랫폼 구조, 메타데이터 모델, 인프라, 패키징 관련 변경
+
+- **Hyperforce 신규 리전 — Indonesia·Italy 추가** — Salesforce Customer 360 앱 스위트(Sales Cloud, Service Cloud, B2B Commerce, Platform, Industries Cloud)를 Hyperforce로 인도네시아·이탈리아에서 새롭게 제공. 한국·스웨덴은 요청 기반으로 제공
+- **Hyperforce Assistant (GA)** — Hyperforce로의 마이그레이션을 돕는 어시스턴트 GA 출시. 프로덕션 및 샌드박스 org 지원; Prepare 단계의 하드코딩 참조 및 연결 확인 항목 업데이트
+- **Salesforce Object ID — 서버 ID 3자리 변경 (Release Update, Winter '24 강제)** — 기존 Object ID의 4~5번째 자리(2자리) 서버 ID가 4~6번째 자리(3자리)로 변경. 기존 Object ID 길이(15~18자)는 유지. 테스트 코드에서 ID 구조에 의존하는 로직 수정 필요
+- **샌드박스 라이선스 컴플라이언스 변경** — 프로비전된 라이선스 수를 초과하는 샌드박스 잠금 처리(LRU 순서); 60일 이상 잠긴 샌드박스 삭제 불가 복구; 알림 이메일 발송. 2023년 12월 중순부터 프로덕션 org 적용
+- **샌드박스 CDN 비활성화 테스트 (Sandbox)** — Enhanced Domains 활성화 후 샌드박스 org에서 Experience Cloud CDN 비활성화를 직접 테스트 가능. 기존에는 지원 팀에 요청해야 했으며 프로덕션 영향 없이 사전 검증 가능
+- **새 Setup 도메인 준비 (예고)** — 향후 릴리즈에서 Setup 페이지를 새 도메인으로 이전 예정; 방화벽·허용 목록에 `*.salesforce-setup.com` 추가 필요
+- **Platform Events — 병렬 구독 Apex 트리거 (Pilot)** — 커스텀 플랫폼 이벤트 Apex 트리거에서 최대 10개 파티션으로 병렬 구독 처리. `PlatformEventSubscriberConfig`의 `PartitionKey`·`NumPartitions`로 설정; 표준 이벤트·Change Events는 미지원
+- **Hyperforce에서 Event Relay 생성 지원** — Hyperforce org에서 Event Relay를 생성해 플랫폼 이벤트·Change Data Capture 이벤트를 Amazon EventBridge로 전송 가능. 기존에는 Hyperforce 미지원
+- **Pub/Sub API 글로벌 엔드포인트 — 인도 리전 추가** — `api.pubsub.salesforce.com` 글로벌 엔드포인트의 요청 라우팅·처리 리전에 인도 추가(기존: 미국·EU). API 요청 지연 시간 개선
+- **Event Relay — EU 리전 처리 추가** — Event Relay 서비스가 EU 리전에서도 이벤트를 처리(기존: 미국만). 이벤트 처리 지연 시간 개선
+- **Hyperforce Enhanced Usage Metrics** — Hyperforce 인스턴스에서 플랫폼 이벤트·Change Events의 게시 및 전달 Enhanced Usage Metrics 사용 가능. 기존에는 Hyperforce 미지원
+
+---
+
 ## Einstein / AI
 
 ### Einstein Generative AI (기반 플랫폼)

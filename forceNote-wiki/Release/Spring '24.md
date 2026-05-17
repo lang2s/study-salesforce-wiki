@@ -467,6 +467,25 @@ export default class DecoratorExample extends LightningElement {
 
 ---
 
+## Architecture
+
+> 플랫폼 구조, 메타데이터 모델, 인프라, 패키징 관련 변경
+
+- **Hyperforce 신규 리전 — South Korea·Sweden 추가 (GA)** — Salesforce Customer 360 앱 스위트(Sales Cloud, Service Cloud, B2B Commerce, Platform, Industries Cloud)를 한국·스웨덴에서 GA 제공. Switzerland·UAE는 요청 기반 제공. 이전 릴리즈 기준 Indonesia·Italy 포함 총 13개국 가용
+- **Hyperforce 메이저 릴리즈 무중단 업그레이드 (Summer '24~)** — Summer '24부터 Hyperforce org의 메이저 릴리즈 업그레이드 시 서비스 다운타임 없음. 기존 5분 유지보수 창 폐지; 업그레이드 중 온라인 사용자는 보안 요건상 재로그인 요청
+- **새 Setup 도메인 적용 시작** — Setup 페이지가 `*.salesforce-setup.com` 도메인으로 이전. Spring '24부터 샌드박스·비프로덕션 org에 롤링 적용 후 프로덕션 org 적용. 방화벽·허용 목록에 사전 추가 필요
+- **Google Chrome Storage Partitioning 임시 옵트아웃** — Chrome 스토리지 파티셔닝이 Summer '24에 Salesforce 도메인에 활성화됨. 신규 설정으로 2024년 9월까지 파티셔닝 비활성화 가능. 공유 스토리지 의존 통합 코드 사전 점검 필요
+- **파티션 도메인(Partitioned Domains) 확대** — Developer Edition, Scratch Org, Demo Org, Trailhead Playground에 파티션 도메인 기본 활성화. Salesforce Edge Network의 scratch org에도 적용
+- **Metadata API 배포 크기 한도 증가 — 400 MB → 600 MB** — SOAP retrieve 및 REST deploy 최대 크기 상향. 대규모 메타데이터 배포 지원
+- **Scratch Org Snapshots (Beta)** — scratch org 설정의 Point-in-time 스냅샷 캡처 후 동일 구성의 scratch org 복제 생성. CLI 명령어: `org create snapshot`, `org list snapshot`. Dev Hub org에서 Scratch Org Snapshots 활성화 필요
+- **샌드박스 명의 도메인 로그인 URL 사용** — Sandboxes Setup 페이지에서 로그인 시 인스턴스 URL 대신 샌드박스의 My Domain 로그인 URL 사용. `https://test.salesforce.com` 허용 여부와 무관하게 Setup에서 로그인 가능
+- **2GP 관리 패키지 — Custom Metadata Type 레코드 제거 가능** — 보호된·공개 레코드를 2GP 관리 패키지에서 제거 가능(지원 케이스 필요)
+- **Data Cloud 2GP 관리 패키지 지원 (2024년 4월~)** — Salesforce 파트너·개발자가 Data Cloud 앱을 second-generation managed packaging으로 개발 가능. scratch org 개발, CLI로 data kit 메타데이터 retrieve, GitHub 공유, 패키지 버전 관리 및 의존성 관리 지원. Salesforce Partners 전용
+- **Pub/Sub API Managed Subscriptions (Beta, Spring '24 이후)** — `ManagedSubscribe` RPC로 구독 재개·Replay ID 커밋 관리. 클라이언트 재연결 시 마지막 커밋된 Replay ID부터 구독 재개. Platform Events, Change Events, 커스텀 채널 지원
+- **Experience Delivery (Pilot)** — LWR 사이트를 위한 새 호스팅 인프라. 서버 사이드 렌더링(SSR) + 전용 CDN으로 페이지 로드 최대 60% 가속. DDoS 보호·방화벽 규칙·속도 제한 규칙 포함. SEO 향상 및 고트래픽 확장성 제공
+
+---
+
 ## Einstein / AI
 
 ### Einstein Copilot (GA — 2024년 4월 10일~)

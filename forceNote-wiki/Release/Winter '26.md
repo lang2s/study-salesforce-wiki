@@ -280,6 +280,28 @@ export default class ScreenFlowLocalAction extends LightningElement {
 
 ---
 
+## Architecture
+
+> 플랫폼 구조, 메타데이터 모델, 인프라, 패키징 관련 변경
+
+- **Hyperforce 리전 확장** — Data Cloud, Marketing Cloud, Platform, Tableau Cloud가 더 많은 Hyperforce 리전에서 제공. Government Cloud Plus 신규 제품·기능 추가
+- **AWS Direct Connect (DX) 지원** — Hyperforce org에 AWS Direct Connect를 통한 직접 네트워크 연결 가능 (Salesforce 문의 필요)
+- **Hyperforce Database Encryption (GA)** — 전체 org 암호화 정식 출시 (이미 `## 보안 / 정책 > Salesforce Shield` 항목 참조)
+- **ACRC 이름 변경** — "Salesforce Out of Region Disaster Recovery"가 "Salesforce Advanced Cross-Region Continuity"로 명칭 변경
+- **새 Setup 도메인 프로덕션 롤아웃** — `*.salesforce-setup.com` 도메인으로 Setup 페이지 이전. Winter '26부터 프로덕션 org에 순차 적용. 방화벽·허용 목록에 해당 도메인 추가 필요
+- **IPv6 준비** — Salesforce가 단계적 IPv6 전환 계획 중. IP 허용 목록 사용 시 IPv6 주소 추가 준비 필요 (Government Cloud 우선 적용 예정)
+- **Lightning CDN → CloudFront 전환** — Lightning CDN이 CloudFront로 전환되고 모든 기존 org에 자동 활성화. 성능 및 전역 분산 콘텐츠 전송 향상
+- **Salesforce Edge Network — 일본 지역 전용 라우팅 옵션** — 일본 인스턴스 org에서 Edge Network 트래픽을 일본 내 로케이션으로만 라우팅하는 옵션 추가 (데이터 레지던시·규정 준수 목적, 기본값은 글로벌 라우팅)
+- **Salesforce Edge Network — 커스텀 도메인 이전 경고** — 커스텀 도메인이 서드파티 CDN으로 호스팅되는 경우 Edge Network 이전 시 My Domain 페이지에 경고 표시
+- **TLS 인증서 수명 단축 예고** — 업계 전체 변경으로 최대 인증서 수명이 단계적으로 단축 예정 (398일 → 200일 → 100일 → 47일). Salesforce는 인증서 변경 공지 중단 예정
+- **Sandbox Quick Create (Hyperforce)** — Hyperforce 인스턴스에서 Full Sandbox 생성·갱신이 최대 2~3배 빠름. 프로덕션의 포인트-인-타임 스냅샷 기반 일관된 샌드박스 생성
+- **Sandbox Quick Clone — 전체 타입 지원** — Developer, Developer Pro, Partial, Full 모든 샌드박스 타입 복제를 Hyperforce에서 2~3배 빠르게 지원
+- **2GP 완전 전환 지원** — 1GP에서 2GP(Second-Generation Managed Packaging)로 패키지 개발 완전 이전 가능. Setup의 패키지 상세 페이지에서 "Move to 2GP" 버튼 클릭
+- **2GP/Unlocked Package 다단계 의존성 자동 계산** — `sfdx-project.json`에 직접 의존성만 명시하면 간접(transitive) 의존성 자동 계산 (`calculateTransitiveDependencies: true`)
+- **1GP Managed Package Released → Beta 되돌리기** — 출시된 1GP 패키지 버전을 Beta 상태로 되돌리는 기능 추가 (미설치 패키지에 한함)
+
+---
+
 ## Release Updates (필수 적용 항목)
 
 > [!warning] Setup → Release Updates 페이지에서 기한 전 반드시 적용·테스트
