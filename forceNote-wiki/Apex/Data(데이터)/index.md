@@ -22,6 +22,7 @@ created: 2026-05-17
 | [[BusinessHours 패턴]] | BusinessHours.diff(), 영업시간 경과 계산, SLA 초과 여부 | #pattern |
 | [[Database Namespace 상세]] | SaveResult/UpsertResult/MergeResult/Cursor/PaginationCursor/QueryLocator/DMLOptions/LeadConvert 전체 | #reference |
 | [[Search Namespace]] | SOSL Apex API — Search.find(), Search.suggest(), SearchResult, KnowledgeSuggestionFilter | #reference |
+| [[FormulaEval Namespace]] | Formula.builder() 동적 수식 평가 — evaluate(), getReferencedFields(), 템플릿 모드 | #reference |
 
 ---
 
@@ -34,6 +35,7 @@ created: 2026-05-17
 - SLA 경과 시간 / 영업시간 기준 계산? → [[BusinessHours 패턴]]
 - DML 결과 처리, Cursor, LeadConvert 상세? → [[Database Namespace 상세]]
 - SOSL 검색, 자동완성 제안? → [[Search Namespace]]
+- 포뮬러 필드 값을 DML 없이 재계산? → [[FormulaEval Namespace]]
 
 ## 보안 연동
 

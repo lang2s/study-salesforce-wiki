@@ -82,6 +82,7 @@
 | 키워드 | 파일 |
 |---|---|
 | SOQL, 쿼리 패턴, 벌크 쿼리, 거버너 한도, Database.query, 데이터 조회, SELECT FROM WHERE | `Apex/Data(데이터)/SOQL 패턴.md` |
+| FormulaEval, Formula.builder, 동적 수식 평가, 포뮬러 필드 재계산, DML 없이 수식 계산, getReferencedFields, 수식 평가 Apex, 템플릿 수식, FormulaReturnType, FormulaGlobal | `Apex/Data(데이터)/FormulaEval Namespace.md` |
 | BusinessHours, BusinessHours.diff, 영업시간 계산, SLA 준수 여부, 업무시간 경과, isWithin, nextStartDate, SLA 초과 | `Apex/Data(데이터)/BusinessHours 패턴.md` |
 | Dynamic SOQL, 동적 쿼리, String.escapeSingleQuotes, 바인딩 변수 | `Apex/Data(데이터)/Dynamic SOQL.md` |
 | 페이징, PagedResult, 오프셋, OFFSET LIMIT, 페이지네이션 | `Apex/Data(데이터)/PagedResult 패턴.md` |
@@ -117,6 +118,7 @@
 | Dom.Document, Dom.XmlNode, XML 파싱, XML 생성, DOM XML, createRootElement, addChildElement, load, toXmlString, getChildElement, getText, SOAP XML | `Apex/Integration(통합)/Dom Namespace.md` |
 | DataSource.Connection, DataSource.Provider, Salesforce Connect, External Objects, 커스텀 어댑터, sync, query, search, upsertRows, deleteRows, TableResult, UpsertResult | `Apex/Integration(통합)/DataSource Namespace.md` |
 | ExternalService, OpenAPI Apex, 타입 안전 외부 호출, External Service Registration, 외부 서비스 등록, ExternalService namespace | `Apex/Integration(통합)/ExternalService Namespace.md` |
+| Invocable.Action, createStandardAction, createCustomAction, Apex에서 Flow 액션 호출, 동적 액션 호출, invoke invocable, addInvocation, setInvocationParameter, getDescribe, 액션 메타데이터 | `Apex/Integration(통합)/Invocable Namespace.md` |
 
 ## Apex — 보안 / FLS / DML (Auth 추가)
 
@@ -148,6 +150,7 @@
 | QuiddityGuard, Quiddity, 실행 컨텍스트, REST Trigger Batch 구분 | `Apex/ExecutionContext(실행컨텍스트)/QuiddityGuard.md` |
 | Platform Event 발행, EventBus.publish, 이벤트 트리거 수신 | `Apex/PlatformEvents(플랫폼이벤트)/Platform Event 발행.md` |
 | ChangeEventHeader, CDC, Change Data Capture, changetype, recordids, changedfields, nulledfields, 변경 데이터 캡처, TriggerContext, RetryableException, TestBroker | `Apex/PlatformEvents(플랫폼이벤트)/ChangeEventHeader.md` |
+| EventPublishFailureCallback, EventPublishSuccessCallback, 이벤트 발행 콜백, 발행 실패 콜백, 발행 성공 콜백, onFailure, onSuccess, getEventUuids, setResumeCheckpoint, 이벤트 부분 처리 재개, Automated Process 콜백 | `Apex/PlatformEvents(플랫폼이벤트)/EventBus Publish Callbacks.md` |
 | Approval.process, ProcessSubmitRequest, ProcessWorkitemRequest, 승인 제출, 승인 프로세스 Apex, Approval.lock, Approval.unlock, LockResult, UnlockResult | `Apex/Architecture(아키텍처)/Approval Namespace.md` |
 | Messaging.sendEmail, SingleEmailMessage, 이메일 발송 Apex, setToAddresses, setHtmlBody, setTemplateId, setTargetObjectId, EmailFileAttachment, 첨부파일 이메일 | `Apex/Messaging(메시징)/SingleEmailMessage.md` |
 | CustomNotification, 커스텀 알림, 인앱 알림, Messaging.CustomNotification, setNotificationTypeId, send 알림, 알림 발송 Apex | `Apex/Messaging(메시징)/CustomNotification.md` |

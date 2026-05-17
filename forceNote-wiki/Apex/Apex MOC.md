@@ -33,6 +33,7 @@ created: 2026-05-17
 - [[BusinessHours 패턴]] — BusinessHours.diff(), isWithin(), nextStartDate(), SLA 경과 시간 계산
 - [[Database Namespace 상세]] — SaveResult/UpsertResult/MergeResult/Cursor/PaginationCursor/QueryLocator/DMLOptions/LeadConvert
 - [[Search Namespace]] — Search.find(), Search.suggest(), SearchResult, KnowledgeSuggestionFilter
+- [[FormulaEval Namespace]] — Formula.builder() 동적 수식 평가, getReferencedFields(), 템플릿 모드
 
 ## ⚡ 비동기
 
@@ -52,6 +53,7 @@ created: 2026-05-17
 - [[Dom Namespace]] — Dom.Document/XmlNode, XML 생성·파싱, HTTP 본문 처리
 - [[DataSource Namespace]] — Salesforce Connect 커스텀 어댑터, Provider/Connection/sync/query/upsert
 - [[ExternalService Namespace]] — OpenAPI 스펙 기반 타입 안전 외부 서비스 호출
+- [[Invocable Namespace]] — Apex에서 Flow Action 동적 호출, createStandardAction/createCustomAction, invoke
 
 ## 📦 컬렉션
 
@@ -80,6 +82,7 @@ created: 2026-05-17
 
 - [[Platform Event 발행]] — EventBus.publish, 수신 트리거, ReplayId
 - [[ChangeEventHeader]] — CDC 변경 이벤트 헤더, changetype/recordids/changedfields, TriggerContext
+- [[EventBus Publish Callbacks]] — 비동기 발행 최종 결과 콜백, EventPublishFailureCallback, setResumeCheckpoint
 
 ## 💾 플랫폼 캐시
 
@@ -114,5 +117,8 @@ OAuth JWT 토큰 교환?   →  [[Auth Namespace]] → JWT/JWS/JWTBearerTokenExc
 MFA / 로그인 플로우?   →  [[Auth Namespace]] → SessionManagement
 외부 오브젝트 연결?    →  [[DataSource Namespace]] → Provider/Connection
 OpenAPI 타입 호출?     →  [[ExternalService Namespace]]
+동적 수식 평가?        →  [[FormulaEval Namespace]] → Formula.builder()
+Flow Action Apex 호출? →  [[Invocable Namespace]] → createStandardAction
+이벤트 발행 결과 추적? →  [[EventBus Publish Callbacks]] → EventPublishFailureCallback
 외부 모킹?             →  [[StubProvider]]
 ```

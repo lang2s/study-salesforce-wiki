@@ -21,6 +21,7 @@ created: 2026-05-17
 | [[Dom Namespace]] | Dom.Document + Dom.XmlNode — XML 생성·파싱, HTTP 연동 | #reference |
 | [[DataSource Namespace]] | Salesforce Connect 커스텀 어댑터 — Provider/Connection/sync/query/search/upsert | #reference |
 | [[ExternalService Namespace]] | OpenAPI 스펙 기반 타입 안전 외부 서비스 호출 — ExternalService.<ServiceName> | #reference |
+| [[Invocable Namespace]] | Apex에서 Flow Action 동적 호출 — createStandardAction, addInvocation, invoke, getDescribe | #reference |
 
 ---
 
@@ -32,6 +33,7 @@ created: 2026-05-17
 - HTTP 요청/응답 본문을 XML로 처리? → [[Dom Namespace]]
 - 외부 시스템 데이터를 External Object로 연결? → [[DataSource Namespace]]
 - OpenAPI 스펙으로 타입 안전 외부 호출? → [[ExternalService Namespace]]
+- Apex에서 Flow Action / 표준 액션 호출? → [[Invocable Namespace]]
 
 ## 관련 폴더
 
