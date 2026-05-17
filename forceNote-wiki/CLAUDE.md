@@ -215,6 +215,7 @@ Step 0 검증 + 4단계를 모두 완료해야 추가 작업이 끝난 것으로
 | Apex/Logging(로깅) | `Apex/Logging(로깅)/index.md` |
 | Apex/PlatformCache(플랫폼캐시) | `Apex/PlatformCache(플랫폼캐시)/index.md` |
 | Apex/PlatformEvents(플랫폼이벤트) | `Apex/PlatformEvents(플랫폼이벤트)/index.md` |
+| Apex/Messaging(메시징) | `Apex/Messaging(메시징)/index.md` |
 | Apex/Security(보안) | `Apex/Security(보안)/index.md` |
 | Apex/Testing(테스트) | `Apex/Testing(테스트)/index.md` |
 | Apex/Trigger(트리거) | `Apex/Trigger(트리거)/index.md` |

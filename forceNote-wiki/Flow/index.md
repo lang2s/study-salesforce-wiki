@@ -29,6 +29,7 @@ created: 2026-05-17
 | [[Flow 데이터 & 보안 액션]] | ExecuteSOQLQuery, SaveRecordsAsync, 레코드 잠금/해제 | #pattern |
 | [[quickChoice Screen Component]] | render() 멀티 템플릿, picklist/list 소스, Custom Property Editor | #pattern |
 | [[Flow 유틸리티 액션 모음]] | 영업시간 계산, CSV 처리, Chatter 게시, Flow 링크·기동 | #pattern |
+| [[Flow Interview API]] | Flow.Interview — Apex에서 Autolaunched Flow 실행, createInterview, getVariableValue | #reference |
 
 ---
 
@@ -48,6 +49,7 @@ created: 2026-05-17
 - Flow에서 동적 SOQL 실행? → [[Flow 데이터 & 보안 액션]]
 - 레코드 잠금/영업시간/Chatter? → [[Flow 유틸리티 액션 모음]]
 - 멀티 패키지 프로젝트 구성? → [[멀티 패키지 구조]]
+- Apex 코드에서 Flow를 직접 실행? → [[Flow Interview API]]
 
 ---
 

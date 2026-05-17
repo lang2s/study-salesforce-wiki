@@ -17,6 +17,7 @@ created: 2026-05-17
 |---|---|---|
 | [[서비스 레이어 패턴]] | TriggerHandler → ServiceLayer 브로커 분리, 재사용 가능한 비즈니스 로직 | #pattern |
 | [[Permission Set 설계]] | objectPermissions, fieldPermissions, classAccesses 구성 표준 | #pattern |
+| [[Approval Namespace]] | Apex에서 승인 프로세스 제출·처리·잠금 — ProcessSubmitRequest, ProcessWorkitemRequest | #reference |
 
 ---
 
@@ -24,6 +25,7 @@ created: 2026-05-17
 
 - Trigger 로직을 어디에 둘지? → [[서비스 레이어 패턴]]
 - 권한 세트 메타데이터 구성? → [[Permission Set 설계]]
+- Apex에서 승인 프로세스 제출? → [[Approval Namespace]]
 
 ## 관련 폴더
 

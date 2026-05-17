@@ -73,10 +73,20 @@ created: 2026-05-17
 ## 📡 플랫폼 이벤트
 
 - [[Platform Event 발행]] — EventBus.publish, 수신 트리거, ReplayId
+- [[ChangeEventHeader]] — CDC 변경 이벤트 헤더, changetype/recordids/changedfields, TriggerContext
 
 ## 💾 플랫폼 캐시
 
 - [[Platform Cache]] — Cache.Org/Session, Cache-Aside 패턴, @CacheBuilder
+
+## 📨 메시징
+
+- [[SingleEmailMessage]] — Apex에서 단일 이메일 발송, setToAddresses, setTemplateId, 첨부파일
+- [[CustomNotification]] — 인앱 알림, setNotificationTypeId, send(), Actionable Notification
+
+## 🏗 승인 프로세스
+
+- [[Approval Namespace]] — ProcessSubmitRequest, ProcessWorkitemRequest, lock/unlock, LockResult
 
 ## 📖 레퍼런스
 

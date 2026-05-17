@@ -141,6 +141,11 @@
 | OrgShape, Org 설정 조회, 샌드박스 여부, 네임스페이스 | `Apex/ExecutionContext(실행컨텍스트)/OrgShape.md` |
 | QuiddityGuard, Quiddity, 실행 컨텍스트, REST Trigger Batch 구분 | `Apex/ExecutionContext(실행컨텍스트)/QuiddityGuard.md` |
 | Platform Event 발행, EventBus.publish, 이벤트 트리거 수신 | `Apex/PlatformEvents(플랫폼이벤트)/Platform Event 발행.md` |
+| ChangeEventHeader, CDC, Change Data Capture, changetype, recordids, changedfields, nulledfields, 변경 데이터 캡처, TriggerContext, RetryableException, TestBroker | `Apex/PlatformEvents(플랫폼이벤트)/ChangeEventHeader.md` |
+| Approval.process, ProcessSubmitRequest, ProcessWorkitemRequest, 승인 제출, 승인 프로세스 Apex, Approval.lock, Approval.unlock, LockResult, UnlockResult | `Apex/Architecture(아키텍처)/Approval Namespace.md` |
+| Messaging.sendEmail, SingleEmailMessage, 이메일 발송 Apex, setToAddresses, setHtmlBody, setTemplateId, setTargetObjectId, EmailFileAttachment, 첨부파일 이메일 | `Apex/Messaging(메시징)/SingleEmailMessage.md` |
+| CustomNotification, 커스텀 알림, 인앱 알림, Messaging.CustomNotification, setNotificationTypeId, send 알림, 알림 발송 Apex | `Apex/Messaging(메시징)/CustomNotification.md` |
+| Flow.Interview, createInterview, 플로우 Apex 호출, Apex에서 Flow 실행, getVariableValue, Flow.Interview.start | `Flow/Flow Interview API.md` |
 | Collections, CollectionUtils, 컬렉션 유틸 | `Apex/Collections(컬렉션)/CollectionUtils.md` |
 | Comparator, 정렬, List.sort, 커스텀 정렬, 리스트 정렬, 오름차순 내림차순 | `Apex/Collections(컬렉션)/Comparator 인터페이스.md` |
 | Iterable, Iterator, 커스텀 이터레이터 | `Apex/Collections(컬렉션)/Iterable Iterator.md` |
@@ -286,6 +291,11 @@
 | 대용량 데이터 처리 | `Apex/Async(비동기)/Batch Apex.md` |
 | 테스트에서 HTTP 호출 모킹 | `Apex/Testing(테스트)/HttpCalloutMock.md` |
 | Flow에서 Apex 쓰는 방법 | `Flow/@InvocableMethod 패턴.md` |
+| Apex에서 Flow 실행하는 방법 | `Flow/Flow Interview API.md` |
+| Apex에서 이메일 보내는 방법 | `Apex/Messaging(메시징)/SingleEmailMessage.md` |
+| 사용자에게 알림 보내는 방법 Apex | `Apex/Messaging(메시징)/CustomNotification.md` |
+| 승인 프로세스 Apex로 제어 | `Apex/Architecture(아키텍처)/Approval Namespace.md` |
+| CDC 트리거 변경 필드 확인 | `Apex/PlatformEvents(플랫폼이벤트)/ChangeEventHeader.md` |
 | 시스템 간 이벤트 연동 | `Integration(통합)/Platform Event 통합 패턴.md` |
 | 레코드 삭제 LWC에서 | `LWC/LDS/uiRecordApi.md` |
 | 정렬 Apex에서 | `Apex/Collections(컬렉션)/Comparator 인터페이스.md` |

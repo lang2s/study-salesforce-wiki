@@ -16,6 +16,7 @@ created: 2026-05-17
 | 파일 | 한 줄 요약 | 태그 |
 |---|---|---|
 | [[Platform Event 발행]] | EventBus.publish, 수신 트리거, ReplayId | #pattern |
+| [[ChangeEventHeader]] | CDC 변경 이벤트 헤더 — changetype, recordids, changedfields, TriggerContext, TestBroker | #reference |
 
 ---
 
