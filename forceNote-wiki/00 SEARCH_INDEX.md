@@ -112,6 +112,26 @@
 | @RestResource, Inbound REST, HttpGet HttpPost, urlmapping, 외부→SF | `Apex/Integration(통합)/Custom REST Endpoint.md` |
 | ConnectApi, Chatter 게시, postFeedItemWithRichText, Chatter 멘션, ConnectApiHelper, 리치 텍스트 피드 | `Apex/Integration(통합)/ConnectApi Chatter 패턴.md` |
 
+## Apex — 표준 클래스 레퍼런스
+
+| 키워드 | 파일 |
+|---|---|
+| Apex 표준 클래스, 표준 클래스 목록, Apex API 레퍼런스, 클래스 레퍼런스 | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| String 메서드, String.format, String.join, String.escapeSingleQuotes, String.template, 문자열 조작 | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| List 메서드, List.sort, List.add, List.remove, 리스트 정렬 | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| Map 메서드, Map.get, Map.put, Map.containsKey, Map.keySet, Map.values | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| Set 메서드, Set.add, Set.contains, Set.retainAll, Set.removeAll | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| Database 클래스, Database.insert, Database.update, Database.query, Database.getCursor, SaveResult, UpsertResult, AccessLevel | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| Crypto 클래스, 암호화, generateAESKey, encryptWithManagedIV, decryptWithManagedIV, generateDigest, generateMac, sign | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| JSON 클래스, JSON.serialize, JSON.deserialize, JSON.deserializeUntyped, JSON.createParser | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| Schema 클래스, SObjectType, DescribeSObjectResult, DescribeFieldResult, getGlobalDescribe | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| Limits 클래스, Limits.getQueries, Limits.getDMLRows, 거버너 한도 확인, 남은 DML | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| System 클래스, System.now, System.today, System.enqueueJob, System.scheduleBatch, System.debug | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| Math 클래스, Math.max, Math.min, Math.abs, Math.random, Math.floor, Math.ceil | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| Date DateTime Time, Date.today, DateTime.now, addDays addMonths daysBetween | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| UUID, UUID.randomUUID, Compression, Deflater, Inflater, DataWeave, DataWeaveScriptResource | `Apex/Apex 표준 클래스 레퍼런스.md` |
+| Comparator, Collator, 로케일 정렬, Collator.getInstance, STRENGTH_PRIMARY | `Apex/Apex 표준 클래스 레퍼런스.md` |
+
 ## Apex — 기타
 
 | 키워드 | 파일 |

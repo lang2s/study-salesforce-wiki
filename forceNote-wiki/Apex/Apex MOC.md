@@ -78,6 +78,10 @@ created: 2026-05-17
 
 - [[Platform Cache]] — Cache.Org/Session, Cache-Aside 패턴, @CacheBuilder
 
+## 📖 레퍼런스
+
+- [[Apex 표준 클래스 레퍼런스]] — String / List / Map / Database / Crypto / JSON / Schema / Limits 전체 API 빠른 참조
+
 ---
 
 ## 빠른 의사결정
