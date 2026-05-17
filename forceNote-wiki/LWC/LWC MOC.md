@@ -36,6 +36,7 @@ created: 2026-05-17
 
 ## 🧭 네비게이션 & UI
 
+- [[Lightning Base Components 레퍼런스]] — lightning-* 전체 컴포넌트 목록 및 속성 빠른 참조
 - [[NavigationMixin 패턴]] — pageReference 타입별 사용법
 - [[Toast & 모달 패턴]] — ShowToastEvent, variant, 모달 구현
 - [[에러 패널 패턴]] — errorPanel, reduceErrors, 에러 타입별 처리
@@ -59,6 +60,7 @@ created: 2026-05-17
 ## 빠른 의사결정
 
 ```
+어떤 컴포넌트 쓸지?    → [[Lightning Base Components 레퍼런스]]
 Apex 호출?             → [[Wire vs Imperative 선택]]
 @wire 에러?            → [[Wire 패턴]] → function 바인딩
 컴포넌트 통신?         → 부모↔자식: [[CustomEvent 패턴]] | 크로스 컴포넌트: [[Lightning Message Service]]
