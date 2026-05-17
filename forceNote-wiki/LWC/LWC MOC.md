@@ -32,6 +32,7 @@ created: 2026-05-17
 - [[uiRecordApi]] — createRecord, updateRecord, deleteRecord, notifyRecordUpdateAvailable
 - [[getRecord 패턴]] — static import, dynamic string, getFieldValue, getRecords
 - [[ldsUtils reduceErrors]] — 에러 정규화 유틸리티
+- [[getPicklistValues 패턴]] — Record Type별 Picklist 옵션 로드, 종속 Picklist validFor 필터링
 
 ## 🧭 네비게이션 & UI
 
