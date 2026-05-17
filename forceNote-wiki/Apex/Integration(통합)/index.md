@@ -17,6 +17,7 @@ created: 2026-05-17
 |---|---|---|
 | [[RestClient 패턴]] | virtual class, Named Credential callout:, PATCH 우회 | #pattern |
 | [[Custom REST Endpoint]] | @RestResource, global inherited sharing, RestContext | #pattern |
+| [[ConnectApi Chatter 패턴]] | postFeedItemWithRichText, @멘션, Flow 리치 텍스트 변환 | #pattern |
 
 ---
 
@@ -24,6 +25,7 @@ created: 2026-05-17
 
 - Apex에서 외부 API 호출? → [[RestClient 패턴]]
 - 외부 시스템이 Salesforce를 REST로 호출? → [[Custom REST Endpoint]]
+- Chatter 피드에 게시(리치 텍스트, @멘션)? → [[ConnectApi Chatter 패턴]]
 
 ## 관련 폴더
 

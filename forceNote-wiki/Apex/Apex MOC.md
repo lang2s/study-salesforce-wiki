@@ -29,6 +29,7 @@ created: 2026-05-17
 - [[DML 패턴]] — insert as user/system, Database.*(accessLevel)
 - [[Dynamic SOQL]] — queryWithBinds, SOQL 인젝션 방어
 - [[PagedResult 패턴]] — 페이지네이션 DTO, scope='global', ?? null coalescing, LIMIT+OFFSET
+- [[BusinessHours 패턴]] — BusinessHours.diff(), isWithin(), nextStartDate(), SLA 경과 시간 계산
 
 ## ⚡ 비동기
 
@@ -44,6 +45,7 @@ created: 2026-05-17
 - [[RestClient 패턴]] — virtual class, PATCH 우회, callout: 접두어
 - [[Custom REST Endpoint]] — @RestResource, global inherited sharing, RestContext
 - [[Named Credential]] — External Credential → Principal → NC 순서
+- [[ConnectApi Chatter 패턴]] — postFeedItemWithRichText, @멘션, Flow 리치 텍스트 변환
 
 ## 📦 컬렉션
 

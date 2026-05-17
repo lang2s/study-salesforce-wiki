@@ -136,6 +136,31 @@ async handleDelete() {
 
 ---
 
+## LightningAlert — 단순 경고 다이얼로그
+
+모달보다 가벼운 alert. 확인 버튼 하나만 있는 단방향 알림에 사용.
+
+```javascript
+import LightningAlert from 'lightning/alert';
+
+async handleAlert() {
+    await LightningAlert.open({
+        message: '이 작업은 되돌릴 수 없습니다.',
+        theme: 'error',   // 'default' | 'shade' | 'inverse' | 'alt-inverse' | 'success' | 'info' | 'warning' | 'error' | 'offline'
+        label: '경고'     // 모달 헤더 접근성 레이블
+    });
+    // await 완료 = 사용자가 OK 클릭
+}
+```
+
+| 구분 | ShowToastEvent | LightningAlert | LightningModal |
+|---|---|---|---|
+| 차단 여부 | 비차단 (알림만) | 차단 (OK 클릭 대기) | 차단 (반환값 있음) |
+| 반환값 | 없음 | 없음 | `close(value)` 값 |
+| 사용 시점 | 성공/실패 피드백 | 단순 경고·안내 | 확인/입력 다이얼로그 |
+
+---
+
 ## 관련 노트
 
 - [[NavigationMixin 패턴]]

@@ -19,6 +19,7 @@ created: 2026-05-17
 | [[DML 패턴]] | insert as user/system, Database.*(accessLevel), 부분 성공 | #pattern |
 | [[Dynamic SOQL]] | queryWithBinds, SOQL 인젝션 방어 | #pattern |
 | [[PagedResult 패턴]] | 페이지네이션 DTO, LIMIT+OFFSET, ?? null coalescing | #pattern |
+| [[BusinessHours 패턴]] | BusinessHours.diff(), 영업시간 경과 계산, SLA 초과 여부 | #pattern |
 
 ---
 
@@ -28,6 +29,7 @@ created: 2026-05-17
 - 조건이 동적으로 바뀌는 쿼리? → [[Dynamic SOQL]]
 - 레코드 삽입/수정/삭제? → [[DML 패턴]]
 - 목록 페이지에 페이지네이션? → [[PagedResult 패턴]]
+- SLA 경과 시간 / 영업시간 기준 계산? → [[BusinessHours 패턴]]
 
 ## 보안 연동
 

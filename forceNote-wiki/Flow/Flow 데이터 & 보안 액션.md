@@ -51,30 +51,19 @@ global class OutputParameters {
 현재 Flow 트랜잭션 밖에서 레코드를 저장한다. DML 한도 초과 시 또는 트리거 재귀를 피할 때 유용.
 
 ```apex
-@InvocableMethod(
-    label='Saves a list of records asynchronously (outside of current transaction)'
-    category='Data'
-)
-global static List<OutputParameters> bulkInvoke(List<InputParameters> inputs) { ... }
+@InvocableMethod(label='Saves a list of records asynchronously' category='Data')
 
 private static OutputParameters invoke(InputParameters input) {
-    UpsertRecordsQueueable job = new UpsertRecordsQueueable(input.records);
-    Id jobId = System.enqueueJob(job);         // Queueable 등록
+    // Queueable에 레코드 전달 → 새 트랜잭션에서 upsert 실행
+    Id jobId = System.enqueueJob(new UpsertRecordsQueueable(input.records));
     output.jobId = jobId;
     return output;
-}
-
-// Queueable 구현 — execute 단에서 upsert
-public class UpsertRecordsQueueable implements Queueable {
-    private List<SObject> records;
-
-    public void execute(QueueableContext context) {
-        upsert records;  // 새 트랜잭션에서 실행
-    }
 }
 ```
 
 **출력:** `jobId` (Id) — AsyncApexJob ID, 추적 가능
+
+> [!note] Queueable 구현 패턴 상세 → [[Queueable]] | bulkInvoke 구조 → [[@InvocableMethod 패턴]]
 
 > [!tip] 언제 SaveRecordsAsync
 > - Flow DML 거버너 한도(150건) 초과 우려
@@ -92,20 +81,12 @@ public class UpsertRecordsQueueable implements Queueable {
 @InvocableMethod(label='Checks if a record is locked' category='Security')
 
 private static OutputParameters invoke(InputParameters input) {
-    OutputParameters output = new OutputParameters();
     output.isLocked = Approval.isLocked(input.recordId); // Boolean 반환
     return output;
 }
-
-global class InputParameters {
-    @InvocableVariable(required=true)
-    global Id recordId;
-}
-global class OutputParameters {
-    @InvocableVariable
-    global Boolean isLocked;
-}
 ```
+
+> [!note] `Approval.isLocked()` / `Approval.lock()` / `Approval.unlock()` 기본 사용법 → [[@InvocableMethod 패턴]]
 
 ---
 

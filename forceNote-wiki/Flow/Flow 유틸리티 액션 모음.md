@@ -156,6 +156,8 @@ Flow.Interview newInterview = Flow.Interview.createInterview(
 newInterview.start();  // 동기 실행 (현재 트랜잭션 내)
 ```
 
+> [!note] `Flow.Interview.createInterview()` 기본 사용법 → [[@InvocableMethod 패턴]] · [[Autolaunched Flow 패턴]]
+
 > [!warning] 파라미터 타입 제한
 > `param1~3Value`가 모두 String 타입. 숫자·날짜 등 다른 타입은 Flow 변수 직접 연결 또는 별도 Apex로 처리.
 

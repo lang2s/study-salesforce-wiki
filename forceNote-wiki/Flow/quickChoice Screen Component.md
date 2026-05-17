@@ -9,6 +9,11 @@ aliases: [quickChoice, Flow Screen 선택기, render() 멀티 템플릿, Custom 
 
 > Flow Screen에서 카드·드롭다운·라디오 세 가지 UI로 선택지를 제공하는 LWC 패턴. `render()`로 템플릿을 동적 교체하고, Picklist 또는 직접 입력 목록 두 소스를 지원한다.
 
+> [!note] 기반 패턴 참조
+> `render()` 멀티 템플릿, `FlowAttributeChangeEvent`, `validate()`, `FORM_FACTOR`, Custom Property Editor의 **기본 패턴** → [[Flow Screen LWC 패턴]]
+> `getPicklistValues` → [[getPicklistValues 패턴]]
+> 이 노트는 세 패턴이 **통합된 실전 예시**다.
+
 ---
 
 ## 핵심 패턴 1 — render()로 템플릿 동적 교체

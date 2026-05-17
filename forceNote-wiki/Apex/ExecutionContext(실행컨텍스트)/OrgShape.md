@@ -87,6 +87,31 @@ public List<String> getFieldsToQuery() {
 
 ---
 
+---
+
+## Url.getOrgDomainUrl() — Org 도메인 URL 획득
+
+Apex에서 현재 Org의 기본 URL을 가져올 때 사용. 이메일 링크, Flow 링크 생성에 활용.
+
+```apex
+// 현재 Org 도메인 URL (예: https://mycompany.my.salesforce.com)
+String baseUrl = Url.getOrgDomainUrl().toExternalForm();
+
+// 활용 예: Flow 시작 링크 생성
+String flowLink = baseUrl + '/flow/' + flowApiName;
+
+// PageReference로 파라미터 URL 인코딩
+System.PageReference pageRef = new System.PageReference(flowLink);
+pageRef.getParameters().put('recordId', recordId);
+String fullUrl = pageRef.getUrl();
+```
+
+> [!tip] Url.getSalesforceBaseUrl() vs Url.getOrgDomainUrl()
+> - `getSalesforceBaseUrl()` — 현재 요청의 base URL (비동기/배치에서 null 가능)
+> - `getOrgDomainUrl()` — Org 설정의 도메인 (비동기 컨텍스트에서도 안전)
+
+---
+
 ## 관련 노트
 
 - [[QuiddityGuard]]

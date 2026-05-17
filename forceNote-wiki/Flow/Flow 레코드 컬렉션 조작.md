@@ -11,23 +11,8 @@ aliases: [Flow 컬렉션, AggregateRecordList, FilterRecords, DedupeRecordList, 
 
 ---
 
-## 공통 구조 — bulkInvoke 패턴
-
-모든 Collections 액션은 동일한 outer/inner 분리 구조를 따른다.
-
-```apex
-@InvocableMethod(label='...' category='Collections')
-global static List<OutputParameters> bulkInvoke(List<InputParameters> inputs) {
-    List<OutputParameters> outputs = new List<OutputParameters>();
-    for (InputParameters input : inputs) {
-        outputs.add(invoke(input));   // 실제 로직은 private invoke()
-    }
-    return outputs;
-}
-```
-
-> [!tip] bulkInvoke 분리 이유
-> Flow에서 루프 없이 한 번에 여러 레코드셋을 처리할 수 있다. 테스트도 invoke()만 직접 호출하면 된다.
+> [!note] 공통 구조
+> 모든 Collections 액션은 `bulkInvoke` / `invoke` 분리 구조를 따른다. 상세 → [[@InvocableMethod 패턴]]
 
 ---
 
