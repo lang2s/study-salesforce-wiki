@@ -22,6 +22,10 @@ created: 2026-05-17
 | [[@InvocableMethod 패턴]] | Flow Action 표준 구조, bulkInvoke, JSON 우회, Queueable 연동 | #pattern |
 | [[Flow Screen LWC 패턴]] | FlowAttributeChangeEvent, @api validate(), Custom Property Editor | #pattern |
 | [[멀티 패키지 구조]] | sfdx-project.json, 도메인별 독립 Unlocked Package 구성 | #pattern |
+| [[Flow 레코드 컬렉션 조작]] | Aggregate/Filter/Dedupe/Join 등 컬렉션 11개 Invocable Action | #pattern |
+| [[Flow 데이터 & 보안 액션]] | ExecuteSOQLQuery, SaveRecordsAsync, 레코드 잠금/해제 | #pattern |
+| [[quickChoice Screen Component]] | render() 멀티 템플릿, picklist/list 소스, Custom Property Editor | #pattern |
+| [[Flow 유틸리티 액션 모음]] | 영업시간 계산, CSV 처리, Chatter 게시, Flow 링크·기동 | #pattern |
 
 ---
 
@@ -33,6 +37,10 @@ created: 2026-05-17
 - 레코드 처리·백그라운드 자동화? → [[Autolaunched Flow 패턴]]
 - Flow에서 Apex 로직 호출? → [[@InvocableMethod 패턴]]
 - Flow 화면 안에 LWC 삽입? → [[Flow Screen LWC 패턴]]
+- Flow 화면 선택 UI (카드/드롭다운/라디오)? → [[quickChoice Screen Component]]
+- Flow 안에서 리스트 필터/집계/정렬? → [[Flow 레코드 컬렉션 조작]]
+- Flow에서 동적 SOQL 실행? → [[Flow 데이터 & 보안 액션]]
+- 레코드 잠금/영업시간/Chatter? → [[Flow 유틸리티 액션 모음]]
 - 멀티 패키지 프로젝트 구성? → [[멀티 패키지 구조]]
 
 ---

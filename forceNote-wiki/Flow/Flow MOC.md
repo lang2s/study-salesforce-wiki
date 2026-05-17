@@ -24,7 +24,14 @@ aliases: [Flow MOC, Flow Index]
 
 - [[@InvocableMethod 패턴]] — Flow Action Apex 표준 구조, bulkInvoke, JSON 우회, Queueable 연동
 - [[Flow Screen LWC 패턴]] — FlowAttributeChangeEvent, @api validate(), Custom Property Editor
+- [[quickChoice Screen Component]] — render() 멀티 템플릿, picklist/list 소스, Custom Property Editor 실전 패턴
 - [[멀티 패키지 구조]] — sfdx-project.json, 도메인별 독립 패키지
+
+## Invocable Actions — 실용 액션 모음
+
+- [[Flow 레코드 컬렉션 조작]] — Aggregate/Filter/Dedupe/Sort/Join 등 컬렉션 11개 액션
+- [[Flow 데이터 & 보안 액션]] — ExecuteSOQLQuery, SaveRecordsAsync, 레코드 잠금/해제
+- [[Flow 유틸리티 액션 모음]] — 영업시간 계산, CSV 처리, Chatter 게시, Flow 링크·기동
 
 ---
 
