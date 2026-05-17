@@ -8,10 +8,10 @@
 
 | 형식 | 예시 |
 |---|---|
-| 순수 한글 ❌ | `비동기`, `테스트` |
-| **영어(한글) ✅** | `Async(비동기)`, `Testing(테스트)` |
-| 영어+한글 혼합 ❌ | `Apex통합`, `UI패턴` |
-| **영어(영어+한글) ✅** | `ApexIntegration(Apex통합)`, `UIPatterns(UI패턴)` |
+| 순수 한글 ❌ | `보안`, `비동기`, `데이터`, `통합`, `테스트`, `트리거` |
+| **영어(한글) ✅** | `Security(보안)`, `Async(비동기)`, `Data(데이터)`, `Integration(통합)`, `Testing(테스트)`, `Trigger(트리거)` |
+| 영어+한글 혼합 ❌ | `Apex통합`, `컴포넌트API`, `UI패턴`, `플랫폼이벤트` |
+| **영어(영어+한글) ✅** | `ApexIntegration(Apex통합)`, `ComponentAPI(컴포넌트API)`, `UIPatterns(UI패턴)`, `PlatformEvents(플랫폼이벤트)` |
 
 ---
 
