@@ -114,6 +114,8 @@
 | 키워드 | 파일 |
 |---|---|
 | Metadata namespace, CustomMetadata, DeployCallback, DeployContainer, enqueueDeployment, CMT 배포, 메타데이터 배포 Apex, Operations.retrieve, Operations.enqueueDeployment, DeployResult, DeployStatus, 커스텀 메타데이터 레코드 생성 | `Apex/Integration(통합)/Metadata Namespace.md` |
+| Compression Namespace, ZipWriter, ZipReader, ZipEntry, Apex Zip, zip 파일, 압축 Apex, addEntry, getArchive, extract, ZipWriter.getArchive, Spring 25 GA 압축 | `Apex/Integration(통합)/Compression Namespace.md` |
+| DataWeave Namespace, DataWeave in Apex, DataWeave.Script, createScript, execute, DataWeave.Result, getValueAsString, dwl 스크립트, JSON 변환 Apex, XML 변환 Apex | `Apex/Integration(통합)/DataWeave Namespace.md` |
 | CustomMetadataValue, fullName CMT, protected_x, CMT 필드 값 Apex, MetadataType enum | `Apex/Integration(통합)/Metadata Namespace.md` |
 
 ## DevOps — Salesforce DX

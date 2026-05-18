@@ -29,6 +29,19 @@ tools:
 
 ## 분석 절차
 
+### 0. WORK_BACKLOG 선행 확인 (필수)
+
+분석 시작 전 **반드시** `_MOC/WORK_BACKLOG.md`를 읽어 이전 주기의 미완료 항목을 파악한다.
+
+```bash
+# 백로그 파일 확인
+cat "/Users/a/Desktop/Study/forceNote-wiki/_MOC/WORK_BACKLOG.md"
+```
+
+- 🔲 대기 / 🟡 진행중 항목 → 이번 보고서에 "이전 미해결 항목" 섹션으로 포함
+- ✅ 완료로 표시된 항목 → 검증 후 완료 확인 (파일이 실제 존재하는지 확인)
+- 완료된 항목이 실제로 wiki에 없으면 → 상태를 다시 🔲로 되돌리고 보고
+
 ### 1. 현재 위키 커버리지 파악
 
 ```bash
@@ -70,6 +83,12 @@ grep -n "Namespace$\| Namespace " /tmp/apex_ref.txt | head -50
 
 분석일: [날짜]
 현재 wiki 파일 수: N개
+
+### 이전 주기 미완료 항목 (WORK_BACKLOG에서)
+
+| 항목 | 이전 우선순위 | 현재 상태 |
+|---|---|---|
+| [항목] | P1/P2/P3 | 🔲 미완료 / ✅ 완료 |
 
 ### 전체 커버리지 현황
 

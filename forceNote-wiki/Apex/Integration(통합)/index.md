@@ -25,6 +25,8 @@ created: 2026-05-17
 | [[Process Namespace]] | 레거시 Flow 플러그인 — Process.Plugin 인터페이스 (deprecated, @InvocableMethod 권장) | #reference |
 | [[QuickAction Namespace]] | Quick Action 실행·조회, Case Feed 이메일 기본값 커스터마이징 — performQuickAction, describeAvailableQuickActions | #reference |
 | [[Metadata Namespace]] | CMT 레코드 Apex 배포·조회 — CustomMetadata, DeployContainer, Operations.enqueueDeployment, DeployCallback | #reference |
+| [[Compression Namespace]] | Apex Zip 압축·해제 — ZipWriter.addEntry/getArchive, ZipReader.extract, Spring '25 GA | #reference |
+| [[DataWeave Namespace]] | Apex에서 DataWeave 스크립트 실행 — Script.createScript, execute, Result.getValueAsString | #reference |
 
 ---
 
@@ -41,6 +43,8 @@ created: 2026-05-17
 - Case Feed 이메일 기본값 커스터마이징? → [[QuickAction Namespace]] → QuickActionDefaultsHandler
 - 레거시 Process.Plugin 마이그레이션? → [[Process Namespace]] (deprecated)
 - Apex에서 CMT 레코드 만들거나 배포? → [[Metadata Namespace]]
+- 파일 여러 개를 Zip으로 묶어야 할 때? → [[Compression Namespace]]
+- JSON/XML/CSV 데이터 변환을 선언적으로? → [[DataWeave Namespace]]
 
 ## 관련 폴더
 

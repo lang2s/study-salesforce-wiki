@@ -84,6 +84,19 @@ Completeness Validator 전달 정보:
 - 건너뛴 클래스: [있으면]
 ```
 
+## 릴리즈 노트 작성 후 추가 체크리스트
+
+릴리즈 노트 파일을 작성했으면 반드시 아래를 확인하고 PM에게 보고한다:
+
+```
+□ GA/Beta로 전환된 Apex 네임스페이스가 있는가?
+  → 있으면: PM에게 "해당 namespace reference file 작성 필요" 보고
+  → 예: "Compression Namespace GA" → Compression Namespace.md 작성 스케줄링
+□ "LWC API vXX.0 변경"이 있으면 → LWC MOC에 연결된 파일 확인
+□ "Apex 클래스/메서드 추가"가 있으면 → 기존 namespace 파일 보완 여부 확인
+□ Empty 폴더가 있으면 (placeholder index.md만 있는 경우) → PM에게 보고
+```
+
 ## 절대 금지
 
 - SEARCH_INDEX, MOC, index.md를 수정하지 않는다 (index-manager 담당)

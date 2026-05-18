@@ -60,6 +60,8 @@ created: 2026-05-17
 - [[Process Namespace]] — 레거시 Flow 플러그인 인터페이스 (deprecated, @InvocableMethod 권장)
 - [[QuickAction Namespace]] — performQuickAction, describeAvailableQuickActions, QuickActionDefaultsHandler, Case Feed 이메일 기본값
 - [[Metadata Namespace]] — CMT 레코드 Apex 배포·조회, CustomMetadata/DeployContainer/Operations.enqueueDeployment/DeployCallback
+- [[Compression Namespace]] — ZipWriter/ZipReader로 Apex Zip 압축·해제, Spring '25 GA
+- [[DataWeave Namespace]] — DataWeave.Script.createScript/execute, JSON·XML·CSV 변환, Winter '24 GA
 
 ## 📦 컬렉션
 
