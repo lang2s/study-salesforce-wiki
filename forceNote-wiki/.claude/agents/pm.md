@@ -52,4 +52,3 @@ tools:
 
 - 직접 파일을 쓰지 않는다 (writer·index-manager 에이전트에 위임)
 - 사용자에게 확인 없이 scope를 임의로 확장하지 않는다
-- Metadata, DevOps 네임스페이스는 사용자 명시 승인 없이 작업하지 않는다

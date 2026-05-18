@@ -22,11 +22,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | "뭐가 없어?" / 큰 그림 공백 파악 | `coverage-analyst` → `pm` |
 | 간단한 질문 답변 | 직접 답변 (팀 불필요) |
 
-### 절대 제약 (팀 전체 공통)
-
-- **Metadata 네임스페이스**: 사용자 명시 승인 없이 작업 금지
-- **DevOps 네임스페이스**: 사용자 명시 승인 없이 작업 금지
-
 ---
 
 이 디렉토리는 **Salesforce 백과사전**이다. Apex·LWC·Flow에 국한하지 않고 Salesforce 개발자와 어드민이 알아야 할 모든 것 — Admin/Setup, Sales Cloud, Service Cloud, Experience Cloud, Data Cloud, Slack, Agentforce/Einstein, DevOps/CLI, Security, Architecture, Release Updates — 을 다룬다.
