@@ -154,6 +154,7 @@
 | Site Namespace, Site.UrlRewriter, UrlRewriter, Sites URL 재작성, Force.com Sites, URL rewriting, generateUrlFor, mapRequestUrl, SEO 친화적 URL, Salesforce Sites URL | `Architecture(아키텍처)/Site Namespace.md` |
 | Site.ExternalUserCreateException, 외부 사용자 생성 예외, getDisplayMessages, 커뮤니티 사용자 생성 실패 | `Architecture(아키텍처)/Site Namespace.md` |
 | Site namespace와 Experience Cloud 차이, UrlRewriter 등록 방법, Sites URL rewrite setup | `Architecture(아키텍처)/Site Namespace.md` |
+| Context Namespace, Context.IndustriesContext, IndustriesContext, Context Service Apex, Industries Context, 컨텍스트 서비스, Financial Services Cloud Context, Health Cloud Context, 비즈니스 컨텍스트 공유 | `Architecture(아키텍처)/Context Namespace.md` |
 
 ## Apex — Flowtesting Namespace
 

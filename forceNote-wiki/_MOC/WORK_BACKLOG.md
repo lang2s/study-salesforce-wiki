@@ -15,7 +15,7 @@ updated: 2026-05-20
 
 | 소스 | 총 작성 대상 | 커버됨 | 미작성 | 커버리지 |
 |---|---|---|---|---|
-| Apex Reference v67.0 (71 네임스페이스) | 69개 (내부 전용 2개 제외) | 27개 | 42개 | 39.1% |
+| Apex Reference v67.0 (71 네임스페이스) | 69개 (내부 전용 2개 제외) | 28개 | 41개 | 40.6% |
 
 ---
 
@@ -36,7 +36,7 @@ updated: 2026-05-20
 | P1-04 | Flow | p.2880 | `Apex/Integration(통합)/Flow Namespace.md` | ✅ 완료(2026-05-19) | 2026-05-19 |
 | P1-05 | TxnSecurity | p.4445 | `Apex/Security(보안)/TxnSecurity Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 |
 | P1-06 | Support | p.3580 | `Apex/Integration(통합)/Support Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 |
-| P1-07 | Context | p.2688 | `Architecture(아키텍처)/Context Namespace.md` | 🔲 대기 | 2026-05-19 |
+| P1-07 | Context | p.2688 | `Architecture(아키텍처)/Context Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 |
 | P1-08 | Datacloud | p.2741 | `Apex/Data(데이터)/Datacloud Namespace.md` | 🔲 대기 | 2026-05-19 |
 
 ---
@@ -135,6 +135,7 @@ updated: 2026-05-20
 | P1-04 | `Apex/Integration(통합)/Flow Namespace.md` | 2026-05-19 | Apex Ref v67.0 p.2880~2884 |
 | P1-05 | `Apex/Security(보안)/TxnSecurity Namespace.md` | 2026-05-20 | Apex Ref v67.0 p.4445~4453 |
 | P1-06 | `Apex/Integration(통합)/Support Namespace.md` | 2026-05-20 | Apex Ref v67.0 p.3580~3583 |
+| P1-07 | `Architecture(아키텍처)/Context Namespace.md` | 2026-05-20 | Apex Ref v67.0 p.2688 (Industries Cloud 전용) |
 
 ---
 

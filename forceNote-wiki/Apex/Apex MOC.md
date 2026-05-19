@@ -121,6 +121,7 @@ created: 2026-05-17
 
 - [[System Namespace]] — AccessLevel(USER_MODE/SYSTEM_MODE), AccessType, Assert, AsyncInfo/AsyncOptions, Callable, Domain/URL, FeatureManagement, Request/Quiddity, UserInfo, UUID, System 클래스 전체 API
 - [[Site Namespace]] — Salesforce Sites URL 재작성, UrlRewriter Interface (generateUrlFor/mapRequestUrl), Site.ExternalUserCreateException
+- [[Context Namespace]] — Industries Cloud Context Service Apex — IndustriesContext 클래스, 비즈니스 컨텍스트 데이터 공유·소비
 
 ## 📖 레퍼런스
 

@@ -22,6 +22,7 @@ created: 2026-05-17
 | [[Salesforce 플랫폼 개요]] | Org/Object/Record/Field/App, Cloud 종류, 환경 구분 | #concept |
 | [[System Namespace]] | System 네임스페이스 전체 클래스 레퍼런스 — AccessLevel, Assert, AsyncOptions, UserInfo, UUID, Callable, FeatureManagement | #reference |
 | [[Site Namespace]] | Salesforce Sites URL 재작성 인터페이스 — UrlRewriter (generateUrlFor, mapRequestUrl), Site.ExternalUserCreateException | #reference |
+| [[Context Namespace]] | Industries Cloud Context Service Apex — IndustriesContext 클래스, 비즈니스 컨텍스트 데이터 공유 | #reference |
 
 ---
 
@@ -37,6 +38,7 @@ created: 2026-05-17
 - 패키지 간 느슨한 결합 인터페이스? → [[System Namespace]] → Callable
 
 - Sites URL 재작성 (Force.com Sites)? → [[Site Namespace]] → UrlRewriter
+- Industries Cloud Context Service Apex? → [[Context Namespace]] → IndustriesContext
 
 ## 관련 폴더
 
