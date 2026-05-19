@@ -20,6 +20,7 @@ created: 2026-05-17
 | [[StripInaccessible]] | AccessType별 FLS 필드 제거 — POST 바디 보안 | #pattern |
 | [[WITH USER_MODE]] | SOQL/DML 인라인 보안 키워드 — USER_MODE vs SYSTEM_MODE | #pattern |
 | [[Auth Namespace]] | JWT/JWS OAuth bearer token flow, MFA TOTP, SessionManagement, RegistrationHandler | #reference |
+| [[TxnSecurity Namespace]] | Transaction Security Policy Apex — EventCondition, AsyncCondition, 실시간 이벤트 기반 차단·알림 정책 | #reference |
 
 ---
 
@@ -31,6 +32,8 @@ created: 2026-05-17
 - SOQL에서 바로 사용자 권한 적용? → [[WITH USER_MODE]]
 - OAuth JWT Bearer Token Flow 구현? → [[Auth Namespace]]
 - MFA / TOTP 세션 보안 또는 커스텀 로그인 플로우? → [[Auth Namespace]]
+- Apex로 Transaction Security Policy 조건 구현? → [[TxnSecurity Namespace]] (EventCondition)
+- 보안 정책에서 비동기 처리 필요? → [[TxnSecurity Namespace]] (AsyncCondition)
 
 ## 보안 계층 관계
 

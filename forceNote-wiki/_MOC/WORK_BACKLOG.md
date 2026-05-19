@@ -1,7 +1,7 @@
 ---
 tags: [backlog, coverage, work-tracking]
 created: 2026-05-18
-updated: 2026-05-19
+updated: 2026-05-20
 ---
 
 # WORK_BACKLOG — 커버리지 공백 추적 대장
@@ -11,11 +11,11 @@ updated: 2026-05-19
 
 ---
 
-## 커버리지 현황 (2026-05-19 기준)
+## 커버리지 현황 (2026-05-20 기준)
 
 | 소스 | 총 작성 대상 | 커버됨 | 미작성 | 커버리지 |
 |---|---|---|---|---|
-| Apex Reference v67.0 (71 네임스페이스) | 69개 (내부 전용 2개 제외) | 24개 | 45개 | 34.8% |
+| Apex Reference v67.0 (71 네임스페이스) | 69개 (내부 전용 2개 제외) | 26개 | 43개 | 37.7% |
 
 ---
 
@@ -34,7 +34,7 @@ updated: 2026-05-19
 | # | 네임스페이스 | PDF 페이지 | 권장 파일 경로 | 상태 | 추가일 |
 |---|---|---|---|---|---|
 | P1-04 | Flow | p.2880 | `Apex/Integration(통합)/Flow Namespace.md` | ✅ 완료(2026-05-19) | 2026-05-19 |
-| P1-05 | TxnSecurity | p.4445 | `Apex/Security(보안)/TxnSecurity Namespace.md` | 🔲 대기 | 2026-05-19 |
+| P1-05 | TxnSecurity | p.4445 | `Apex/Security(보안)/TxnSecurity Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 |
 | P1-06 | Support | p.3580 | `Apex/Integration(통합)/Support Namespace.md` | 🔲 대기 | 2026-05-19 |
 | P1-07 | Context | p.2688 | `Architecture(아키텍처)/Context Namespace.md` | 🔲 대기 | 2026-05-19 |
 | P1-08 | Datacloud | p.2741 | `Apex/Data(데이터)/Datacloud Namespace.md` | 🔲 대기 | 2026-05-19 |
@@ -133,6 +133,7 @@ updated: 2026-05-19
 | F-01 | ConnectApi Communities/UserProfiles 보완 | 2026-05-19 | Apex Ref v67.0 p.1499, 1972 |
 | F-02 | 비동기 컨텍스트 선택 — Apex Cursor 추가 | 2026-05-19 | Apex Ref v67.0 p.2692 |
 | P1-04 | `Apex/Integration(통합)/Flow Namespace.md` | 2026-05-19 | Apex Ref v67.0 p.2880~2884 |
+| P1-05 | `Apex/Security(보안)/TxnSecurity Namespace.md` | 2026-05-20 | Apex Ref v67.0 p.4445~4453 |
 
 ---
 

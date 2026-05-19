@@ -25,6 +25,7 @@ created: 2026-05-17
 - [[StripInaccessible]] — AccessType별 FLS 필드 제거
 - [[WITH USER_MODE]] — SOQL/DML 인라인 보안 키워드
 - [[Auth Namespace]] — JWT/JWS OAuth bearer token flow, MFA TOTP, SessionManagement, RegistrationHandler
+- [[TxnSecurity Namespace]] — EventCondition/AsyncCondition으로 Transaction Security Policy Apex 구현, Real-Time Event Monitoring 기반 차단·알림 정책
 
 ## 📊 데이터 (SOQL / DML)
 

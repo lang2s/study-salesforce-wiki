@@ -84,6 +84,8 @@
 | Auth.JWT, Auth.JWS, Auth.JWTBearerTokenExchange, OAuth JWT bearer token, JWT 서명, JWT 클레임, JWT flow, getAccessToken, getCompactSerialization | `Apex/Security(보안)/Auth Namespace.md` |
 | Auth.SessionManagement, 세션 관리, MFA, TOTP, validateTotpTokenForUser, getQrCode, setSessionLevel, finishLoginFlow, generateVerificationUrl, inOrgNetworkRange, 커스텀 로그인 | `Apex/Security(보안)/Auth Namespace.md` |
 | Auth.RegistrationHandler, SSO 프로비저닝, Auth.UserData, createUser updateUser, 사용자 자동 생성 | `Apex/Security(보안)/Auth Namespace.md` |
+| TxnSecurity.EventCondition, TxnSecurity.AsyncCondition, Transaction Security Apex, 트랜잭션 보안 정책, evaluate() 정책 조건, Real-Time Event Monitoring 보안, ApiEvent 차단, 로그인 이벤트 차단, 실시간 이벤트 보안 정책, Apex 보안 정책 | `Apex/Security(보안)/TxnSecurity Namespace.md` |
+| TxnSecurity.PolicyCondition, TxnSecurity.Event, 레거시 트랜잭션 보안, PolicyCondition evaluate, 구형 트랜잭션 보안 | `Apex/Security(보안)/TxnSecurity Namespace.md` |
 
 ## Apex — 데이터 / SOQL
 
