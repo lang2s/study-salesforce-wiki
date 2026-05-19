@@ -21,6 +21,7 @@ created: 2026-05-17
 | [[Schema Namespace 상세]] | DescribeSObjectResult/DescribeFieldResult/RecordTypeInfo/PicklistEntry/ChildRelationship 전체 | #reference |
 | [[Salesforce 플랫폼 개요]] | Org/Object/Record/Field/App, Cloud 종류, 환경 구분 | #concept |
 | [[System Namespace]] | System 네임스페이스 전체 클래스 레퍼런스 — AccessLevel, Assert, AsyncOptions, UserInfo, UUID, Callable, FeatureManagement | #reference |
+| [[Site Namespace]] | Salesforce Sites URL 재작성 인터페이스 — UrlRewriter (generateUrlFor, mapRequestUrl), Site.ExternalUserCreateException | #reference |
 
 ---
 
@@ -34,6 +35,8 @@ created: 2026-05-17
 - 현재 사용자 정보 조회? → [[System Namespace]] → UserInfo
 - UUID 생성? → [[System Namespace]] → UUID
 - 패키지 간 느슨한 결합 인터페이스? → [[System Namespace]] → Callable
+
+- Sites URL 재작성 (Force.com Sites)? → [[Site Namespace]] → UrlRewriter
 
 ## 관련 폴더
 

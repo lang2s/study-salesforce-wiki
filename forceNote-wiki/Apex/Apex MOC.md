@@ -79,6 +79,7 @@ created: 2026-05-17
 - [[HttpCalloutMock]] — HttpCalloutMock 구현, Test.setMock
 - [[testVisible 회로차단기]] — Boolean/Exception 회로 차단기
 - [[SOSL 테스트 패턴]] — Test.setFixedSearchResults
+- [[Flowtesting Namespace]] — Flow Builder 생성 flow test, flowtesting 동적 namespace, sf flow run test
 
 ## 🔭 실행 컨텍스트
 
@@ -116,6 +117,7 @@ created: 2026-05-17
 ## 🌐 System Namespace 레퍼런스
 
 - [[System Namespace]] — AccessLevel(USER_MODE/SYSTEM_MODE), AccessType, Assert, AsyncInfo/AsyncOptions, Callable, Domain/URL, FeatureManagement, Request/Quiddity, UserInfo, UUID, System 클래스 전체 API
+- [[Site Namespace]] — Salesforce Sites URL 재작성, UrlRewriter Interface (generateUrlFor/mapRequestUrl), Site.ExternalUserCreateException
 
 ## 📖 레퍼런스
 

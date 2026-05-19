@@ -20,6 +20,7 @@ created: 2026-05-17
 | [[StubProvider]] | System.StubProvider, Test.createStub 클래스 모킹 | #pattern |
 | [[testVisible 회로차단기]] | @testVisible Boolean/Exception 회로 차단기 | #pattern |
 | [[SOSL 테스트 패턴]] | Test.setFixedSearchResults, SOSL 고정 결과 | #pattern |
+| [[Flowtesting Namespace]] | Flow Builder 생성 flow test 실행 — flowtesting 동적 namespace, sf flow run test CLI | #reference |
 
 ---
 
@@ -30,3 +31,4 @@ created: 2026-05-17
 - 외부 클래스 의존성 격리? → [[StubProvider]]
 - private 로직에 테스트 전용 플래그? → [[testVisible 회로차단기]]
 - SOSL 검색 결과 고정? → [[SOSL 테스트 패턴]]
+- Flow Builder에서 만든 flow test 실행? → [[Flowtesting Namespace]]

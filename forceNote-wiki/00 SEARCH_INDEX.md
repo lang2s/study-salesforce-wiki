@@ -144,6 +144,23 @@
 | DomainCreator, getVisualforceHostname, URL.getOrgDomainUrl, URL.getSalesforceBaseUrl, Org URL 조회 | `Architecture(아키텍처)/System Namespace.md` |
 | withPermissionSetId, AccessLevel 권한 세트, DML 권한 세트 지정 | `Architecture(아키텍처)/System Namespace.md` |
 
+
+## Architecture — Site Namespace
+
+| 키워드 | 파일 |
+|---|---|
+| Site Namespace, Site.UrlRewriter, UrlRewriter, Sites URL 재작성, Force.com Sites, URL rewriting, generateUrlFor, mapRequestUrl, SEO 친화적 URL, Salesforce Sites URL | `Architecture(아키텍처)/Site Namespace.md` |
+| Site.ExternalUserCreateException, 외부 사용자 생성 예외, getDisplayMessages, 커뮤니티 사용자 생성 실패 | `Architecture(아키텍처)/Site Namespace.md` |
+| Site namespace와 Experience Cloud 차이, UrlRewriter 등록 방법, Sites URL rewrite setup | `Architecture(아키텍처)/Site Namespace.md` |
+
+## Apex — Flowtesting Namespace
+
+| 키워드 | 파일 |
+|---|---|
+| flowtesting namespace, Flow Builder 테스트, Flow 단위 테스트, sf flow run test, Flow test CLI, 동적 Apex 클래스, flow test 실행 | `Apex/Testing(테스트)/Flowtesting Namespace.md` |
+| Flow Builder flow test, Flow Interview 테스트 비교, Flow 검증, Decision 경로 테스트, Flow 출력변수 검증 | `Apex/Testing(테스트)/Flowtesting Namespace.md` |
+| Apex에서 Flow 테스트하는 방법, flowtesting vs Flow.Interview, @isTest Flow 실행 패턴 | `Apex/Testing(테스트)/Flowtesting Namespace.md` |
+
 ## DevOps — Salesforce DX
 
 | 키워드 | 파일 |

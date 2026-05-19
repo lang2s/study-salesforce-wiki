@@ -47,8 +47,8 @@ created: 2026-05-18
 |---|---|---|---|---|---|
 | P3-01 | System Namespace 상세 레퍼런스 | Apex Ref v67.0 p.3584 | ✅ 완료 | 2026-05-18 | 2026-05-19 |
 | P3-02 | KbManagement Namespace | Apex Ref v67.0 p.2968 | ✅ 완료 | 2026-05-18 | 2026-05-19 |
-| P3-03 | Site Namespace | Apex Ref v67.0 p.3576 | 🔲 대기 | 2026-05-18 | — |
-| P3-04 | Flowtesting Namespace 개념 노트 | Apex Ref v67.0 p.2885 | 🔲 대기 | 2026-05-18 | — |
+| P3-03 | Site Namespace | Apex Ref v67.0 p.3576 | ✅ 완료 | 2026-05-18 | 2026-05-19 |
+| P3-04 | Flowtesting Namespace 개념 노트 | Apex Ref v67.0 p.2885 | ✅ 완료 | 2026-05-18 | 2026-05-19 |
 | P3-05 | LWC BaseComponents 확장 (lightning-tree, lightning-tab, lightning-pill 등) | LWC Component Ref (미확보) | 🔲 대기 | 2026-05-18 | — |
 
 ---
