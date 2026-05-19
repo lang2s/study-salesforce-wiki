@@ -11,6 +11,27 @@ aliases: [Flow.Interview, Flow Interview, Apex에서 Flow 호출, createIntervie
 
 ---
 
+## 언제 쓰나
+
+`Flow.Interview`는 **Apex 코드가 Flow를 시작점으로 제어해야 할 때** 사용한다. 반대 방향(`@InvocableMethod` — Flow에서 Apex를 호출)과 혼동하지 않는다.
+
+**이 API가 필요한 상황:**
+
+| 상황 | 설명 |
+|---|---|
+| 트리거에서 조건부 Flow 실행 | Before/After 트리거에서 특정 조건을 Apex로 판단한 뒤 Flow에 위임 |
+| 런타임에 Flow 이름이 결정됨 | CMDT나 설정값으로 Flow API 이름을 동적으로 주입 |
+| Flow 결과를 Apex에서 후처리 | Flow 실행 후 출력 변수를 읽어 Apex에서 추가 로직 적용 |
+| REST API Handler에서 Flow 호출 | Apex REST 엔드포인트 → Flow → DML 위임 구조 |
+
+**이 API를 쓰지 말아야 할 상황:**
+
+- Screen Flow는 호출 불가. Autolaunched Flow만 지원한다.
+- 단순히 Apex에서 DML을 실행하려는 목적이라면 ServiceLayer 직접 호출이 더 명확하다.
+- 반복문 안에서 매 레코드마다 `start()`를 호출하면 거버너 한도(SOQL, DML)가 빠르게 소진된다. 벌크 처리 설계가 필요하다.
+
+---
+
 ## 기본 사용 — 정적(Static) 방식 (권장)
 
 ```apex

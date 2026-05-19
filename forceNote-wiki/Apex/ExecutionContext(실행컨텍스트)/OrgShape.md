@@ -11,6 +11,14 @@ aliases: [OrgShape, 조직 환경 확인, Sandbox 확인]
 
 ---
 
+## 개념
+
+Apex 코드가 어떤 조직 환경에서 실행되는지에 따라 동작을 분기해야 하는 경우가 있다. 예를 들어 Multi-Currency가 활성화된 조직에서만 `CurrencyIsoCode` 필드가 존재하며, Person Account가 꺼진 조직에서 `IsPersonAccount` 필드를 참조하면 에러가 발생한다. Sandbox에서만 상세 디버그 로그를 남기고 싶을 때도 있다.
+
+이런 org 환경 정보를 매번 직접 쿼리하거나 Schema API를 호출하면 코드 중복이 생기고, 팀 내 구현이 제각각이 된다. `OrgShape`는 이런 환경 확인 로직을 단일 유틸리티 클래스로 캡슐화해서 일관된 인터페이스를 제공한다.
+
+---
+
 ## 주요 메서드
 
 ```apex
@@ -86,6 +94,12 @@ public List<String> getFieldsToQuery() {
 > `OrgShape.isSandbox()`는 `Organization` 레코드를 쿼리. `@isTest`에서는 실제 조직 정보가 반환되므로 테스트 환경에서의 결과는 조직 유형에 따라 다름.
 
 ---
+
+## 주의사항 및 성능 고려사항
+
+- **SOQL 비용** — `isSandbox()`는 매 호출마다 `Organization` SObject를 SOQL로 쿼리한다. 루프나 반복 호출이 예상되는 경우 결과를 변수에 캐싱해서 재사용해야 한다. `isMultiCurrencyEnabled()`는 `UserInfo` 시스템 메서드를 사용하므로 SOQL을 소비하지 않는다.
+- **Static 메서드이므로 Mocking 불가** — 단위 테스트에서 `OrgShape.isSandbox()`의 반환값을 제어하기 어렵다. 테스트 환경이 Sandbox가 아니면 항상 `false`를 반환하므로 Sandbox 전용 분기를 테스트할 때 별도 고려가 필요하다.
+- **Schema describe 비용** — `isPersonAccountEnabled()`는 `Schema.SObjectType.Account.fields.getMap()`을 호출해 필드 describe를 실행한다. Apex governor limit에서 Schema describe 호출은 별도 제한이 없지만, 대형 객체에서는 처리 시간이 걸릴 수 있다.
 
 ---
 

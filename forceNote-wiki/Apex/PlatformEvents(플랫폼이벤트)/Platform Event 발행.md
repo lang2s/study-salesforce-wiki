@@ -11,6 +11,16 @@ aliases: [Platform Event, EventBus.publish, 플랫폼 이벤트]
 
 ---
 
+## 개념
+
+Apex 트리거나 서비스 레이어에서 다른 시스템·컴포넌트로 알림을 보낼 때 직접 호출하면 두 서비스가 강하게 결합된다. 예를 들어 Order가 생성될 때 재고 시스템과 알림 시스템을 동기적으로 호출하면, 재고 시스템이 느리거나 오류를 낼 때 Order 저장 자체가 실패하거나 지연된다.
+
+Platform Event는 이 결합을 끊기 위한 **Salesforce 내장 발행-구독(Pub/Sub) 메시지 버스**다. 발행자(Publisher)는 이벤트를 버스에 올리기만 하고, 누가 수신하는지 알 필요가 없다. 수신자(Subscriber — Apex 트리거, LWC, 외부 시스템)는 이벤트가 올 때만 독립된 트랜잭션으로 처리한다.
+
+중요한 트랜잭션 보장이 있다. `EventBus.publish()`는 메인 트랜잭션이 커밋될 때 이벤트가 실제로 발행된다. 메인 트랜잭션이 롤백되면 이벤트도 취소되어 부분 상태가 발생하지 않는다. 단, 수신 트리거는 별도 트랜잭션으로 동작하므로 수신 실패가 발행 성공을 취소하지는 않는다.
+
+---
+
 ## 발행 패턴
 
 ```apex
@@ -123,6 +133,14 @@ String lastReplayId = Trigger.new[Trigger.new.size() - 1].ReplayId;
 ```
 
 ---
+
+## 제한사항 및 주의사항
+
+- **HighVolume vs StandardVolume** — `eventType`에 따라 보존 기간과 구독 방식이 다르다. HighVolume(기본 권장)은 72시간 이벤트 보존, ReplayId 지원. StandardVolume은 24시간 보존이며 권한 설정이 다르다. 새 이벤트는 HighVolume으로 정의하는 것이 표준이다.
+- **발행 한도 (Governor Limit)** — 트랜잭션당 `EventBus.publish()` 호출로 발행할 수 있는 이벤트 수는 플랜에 따라 다르다. 단건/리스트 호출 모두 합산된다. 대량 이벤트는 리스트로 묶어 한 번에 발행하는 것이 권장된다.
+- **`Database.SaveResult` 확인 필수** — `EventBus.publish()`는 예외를 던지지 않고 `Database.SaveResult`를 반환한다. 결과를 확인하지 않으면 발행 실패를 조용히 놓친다.
+- **수신 트리거의 재시도 없음** — 수신 트리거에서 예외가 발생하면 해당 트리거 실행만 실패한다. 이벤트가 재발행되거나 재처리되지는 않으므로 수신 측에서 견고한 에러 처리가 필요하다.
+- **LWC Subscribe는 Lightning 페이지에서만** — LWC에서 Platform Event를 구독하는 `lightning/empApi`는 브라우저 세션이 활성화된 동안만 동작한다. 페이지 이동 시 구독이 끊길 수 있다.
 
 ## 관련 노트
 

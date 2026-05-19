@@ -11,6 +11,24 @@ aliases: [MFA, 다중 인증, Multi-Factor Authentication, Salesforce Authentica
 
 ---
 
+## 왜 MFA가 의무화되었나
+
+Salesforce는 2022년부터 모든 사용자에게 MFA를 의무 적용했다. 배경은 두 가지다.
+
+1. **크리덴셜 탈취 공격 급증** — 비밀번호만으로는 피싱·브루트포스 공격을 막을 수 없다. 두 번째 인증 수단이 있으면 비밀번호가 탈취되어도 계정이 안전하다.
+2. **Salesforce 데이터의 높은 가치** — 고객 정보·거래 데이터·개인정보가 집중되어 있어 단일 계정 탈취의 피해가 크다. 금융·의료·공공 분야는 규제(HIPAA, PCI-DSS 등)에서도 MFA를 요구한다.
+
+**관리자가 흔히 실수하는 설정:**
+
+| 실수 | 결과 | 올바른 처리 |
+|---|---|---|
+| 시스템 관리자 프로필에만 MFA 적용 | 일반 사용자 계정이 공격 대상이 됨 | 모든 프로필에 MFA 적용 |
+| Trusted IP에 너무 넓은 범위 설정 | 사무실 외부에서도 MFA 면제됨 | 정확한 사무실 IP 대역만 허용 |
+| API 전용 계정에도 MFA 강제 | CI/CD·연동 서비스 인증 실패 | Connected App + OAuth Flow 사용 |
+| 이메일 인증을 기본값으로 유지 | 이메일 계정 탈취 시 우회 가능 | Salesforce Authenticator 또는 TOTP 앱 사용 |
+
+---
+
 ## MFA (Multi-Factor Authentication)
 
 MFA는 로그인 시 **비밀번호 + 별도 인증 수단**을 조합해 보안을 강화한다. Salesforce는 2022년부터 MFA를 **의무화**했다.

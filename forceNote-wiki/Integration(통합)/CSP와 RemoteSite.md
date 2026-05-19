@@ -11,6 +11,18 @@ aliases: [CSP Trusted Site, Remote Site, 외부 연동 보안]
 
 ---
 
+## 개념
+
+Salesforce에서 외부 서비스를 연동할 때는 요청이 발생하는 **레이어에 따라 서로 다른 보안 설정**이 필요하다.
+
+**CSP Trusted Site**는 브라우저 레이어에서 동작한다. 브라우저는 기본적으로 Same-Origin Policy에 따라 현재 도메인과 다른 도메인으로의 요청을 차단한다. Salesforce는 여기에 더해 Content Security Policy(CSP) 헤더를 통해 허용 도메인을 명시적으로 제한한다. LWC에서 외부 이미지를 `<img>` 태그로 로드하거나, `fetch()`로 외부 API를 직접 호출하거나, `loadScript()`로 외부 JS를 가져올 때 모두 브라우저가 CSP를 검사한다. 미등록 도메인은 브라우저 콘솔에 `Refused to connect` 에러가 발생한다.
+
+**Remote Site Setting**은 서버 레이어에서 동작한다. Apex의 `Http.send()`는 브라우저가 아닌 Salesforce 서버에서 실행되므로 브라우저 CSP와 무관하다. 대신 Salesforce는 서버에서 나가는 HTTP callout 대상 URL을 허용 목록으로 관리한다. 미등록 URL로 callout을 시도하면 `System.CalloutException: Unauthorized endpoint` 에러가 발생한다.
+
+Named Credential을 통한 callout은 Remote Site Setting 등록이 면제된다. Named Credential 자체가 허용된 엔드포인트를 정의하기 때문이다.
+
+---
+
 ## 결정 매트릭스
 
 | 사용 목적 | 필요한 설정 |
@@ -109,6 +121,14 @@ Nominatim Geocoding API (Apex callout)
 | 관리 위치 | 메타데이터 XML | Setup > Named Credentials |
 
 ---
+
+## 주의사항
+
+- **LWC에서 직접 외부 API 호출 시 CORS도 검토** — CSP Trusted Site를 등록해도 외부 서버가 CORS 헤더(`Access-Control-Allow-Origin`)를 응답에 포함하지 않으면 브라우저가 여전히 차단한다. CSP는 Salesforce 측 설정이고 CORS는 외부 서버 측 설정이다.
+- **`disableProtocolSecurity=true` 프로덕션 금지** — Remote Site Setting에서 HTTPS 검증을 비활성화하면 중간자 공격에 취약해진다. 테스트 목적으로만 Sandbox에서 사용하고 프로덕션에는 절대 배포하지 않는다.
+- **LWC에서 외부 JS 로드** — `loadScript()`로 CDN에서 JS를 직접 로드하면 Locker Service/LWS 제약과 CSP가 함께 작동한다. 외부 JS는 Static Resource로 번들링하는 것이 권장되며, 이 경우 CSP 등록도 불필요하다.
+- **Experience Cloud(Communities)** — Context가 `LEX`이면 Experience Cloud 사이트에는 적용되지 않는다. 두 환경 모두 커버하려면 `All`로 설정.
+- **URL 범위** — Remote Site Setting의 URL은 정확한 도메인 기반으로 매칭된다. 서브도메인이 다르면 별도 등록이 필요하다.
 
 ## 관련 노트
 

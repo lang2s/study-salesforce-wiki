@@ -11,6 +11,18 @@ aliases: [MetadataTriggerHandler, CMDT 트리거]
 
 ---
 
+## 개념
+
+전통적인 트리거 아키텍처에서는 새 핸들러 클래스를 추가하거나 실행 순서를 바꿀 때마다 코드 배포가 필요하다. 운영 중인 조직에서 특정 통합 사용자의 트리거 동작을 임시로 끄려면 코드를 수정하고 배포해야 하며, 이는 변경 관리 프로세스와 충돌한다.
+
+CMDT 기반 메타데이터 트리거는 이 문제를 해결하기 위해 트리거의 **등록·순서·활성화 여부를 Custom Metadata Type(CMDT) 레코드로 관리**한다. 트리거 파일 자체는 `new MetadataTriggerHandler().run()` 한 줄만 남고, 실제 어떤 핸들러를 어떤 순서로 실행할지는 런타임에 CMDT를 쿼리해서 결정한다.
+
+핵심 장점은 배포 없는 변경이다. CMDT 레코드는 일반 레코드처럼 Setup UI에서 수정할 수 있어, `Enabled__c` 체크박스 하나로 특정 핸들러를 즉시 비활성화할 수 있다. `Disabled_for__mdt`를 통해 특정 사용자(예: 데이터 마이그레이션 계정)에게만 선택적으로 트리거를 우회하는 것도 코드 변경 없이 가능하다.
+
+이 패턴은 apex-recipes의 `MetadataTriggerHandler.cls`와 `MetadataTriggerService.cls`에 구현되어 있으며, 기존 `TriggerHandler` 프레임워크 위에 동작한다.
+
+---
+
 ## 구조
 
 ```

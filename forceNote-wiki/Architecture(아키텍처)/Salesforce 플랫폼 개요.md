@@ -11,6 +11,24 @@ aliases: [Salesforce란, Salesforce 개요, Salesforce 플랫폼, Org, Object, R
 
 ---
 
+## 왜 플랫폼 구조를 이해해야 하나
+
+Salesforce는 단순한 CRM 소프트웨어가 아니라 **멀티테넌트 클라우드 플랫폼**이다. 코드를 작성하기 전에 이 플랫폼의 구조(Org, Object, Cloud 계층)를 이해해야 하는 이유는 세 가지다.
+
+1. **거버너 한도(Governor Limits)** — Salesforce는 단일 서버를 수천 개 고객이 공유하는 멀티테넌트 구조이므로, 한 고객이 리소스를 독점하지 못하도록 SOQL 쿼리 수·DML 행 수·CPU 시간 등에 엄격한 한도를 적용한다. 이 한도를 모르면 배포 후 예기치 않은 런타임 오류가 발생한다.
+2. **메타데이터 기반 커스터마이징** — 코드 없이도 오브젝트·필드·레이아웃·규칙을 Setup UI에서 변경할 수 있다. 개발자는 Apex·LWC·Flow가 메타데이터 위에서 동작한다는 사실을 이해해야 충돌 없이 개발할 수 있다.
+3. **환경 분리 전략** — Production·Sandbox·Scratch Org의 차이를 모르면 잘못된 환경에서 실수를 저지르거나 CI/CD 파이프라인을 잘못 구성할 수 있다.
+
+**개발자 vs 어드민 관점:**
+
+| 역할 | 주로 다루는 레이어 |
+|---|---|
+| 어드민 | Profiles, Page Layouts, Validation Rules, Flow (노코드), Reports |
+| 개발자 | Apex, LWC, Flow (고급), REST API, SFDX, Metadata API |
+| 아키텍트 | Org 전략, 거버너 한도 설계, Integration 패턴, Security 모델 |
+
+---
+
 ## 핵심 개념 정의
 
 | 개념 | 정의 |
