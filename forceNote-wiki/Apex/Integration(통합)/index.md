@@ -30,6 +30,7 @@ created: 2026-05-17
 | [[DataWeave Namespace]] | Apex에서 DataWeave 스크립트 실행 — Script.createScript, execute, Result.getValueAsString | #reference |
 | [[KbManagement Namespace]] | Knowledge Article 라이프사이클 API — PublishingService, 게시·번역·보관·삭제 전체 메서드 | #reference |
 | [[Flow Namespace]] | Flow.Interview 클래스 — Apex에서 Flow 실행, createInterview(정적/동적), start(), getVariableValue() | #reference |
+| [[Support Namespace]] | Case Feed 이메일 기본 템플릿 선택(Classic), Entitlement 마일스톤 동적 트리거 시간 계산 | #reference |
 
 ---
 
@@ -44,7 +45,9 @@ created: 2026-05-17
 - OpenAPI 스펙으로 타입 안전 외부 호출? → [[ExternalService Namespace]]
 - Apex에서 Flow Action / 표준 액션 호출? → [[Invocable Namespace]]
 - Quick Action 프로그래밍적 실행? → [[QuickAction Namespace]]
-- Case Feed 이메일 기본값 커스터마이징? → [[QuickAction Namespace]] → QuickActionDefaultsHandler
+- Case Feed 이메일 기본값 커스터마이징 (Classic)? → [[Support Namespace]] → EmailTemplateSelector
+- Case Feed 이메일 기본값 커스터마이징 (Lightning)? → [[QuickAction Namespace]] → QuickActionDefaultsHandler
+- Entitlement 마일스톤 트리거 시간 동적 계산? → [[Support Namespace]] → MilestoneTriggerTimeCalculator
 - 레거시 Process.Plugin 마이그레이션? → [[Process Namespace]] (deprecated)
 - Apex에서 CMT 레코드 만들거나 배포? → [[Metadata Namespace]]
 - 파일 여러 개를 Zip으로 묶어야 할 때? → [[Compression Namespace]]

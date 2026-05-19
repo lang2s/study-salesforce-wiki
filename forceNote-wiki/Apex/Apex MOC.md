@@ -67,6 +67,7 @@ created: 2026-05-17
 - [[DataWeave Namespace]] — DataWeave.Script.createScript/execute, JSON·XML·CSV 변환, Winter '24 GA
 - [[KbManagement Namespace]] — KbManagement.PublishingService, 아티클 게시·번역·보관·삭제 라이프사이클 API
 - [[Flow Namespace]] — Flow.Interview 클래스 — Apex에서 Flow 실행, createInterview(정적/동적), start(), getVariableValue()
+- [[Support Namespace]] — EmailTemplateSelector(Classic Case Feed 템플릿 자동 선택), MilestoneTriggerTimeCalculator(동적 SLA 트리거 시간)
 
 ## 📦 컬렉션
 
