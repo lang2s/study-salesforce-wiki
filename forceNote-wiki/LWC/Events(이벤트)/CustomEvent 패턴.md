@@ -11,6 +11,29 @@ aliases: [CustomEvent, 이벤트 버블링, 이벤트 위임]
 
 ---
 
+## 개념 — 자식이 부모에게 데이터를 올려보내는 유일한 표준 방법
+
+LWC에서 데이터 흐름은 기본적으로 **단방향(부모 → 자식)**이다. `@api` 프로퍼티와 `@api` 메서드로 부모가 자식에게 값을 전달하거나 명령을 내린다.
+
+반대 방향(자식 → 부모)은 CustomEvent로만 가능하다. 자식 컴포넌트가 `dispatchEvent(new CustomEvent('이벤트명', { detail: 데이터 }))`를 호출하면, 부모 템플릿에서 `on이벤트명` 핸들러로 수신한다. 이는 W3C DOM 이벤트 표준을 그대로 따른다.
+
+**언제 쓰나:**
+- 자식 컴포넌트에서 버튼 클릭, 입력 완료 등 사용자 액션을 부모에게 알릴 때
+- 자식이 처리한 결과값(ID, 객체 등)을 부모에게 전달할 때
+- 여러 자식이 동일 이벤트를 발생시키고 공통 조상이 처리할 때 (`bubbles: true`)
+- 형제 컴포넌트 간 통신이 필요하면 CustomEvent 대신 Lightning Message Service를 사용한다
+
+---
+
+## 주의사항
+
+- **이벤트명은 소문자·하이픈만**: 대문자나 `on` 접두사를 이름에 포함하면 안 된다. 부모 핸들러는 자동으로 `on` + 이벤트명 형태가 된다 (`select` → `onselect`).
+- **`detail`에 DOM 요소 참조 금지**: `composed: false`(기본) Shadow DOM 경계 밖으로 DOM 요소 참조가 전달되면 접근 불가 문제가 생긴다. ID, 순수 데이터 객체만 전달한다.
+- **`bubbles: true` 남용 주의**: 이벤트가 의도치 않은 조상까지 전파되어 예상 밖의 핸들러가 실행될 수 있다. 단순 부모-자식 간 통신에는 `bubbles: false`(기본값)로 충분하다.
+- **수동 리스너 해제 필수**: `connectedCallback()`에서 `addEventListener`로 등록한 리스너는 반드시 `disconnectedCallback()`에서 `removeEventListener`로 해제해야 메모리 누수를 막을 수 있다.
+
+---
+
 ## 패턴 1: 단순 시그널 (데이터 없음)
 
 ```javascript

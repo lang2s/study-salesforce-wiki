@@ -137,6 +137,20 @@ Messaging.sendEmail(new List<Messaging.SingleEmailMessage>{ mail });
 
 ---
 
+## 언제 쓰나
+
+| 상황 | 권장 |
+|---|---|
+| Apex 코드에서 이메일 한 건을 즉시 발송 | `Messaging.SingleEmailMessage` |
+| 이메일 템플릿 + 머지 필드 기반 발송 | `setTemplateId()` + `setTargetObjectId()` |
+| 대량 이메일 (수천 명 수신자) | `Messaging.MassEmailMessage` |
+| 인앱(모바일·데스크톱) 알림이 필요한 경우 | `Messaging.CustomNotification` |
+| 외부 이메일 서비스(SendGrid 등)를 통한 발송 | Callout + HTTP POST |
+
+단일 트랜잭션에서 최대 10건까지 `Messaging.sendEmail()`로 한 번에 발송 가능하다. 수신자 합계가 150명을 초과하는 경우 MassEmailMessage를 검토한다.
+
+---
+
 ## 관련 노트
 
 - [[CustomNotification]] — 이메일 대신 인앱 알림

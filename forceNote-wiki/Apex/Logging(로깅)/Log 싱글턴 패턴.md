@@ -116,6 +116,19 @@ trigger LogEventTrigger on LogEvent__e (after insert) {
 
 ---
 
+## 언제 쓰나
+
+| 상황 | 권장 |
+|---|---|
+| 트리거·서비스·배치가 하나의 트랜잭션에서 공통 로그 버퍼를 공유해야 할 때 | 싱글턴 Log 패턴 |
+| Platform Event로 로그를 비동기 전송하되 DML을 한 번만 발행하고 싶을 때 | `commitLogs()` + `EventBus.publish()` 조합 |
+| Debug 로그(System.debug)만으로는 프로덕션 이슈 추적이 어려울 때 | Log 싱글턴으로 커스텀 오브젝트/Platform Event에 영속화 |
+| 여러 클래스에서 각자 Platform Event를 발행해 한도를 소모하는 문제를 막을 때 | 싱글턴 버퍼 패턴으로 단일 발행 포인트 확보 |
+
+Platform Event 발행 한도(트랜잭션당 150 DML 행, 동시 5개)를 절약하고 로그를 중앙화할 때 가장 효과적이다.
+
+---
+
 ## 관련 노트
 
 - [[Platform Event 발행]]

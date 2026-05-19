@@ -185,6 +185,21 @@ static void testPostFeedElement() {
 
 ---
 
+## 언제 쓰나
+
+| 상황 | 권장 |
+|---|---|
+| Apex 코드에서 Chatter 피드에 게시·@멘션·댓글을 처리해야 할 때 | `ConnectApi.ChatterFeeds` |
+| Experience Cloud 사이트 콘텐츠를 Apex에서 관리할 때 | `ConnectApi.ManagedContent`, `ConnectApi.Sites` |
+| Einstein/LLM 프롬프트 템플릿 결과를 Apex에서 소비할 때 | `ConnectApi.EinsteinLLM` |
+| Data Cloud 세그먼트·인사이트를 Apex에서 읽거나 실행할 때 | `ConnectApi.CdpSegment`, `ConnectApi.CdpCalculatedInsight` |
+| Named Credential·External Credential을 Apex로 프로그래밍 방식 관리 | `ConnectApi.NamedCredentials` |
+| Connect REST API 동작을 Apex 서버에서 직접 수행해야 할 때 | ConnectApi (HTTP Callout 없이 동일 효과) |
+
+SOQL로 접근하기 어려운 Chatter/Community/Commerce 데이터를 Apex에서 읽거나 쓸 때, 외부 HTTP 호출 없이 ConnectApi를 사용하면 코드가 단순해지고 Governor Limit 관리도 쉬워진다.
+
+---
+
 ## 관련 노트
 
 - [[ConnectApi Chatter 패턴]] — postFeedItemWithRichText, @멘션, Flow 리치 텍스트 변환 상세

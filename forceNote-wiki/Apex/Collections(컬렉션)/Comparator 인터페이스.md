@@ -137,6 +137,29 @@ Integer result = col.compare('apple', 'APPLE'); // 0 (같음)
 
 ---
 
+## 언제 쓰나
+
+| 상황 | 권장 |
+|---|---|
+| SObject 리스트를 단일 필드 기준으로 정렬 | `List.sort()` + `Comparator` 구현 |
+| 복합 기준 정렬 (1차: 금액 내림차순, 2차: 이름 오름차순) | `compare()` 내부에서 다단계 조건 작성 |
+| 한국어·다국어 문자열을 유니코드 순이 아닌 자연 순으로 정렬 | `Collator` 조합 |
+| 런타임에 정렬 기준을 동적으로 바꿔야 할 때 | `Comparator` 구현 클래스를 교체 |
+
+Winter '24 이전에는 `SObject.getSObjectType().getDescribe()`를 이용한 수동 비교나 Map 기반 임시방편이 필요했다. `Comparator` 도입 후 람다 스타일의 단일 메서드 구현으로 대체 가능하다.
+
+---
+
+## 주의사항
+
+> [!warning] Comparator 구현 시 주의점
+> - **null 처리 필수**: `compare()` 메서드에서 두 인자 중 하나가 null이면 NullPointerException 발생. 방어적 null 체크가 필요하다.
+> - **삼항 규칙 준수**: `compare(a, b)`가 음수면 a < b, 0이면 같음, 양수면 a > b. 반환값을 Boolean처럼 0/1로만 반환하면 정렬이 불안정해진다.
+> - **동등성 일관성**: `compare(a, b) == 0`일 때 `a.equals(b)`와 일관되지 않으면 Set·Map에서 예측 불가 동작 발생.
+> - **Collator는 별도 인스턴스**: `Collator.getInstance()`를 매 `compare()` 호출마다 생성하면 성능 저하. 인스턴스를 필드로 캐싱한다.
+
+---
+
 ## 관련 노트
 
 - [[Iterable Iterator]]

@@ -124,6 +124,29 @@ Flow Builder에서 flow test를 생성할 때 다루는 주요 검증 요소:
 
 ---
 
+## 언제 쓰나
+
+| 상황 | 권장 |
+|---|---|
+| Flow Builder로 만든 Flow의 Decision 분기·DML 결과를 코드 없이 자동 검증 | `flowtesting` namespace |
+| Apex 코드가 Flow를 호출하거나 Flow 결과를 소비하는 통합 시나리오 | `Flow.Interview` + `@isTest` |
+| Flow에서 호출하는 `@InvocableMethod` 메서드 단독 테스트 | 별도 `@isTest` 클래스 |
+| CI/CD 파이프라인에서 Flow 테스트를 자동 실행 | `sf flow run test --flow-api-name` |
+
+어드민이 코드 없이 테스트를 직접 관리해야 할 때, 또는 Flow 비즈니스 로직의 Decision 분기를 격리 검증해야 할 때 가장 적합하다.
+
+---
+
+## 주의사항
+
+> [!warning] flowtesting namespace 제한사항
+> - **코드에서 직접 참조 불가**: 동적 생성 클래스이므로 Apex 코드 내 컴파일 타임 참조 불가.
+> - **Flow Builder에서만 생성 가능**: 수동 작성 또는 메타데이터 API 배포 불가. 반드시 Flow Builder UI에서 생성해야 한다.
+> - **Flow 리네임 주의**: Flow API명이 바뀌면 flowtesting 클래스 경로도 변경된다.
+> - **코드 커버리지 미집계**: `sf apex run test`로 `flowtesting.*` 클래스를 실행해도 Apex 코드 커버리지에 포함되지 않는다.
+
+---
+
 ## 관련 노트
 
 - [[Flow Interview API]] — Apex에서 Flow를 직접 실행하는 Flow.Interview 클래스

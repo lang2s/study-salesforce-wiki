@@ -193,6 +193,30 @@ public static void put(String key, Object value, Integer ttlSecs,
 
 ---
 
+## 언제 쓰나
+
+| 상황 | 권장 |
+|---|---|
+| 반복 조회되는 설정 데이터(Custom Setting 등)를 SOQL 없이 재사용 | `Cache.Org` + `CacheBuilder` |
+| 사용자 세션 동안 유지할 임시 상태(장바구니, 선택 항목 등) | `Cache.Session` |
+| 여러 파티션을 운영하며 격리된 캐시 공간이 필요할 때 | `Cache.OrgPartition` / `Cache.SessionPartition` |
+| 캐시 미스 시 자동 로딩 로직이 필요할 때 | `CacheBuilder` 인터페이스 구현 |
+
+SOQL 호출이 Governor Limit에 가까워지는 트리거·배치 환경에서 가장 효과적이다. 캐시 히트 시 SOQL 카운트를 아예 소모하지 않는다.
+
+---
+
+## 주의사항
+
+> [!warning] Platform Cache 사용 시 주의점
+> - **캐시는 보장되지 않는다**: LRU 방식으로 용량 초과 시 무작위 삭제. 캐시 히트를 가정한 비즈니스 로직은 금지. 항상 미스 핸들러를 작성한다.
+> - **직렬화 가능한 타입만 저장 가능**: `Cache.Org.put()`에 넣을 수 있는 값은 `Cacheable`(직렬화 가능) 타입만. SObject는 기본 지원되지만 Apex 커스텀 타입은 `Cache.CacheBuilder` 또는 JSON 변환 후 저장.
+> - **기본 파티션 미설정 에러**: 파티션을 설정하지 않은 상태에서 단순 키(namespace 없이)로 접근하면 `Cache.Org.OrgCacheException` 발생. Setup > Platform Cache > Default Partition 설정 필수.
+> - **TTL 기본값**: `put(key, value)` 호출 시 TTL을 지정하지 않으면 기본값 86400초(24시간). 짧은 TTL이 필요한 데이터는 명시적으로 지정.
+> - **Session Cache는 Batch에서 사용 불가**: Batch Apex는 사용자 세션 컨텍스트가 없으므로 `Cache.Session`에 접근 시 예외 발생.
+
+---
+
 ## 관련 노트
 
 - [[Platform Cache]] — 패턴 중심 사용 가이드 (CacheBuilder, Cache-Aside 패턴)

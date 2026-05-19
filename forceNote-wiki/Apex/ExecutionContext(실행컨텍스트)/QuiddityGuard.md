@@ -116,6 +116,29 @@ public Boolean canExecute() {
 
 ---
 
+## 언제 쓰나
+
+| 상황 | 권장 |
+|---|---|
+| Trigger 로직을 Batch/Future/Queueable 실행 시에만 건너뛰어야 할 때 | `QuiddityGuard.isAcceptableQuiddity()` |
+| 테스트 컨텍스트(`@isTest`)에서만 특정 분기를 활성화해야 할 때 | `Request.getQuiddity() == Quiddity.RUNTEST_*` |
+| 외부 패키지·자동화가 트리거를 재귀 호출하지 않도록 막아야 할 때 | Quiddity 화이트리스트 패턴 |
+| 조직이 Sandbox인지 Production인지에 따라 로직을 분기해야 할 때 | `OrgShape.isSandbox()` 조합 |
+
+여러 비동기 컨텍스트(Batch, Future, Queueable, Scheduled)가 혼재하는 대형 프로젝트에서 Guard 패턴을 쓰면 trigger 로직 중복 실행을 막을 수 있다.
+
+---
+
+## 주의사항
+
+> [!warning] QuiddityGuard 사용 시 주의점
+> - **화이트리스트 누락**: 허용할 Quiddity 값을 빠뜨리면 정상 실행 컨텍스트가 차단된다. `SYNCHRONOUS`, `QUEUEABLE` 등 프로젝트에서 사용하는 모든 컨텍스트를 명시해야 한다.
+> - **테스트 컨텍스트 구분**: `RUNTEST_ASYNC` vs `RUNTEST_SYNC` 두 값이 별도로 존재한다. 테스트 실행 방식에 따라 다른 Quiddity가 반환될 수 있다.
+> - **패키지 컨텍스트**: 관리 패키지 코드는 `Quiddity.INVOCATION_TYPE` 등 추가 값이 반환될 수 있으므로 범용 Guard는 방어적으로 작성한다.
+> - **Request.getQuiddity() 비용 없음**: Governor Limit을 소모하지 않는 경량 호출이지만, 트리거마다 매 호출마다 평가되므로 싱글턴 캐싱을 고려할 수 있다.
+
+---
+
 ## 관련 노트
 
 - [[OrgShape]]
