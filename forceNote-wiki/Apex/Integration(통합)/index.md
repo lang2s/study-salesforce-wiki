@@ -28,6 +28,7 @@ created: 2026-05-17
 | [[Metadata Namespace]] | CMT 레코드 Apex 배포·조회 — CustomMetadata, DeployContainer, Operations.enqueueDeployment, DeployCallback | #reference |
 | [[Compression Namespace]] | Apex Zip 압축·해제 — ZipWriter.addEntry/getArchive, ZipReader.extract, Spring '25 GA | #reference |
 | [[DataWeave Namespace]] | Apex에서 DataWeave 스크립트 실행 — Script.createScript, execute, Result.getValueAsString | #reference |
+| [[KbManagement Namespace]] | Knowledge Article 라이프사이클 API — PublishingService, 게시·번역·보관·삭제 전체 메서드 | #reference |
 
 ---
 
@@ -47,6 +48,7 @@ created: 2026-05-17
 - Apex에서 CMT 레코드 만들거나 배포? → [[Metadata Namespace]]
 - 파일 여러 개를 Zip으로 묶어야 할 때? → [[Compression Namespace]]
 - JSON/XML/CSV 데이터 변환을 선언적으로? → [[DataWeave Namespace]]
+- Knowledge 아티클 게시·번역·보관을 Apex로? → [[KbManagement Namespace]]
 
 ## 관련 폴더
 

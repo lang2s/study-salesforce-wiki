@@ -64,6 +64,7 @@ created: 2026-05-17
 - [[Metadata Namespace]] — CMT 레코드 Apex 배포·조회, CustomMetadata/DeployContainer/Operations.enqueueDeployment/DeployCallback
 - [[Compression Namespace]] — ZipWriter/ZipReader로 Apex Zip 압축·해제, Spring '25 GA
 - [[DataWeave Namespace]] — DataWeave.Script.createScript/execute, JSON·XML·CSV 변환, Winter '24 GA
+- [[KbManagement Namespace]] — KbManagement.PublishingService, 아티클 게시·번역·보관·삭제 라이프사이클 API
 
 ## 📦 컬렉션
 
@@ -83,6 +84,7 @@ created: 2026-05-17
 
 - [[QuiddityGuard]] — trusted/untrusted Quiddity, testQuiddityOverride
 - [[OrgShape]] — isSandbox, isMultiCurrencyEnabled, isPersonAccountEnabled
+- [[Governor Limits]] — Per-Transaction/Platform/Static 한도 전체 표, Limits 클래스, Bulkify/SOQL 방어 패턴
 
 ## 📋 로깅
 
@@ -111,9 +113,17 @@ created: 2026-05-17
 - [[Approval Namespace]] — ProcessSubmitRequest, ProcessWorkitemRequest, lock/unlock, LockResult
 - [[Schema Namespace 상세]] — DescribeSObjectResult/DescribeFieldResult/RecordTypeInfo/PicklistEntry/ChildRelationship
 
+## 🌐 System Namespace 레퍼런스
+
+- [[System Namespace]] — AccessLevel(USER_MODE/SYSTEM_MODE), AccessType, Assert, AsyncInfo/AsyncOptions, Callable, Domain/URL, FeatureManagement, Request/Quiddity, UserInfo, UUID, System 클래스 전체 API
+
 ## 📖 레퍼런스
 
 - [[Apex 표준 클래스 레퍼런스]] — String / List / Map / Database / Crypto / JSON / Schema / Limits 전체 API 빠른 참조
+
+## ✅ 모범 사례
+
+- [[Apex Best Practices]] — Bulkify / 루프 내 DML·SOQL 금지 / 하드코딩 ID 금지 / 공유 모델 명시 / 단일 트리거 / SOQL for 루프 / 모듈화 / 테스트 시나리오 / 중첩 루프 금지 / 네이밍 / 트리거 로직 분리 / AuraEnabled JSON 금지 (12가지)
 
 ---
 

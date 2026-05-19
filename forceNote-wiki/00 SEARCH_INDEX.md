@@ -126,6 +126,23 @@
 | Compression Namespace, ZipWriter, ZipReader, ZipEntry, Apex Zip, zip 파일, 압축 Apex, addEntry, getArchive, extract, ZipWriter.getArchive, Spring 25 GA 압축 | `Apex/Integration(통합)/Compression Namespace.md` |
 | DataWeave Namespace, DataWeave in Apex, DataWeave.Script, createScript, execute, DataWeave.Result, getValueAsString, dwl 스크립트, JSON 변환 Apex, XML 변환 Apex | `Apex/Integration(통합)/DataWeave Namespace.md` |
 | CustomMetadataValue, fullName CMT, protected_x, CMT 필드 값 Apex, MetadataType enum | `Apex/Integration(통합)/Metadata Namespace.md` |
+| KbManagement Namespace, PublishingService, Knowledge Article API, 아티클 게시 Apex, 아티클 번역 Apex, 아티클 보관 Apex, publishArticle, archiveOnlineArticle, submitForTranslation, editOnlineArticle, editArchivedArticle, restoreOldVersion, scheduleForPublication, completeTranslation, deleteDraftArticle, deleteArchivedArticle, 지식 문서 라이프사이클 | `Apex/Integration(통합)/KbManagement Namespace.md` |
+
+## Apex — System Namespace
+
+| 키워드 | 파일 |
+|---|---|
+| System Namespace, System 네임스페이스, Apex 코어 네임스페이스, AccessLevel, AccessType, Assert 클래스, AsyncInfo, AsyncOptions, Callable, Domain, FeatureManagement, UserInfo, UUID, Request class, System.debug, System.enqueueJob, System.now, System.today, System.schedule | `Architecture(아키텍처)/System Namespace.md` |
+| AccessLevel.USER_MODE, AccessLevel.SYSTEM_MODE, DML 실행 모드, 보안 모드 DML, Database.insert AccessLevel | `Architecture(아키텍처)/System Namespace.md` |
+| AccessType CREATABLE READABLE UPDATABLE UPSERTABLE, stripInaccessible 접근 체크 타입 | `Architecture(아키텍처)/System Namespace.md` |
+| AsyncInfo 스택 깊이, AsyncOptions 중복 시그니처, QueueableDuplicateSignature, enqueueJob 파라미터 | `Architecture(아키텍처)/System Namespace.md` |
+| Request.getCurrent, getQuiddity, getRequestId, 현재 요청 컨텍스트 Apex | `Architecture(아키텍처)/System Namespace.md` |
+| UserInfo.getUserId, getUserEmail, getOrganizationId, getTimeZone, isMultiCurrencyOrganization, 현재 사용자 정보 Apex | `Architecture(아키텍처)/System Namespace.md` |
+| UUID.randomUUID, 랜덤 UUID 생성, Version 4 UUID Apex | `Architecture(아키텍처)/System Namespace.md` |
+| Callable interface, 패키지 간 느슨한 결합, Type.forName 인스턴스화, 동적 호출 Apex | `Architecture(아키텍처)/System Namespace.md` |
+| FeatureManagement, checkPackageBooleanValue, checkPackageIntegerValue, checkPermission, 커스텀 퍼미션 확인, Feature Parameter | `Architecture(아키텍처)/System Namespace.md` |
+| DomainCreator, getVisualforceHostname, URL.getOrgDomainUrl, URL.getSalesforceBaseUrl, Org URL 조회 | `Architecture(아키텍처)/System Namespace.md` |
+| withPermissionSetId, AccessLevel 권한 세트, DML 권한 세트 지정 | `Architecture(아키텍처)/System Namespace.md` |
 
 ## DevOps — Salesforce DX
 
@@ -180,6 +197,7 @@
 | Cache Namespace, Cache.Org, Cache.Session, Cache.OrgPartition, Cache.SessionPartition, Cache.Visibility, 플랫폼 캐시 네임스페이스, doLoad, CacheBuilder 인터페이스 | `Apex/PlatformCache(플랫폼캐시)/Cache Namespace.md` |
 | OrgShape, Org 설정 조회, 샌드박스 여부, 네임스페이스 | `Apex/ExecutionContext(실행컨텍스트)/OrgShape.md` |
 | QuiddityGuard, Quiddity, 실행 컨텍스트, REST Trigger Batch 구분 | `Apex/ExecutionContext(실행컨텍스트)/QuiddityGuard.md` |
+| Governor Limits, 거버너 한도, 실행 한도, SOQL 한도, DML 한도, Heap size, CPU time, Callout 한도, Limits 클래스, getQueries, getDmlStatements, getLimitQueries, getLimitDmlStatements, 거버너 리밋, Apex 실행 한도, 한도 초과 예외, LimitException, Per-Transaction Limits, 비동기 동기 한도 차이, Platform Apex Limits, Static Apex Limits | `Apex/ExecutionContext(실행컨텍스트)/Governor Limits.md` |
 | Platform Event 발행, EventBus.publish, 이벤트 트리거 수신 | `Apex/PlatformEvents(플랫폼이벤트)/Platform Event 발행.md` |
 | ChangeEventHeader, CDC, Change Data Capture, changetype, recordids, changedfields, nulledfields, 변경 데이터 캡처, TriggerContext, RetryableException, TestBroker | `Apex/PlatformEvents(플랫폼이벤트)/ChangeEventHeader.md` |
 | EventPublishFailureCallback, EventPublishSuccessCallback, 이벤트 발행 콜백, 발행 실패 콜백, 발행 성공 콜백, onFailure, onSuccess, getEventUuids, setResumeCheckpoint, 이벤트 부분 처리 재개, Automated Process 콜백 | `Apex/PlatformEvents(플랫폼이벤트)/EventBus Publish Callbacks.md` |
@@ -196,6 +214,12 @@
 | Collections, CollectionUtils, 컬렉션 유틸 | `Apex/Collections(컬렉션)/CollectionUtils.md` |
 | Comparator, 정렬, List.sort, 커스텀 정렬, 리스트 정렬, 오름차순 내림차순 | `Apex/Collections(컬렉션)/Comparator 인터페이스.md` |
 | Iterable, Iterator, 커스텀 이터레이터 | `Apex/Collections(컬렉션)/Iterable Iterator.md` |
+
+## Apex — Best Practices
+
+| 키워드 | 파일 |
+|---|---|
+| Apex best practices, Apex 모범 사례, Apex 베스트 프랙티스, bulkify, 벌크화, 루프 내 DML 금지, SOQL 루프 금지, 하드코딩 ID 금지, with sharing, 단일 트리거, SOQL for 루프, 모듈화, 테스트 시나리오, 중첩 루프 금지, 네이밍 컨벤션, 트리거 비즈니스 로직 금지, AuraEnabled JSON 반환 금지, Apex 코딩 표준, Apex 성능, governor limits | `Apex/Apex Best Practices.md` |
 
 ---
 
@@ -416,3 +440,6 @@
 | Scratch Org 만드는 방법 | `DevOps(데브옵스)/Scratch Org 패턴.md` |
 | Jenkins로 Salesforce CI 구성 | `DevOps(데브옵스)/CI CD 패턴.md` |
 | 패키지 만들고 설치하는 방법 | `DevOps(데브옵스)/Unlocked Package 패턴.md` |
+| Knowledge 아티클 Apex로 게시하는 방법 | `Apex/Integration(통합)/KbManagement Namespace.md` |
+| Knowledge 아티클 번역 제출 Apex | `Apex/Integration(통합)/KbManagement Namespace.md` |
+| Knowledge 아티클 보관 스케줄 Apex | `Apex/Integration(통합)/KbManagement Namespace.md` |
