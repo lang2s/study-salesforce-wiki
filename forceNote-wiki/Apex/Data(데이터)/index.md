@@ -26,6 +26,7 @@ created: 2026-05-17
 | [[FormulaEval Namespace]] | Formula.builder() 동적 수식 평가 — evaluate(), getReferencedFields(), 템플릿 모드 | #reference |
 | [[Reports Namespace]] | Apex에서 보고서 실행·조회 — ReportManager.runReport/runAsyncReport, FactMap, ReportMetadata | #reference |
 | [[Datacloud Namespace]] | Duplicate Management API — FindDuplicates/FindDuplicatesByIds, DuplicateResult, MatchRecord (Salesforce Data Cloud 제품과 무관) | #reference |
+| [[Wave Namespace]] | CRM Analytics Analytics SDK — QueryBuilder/QueryNode/ProjectionNode로 SAQL 쿼리 빌드·실행, Templates 조회 | #reference |
 
 ---
 
@@ -43,6 +44,9 @@ created: 2026-05-17
 - Apex에서 보고서 실행·결과 분석? → [[Reports Namespace]]
 - 중복 레코드 탐지·차단 처리? → [[Datacloud Namespace]] (Duplicate Management)
 - DML 에러에서 중복 정보 추출? → [[Datacloud Namespace]] → DuplicateResult
+- Apex에서 SAQL 쿼리로 CRM Analytics 데이터 조회? → [[Wave Namespace]] → QueryBuilder.load
+- CRM Analytics 집계(sum/avg/count)를 Apex로? → [[Wave Namespace]] → ProjectionNode
+- CRM Analytics 템플릿 목록 Apex로 가져오기? → [[Wave Namespace]] → Templates.getTemplates
 
 ## 보안 연동
 

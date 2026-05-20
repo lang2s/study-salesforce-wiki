@@ -23,6 +23,10 @@ created: 2026-05-17
 | [[System Namespace]] | System 네임스페이스 전체 클래스 레퍼런스 — AccessLevel, Assert, AsyncOptions, UserInfo, UUID, Callable, FeatureManagement | #reference |
 | [[Site Namespace]] | Salesforce Sites URL 재작성 인터페이스 — UrlRewriter (generateUrlFor, mapRequestUrl), Site.ExternalUserCreateException | #reference |
 | [[Context Namespace]] | Industries Cloud Context Service Apex — IndustriesContext 클래스, 비즈니스 컨텍스트 데이터 공유 | #reference |
+| [[ApexPages Namespace]] | Visualforce 컨트롤러 클래스 전체 — Action, Component, Message, StandardController, StandardSetController, IdeaStandard*, KnowledgeArticleVersionStandardController | #reference |
+| [[AppLauncher Namespace]] | App Launcher 앱 가시성·정렬 제어 — AppMenu.setAppVisibility, setOrgSortOrder, setUserSortOrder | #reference |
+| [[VisualEditor Namespace]] | Lightning App Builder 동적 피클리스트 — DynamicPickList 상속, DataRow, DynamicPickListRows, DesignTimePageContext | #reference |
+| [[Canvas Namespace]] | 외부 웹 앱 임베드 Apex SDK — CanvasLifecycleHandler(excludeContextTypes/onRender), RenderContext, ApplicationContext, EnvironmentContext, Canvas.Test | #reference |
 
 ---
 
@@ -39,6 +43,16 @@ created: 2026-05-17
 
 - Sites URL 재작성 (Force.com Sites)? → [[Site Namespace]] → UrlRewriter
 - Industries Cloud Context Service Apex? → [[Context Namespace]] → IndustriesContext
+- Visualforce 컨트롤러 확장 클래스? → [[ApexPages Namespace]] → StandardController
+- App Launcher 앱 숨기기/정렬? → [[AppLauncher Namespace]] → AppMenu
+- Visualforce 목록 페이지네이션? → [[ApexPages Namespace]] → StandardSetController
+- VF 컨트롤러에서 오류 표시? → [[ApexPages Namespace]] → Message Class
+- App Builder 컴포넌트 속성에 커스텀 피클리스트? → [[VisualEditor Namespace]] → DynamicPickList
+- 페이지 유형(RecordPage/HomePage)별 옵션 분기? → [[VisualEditor Namespace]] → DesignTimePageContext
+- 외부 웹 앱을 Salesforce에 임베드(Canvas App)? → [[Canvas Namespace]] → CanvasLifecycleHandler
+- Canvas 앱 렌더 시점에 컨텍스트 필터링? → [[Canvas Namespace]] → excludeContextTypes, ContextTypeEnum
+- Canvas 앱 커스텀 파라미터 Apex에서 수정? → [[Canvas Namespace]] → EnvironmentContext.setParametersAsJSON
+- CanvasLifecycleHandler 단위 테스트? → [[Canvas Namespace]] → Canvas.Test.mockRenderContext
 
 ## 관련 폴더
 

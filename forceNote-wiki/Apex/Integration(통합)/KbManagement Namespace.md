@@ -37,8 +37,8 @@ aliases: [KbManagement, PublishingService, Knowledge Article API, 지식 문서 
 | 메서드 | 반환 | 설명 |
 |---|---|---|
 | `archiveOnlineArticle(articleId, scheduledDate)` | `Void` | 온라인 아티클 보관 (null이면 즉시) |
-| `assignDraftArticleTask(articleId, assigneeId, instructions, dueDate, sendEmail)` | `Void` | 초안 아티클 검토 태스크 할당 |
-| `assignDraftTranslationTask(articleVersionId, assigneeId, instructions, dueDate, sendEmail)` | `Void` | 초안 번역 검토 태스크 할당 |
+| `assignDraftArticleTask(articleId, assigneeId, instructions, dueDate, sendEmailNotification)` | `Void` | 초안 아티클 검토 태스크 할당 |
+| `assignDraftTranslationTask(articleVersionId, assigneeId, instructions, dueDate, sendEmailNotification)` | `Void` | 초안 번역 검토 태스크 할당 |
 | `cancelScheduledArchivingOfArticle(articleId)` | `Void` | 예약 보관 취소 |
 | `cancelScheduledPublicationOfArticle(articleId)` | `Void` | 예약 게시 취소 |
 | `completeTranslation(articleVersionId)` | `Void` | 번역을 게시 준비 완료 상태로 변경 |

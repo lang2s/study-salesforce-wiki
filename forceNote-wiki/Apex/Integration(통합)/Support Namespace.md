@@ -93,11 +93,22 @@ private class MyCaseTemplateChooserTest {
         c.Subject = 'I\'m having trouble with my LX-1150';
         Database.insert(c);
 
-        // 실제 호출 — 반환된 템플릿 ID 검증
+        // LX-1150 템플릿 검증
         Id actualTemplateId = chooser.getDefaultEmailTemplateId(c.Id);
         EmailTemplate expectedTemplate =
             [SELECT id FROM EmailTemplate WHERE DeveloperName = 'LX1150_template'];
-        System.assertEquals(expectedTemplate.Id, actualTemplateId);
+        Id expectedTemplateId = expectedTemplate.Id;
+        System.assertEquals(actualTemplateId, expectedTemplateId);
+
+        // Subject 변경 후 LX-1220 템플릿 검증
+        c.Subject = 'My LX1220 is overheating';
+        Database.update(c);
+
+        actualTemplateId = chooser.getDefaultEmailTemplateId(c.Id);
+        expectedTemplate =
+            [SELECT id FROM EmailTemplate WHERE DeveloperName = 'LX1220_template'];
+        expectedTemplateId = expectedTemplate.Id;
+        System.assertEquals(actualTemplateId, expectedTemplateId);
     }
 }
 ```

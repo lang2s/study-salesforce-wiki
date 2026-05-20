@@ -163,17 +163,22 @@ public class CalloutToExternalValidator implements Queueable {
 | `timeStamp` | Datetime | 이벤트 발생 시각 |
 | `userId` | String | 이벤트를 유발한 사용자 ID |
 
-### data 맵의 주요 Key Name
+### data 맵 Key Name 전체 목록
 
 | Key Name | True Value Type | Events Supported |
 |---|---|---|
 | ActionName | String (Convert/Delete/Insert/Undelete/Update/Upsert) | Entity |
-| ApiType | String | DataExport, Login |
+| ApiType | String (Enum manifested as a String) | DataExport, Login |
 | Application | String | AccessResource, DataExport |
-| ClientId | String | DataExport |
+| ClientId | String (ID of the client) | DataExport |
+| ConnectedAppId | String (ID of the Connected App) | AccessResource, DataExport |
+| ExecutionTime | milliseconds | DataExport |
+| IsApi | Boolean | DataExport |
+| IsScheduled | Boolean | DataExport |
+| LoginHistoryId | String | DataExport, Login |
 | NumberOfRecords | Integer | DataExport |
-| PolicyId | String | All events |
-| SessionLevel | String (STANDARD / HIGH_ASSURANCE) | AccessResource |
+| PolicyId | String (ID of the current policy) | All events |
+| SessionLevel | String (Enum: STANDARD, HIGH_ASSURANCE) | AccessResource |
 | SourceIp | String (IPv4) | AccessResource |
 | UserName | String | Entity |
 

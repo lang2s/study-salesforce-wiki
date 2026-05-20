@@ -17,6 +17,10 @@ created: 2026-05-17
 - [[TriggerHandler 패턴]] — abstract class, bypass, 루프 방지
 - [[CMDT 메타데이터 트리거]] — 배포 없이 핸들러 등록/비활성화
 - [[Permission Set 설계]] — objectPermissions, fieldPermissions, classAccesses 구성 표준
+- [[ApexPages Namespace]] — Visualforce 컨트롤러 전체 레퍼런스: Action·Component·Message·StandardController·StandardSetController·IdeaStandard*·KnowledgeArticleVersionStandardController
+- [[AppLauncher Namespace]] — App Launcher 앱 가시성·정렬 제어: AppMenu.setAppVisibility, setOrgSortOrder, setUserSortOrder
+- [[VisualEditor Namespace]] — Lightning App Builder 동적 피클리스트: DynamicPickList 상속, DataRow, DynamicPickListRows, DesignTimePageContext(pageType 분기)
+- [[Canvas Namespace]] — 외부 웹 앱 임베드 Apex SDK: CanvasLifecycleHandler(excludeContextTypes/onRender), RenderContext, ApplicationContext, EnvironmentContext, Canvas.Test
 
 ## 🔒 보안
 
@@ -26,6 +30,7 @@ created: 2026-05-17
 - [[WITH USER_MODE]] — SOQL/DML 인라인 보안 키워드
 - [[Auth Namespace]] — JWT/JWS OAuth bearer token flow, MFA TOTP, SessionManagement, RegistrationHandler
 - [[TxnSecurity Namespace]] — EventCondition/AsyncCondition으로 Transaction Security Policy Apex 구현, Real-Time Event Monitoring 기반 차단·알림 정책
+- [[UserProvisioning Namespace]] — 커넥티드 앱 아웃바운드 사용자 프로비저닝: ConnectorTestUtil/UserProvisioningLog/UserProvisioningPlugin(reconOffset 청크)
 
 ## 📊 데이터 (SOQL / DML)
 
@@ -40,6 +45,7 @@ created: 2026-05-17
 - [[FormulaEval Namespace]] — Formula.builder() 동적 수식 평가, getReferencedFields(), 템플릿 모드
 - [[Reports Namespace]] — ReportManager.runReport/runAsyncReport, ReportMetadata 필터 재정의, FactMap 탐색
 - [[Datacloud Namespace]] — Duplicate Management Apex — FindDuplicates/FindDuplicatesByIds, DuplicateResult, MatchRecord (이름 주의: Salesforce Data Cloud 제품과 무관)
+- [[Wave Namespace]] — CRM Analytics SDK — QueryBuilder/QueryNode/ProjectionNode로 SAQL 쿼리 빌드·실행, Templates 조회
 
 ## ⚡ 비동기
 
@@ -69,6 +75,34 @@ created: 2026-05-17
 - [[KbManagement Namespace]] — KbManagement.PublishingService, 아티클 게시·번역·보관·삭제 라이프사이클 API
 - [[Flow Namespace]] — Flow.Interview 클래스 — Apex에서 Flow 실행, createInterview(정적/동적), start(), getVariableValue()
 - [[Support Namespace]] — EmailTemplateSelector(Classic Case Feed 템플릿 자동 선택), MilestoneTriggerTimeCalculator(동적 SLA 트리거 시간)
+- [[LxScheduler Namespace]] — Salesforce Scheduler 외부 캘린더 연동 API — GetAppointmentCandidates/Slots, ServiceResourceScheduleHandler
+- [[TerritoryMgmt Namespace]] — Enterprise Territory Management: OpportunityTerritory2AssignmentFilter로 Opportunity Territory 배정 로직 커스터마이즈
+- [[Slack Namespace]] — Salesforce 플랫폼 Slack SDK: RunnableHandler, BotClient/UserClient/AppClient, 43개 클래스 그룹 인벤토리
+- [[PlaceQuote Namespace]] — Salesforce CPQ Quote 생성·수정: 가격 책정 설정·구성 옵션 포함 Quote 프로그래밍적 처리
+- [[ChatterAnswers Namespace]] — Chatter Answers 포털 Account 생성 인터페이스: AccountCreator.createAccount (⚠️ deprecated)
+- [[CommerceBuyGrp Namespace]] — B2B/D2C Commerce Buyer Group 동적 배정: BuyerGroupEvaluationService, BuyerGroupRequest/Response
+- [[CommerceExtension Namespace]] — B2B/D2C Commerce 확장 포인트 해결 전략: ResolutionStrategy.resolve(), ResolutionStates(EXECUTE_DEFAULT/EXECUTE_REGISTERED/OFF), ExtensionInfo
+- [[CommerceOrders Namespace]] — B2B/D2C Commerce 주문 생성 Apex: 통합 가격 책정·구성·유효성 검사 (PDF 스텁)
+- [[CommercePayments Namespace]] — Payment Gateway ISV 어댑터 SDK: PaymentGatewayAdapter/AsyncAdapter, 45개 클래스, SalesforceResultCode 7개, AdyenAdapter 비동기 예시
+- [[CommerceTax Namespace]] — Tax Engine ISV 어댑터 SDK: TaxEngineAdapter.processRequest, CalculateTaxRequest/Response, TaxLineItemRequest, TaxDetailsResponse, ImpositionResponse/JurisdictionResponse, 5개 Enum(TaxTransactionStatus/Type/CalculateTaxType/RequestType/ResultCode), Avalara 전체 예시
+- [[ComplianceMgmt Namespace]] — FSC 규정 준수 제어 룰 프로세서 Apex: ComplianceEvaluation Interface, ControlEvaluationInput/ControlInput, ComplianceEvaluationResponse, EvaluationResult, ComplianceControlLog (⚠️ API 상세는 FSC 개발자 가이드 참조)
+- [[embeddedai Namespace]] — Apex에서 Embedded AI 서비스에 레코드 데이터 전달: ApexMap(키-값 쌍), RecordApexRepresentation(레코드+관련 레코드 계층 구조), toRecordApexRep(JSON 역직렬화)
+- [[Functions Namespace]] — Salesforce Functions 동기/비동기 호출 Apex SDK: Function.get/invoke, FunctionCallback.handleResponse, FunctionInvokeMock+MockFunctionInvocationFactory 테스트 모킹
+- [[ise_bots_apex Namespace]] — Einstein Bot 동적 메뉴 항목 Apex: DynamicMenuItem(EntityId/Label/SummaryTextWithFormula/sortByDate + 런타임 Value 프로퍼티 10개)
+- [[industriesNlpSvc Namespace]] — Industries Einstein NLP 서비스 Apex: NlpResponse(summarizationResult·errors), NlpSummarizationResult(summary), transformNlpActionResult Invocable Action 출력
+- [[IssueCreditMemo Namespace]] — Revenue Cloud 크레딧 메모 생성·적용 Apex: CreditLineRequestInputRepresentations, CreditRequestInputRepresentations, CreditResponseOutputRepresentations (⚠️ 스텁)
+- [[ind_mfg_sample_mgmt_apex Namespace]] — Manufacturing Cloud 제품 요구사양 생애주기 관리 Apex: ProductRequirementSpecification·Item·Version (⚠️ 스텁)
+- [[IndustriesDigitalLending Namespace]] — FSC Digital Lending OmniScript·Integration Procedure callable Apex: DigitalLendingIntakeRecordsWrapper, DigitalLendingProductsApi, PricingExecutionWrapper 외 5개 (⚠️ 스텁)
+- [[InvoiceWriteOff Namespace]] — Revenue Cloud 인보이스 전체 상각 크레딧 메모 Apex: WriteOffInvoiceInput·InputList·Response·ResponseList·ResponseError (⚠️ 스텁)
+- [[IsvPartners Namespace]] — AppExchange ISV App Analytics 커스텀 상호작용 로깅: AppAnalytics.logCustomInteraction(3 오버로드), interactionLabel enum 필수, interactionId 해시·토큰화
+- [[RichMessaging Namespace]] — Enhanced Messaging(Messaging for Web/In-App) 채널 Apex SDK: AuthRequestHandler/ProcessFormHandler/ProcessPaymentHandler 3대 인터페이스, 22개 클래스, _Value suffix 이중 프로퍼티 패턴(Flow/LWC 양측 지원)
+- [[RevSignaling Namespace]] — Revenue Lifecycle Management Procedure Plan 커스텀 로직 확장: ProcedurePlan, SignalingApexProcessor, TransactionRequest/Response (⚠️ 스텁)
+- [[RevSalesTrxn Namespace]] — 가격·구성 통합 판매 트랜잭션(Quote/Order) 생성 Apex: PlaceSalesTransactionExecutor, ConfigurationOptionsInput, GraphRequest, RecordResource (⚠️ 스텁)
+- [[RulesAppIn Namespace]] — 규칙 기반 결제·크레딧 적용 출력 클래스: RulesApplicationResponse/SummaryResponse/ErrorResponse, applyPaymentsAndCreditsByRules Invocable Action 연동 (⚠️ 스텁)
+- [[runtime_industries_cpq Namespace]] — Industries CPQ 제품 검색·카탈로그·카테고리 관리 Apex (managed package, 외부 문서 참조) (⚠️ 스텁)
+- [[runtime_industries_insurance Namespace]] — Industries Insurance 보험 견적·조항·레이팅 옵션 클래스 5개: AddEligibleInsuranceClausesOptions, CreateInsuranceQuoteOptions 등 (⚠️ 스텁)
+- [[Sfc Namespace]] — Salesforce Files 다운로드 커스터마이징: ContentDownloadHandlerFactory 팩토리 패턴, ContentDownloadContext 7개 값, isDownloadAllowed/redirectUrl/downloadErrorMessage
+- [[Pref_center Namespace]] — Privacy Center Preference Manager 커스터마이징 Apex SDK: PreferenceCenterApexHandler(load/submit), LoadFormData/SubmitFormData, TokenUtility.generateToken(EMAIL/STANDARD), ValidationResult
 
 ## 📦 컬렉션
 

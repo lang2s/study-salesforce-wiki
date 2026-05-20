@@ -46,15 +46,15 @@ updated: 2026-05-20
 | # | 네임스페이스 | PDF 페이지 | 권장 파일 경로 | 상태 | 추가일 | 완료일 |
 |---|---|---|---|---|---|---|
 | P2-02 | `Release/Spring '26.md` (v66.0) | 로컬 PDF 미확보 | — | 🔲 대기 | 2026-05-18 | — |
-| P2-05 | ApexPages | p.10 | `Architecture(아키텍처)/ApexPages Namespace.md` | 🔲 대기 | 2026-05-19 | — |
-| P2-06 | AppLauncher | p.43 | `Architecture(아키텍처)/AppLauncher Namespace.md` | 🔲 대기 | 2026-05-19 | — |
-| P2-07 | LxScheduler | p.2980 | `Apex/Integration(통합)/LxScheduler Namespace.md` | 🔲 대기 | 2026-05-19 | — |
-| P2-08 | VisualEditor | p.4462 | `Architecture(아키텍처)/VisualEditor Namespace.md` | 🔲 대기 | 2026-05-19 | — |
-| P2-09 | Wave | p.4476 | `Apex/Data(데이터)/Wave Namespace.md` | 🔲 대기 | 2026-05-19 | — |
-| P2-10 | UserProvisioning | p.4454 | `Apex/Security(보안)/UserProvisioning Namespace.md` | 🔲 대기 | 2026-05-19 | — |
-| P2-11 | TerritoryMgmt | p.4441 | `Apex/Integration(통합)/TerritoryMgmt Namespace.md` | 🔲 대기 | 2026-05-19 | — |
-| P2-12 | Slack | p.3578 | `Apex/Integration(통합)/Slack Namespace.md` | 🔲 대기 | 2026-05-19 | — |
-| P2-13 | PlaceQuote | p.3208 | `Apex/Integration(통합)/PlaceQuote Namespace.md` | 🔲 대기 | 2026-05-19 | — |
+| P2-05 | ApexPages | p.10 | `Architecture(아키텍처)/ApexPages Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 | 2026-05-20 |
+| P2-06 | AppLauncher | p.43 | `Architecture(아키텍처)/AppLauncher Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 | 2026-05-20 |
+| P2-07 | LxScheduler | p.2980 | `Apex/Integration(통합)/LxScheduler Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 | 2026-05-20 |
+| P2-08 | VisualEditor | p.4462 | `Architecture(아키텍처)/VisualEditor Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 | 2026-05-20 |
+| P2-09 | Wave | p.4476 | `Apex/Data(데이터)/Wave Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 | 2026-05-20 |
+| P2-10 | UserProvisioning | p.4454 | `Apex/Security(보안)/UserProvisioning Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 | 2026-05-20 |
+| P2-11 | TerritoryMgmt | p.4441 | `Apex/Integration(통합)/TerritoryMgmt Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 | 2026-05-20 |
+| P2-12 | Slack | p.3578 | `Apex/Integration(통합)/Slack Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 | 2026-05-20 |
+| P2-13 | PlaceQuote | p.3208 | `Apex/Integration(통합)/PlaceQuote Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 | 2026-05-20 |
 
 ---
 
@@ -63,36 +63,36 @@ updated: 2026-05-20
 | # | 네임스페이스 | PDF 페이지 | 대상 | 상태 | 추가일 |
 |---|---|---|---|---|---|
 | P3-05 | LWC BaseComponents 확장 (lightning-tree, lightning-tab, lightning-pill 등) | LWC Component Ref (미확보) | LWC 개발자 | 🔲 대기 | 2026-05-18 |
-| P3-06 | Canvas | p.279 | 레거시 Canvas 앱 담당자 | 🔲 대기 | 2026-05-19 |
-| P3-07 | ChatterAnswers | p.299 | (거의 deprecated) | 🔲 대기 | 2026-05-19 |
-| P3-08 | CommerceBuyGrp | p.301 | B2B Commerce 전문 | 🔲 대기 | 2026-05-19 |
-| P3-09 | CommerceExtension | p.307 | B2B Commerce 전문 | 🔲 대기 | 2026-05-19 |
-| P3-10 | CommerceOrders | p.316 | B2B Commerce 전문 | 🔲 대기 | 2026-05-19 |
-| P3-11 | CommercePayments | p.317 | Payment Gateway ISV | 🔲 대기 | 2026-05-19 |
-| P3-12 | CommerceTax | p.527 | Tax Integration ISV | 🔲 대기 | 2026-05-19 |
-| P3-13 | ComplianceMgmt | p.646 | Financial Services Cloud | 🔲 대기 | 2026-05-19 |
-| P3-14 | embeddedai | p.2859 | Einstein 내장 개발자 | 🔲 대기 | 2026-05-19 |
-| P3-15 | Functions | p.2905 | Salesforce Functions org | 🔲 대기 | 2026-05-19 |
-| P3-16 | ise_bots_apex | p.2921 | Einstein Bot 고급 커스텀 | 🔲 대기 | 2026-05-19 |
-| P3-17 | IssueCreditMemo | p.2925 | Revenue Cloud | 🔲 대기 | 2026-05-19 |
-| P3-18 | InvoiceWriteOff | p.2966 | Revenue Cloud | 🔲 대기 | 2026-05-19 |
-| P3-19 | IsvPartners | p.2966 | AppExchange ISV | 🔲 대기 | 2026-05-19 |
-| P3-20 | IndustriesDigitalLending | p.2928 | Financial Services Cloud | 🔲 대기 | 2026-05-19 |
-| P3-21 | industriesNlpSvc | p.2926 | Industries AI | 🔲 대기 | 2026-05-19 |
-| P3-22 | Pref_center | p.3208 | Privacy Center org | 🔲 대기 | 2026-05-19 |
-| P3-23 | RichMessaging | p.3408 | Messaging for Web/In-App | 🔲 대기 | 2026-05-19 |
-| P3-24 | RevSignaling | p.3408 | Revenue Lifecycle Mgmt | 🔲 대기 | 2026-05-19 |
-| P3-25 | RevSalesTrxn | p.3408 | Revenue Cloud / CPQ | 🔲 대기 | 2026-05-19 |
-| P3-26 | RulesAppIn | p.3457 | Revenue Cloud | 🔲 대기 | 2026-05-19 |
-| P3-27 | runtime_industries_cpq | p.3458 | Industries CPQ | 🔲 대기 | 2026-05-19 |
-| P3-28 | runtime_industries_insurance | p.3458 | Insurance Cloud | 🔲 대기 | 2026-05-19 |
-| P3-29 | Sfc | p.3554 | Files 커스텀 처리 | 🔲 대기 | 2026-05-19 |
+| P3-06 | Canvas | p.279 | `Architecture(아키텍처)/Canvas Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-07 | ChatterAnswers | p.299 | `Apex/Integration(통합)/ChatterAnswers Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-08 | CommerceBuyGrp | p.301 | `Apex/Integration(통합)/CommerceBuyGrp Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-09 | CommerceExtension | p.307 | `Apex/Integration(통합)/CommerceExtension Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-10 | CommerceOrders | p.316 | `Apex/Integration(통합)/CommerceOrders Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-11 | CommercePayments | p.317 | `Apex/Integration(통합)/CommercePayments Namespace.md` | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-12 | CommerceTax | p.527 | Tax Integration ISV | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-13 | ComplianceMgmt | p.646 | Financial Services Cloud | ✅ 완료(2026-05-20) — 스텁(PDF 클래스 인벤토리만 수록, FSC 가이드 참조 필요) | 2026-05-19 |
+| P3-14 | embeddedai | p.2859 | Einstein 내장 개발자 | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-15 | Functions | p.2905 | Salesforce Functions org | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-16 | ise_bots_apex | p.2921 | Einstein Bot 고급 커스텀 | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-17 | IssueCreditMemo | p.2925 | Revenue Cloud | ✅ 완료(2026-05-20) — 스텁(3개 클래스 인벤토리, Revenue Cloud 개발자 가이드 참조) | 2026-05-19 |
+| P3-18 | InvoiceWriteOff | p.2966 | Revenue Cloud | ✅ 완료(2026-05-20) — 스텁(5개 클래스 인벤토리, Revenue Cloud 개발자 가이드 참조) | 2026-05-19 |
+| P3-19 | IsvPartners | p.2966 | AppExchange ISV | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-20 | IndustriesDigitalLending | p.2928 | Financial Services Cloud | ✅ 완료(2026-05-20) — 스텁(5개 callable 클래스 인벤토리, industriesDigitalLending 공식 문서 참조) | 2026-05-19 |
+| P3-21 | industriesNlpSvc | p.2926 | Industries AI | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-22 | Pref_center | p.3208 | Privacy Center org | ✅ 완료(2026-05-20) | 2026-05-19 |
+| P3-23 | RichMessaging | p.3408 | Messaging for Web/In-App | ✅ 완료(2026-05-21) | 2026-05-19 |
+| P3-24 | RevSignaling | p.3408 | Revenue Lifecycle Mgmt | ✅ 완료(2026-05-21) | 2026-05-19 |
+| P3-25 | RevSalesTrxn | p.3408 | Revenue Cloud / CPQ | ✅ 완료(2026-05-21) | 2026-05-19 |
+| P3-26 | RulesAppIn | p.3457 | Revenue Cloud | ✅ 완료(2026-05-21) | 2026-05-19 |
+| P3-27 | runtime_industries_cpq | p.3458 | Industries CPQ | ✅ 완료(2026-05-21) | 2026-05-19 |
+| P3-28 | runtime_industries_insurance | p.3458 | Insurance Cloud | ✅ 완료(2026-05-21) | 2026-05-19 |
+| P3-29 | Sfc | p.3554 | Files 커스텀 처리 | ✅ 완료(2026-05-21) | 2026-05-19 |
 | P3-30 | Sfdc_Checkout | p.3558 | B2B Commerce 전문 | 🔲 대기 | 2026-05-19 |
 | P3-31 | Sfdc_Enablement | p.3563 | Enablement 앱 | 🔲 대기 | 2026-05-19 |
 | P3-32 | sfdc_surveys | p.3573 | Surveys 기능 | 🔲 대기 | 2026-05-19 |
 | P3-33 | renew_assets_summary | p.3285 | Revenue Cloud | 🔲 대기 | 2026-05-19 |
 | P3-34 | fsccashflow | p.2894 | Financial Services Cloud | 🔲 대기 | 2026-05-19 |
-| P3-35 | ind_mfg_sample_mgmt_apex | p.2925 | Manufacturing Cloud | 🔲 대기 | 2026-05-19 |
+| P3-35 | ind_mfg_sample_mgmt_apex | p.2925 | Manufacturing Cloud | ✅ 완료(2026-05-20) — 스텁(3개 클래스 인벤토리, Manufacturing Cloud 개발자 가이드 참조) | 2026-05-19 |
 
 ---
 
@@ -112,19 +112,19 @@ updated: 2026-05-20
 
 | # | 파일 | Apex Ref PDF 페이지 | 상태 | 추가일 | 완료일 |
 |---|---|---|---|---|---|
-| V-01 | `Apex/Security(보안)/TxnSecurity Namespace.md` | p.4445~4453 | 🔲 대기 | 2026-05-20 | — |
-| V-02 | `Apex/Integration(통합)/Support Namespace.md` | p.3580~3583 | 🔲 대기 | 2026-05-20 | — |
-| V-03 | `Architecture(아키텍처)/Context Namespace.md` | p.2688 | 🔲 대기 | 2026-05-20 | — |
-| V-04 | `Apex/Data(데이터)/Datacloud Namespace.md` | p.2741~2760 | 🔲 대기 | 2026-05-20 | — |
-| V-05 | `Apex/Integration(통합)/Flow Namespace.md` | p.2880~2884 | 🔲 대기 | 2026-05-20 | — |
-| V-06 | `Apex/Testing(테스트)/Flowtesting Namespace.md` | p.2885~2892 | 🔲 대기 | 2026-05-20 | — |
-| V-07 | `Architecture(아키텍처)/Site Namespace.md` | p.3576~3580 | 🔲 대기 | 2026-05-20 | — |
-| V-08 | `Apex/Integration(통합)/KbManagement Namespace.md` | p.2968~2979 | 🔲 대기 | 2026-05-20 | — |
-| V-09 | `Architecture(아키텍처)/System Namespace.md` | p.3584~4440 | 🔲 대기 | 2026-05-20 | — |
-| V-10 | `Apex/Integration(통합)/ConnectApi Namespace 개요.md` | p.663~2687 | 🔲 대기 | 2026-05-20 | — |
-| V-11 | `Apex/PlatformEvents(플랫폼이벤트)/EventBus Namespace.md` | p.2865~2879 | 🔲 대기 | 2026-05-20 | — |
-| V-12 | `Apex/Integration(통합)/DataWeave Namespace.md` | p.2841~2858 | 🔲 대기 | 2026-05-20 | — |
-| V-13 | `Apex/Integration(통합)/Compression Namespace.md` | p.646~662 | 🔲 대기 | 2026-05-20 | — |
+| V-01 | `Apex/Security(보안)/TxnSecurity Namespace.md` | p.4445~4453 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-02 | `Apex/Integration(통합)/Support Namespace.md` | p.3580~3583 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-03 | `Architecture(아키텍처)/Context Namespace.md` | p.2688 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-04 | `Apex/Data(데이터)/Datacloud Namespace.md` | p.2741~2760 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-05 | `Apex/Integration(통합)/Flow Namespace.md` | p.2880~2884 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-06 | `Apex/Testing(테스트)/Flowtesting Namespace.md` | p.2885~2892 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-07 | `Architecture(아키텍처)/Site Namespace.md` | p.3576~3580 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-08 | `Apex/Integration(통합)/KbManagement Namespace.md` | p.2968~2979 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-09 | `Architecture(아키텍처)/System Namespace.md` | p.3584~4440 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-10 | `Apex/Integration(통합)/ConnectApi Namespace 개요.md` | p.663~2687 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-11 | `Apex/PlatformEvents(플랫폼이벤트)/EventBus Namespace.md` | p.2865~2879 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-12 | `Apex/Integration(통합)/DataWeave Namespace.md` | p.2841~2858 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
+| V-13 | `Apex/Integration(통합)/Compression Namespace.md` | p.646~662 | ✅ 완료 | 2026-05-20 | 2026-05-20 |
 
 ---
 
@@ -160,6 +160,9 @@ updated: 2026-05-20
 | P1-06 | `Apex/Integration(통합)/Support Namespace.md` | 2026-05-20 | Apex Ref v67.0 p.3580~3583 |
 | P1-07 | `Architecture(아키텍처)/Context Namespace.md` | 2026-05-20 | Apex Ref v67.0 p.2688 (Industries Cloud 전용) |
 | P1-08 | `Apex/Data(데이터)/Datacloud Namespace.md` | 2026-05-20 | Apex Ref v67.0 p.2741~2760 (Duplicate Management) |
+| P2-05 | `Architecture(아키텍처)/ApexPages Namespace.md` | 2026-05-20 | Apex Ref v67.0 p.10~42 (Visualforce 컨트롤러 8개 클래스) |
+| P2-06 | `Architecture(아키텍처)/AppLauncher Namespace.md` | 2026-05-20 | Apex Ref v67.0 p.43~47 (AppMenu 3개 메서드, 나머지 8개 internal only) |
+| P2-07 | `Apex/Integration(통합)/LxScheduler Namespace.md` | 2026-05-20 | Apex Ref v67.0 p.2980~3022 (14개 클래스/인터페이스, Salesforce Scheduler 외부 캘린더 연동) |
 
 ---
 

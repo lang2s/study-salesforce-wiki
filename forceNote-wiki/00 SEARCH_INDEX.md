@@ -86,6 +86,10 @@
 | Auth.RegistrationHandler, SSO 프로비저닝, Auth.UserData, createUser updateUser, 사용자 자동 생성 | `Apex/Security(보안)/Auth Namespace.md` |
 | TxnSecurity.EventCondition, TxnSecurity.AsyncCondition, Transaction Security Apex, 트랜잭션 보안 정책, evaluate() 정책 조건, Real-Time Event Monitoring 보안, ApiEvent 차단, 로그인 이벤트 차단, 실시간 이벤트 보안 정책, Apex 보안 정책 | `Apex/Security(보안)/TxnSecurity Namespace.md` |
 | TxnSecurity.PolicyCondition, TxnSecurity.Event, 레거시 트랜잭션 보안, PolicyCondition evaluate, 구형 트랜잭션 보안 | `Apex/Security(보안)/TxnSecurity Namespace.md` |
+| UserProvisioning Namespace, UserProvisioningLog, UserProvisioningPlugin, ConnectorTestUtil, 사용자 프로비저닝 Apex, 커넥티드 앱 프로비저닝, SCIM 프로비저닝, 아웃바운드 프로비저닝 | `Apex/Security(보안)/UserProvisioning Namespace.md` |
+| UserProvisioning.UserProvisioningLog.log, 프로비저닝 로그, UPR 로깅, userProvisioningRequestId externalUserId | `Apex/Security(보안)/UserProvisioning Namespace.md` |
+| UserProvisioningPlugin invoke buildDescribeCall, Process.PluginResult, reconOffset nextReconOffset reconState, 10000 DML 한도 우회 프로비저닝, Flow Builder 프로비저닝 플러그인 | `Apex/Security(보안)/UserProvisioning Namespace.md` |
+| ConnectorTestUtil.createConnectedApp, 프로비저닝 테스트, UserProvisioningRequest, @isTest 커넥티드 앱 시뮬레이션 | `Apex/Security(보안)/UserProvisioning Namespace.md` |
 
 ## Apex — 데이터 / SOQL
 
@@ -97,6 +101,11 @@
 | Reports namespace, ReportManager, runReport, runAsyncReport, ReportResults, ReportMetadata, ReportFact, ReportFactWithDetails, SummaryValue, FactMap, 보고서 Apex 실행, 비동기 보고서, 보고서 필터 재정의, getFactMap, ReportFilter, BucketField, ReportInstance | `Apex/Data(데이터)/Reports Namespace.md` |
 | BusinessHours, BusinessHours.diff, 영업시간 계산, SLA 준수 여부, 업무시간 경과, isWithin, nextStartDate, SLA 초과 | `Apex/Data(데이터)/BusinessHours 패턴.md` |
 | Datacloud Namespace, Datacloud.FindDuplicates, FindDuplicatesByIds, DuplicateResult, MatchResult, MatchRecord, FieldDiff, findDuplicates, 중복 레코드 탐지 Apex, Duplicate Management Apex, 중복 규칙 Apex, 중복 차단 처리, DuplicateError 처리, 레코드 중복 검사 | `Apex/Data(데이터)/Datacloud Namespace.md` |
+| Wave Namespace, wave namespace, CRM Analytics SDK, SAQL 빌더, SAQL 쿼리 Apex, QueryBuilder, QueryNode, ProjectionNode, CRM Analytics 쿼리 Apex, 애널리틱스 쿼리 | `Apex/Data(데이터)/Wave Namespace.md` |
+| Wave.QueryBuilder.load, Wave.QueryBuilder.count, Wave.QueryBuilder.get, union, cogroup, 데이터셋 스트림 로드, SAQL union cogroup Apex | `Apex/Data(데이터)/Wave Namespace.md` |
+| Wave.QueryNode, build, foreach, group by all, order SAQL, cap, filter predicate, execute ConnectApi.LiteralJson | `Apex/Data(데이터)/Wave Namespace.md` |
+| Wave.ProjectionNode, sum avg min max unique alias, 집계 함수 체이닝 Apex, SAQL projection | `Apex/Data(데이터)/Wave Namespace.md` |
+| Wave.Templates, getTemplate, getTemplateConfig, getTemplates, TemplatesSearchOptions, CRM Analytics 템플릿 조회, filterGroup options type | `Apex/Data(데이터)/Wave Namespace.md` |
 | Dynamic SOQL, 동적 쿼리, String.escapeSingleQuotes, 바인딩 변수 | `Apex/Data(데이터)/Dynamic SOQL.md` |
 | 페이징, PagedResult, 오프셋, OFFSET LIMIT, 페이지네이션 | `Apex/Data(데이터)/PagedResult 패턴.md` |
 
@@ -157,6 +166,36 @@
 | Site namespace와 Experience Cloud 차이, UrlRewriter 등록 방법, Sites URL rewrite setup | `Architecture(아키텍처)/Site Namespace.md` |
 | Context Namespace, Context.IndustriesContext, IndustriesContext, Context Service Apex, Industries Context, 컨텍스트 서비스, Financial Services Cloud Context, Health Cloud Context, 비즈니스 컨텍스트 공유 | `Architecture(아키텍처)/Context Namespace.md` |
 
+## Architecture — ApexPages Namespace
+
+| 키워드 | 파일 |
+|---|---|
+| ApexPages Namespace, ApexPages 네임스페이스, Visualforce 컨트롤러, VF 컨트롤러, StandardController, StandardSetController, ApexPages.Action, ApexPages.Message, ApexPages.Component | `Architecture(아키텍처)/ApexPages Namespace.md` |
+| StandardController 확장, 표준 컨트롤러 확장, getRecord, addFields, getId, save cancel delete edit view, 컨트롤러 확장 클래스, VF 표준 컨트롤러 | `Architecture(아키텍처)/ApexPages Namespace.md` |
+| StandardSetController, 목록 컨트롤러, 페이지네이션, getRecords, getHasNext, getHasPrevious, setPageSize, getSelected, setSelected, getCompleteResult, 10000 레코드 한도 | `Architecture(아키텍처)/ApexPages Namespace.md` |
+| ApexPages.Message, Severity enum, CONFIRM ERROR FATAL INFO WARNING, VF 유효성 검사 오류, 커스텀 컨트롤러 오류 처리 | `Architecture(아키텍처)/ApexPages Namespace.md` |
+| IdeaStandardController, IdeaStandardSetController, getCommentList, getIdeaList, Idea 컨트롤러 | `Architecture(아키텍처)/ApexPages Namespace.md` |
+| KnowledgeArticleVersionStandardController, Knowledge 문서 컨트롤러, getSourceId, setDataCategory | `Architecture(아키텍처)/ApexPages Namespace.md` |
+| ApexPages.Component, childComponents, expressions, facets, 동적 Visualforce 컴포넌트, 동적 VF | `Architecture(아키텍처)/ApexPages Namespace.md` |
+
+## Architecture — AppLauncher Namespace
+
+| 키워드 | 파일 |
+|---|---|
+| AppLauncher Namespace, AppLauncher 네임스페이스, AppMenu, App Launcher Apex, 앱 런처 제어, 앱 가시성 설정, 앱 정렬 순서 | `Architecture(아키텍처)/AppLauncher Namespace.md` |
+| setAppVisibility, 앱 숨기기, 앱 표시, AppMenuItem ApplicationId, App Launcher 앱 숨김 | `Architecture(아키텍처)/AppLauncher Namespace.md` |
+| setOrgSortOrder, setUserSortOrder, 조직 정렬 순서, 사용자 정렬 순서, UserAppMenuItem AppMenuItemId | `Architecture(아키텍처)/AppLauncher Namespace.md` |
+
+## Architecture — VisualEditor Namespace
+
+| 키워드 | 파일 |
+|---|---|
+| VisualEditor Namespace, VisualEditor 네임스페이스, DynamicPickList, 동적 피클리스트, App Builder 피클리스트, Lightning App Builder 커스텀 피클리스트 | `Architecture(아키텍처)/VisualEditor Namespace.md` |
+| DataRow, VisualEditor.DataRow, 피클리스트 행, label value selected, getLabel getValue isSelected, compareTo | `Architecture(아키텍처)/VisualEditor Namespace.md` |
+| DesignTimePageContext, entityName pageType, HomePage AppPage RecordPage, 페이지 컨텍스트 Apex | `Architecture(아키텍처)/VisualEditor Namespace.md` |
+| DynamicPickListRows, containsAllRows, addRow addAllRows getDataRows sort, 타입-어헤드 200개 한도 | `Architecture(아키텍처)/VisualEditor Namespace.md` |
+| datasource="apex://", Aura design attribute datasource, DynamicPickList 상속, 앱 빌더 속성 드롭다운 | `Architecture(아키텍처)/VisualEditor Namespace.md` |
+
 ## Apex — Flowtesting Namespace
 
 | 키워드 | 파일 |
@@ -190,6 +229,38 @@
 | QuickAction, performQuickAction, performQuickActions, describeAvailableQuickActions, describeQuickActions, QuickActionRequest, QuickActionResult, QuickActionDefaultsHandler, SendEmailQuickActionDefaults, Case Feed 이메일 기본값, 퀵 액션 실행, 퀵 액션 메타데이터 조회 | `Apex/Integration(통합)/QuickAction Namespace.md` |
 | Flow Namespace, Flow.Interview 클래스 레퍼런스, createInterview 시그니처, start() 메서드, getVariableValue, Apex에서 Flow 실행 API, Flow Interview 클래스 전체 메서드, User Provisioning Flow 실행 | `Apex/Integration(통합)/Flow Namespace.md` |
 | Support Namespace, Support.EmailTemplateSelector, Support.MilestoneTriggerTimeCalculator, Case Feed 이메일 기본 템플릿 Apex, 마일스톤 트리거 시간 동적 계산, getDefaultTemplateId, calculateMilestoneTriggerTime, Entitlement 마일스톤 SLA | `Apex/Integration(통합)/Support Namespace.md` |
+| LxScheduler Namespace, lxscheduler, Salesforce Scheduler Apex, 스케줄러 네임스페이스, GetAppointmentCandidates, GetAppointmentSlots, SchedulerResources, ServiceResourceScheduleHandler, 예약 후보 리소스, 예약 가능 타임슬롯, 외부 캘린더 연동, WorkTypeBuilder, SkillRequirementBuilder, ServiceResourceSchedule, UnavailableTimeslot, ServiceAppointmentRequestInfo, ServiceResourceInfo, getAppointmentCandidates, getAppointmentSlots | `Apex/Integration(통합)/LxScheduler Namespace.md` |
+| TerritoryMgmt Namespace, TerritoryMgmt, OpportunityTerritory2AssignmentFilter, 테리토리 관리 Apex, Enterprise Territory Management Apex, 영업 구역 배정 필터, Opportunity Territory Assignment | `Apex/Integration(통합)/TerritoryMgmt Namespace.md` |
+| getOpportunityTerritory2Assignments, Territory2 배정 Apex, ObjectTerritory2Association, Territory2Model Active, Territory2Type Priority, 우선순위 테리토리 배정, 동순위 테리토리 충돌 | `Apex/Integration(통합)/TerritoryMgmt Namespace.md` |
+| Slack Namespace, Slack SDK Apex, 슬랙 네임스페이스, Slack 앱 Apex, RunnableHandler, BotClient, AppClient, UserClient, Slack 봇 개발, Slack 이벤트 핸들러, Slack 커맨드 Apex, Slack 액션 Apex, Slack 단축키 Apex | `Apex/Integration(통합)/Slack Namespace.md` |
+| Slack.RunnableHandler, Slack.BotClient, Slack.UserClient, Slack.AppClient, Slack.Message, Slack.Channel, Slack.Chat, Slack.Event, Slack.Shortcut, Slack.SlackCommand, Slack.TestHarness, Slack.Workflow, Slack.UserMapping | `Apex/Integration(통합)/Slack Namespace.md` |
+| PlaceQuote Namespace, PlaceQuote, CPQ Apex, Configure Price Quote Apex, 견적 생성 Apex, CPQ 네임스페이스, Quote 생성 Apex, Pricing Preferences Apex, CPQ 가격 책정 | `Apex/Integration(통합)/PlaceQuote Namespace.md` |
+| Canvas Namespace, Canvas App Apex, 캔버스 앱 Apex, CanvasLifecycleHandler, RenderContext, ApplicationContext Canvas, EnvironmentContext Canvas, Canvas.Test, 외부 앱 임베드 Salesforce, Canvas SDK | `Architecture(아키텍처)/Canvas Namespace.md` |
+| excludeContextTypes, ContextTypeEnum, ORGANIZATION RECORD_DETAIL USER, onRender renderContext, mockRenderContext, testCanvasLifecycle, CanvasRenderException, Canvas 커스텀 파라미터, addEntityField Canvas, setParametersAsJSON Canvas | `Architecture(아키텍처)/Canvas Namespace.md` |
+| ChatterAnswers Namespace, AccountCreator Interface, chatteranswers:registration, Chatter Answers 포털 계정 생성, createAccount registrationClassName, 포털 사용자 Account 생성 Apex | `Apex/Integration(통합)/ChatterAnswers Namespace.md` |
+| CommerceBuyGrp Namespace, BuyerGroupEvaluationService, BuyerGroupRequest, BuyerGroupResponse, Buyer Group 배정 Apex, B2B Commerce Buyer Group, getBuyerGroupIds, isGuestUser 바이어 그룹, 커스텀 바이어 그룹 로직 | `Apex/Integration(통합)/CommerceBuyGrp Namespace.md` |
+| CommerceExtension Namespace, ResolutionStrategy, Resolution, ResolutionStates, ExtensionInfo, EXECUTE_DEFAULT EXECUTE_REGISTERED OFF, B2B Commerce 확장 포인트, getLocaleString ExtensionInfo, 로케일별 확장 전략 Apex | `Apex/Integration(통합)/CommerceExtension Namespace.md` |
+| CommerceOrders Namespace, B2B Commerce Order Apex, 주문 생성 Apex, Commerce Order API, 통합 가격 책정 주문 | `Apex/Integration(통합)/CommerceOrders Namespace.md` |
+| CommercePayments Namespace, PaymentGatewayAdapter, PaymentGatewayAsyncAdapter, processRequest, processNotification, PaymentGatewayContext, SalesforceResultCode, GatewayErrorResponse, GatewayNotificationResponse, PaymentsHttp, NotificationClient, 결제 게이트웨이 어댑터, ISV Payment Adapter, Apex Payment Gateway, AuthorizationRequest CaptureRequest ReferencedRefundRequest SaleRequest PostAuthorizationRequest, PaymentMethodTokenizationRequest, EnhancedPaymentDataInput Level2 Level3, SalesforceResultCode Decline Success PermanentFail Indeterminate, AdyenAdapter 비동기 결제 예시 | `Apex/Integration(통합)/CommercePayments Namespace.md` |
+| CommerceTax Namespace, TaxEngineAdapter, TaxEngineContext, TaxTransactionRequest, CalculateTaxRequest, TaxLineItemRequest, TaxSellerDetailsRequest, TaxCustomerDetailsRequest, CalculateTaxResponse, ErrorResponse, TaxDetailsResponse, LineItemResponse, ImpositionResponse, JurisdictionResponse, AmountDetailsResponse, RuleDetailsResponse, TaxTransactionStatus, TaxTransactionType, CalculateTaxType, RequestType, ResultCode, 세금 엔진 어댑터, B2B 세금 계산 Apex, ISV 세금 어댑터, Avalara, processRequest 세금, 세금 계산 ISV, 외부 세금 엔진 연동 | `Apex/Integration(통합)/CommerceTax Namespace.md` |
+| ComplianceMgmt Namespace, ComplianceEvaluation, ControlEvaluationInput, ControlInput, ComplianceEvaluationResponse, EvaluationResult, ComplianceControlLog, FSC 규정 준수 Apex, Financial Services Cloud 컴플라이언스, 컴플라이언스 룰 프로세서 | `Apex/Integration(통합)/ComplianceMgmt Namespace.md` |
+| embeddedai Namespace, ApexMap, RecordApexRepresentation, toRecordApexRep, AI 레코드 표현, embedded AI Apex, 레코드 데이터 AI 전달, 키-값 AI, relatedRecordData, objectType AI, Apex AI 직렬화 | `Apex/Integration(통합)/embeddedai Namespace.md` |
+| Functions Namespace, functions.Function, FunctionInvocation, FunctionCallback, FunctionInvokeMock, MockFunctionInvocationFactory, FunctionErrorType, FunctionInvocationStatus, Salesforce Functions Apex, 함수 호출 Apex, 함수 동기 비동기 호출, createSuccessResponse, createErrorResponse, get functionName, invoke payload | `Apex/Integration(통합)/Functions Namespace.md` |
+| ise_bots_apex Namespace, DynamicMenuItem, EntityId, EntityName, LabelValue, SummaryTextWithFormula, sortByDate, Einstein Bot 동적 메뉴, 봇 메뉴 Apex, ise_bots_apex.DynamicMenuItem | `Apex/Integration(통합)/ise_bots_apex Namespace.md` |
+| industriesNlpSvc Namespace, NlpResponse, NlpSummarizationResult, summarizationResult, errors, summary, Industries NLP Apex, transformNlpActionResult 출력, Einstein NLP 요약 Apex, SurveyLongSummarization SurveyShortSummarization, 자연어처리 Apex | `Apex/Integration(통합)/industriesNlpSvc Namespace.md` |
+| IssueCreditMemo Namespace, CreditLineRequestInputRepresentations, CreditRequestInputRepresentations, CreditResponseOutputRepresentations, Revenue Cloud 크레딧 메모 Apex, 인보이스 분쟁 조정 크레딧 | `Apex/Integration(통합)/IssueCreditMemo Namespace.md` |
+| ind_mfg_sample_mgmt_apex Namespace, ProductRequirementSpecification, ProductRequirementSpecificationItem, ProductRequirementSpecificationVersion, Manufacturing Cloud Apex, 제품 요구사양 Apex, 제조 샘플 관리 | `Apex/Integration(통합)/ind_mfg_sample_mgmt_apex Namespace.md` |
+| IndustriesDigitalLending Namespace, DigitalLendingIntakeRecordsWrapper, DigitalLendingPostIntakeRecordsWrapper, DigitalLendingProductsApi, DigitalLendingUtils, PricingExecutionWrapper, FSC Digital Lending Apex, 디지털 대출 OmniScript callable, 디지털 렌딩 FlexCards | `Apex/Integration(통합)/IndustriesDigitalLending Namespace.md` |
+| InvoiceWriteOff Namespace, WriteOffInvoiceInputList, WriteOffInvoiceInput, WriteOffInvoiceResponseList, WriteOffInvoiceResponse, WriteOffInvoiceResponseError, Revenue Cloud 인보이스 상각 Apex, 인보이스 write-off 크레딧 메모 | `Apex/Integration(통합)/InvoiceWriteOff Namespace.md` |
+| IsvPartners Namespace, AppAnalytics, logCustomInteraction, interactionLabel interactionId interactionUuid, AppExchange App Analytics Apex, ISV 커스텀 상호작용 로깅, 앱 분석 패키지 사용 로그, ISV 파트너 Apex | `Apex/Integration(통합)/IsvPartners Namespace.md` |
+| RichMessaging Namespace, Enhanced Messaging Apex SDK, Messaging for Web Apex, Messaging for In-App Apex, AuthRequestHandler, ProcessFormHandler, ProcessPaymentHandler, PaymentLineItem, PaymentMethod, ShippingMethod, RecurringTiming, DeferredTiming, AddressableContact, PostalAddress, ProcessPaymentRequest, ProcessPaymentResult, TimeSlotOption, AuthRequestResponse, AuthRequestResult, MessageDefinitionInputParameter, TimingIntervalUnit, TimingType, PaymentItemStatus, ProcessPaymentResultStatus, 채팅채널 결제 Apex, 메시징 폼 제출, 메시징 인증 요청, Enhanced Messaging 결제 처리, 메시징 배송수단, 반복결제 타이밍 | `Apex/Integration(통합)/RichMessaging Namespace.md` |
+| RevSignaling Namespace, ProcedurePlan, SignalingApexProcessor, TransactionRequest, TransactionResponse, Procedure Plan Apex, Revenue Lifecycle Management Apex, 프로시저 플랜 커스텀 로직, 수익 라이프사이클 시그널링 | `Apex/Integration(통합)/RevSignaling Namespace.md` |
+| RevSalesTrxn Namespace, ConfigurationOptionsInput, GraphRequest, PlaceSalesTransactionException, PlaceSalesTransactionExecutor, PlaceSalesTransactionResponse, RecordResource, RecordWithReferenceRequest, Revenue Cloud 판매 트랜잭션 Apex, CPQ Quote Order Apex 생성, 통합 가격 책정 구성 Apex | `Apex/Integration(통합)/RevSalesTrxn Namespace.md` |
+| RulesAppIn Namespace, RulesApplicationResponse, RulesApplicationSummaryResponse, RulesApplicationErrorResponse, applyPaymentsAndCreditsByRules, 규칙 기반 결제 크레딧 적용 Apex, Revenue Cloud 결제 규칙 출력 클래스 | `Apex/Integration(통합)/RulesAppIn Namespace.md` |
+| runtime_industries_cpq Namespace, Industries CPQ Apex, CPQ 제품 검색 Apex, 제품 카탈로그 카테고리 관리 Apex, managed package cpq namespace | `Apex/Integration(통합)/runtime_industries_cpq Namespace.md` |
+| runtime_industries_insurance Namespace, AddEligibleInsuranceClausesOptions, CreateInsuranceQuoteOptions, CreateInsuranceRatingOptions, GenerateInsuranceClausesOptions, UpdateInsuranceQuoteOptions, Industries Insurance Apex, 보험 견적 생성 Apex, 보험 조항 생성 Apex, 보험 레이팅 Apex, Insurance Cloud managed package | `Apex/Integration(통합)/runtime_industries_insurance Namespace.md` |
+| Sfc Namespace, ContentDownloadContext, ContentDownloadHandler, ContentDownloadHandlerFactory, getContentDownloadHandler, isDownloadAllowed, downloadErrorMessage, redirectUrl, Salesforce Files Apex, 파일 다운로드 커스터마이징 Apex, 콘텐츠 다운로드 제어, IRM 파일 제어, 모바일 다운로드 차단 Apex, CHATTER CONTENT DELIVERY REST_API RETRIEVE S1 SOQL | `Apex/Integration(통합)/Sfc Namespace.md` |
+| Pref_center Namespace, PreferenceCenterApexHandler, LoadFormData, LoadParameters, SubmitFormData, SubmitParameters, TokenUtility, generateToken, generateTokens, TokenType, ValidationResult, Privacy Center Apex, Preference Manager Apex, 동의 양식 커스터마이징, 개인정보 동의 관리 Apex, 양식 로드 제출 핸들러 | `Apex/Integration(통합)/Pref_center Namespace.md` |
 
 ## Apex — 보안 / FLS / DML (Auth 추가)
 

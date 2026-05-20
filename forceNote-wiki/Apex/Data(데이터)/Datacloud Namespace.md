@@ -370,7 +370,7 @@ for (Datacloud.FindDuplicatesResult findDupeResult : results) {
 |---|---|---|
 | `getDuplicateRule()` | `String` | 트리거된 Duplicate Rule의 developer name |
 | `getErrorMessage()` | `String` | 관리자가 설정한 중복 경고 메시지 |
-| `getMatchResults()` | `List<MatchResult>` | 매칭 규칙별 결과 목록 |
+| `getMatchResults()` | `List<Datacloud.MatchResult>` | 매칭 규칙별 결과 목록 |
 | `isAllowSave()` | `Boolean` | 규칙이 저장을 허용하는지 여부 |
 
 ### MatchResult 클래스

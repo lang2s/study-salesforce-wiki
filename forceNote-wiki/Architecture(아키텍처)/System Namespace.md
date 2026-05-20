@@ -344,7 +344,7 @@ PDF p.3584–3591 기준 주요 클래스 (총 60개 이상):
 | `OrgLimit` / `OrgLimits` | Org 전체 한도 조회 |
 | `Pattern` / `Matcher` | 정규식 매칭 |
 | `Queueable` / `QueueableContext` | 비동기 잡 인터페이스 → [[Queueable]] |
-| `QueuableDuplicateSignature` | Queueable 중복 방지 시그니처 |
+| `QueueableDuplicateSignature` | Queueable 중복 방지 시그니처 |
 | `Quiddity` | 실행 컨텍스트 열거형 → [[QuiddityGuard]] |
 | `Request` | 현재 요청 ID·Quiddity 조회 |
 | `RestContext` / `RestRequest` / `RestResponse` | 인바운드 REST → [[Custom REST Endpoint]] |

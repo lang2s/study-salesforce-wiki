@@ -55,7 +55,7 @@ https://myblog.my.salesforce-sites.com/posts/my-blog-post-title
 public System.PageReference[] generateUrlFor(System.PageReference[] salesforceUrls)
 ```
 
-입력 배열과 출력 배열의 크기와 순서가 반드시 일치해야 한다. `generateUrlFor`는 입력 순서 기준으로 URL을 매핑한다.
+`PageReference[]` 대신 `List<PageReference>`를 사용해도 된다. 입력 배열과 출력 배열의 크기와 순서가 반드시 일치해야 한다. `generateUrlFor`는 입력 순서 기준으로 URL을 매핑한다.
 
 ### mapRequestUrl 시그니처
 

@@ -21,6 +21,7 @@ created: 2026-05-17
 | [[WITH USER_MODE]] | SOQL/DML 인라인 보안 키워드 — USER_MODE vs SYSTEM_MODE | #pattern |
 | [[Auth Namespace]] | JWT/JWS OAuth bearer token flow, MFA TOTP, SessionManagement, RegistrationHandler | #reference |
 | [[TxnSecurity Namespace]] | Transaction Security Policy Apex — EventCondition, AsyncCondition, 실시간 이벤트 기반 차단·알림 정책 | #reference |
+| [[UserProvisioning Namespace]] | 커넥티드 앱 아웃바운드 사용자 프로비저닝 — ConnectorTestUtil, UserProvisioningLog, UserProvisioningPlugin(reconOffset 청크 패턴) | #reference |
 
 ---
 
@@ -34,6 +35,9 @@ created: 2026-05-17
 - MFA / TOTP 세션 보안 또는 커스텀 로그인 플로우? → [[Auth Namespace]]
 - Apex로 Transaction Security Policy 조건 구현? → [[TxnSecurity Namespace]] (EventCondition)
 - 보안 정책에서 비동기 처리 필요? → [[TxnSecurity Namespace]] (AsyncCondition)
+- 커넥티드 앱 사용자 프로비저닝 로그 기록? → [[UserProvisioning Namespace]] → UserProvisioningLog.log
+- 프로비저닝 플러그인 커스터마이즈? → [[UserProvisioning Namespace]] → UserProvisioningPlugin
+- 프로비저닝 테스트(@isTest 전용 시뮬레이션)? → [[UserProvisioning Namespace]] → ConnectorTestUtil
 
 ## 보안 계층 관계
 
