@@ -25,7 +25,9 @@ created: 2026-05-21
 | 서비스 레이어, ServiceLayer, TriggerHandler, Trigger 계층, 비즈니스 로직 분리 | `Architecture(아키텍처)/서비스 레이어 패턴.md` |
 | TriggerHandler, beforeInsert afterInsert, Trigger.new, 트리거 패턴 | `Apex/Trigger(트리거)/TriggerHandler 패턴.md` |
 | CMDT, Custom Metadata, 트리거 on/off, 메타데이터 트리거 제어 | `Apex/Trigger(트리거)/CMDT 메타데이터 트리거.md` |
+| Custom Metadata Types 상세, __mdt, CustomMetadata__mdt, getAll, getInstance, 커스텀 메타데이터 Apex 조회, Metadata.CustomMetadata, Metadata.DeployContainer, enqueueDeployment, CMDT 배포, CMDT 캐시, 커스텀 메타데이터 타입 vs 커스텀 설정, 기능 플래그, Feature Flag, 요율표, 매핑 테이블, Protected Custom Metadata | `Architecture(아키텍처)/Custom Metadata Types.md` |
 | Permission Set, 권한 설계 | `Architecture(아키텍처)/Permission Set 설계.md` |
+| Validation Rules, 검증 규칙, REGEX 수식, SSN 형식 검증, 우편번호 ZIP 검증, 전화번호 검증, 날짜 검증 평일, 숫자 MOD 짝수 홀수, 소유자 검증, ISCHANGED, PRIORVALUE, ISNEW, ISPICKVAL, ISNUMBER, VLOOKUP 역할 한도, $User 커스텀 필드, $Profile.Name, 크로스 오브젝트 검증, IP 주소 검증, 신용카드 번호 검증, California 운전면허, 계정 번호 검증, 연간 매출 범위 | `Architecture(아키텍처)/Validation Rules 예제.md` |
 
 ## Apex — 보안 / FLS / DML (Auth 추가)
 
@@ -152,9 +154,12 @@ created: 2026-05-21
 | Messaging Namespace, InboundEmail, InboundEmailHandler, InboundEmailResult, InboundEnvelope, 인바운드 이메일, 이메일 서비스, Email Service, ActionableNotification, MassEmailMessage, PushNotification, 인앱 알림 모바일 | `Apex/Messaging(메시징)/Messaging Namespace.md` |
 | Flow.Interview, createInterview, 플로우 Apex 호출, Apex에서 Flow 실행, getVariableValue, Flow.Interview.start | `Flow/Flow Interview API.md` |
 | SaveResult, UpsertResult, DeleteResult, MergeResult, UndeleteResult, EmptyRecycleBinResult, DML 결과, Database.Error, isSuccess, getErrors, getId, isCreated | `Apex/Data(데이터)/Database Namespace 상세.md` |
-| Database.Cursor, getCursor, fetch, getNumRecords, PaginationCursor, fetchPage, CursorFetchResult, QueryLocator, QueryLocatorIterator, DMLOptions, LeadConvert, convertLead | `Apex/Data(데이터)/Database Namespace 상세.md` |
+| Database.Cursor, getCursor, fetch, getNumRecords, PaginationCursor, fetchPage, CursorFetchResult, QueryLocator, QueryLocatorIterator, hasNext, next, DMLOptions, LeadConvert, convertLead | `Apex/Data(데이터)/Database Namespace 상세.md` |
+| DMLOptions.AssignmentRuleHeader, useDefaultRule, assignmentRuleId, 배정 규칙, DMLOptions.DuplicateRuleHeader, allowSave, runAsCurrentUser, DMLOptions.EmailHeader, triggerAutoResponseEmail, localeOptions | `Apex/Data(데이터)/Database Namespace 상세.md` |
 | Search.find, SOSL Apex, dynamic SOSL, SearchResult, SearchResults, getSObject, Search.suggest, SuggestionResult, KnowledgeSuggestionFilter, QuestionSuggestionFilter | `Apex/Data(데이터)/Search Namespace.md` |
 | DescribeSObjectResult, DescribeFieldResult, getDescribe, getFields, isAccessible, isCreateable, getLabel, getKeyPrefix, getPicklistValues, RecordTypeInfo, getRecordTypeInfosByDeveloperName, ChildRelationship, getChildRelationships, Schema.getGlobalDescribe, DisplayType | `Architecture(아키텍처)/Schema Namespace 상세.md` |
+| SObjectType, SObjectField, newSObject, SObjectDescribeOptions, FieldDescribeOptions, SOAPType, SOAPType Enum, DescribeTabResult, DescribeTabSetResult, describeTabs, DataCategory, DescribeDataCategoryGroupResult, describeDataCategoryGroups, DescribeColorResult, DescribeIconResult | `Architecture(아키텍처)/Schema Namespace 상세.md` |
+| getAssociateEntityType, getAssociateParentEntity, isMruEnabled, getDataTranslationEnabled, getController 피클리스트, isDefaultedOnCreate, isHtmlFormatted, isIdLookup, isWriteRequiresMasterRead, isSearchPrefilterable | `Architecture(아키텍처)/Schema Namespace 상세.md` |
 | Collections, CollectionUtils, 컬렉션 유틸 | `Apex/Collections(컬렉션)/CollectionUtils.md` |
 | Comparator, 정렬, List.sort, 커스텀 정렬, 리스트 정렬, 오름차순 내림차순 | `Apex/Collections(컬렉션)/Comparator 인터페이스.md` |
 | Iterable, Iterator, 커스텀 이터레이터 | `Apex/Collections(컬렉션)/Iterable Iterator.md` |

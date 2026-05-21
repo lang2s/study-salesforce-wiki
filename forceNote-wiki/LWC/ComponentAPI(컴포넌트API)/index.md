@@ -17,6 +17,7 @@ created: 2026-05-17
 |---|---|---|
 | [[@api 패턴]] | @api property/method, getter/setter, lwc:spread | #pattern |
 | [[컴포지션 패턴]] | Container vs Presentational, for:each, lwc:if/elseif/else | #pattern |
+| [[LWC API 버전 관리]] | .js-meta.xml apiVersion 규칙, 버전별 기능 변경, 동적 임포트 | #reference |
 
 ---
 

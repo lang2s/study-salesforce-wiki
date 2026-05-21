@@ -1,8 +1,9 @@
 ---
-tags: [apex, database, namespace, dml, saveresult, upsertresult, deleteresult, cursor, querylocator, mergeresult, dml-options, lead-convert]
+tags: [apex, database, namespace, dml, saveresult, upsertresult, deleteresult, cursor, querylocator, mergeresult, dml-options, lead-convert, querylocatoriterator]
 source: salesforce_apex_reference_guide (Version 67.0, Summer '26)
 created: 2026-05-17
-aliases: [Database Namespace, SaveResult, UpsertResult, DeleteResult, MergeResult, QueryLocator, Cursor, PaginationCursor, DMLOptions, LeadConvert, Database.Error, EmptyRecycleBinResult]
+updated: 2026-05-22
+aliases: [Database Namespace, SaveResult, UpsertResult, DeleteResult, MergeResult, QueryLocator, QueryLocatorIterator, Cursor, PaginationCursor, DMLOptions, LeadConvert, Database.Error, EmptyRecycleBinResult, AssignmentRuleHeader, DuplicateRuleHeader, EmailHeader, LocaleOptions]
 ---
 
 # Database Namespace 상세 레퍼런스
@@ -147,6 +148,7 @@ opts.assignmentRuleHeader.useDefaultRule = true;
 
 // 중복 레코드 허용 (DuplicateRule 바이패스)
 opts.duplicateRuleHeader.allowSave = true;
+opts.duplicateRuleHeader.runAsCurrentUser = true;  // 현재 사용자 공유 규칙 적용
 
 // 자동 발송 이메일 제어
 opts.emailHeader.triggerAutoResponseEmail = true;
@@ -155,6 +157,9 @@ opts.emailHeader.triggerUserEmail = true;
 
 // 대용량 문자열 트런케이션 허용
 opts.allowFieldTruncation = true;
+
+// 반환 레이블 언어 설정 (예: 'ko', 'en_US', 'de_DE')
+opts.localeOptions = 'en_US';
 
 // 부분 성공 허용
 opts.optAllOrNone = false;
@@ -167,6 +172,55 @@ Case c = new Case(Subject = 'Test');
 c.setOptions(opts);
 Database.insert(c);
 ```
+
+### DMLOptions 프로퍼티 전체 목록
+
+| 프로퍼티 | 타입 | 설명 |
+|---|---|---|
+| `allowFieldTruncation` | `Boolean` | 긴 문자열 트런케이션 허용 (API v15.0+ 기본값: false) |
+| `assignmentRuleHeader` | `DmlOptions.AssignmentRuleHeader` | 배정 규칙 설정 |
+| `duplicateRuleHeader` | `DMLOptions.DuplicateRuleHeader` | 중복 규칙 설정 |
+| `emailHeader` | `DmlOptions.EmailHeader` | 자동 이메일 설정 |
+| `localeOptions` | `String` | 반환 레이블 언어 코드 (예: `'en_US'`, `'de_DE'`, `'ko'`) |
+| `optAllOrNone` | `Boolean` | 부분 성공 허용 여부 (기본값: false) |
+
+### DmlOptions.AssignmentRuleHeader 프로퍼티
+
+Case/Lead 배정 규칙 설정. Account에는 지원하지 않음.
+
+| 프로퍼티 | 타입 | 설명 |
+|---|---|---|
+| `useDefaultRule` | `Boolean` | 기본(활성) 배정 규칙 사용. `assignmentRuleId` 와 동시 사용 금지 |
+| `assignmentRuleId` | `Id` | 특정 배정 규칙 ID (활성/비활성 모두 가능). `useDefaultRule` 와 동시 사용 금지 |
+
+```apex
+// 방법 1 — 기본 규칙
+opts.assignmentRuleHeader.useDefaultRule = true;
+
+// 방법 2 — 특정 규칙 ID 지정
+opts.assignmentRuleHeader.assignmentRuleId = '01QD0000000EqAn';
+```
+
+### DMLOptions.DuplicateRuleHeader 프로퍼티
+
+| 프로퍼티 | 타입 | 설명 |
+|---|---|---|
+| `allowSave` | `Boolean` | Alert 중복 규칙 위반 시에도 저장 허용 (true) 또는 거부 (false) |
+| `runAsCurrentUser` | `Boolean` | 현재 사용자의 공유 규칙 적용 여부. true 설정 시 보이지 않는 중복 레코드 탐지 방지 |
+
+```apex
+// 리드→연락처 전환 시 현재 사용자 기준으로 중복 탐지
+opts.duplicateRuleHeader.allowSave = false;
+opts.duplicateRuleHeader.runAsCurrentUser = true;
+```
+
+### DmlOptions.EmailHeader 프로퍼티
+
+| 프로퍼티 | 타입 | 설명 |
+|---|---|---|
+| `triggerAutoResponseEmail` | `Boolean` | 자동 응답 규칙 이메일 발송 여부 (케이스 생성, 비밀번호 재설정 등) |
+| `triggerOtherEmail` | `Boolean` | 조직 외부 이메일 발송 여부 (케이스 연락처 수정 등) |
+| `triggerUserEmail` | `Boolean` | 조직 내 사용자 이메일 발송 여부 (비밀번호 재설정, 신규 사용자 등) |
 
 ---
 
@@ -269,6 +323,37 @@ while (it.hasNext()) {
 
 // QueryLocator 쿼리 문자열 확인 (테스트 검증용)
 String q = ql.getQuery();
+```
+
+### QueryLocator 추가 메서드
+
+| 메서드 | 반환 타입 | 설명 |
+|---|---|---|
+| `getQuery()` | `String` | QueryLocator에서 사용한 SOQL 문자열 반환 |
+| `iterator()` | `Database.QueryLocatorIterator` | 새 이터레이터 인스턴스 반환 |
+
+> ⚠️ `iterator()`를 반복 호출하면 매번 새 이터레이터가 생성됨. 반드시 변수에 저장해서 사용.
+
+---
+
+## QueryLocatorIterator — QueryLocator 이터레이터
+
+`Database.QueryLocator.iterator()`가 반환. 배치 테스트 등에서 레코드를 직접 순회할 때 사용.
+
+| 메서드 | 반환 타입 | 설명 |
+|---|---|---|
+| `hasNext()` | `Boolean` | 다음 레코드가 있으면 true |
+| `next()` | `sObject` | 다음 sObject 레코드 반환 |
+
+```apex
+Database.QueryLocator ql = Database.getQueryLocator(
+    [SELECT Name FROM Account LIMIT 5]
+);
+Database.QueryLocatorIterator it = ql.iterator();  // 변수에 저장
+while (it.hasNext()) {
+    Account a = (Account) it.next();
+    System.debug(a.Name);
+}
 ```
 
 ---

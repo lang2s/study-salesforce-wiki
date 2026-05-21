@@ -19,6 +19,7 @@ created: 2026-05-17
 
 - [[@api 패턴]] — property, method, getter/setter, lwc:spread
 - [[컴포지션 패턴]] — Container vs Presentational, for:each, lwc:if/lwc:elseif/lwc:else
+- [[LWC API 버전 관리]] — .js-meta.xml apiVersion 규칙, 버전별 기능, 동적 임포트
 
 ## 📡 이벤트 & 통신
 
@@ -28,6 +29,7 @@ created: 2026-05-17
 
 ## 🗃 LDS & 레코드 폼
 
+- [[UI API 개요]] — UI API REST 엔드포인트 전체 + wire 어댑터 매핑 (v67.0 Summer '26)
 - [[Record Form 선택]] — lightning-record-form vs edit-form vs view-form 결정
 - [[uiRecordApi]] — createRecord, updateRecord, deleteRecord, notifyRecordUpdateAvailable
 - [[getRecord 패턴]] — static import, dynamic string, getFieldValue, getRecords
