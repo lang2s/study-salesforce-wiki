@@ -27,6 +27,7 @@ created: 2026-05-21
 | ConnectApi Namespace, Connect in Apex, ConnectApi 개요, ChatterFeeds, ChatterGroups, ChatterUsers, EinsteinLLM, CdpQuery, ConnectApi 클래스 목록, Communities, ManagedContent, CommerceCart, 커넥트API 네임스페이스 | `Apex/Integration(통합)/ConnectApi Namespace 개요.md` |
 | Dom.Document, Dom.XmlNode, XML 파싱, XML 생성, DOM XML, createRootElement, addChildElement, load, toXmlString, getChildElement, getText, SOAP XML | `Apex/Integration(통합)/Dom Namespace.md` |
 | DataSource.Connection, DataSource.Provider, Salesforce Connect, External Objects, 커스텀 어댑터, sync, query, search, upsertRows, deleteRows, TableResult, UpsertResult | `Apex/Integration(통합)/DataSource Namespace.md` |
+| DataRetrieval Namespace, 상담원 고객 인게이지먼트, Engagement, Engagements, RecordTranscripts, Transcript, EngagementRecordDetails, 대화 트랜스크립트, Service Cloud Voice 트랜스크립트, Einstein Conversation Mining, Omnichannel 대화 기록, RecordDetailsRepresentation | `Apex/Integration(통합)/DataRetrieval Namespace.md` |
 | ExternalService, OpenAPI Apex, 타입 안전 외부 호출, External Service Registration, 외부 서비스 등록, ExternalService namespace | `Apex/Integration(통합)/ExternalService Namespace.md` |
 | Invocable.Action, createStandardAction, createCustomAction, Apex에서 Flow 액션 호출, 동적 액션 호출, invoke invocable, addInvocation, setInvocationParameter, getDescribe, 액션 메타데이터 | `Apex/Integration(통합)/Invocable Namespace.md` |
 | Process.Plugin, PluginDescribeResult, PluginRequest, PluginResult, 레거시 플로우 플러그인, deprecated 플러그인, Flow 플러그인 Apex | `Apex/Integration(통합)/Process Namespace.md` |

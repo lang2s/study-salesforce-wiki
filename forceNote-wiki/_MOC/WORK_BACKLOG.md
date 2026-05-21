@@ -181,7 +181,7 @@ updated: 2026-05-22
 
 | # | 네임스페이스 | 설명 (PDF) | 우선순위 | 권장 경로 | 비고 |
 |---|---|---|---|---|---|
-| C-01 | DataRetrieval | 상담원-고객 engagement 상세 + 대화 transcript (Engagement·RecordTranscripts 등) | P2 | `Apex/Integration(통합)/DataRetrieval Namespace.md` | 신규 발견 |
+| C-01 | DataRetrieval | 상담원-고객 engagement 상세 + 대화 transcript (Engagement·RecordTranscripts 등) | P2 | `Apex/Integration(통합)/DataRetrieval Namespace.md` | ✅ 완료(2026-05-22) — 스텁(PDF p.2761 클래스 인벤토리만 수록, 상세는 Service Cloud 개발자 가이드 참조) |
 | C-02 | Sfdc_Checkout | B2B Commerce 체크아웃 (AsyncCartProcessor·B2BCheckoutController 등) | P2 | `Apex/Integration(통합)/Sfdc_Checkout Namespace.md` | = I-04 |
 | C-03 | fsccashflow | FSC CashFlow Flexcard 유틸 (FSCCashFlowUtil) | P3 | `Apex/Integration(통합)/fsccashflow Namespace.md` | = I-02 |
 | C-04 | renew_assets_summary | 갱신 가능 자산 → 갱신 Opportunity (Revenue Cloud) | P3 | `Apex/Integration(통합)/renew_assets_summary Namespace.md` | = I-03 |
