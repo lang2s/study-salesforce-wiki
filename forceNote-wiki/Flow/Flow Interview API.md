@@ -148,4 +148,4 @@ trigger AccountTrigger on Account (after insert) {
 - [[@InvocableMethod 패턴]] — Flow에서 Apex를 호출하는 반대 방향 패턴
 - [[Autolaunched Flow 패턴]] — Apex에서 호출되는 Flow 설계 방법
 - [[Queueable]] — Flow 호출 후 비동기 처리
-- [[거버너 한도]] — Flow 실행 중 공유되는 한도 확인
+- [[Governor Limits]] — Flow 실행 중 공유되는 한도 확인

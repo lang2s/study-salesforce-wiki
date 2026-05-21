@@ -35,4 +35,4 @@ created: 2026-05-17
 | 상황 | 선택 |
 |---|---|
 | 단순 레코드 CRUD | LDS (이 폴더) |
-| 복잡한 비즈니스 로직 포함 | Apex → [[LWC/ApexIntegration(Apex통합)/index\|ApexIntegration]] |
+| 복잡한 비즈니스 로직 포함 | Apex → [[LWC/ApexIntegration(Apex통합)/index|ApexIntegration]] |

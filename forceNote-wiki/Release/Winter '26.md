@@ -353,10 +353,10 @@ export default class ScreenFlowLocalAction extends LightningElement {
 - [ ] [[Flow 설계 베스트 프랙티스]] — 인라인 Transform 처리, 중첩 루프, LWC Local Action 패턴 추가
 - [ ] [[Flow 에러 처리]] — Persistent Logging 및 디버거 개선 내용 반영
 - [ ] [[Batch Apex]] — Test Discovery/Runner API를 이용한 CI 자동화 패턴 참조 추가
-- [ ] [[Permission Set 관리]] — Permission Set License 자동 회수, Secure Roles Behavior 강제 적용 내용 추가
+- [ ] [[Permission Set 설계]] — Permission Set License 자동 회수, Secure Roles Behavior 강제 적용 내용 추가
 - [ ] [[External Services]] — Binary File 지원, 한도 증가(3,000 오브젝트/오퍼레이션, 700 등록) 반영
 - [ ] [[Platform Encryption]] — Database Encryption GA, Field Audit Trail 선언적 보존 정책 내용 추가
-- [ ] [[Salesforce CLI / DevOps]] — MCP Tools (DevOps Center, LWC), `sf package version retrieve`, Quick Create/Clone 내용 추가
+- [ ] [[Salesforce DX 개요]] — MCP Tools (DevOps Center, LWC), `sf package version retrieve`, Quick Create/Clone 내용 추가
 - [ ] [[SLDS / LWC 디자인 시스템]] — SLDS 2 GA, 다크 모드, 밀도 인식 Styling Hook 내용 추가
 
 ---
