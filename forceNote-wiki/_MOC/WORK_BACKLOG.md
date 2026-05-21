@@ -1,7 +1,7 @@
 ---
 tags: [backlog, coverage, work-tracking]
 created: 2026-05-18
-updated: 2026-05-20
+updated: 2026-05-21
 ---
 
 # WORK_BACKLOG — 커버리지 공백 추적 대장
@@ -87,12 +87,66 @@ updated: 2026-05-20
 | P3-27 | runtime_industries_cpq | p.3458 | Industries CPQ | ✅ 완료(2026-05-21) | 2026-05-19 |
 | P3-28 | runtime_industries_insurance | p.3458 | Insurance Cloud | ✅ 완료(2026-05-21) | 2026-05-19 |
 | P3-29 | Sfc | p.3554 | Files 커스텀 처리 | ✅ 완료(2026-05-21) | 2026-05-19 |
-| P3-30 | Sfdc_Checkout | p.3558 | B2B Commerce 전문 | 🔲 대기 | 2026-05-19 |
-| P3-31 | Sfdc_Enablement | p.3563 | Enablement 앱 | 🔲 대기 | 2026-05-19 |
-| P3-32 | sfdc_surveys | p.3573 | Surveys 기능 | 🔲 대기 | 2026-05-19 |
-| P3-33 | renew_assets_summary | p.3285 | Revenue Cloud | 🔲 대기 | 2026-05-19 |
-| P3-34 | fsccashflow | p.2894 | Financial Services Cloud | 🔲 대기 | 2026-05-19 |
+| P3-30 | Sfdc_Checkout | p.3558 | B2B Commerce 전문 | ✅ 완료(2026-05-21) | 2026-05-19 |
+| P3-31 | Sfdc_Enablement | p.3563 | Enablement 앱 | ✅ 완료(2026-05-21) | 2026-05-19 |
+| P3-32 | sfdc_surveys | p.3573 | Surveys 기능 | ✅ 완료(2026-05-21) | 2026-05-19 |
+| P3-33 | renew_assets_summary | p.3285 | Revenue Cloud | ✅ 완료(2026-05-21) — 스텁(2개 클래스 인벤토리, Revenue Cloud 개발자 가이드 참조) | 2026-05-19 |
+| P3-34 | fsccashflow | p.2894 | Financial Services Cloud | ✅ 완료(2026-05-21) | 2026-05-19 |
 | P3-35 | ind_mfg_sample_mgmt_apex | p.2925 | Manufacturing Cloud | ✅ 완료(2026-05-20) — 스텁(3개 클래스 인벤토리, Manufacturing Cloud 개발자 가이드 참조) | 2026-05-19 |
+
+---
+
+### 신규 소스 PDF — 즉시 작성 권장
+
+> **배경:** 2026-05-21 `Salesforce Documents/` 신규 PDF 13개 발견. Apex Reference 외 첫 대규모 소스 확장.
+
+| # | 주제 | 소스 PDF | 권장 파일 경로 | 상태 | 추가일 |
+|---|---|---|---|---|---|
+| N1-01 | SOQL/SOSL 기초 문법 (SELECT, WHERE, 관계 쿼리, 집계 함수, SOSL 구문 전체) | `salesforce_soql_sosl.pdf` (v67.0 Summer '26) | `Apex/Data(데이터)/SOQL 문법 레퍼런스.md` | ✅ 완료(2026-05-21) | 2026-05-21 |
+| N1-02 | Governor Limits 빠른 참조 (SOQL 한도, DML 한도, Heap, CPU, Callout, API 한도 전체) | `salesforce_app_limits_cheatsheet.pdf` (Summer '26) | `Architecture(아키텍처)/Governor Limits 빠른 참조.md` | ✅ 완료(2026-05-21) | 2026-05-21 |
+
+---
+
+### 신규 소스 PDF — 다음 사이클
+
+| # | 주제 | 소스 PDF | 권장 파일 경로 | 상태 | 추가일 |
+|---|---|---|---|---|---|
+| N2-01 | Change Data Capture — 변경 이벤트 구독·처리·갭 이벤트 | `salesforce_change_data_capture.pdf` (v66.0 Spring '26) | `Apex/PlatformEvents(플랫폼이벤트)/Change Data Capture.md` | ✅ 완료(2026-05-21) | 2026-05-21 |
+| N2-02 | Validation Rules 예제 모음 (Account, Contact, Opportunity 등 주요 객체) | `salesforce_useful_validation_formulas.pdf` (Spring '26) | `Architecture(아키텍처)/Validation Rules 예제.md` | ✅ 완료(2026-05-21) | 2026-05-21 |
+| N2-03 | UI API 개요 (getRecord, getFieldValue, wire 어댑터 전체 목록 + LWC 통합) | `api_ui.pdf` (v67.0 Summer '26) | `LWC/LDS/UI API 개요.md` | 🔲 대기 | 2026-05-21 |
+
+---
+
+### 신규 소스 PDF — 장기 계획
+
+| # | 주제 | 소스 PDF | 권장 파일 경로 | 상태 | 추가일 |
+|---|---|---|---|---|---|
+| N3-01 | Experience Cloud 개발자 가이드 개요 (Guest 사용자, Apex 가시성, Communities) | `communities_dev.pdf` (v66.0 Spring '26) | `Architecture(아키텍처)/Experience Cloud 개발자 가이드.md` | 🔲 대기 | 2026-05-21 |
+| N3-02 | Reports & Dashboards REST API 개요 (보고서 실행, 필터, 대시보드 갱신) | `salesforce_analytics_rest_api.pdf` (v67.0 Summer '26) | `Integration(통합)/Reports Dashboards REST API.md` | 🔲 대기 | 2026-05-21 |
+| N3-03 | Lightning Aura Components 개요 (레거시 호환 참조 — 이벤트, 버스, 컴포넌트 구조) | `lightningAura.pdf` (v67.0 Summer '26) | `LWC/Aura/Lightning Aura 개요.md` | 🔲 대기 | 2026-05-21 |
+| N3-04 | Tooling API 개요 (메타데이터 쿼리, 디버그 로그 생성, ApexClass 배포) | `api_tooling.pdf` (v67.0 Summer '26) | `Architecture(아키텍처)/Tooling API 개요.md` | 🔲 대기 | 2026-05-21 |
+| N3-05 | Mobile & Offline 개발 가이드 개요 (오프라인 브리프케이스, GraphQL, priming) | `mobile_offline.pdf` (v67.0 Summer '26) | `LWC/Mobile(모바일)/Offline 개발 가이드.md` | 🔲 대기 | 2026-05-21 |
+| N3-06 | LWC in CRM Analytics Dashboards (wave 어댑터, 필터 컨텍스트, 대시보드 삽입) | `bi_dev_guide_lwc_in_db.pdf` (Summer '26) | `LWC/LWC in CRM Analytics.md` | 🔲 대기 | 2026-05-21 |
+| N3-07 | Enterprise Sales Management 개요 (Sales Program, Milestone, Engagement) | `esm_developer_guide.pdf` (v66.0 Spring '26) | `Architecture(아키텍처)/Enterprise Sales Management.md` | 🔲 대기 | 2026-05-21 |
+
+---
+
+### L — 깨진 wikilink — 신규 파일 필요 (wiki-linter 2026-05-21)
+
+> 2026-05-21 `/lint` 결과. 6개 링크는 즉시 수정 완료. 아래 9개는 대상 파일 없어 신규 작성 필요.
+> `[[Spring '26]]`은 P2-02와 동일 항목.
+
+| # | 깨진 링크 | 참조 위치 | 권장 파일 경로 | 우선순위 | 상태 | 추가일 |
+|---|---|---|---|---|---|---|
+| L-01 | `[[Spring '26]]` | Release MOC, Summer '26 | `Release/Spring '26.md` | P2 (→ P2-02 중복) | 🔲 대기 | 2026-05-21 |
+| L-02 | `[[LWC API 버전 관리]]` | `Release/Winter '24.md` | `LWC/ComponentAPI(컴포넌트API)/LWC API 버전 관리.md` | P2 | 🔲 대기 | 2026-05-21 |
+| L-03 | `[[Custom Metadata Types]]` | `Release/Winter '24.md` 외 | `Architecture(아키텍처)/Custom Metadata Types.md` | P2 | 🔲 대기 | 2026-05-21 |
+| L-04 | `[[lightning-tabset]]` | LWC BaseComponents index | `LWC/BaseComponents(베이스컴포넌트)/lightning-tabset.md` | P3 (→ P3-05 연관) | 🔲 대기 | 2026-05-21 |
+| L-05 | `[[DevOps Center]]` | Release 노트 | `Architecture(아키텍처)/DevOps Center.md` | P3 | 🔲 대기 | 2026-05-21 |
+| L-06 | `[[Enhanced Domains]]` | Release 노트 | `Architecture(아키텍처)/Enhanced Domains.md` | P3 | 🔲 대기 | 2026-05-21 |
+| L-07 | `[[External Services]]` | `Release/Winter '26.md` | `Integration(통합)/External Services.md` | P3 | 🔲 대기 | 2026-05-21 |
+| L-08 | `[[Platform Encryption]]` | Release 노트 | `Apex/Security(보안)/Platform Encryption.md` | P3 | 🔲 대기 | 2026-05-21 |
+| L-09 | `[[SLDS / LWC 디자인 시스템]]` | LWC 관련 노트 | `LWC/UIPatterns(UI패턴)/SLDS LWC 디자인 시스템.md` | P3 | 🔲 대기 | 2026-05-21 |
 
 ---
 
