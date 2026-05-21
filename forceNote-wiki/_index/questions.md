@@ -40,8 +40,8 @@ created: 2026-05-21
 | 로그 남기는 방법 | `Apex/Logging(로깅)/Log 싱글턴 패턴.md` |
 | 캐시 사용하는 방법 | `Apex/PlatformCache(플랫폼캐시)/Platform Cache.md` |
 | 공유 규칙 보안 적용 | `Apex/Security(보안)/Safely.md` |
-| 데이터 조회 쿼리 | `Apex/Data(데이터)/SOQL 패턴.md` |
-| 여러 오브젝트에서 키워드 검색 | `Apex/Data(데이터)/SOSL 패턴.md` |
+| 데이터 조회 쿼리 | `Apex/SOQL(SOQL)/SOQL 패턴.md` |
+| 여러 오브젝트에서 키워드 검색 | `Apex/SOQL(SOQL)/SOSL 패턴.md` |
 | Aura 컴포넌트 만드는 방법 | `Aura(오라)/Aura 컴포넌트 구조.md` |
 | Aura에서 LWC로 전환하는 방법 | `Aura(오라)/Aura vs LWC.md` |
 | Salesforce 처음 사용법 | `Architecture(아키텍처)/Salesforce 플랫폼 개요.md` |

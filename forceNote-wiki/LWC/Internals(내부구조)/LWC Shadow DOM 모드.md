@@ -9,7 +9,7 @@ aliases: [LWC Shadow DOM, LWC Light DOM, synthetic shadow, native shadow, shadow
 
 > LWC 컴포넌트의 세 가지 렌더링 격리 모드(Native Shadow / Synthetic Shadow / Light DOM) 내부 구현과 전환 방법.
 
-**상위:** [[Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
+**상위:** [[index|Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
 
 ---
 

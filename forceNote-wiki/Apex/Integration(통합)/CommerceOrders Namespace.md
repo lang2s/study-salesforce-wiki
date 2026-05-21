@@ -1,4 +1,4 @@
----
+﻿---
 tags: [apex, namespace, commerceorders, b2b-commerce, d2c-commerce, order]
 source: salesforce_apex_reference_guide.pdf p.316
 created: 2026-05-20
@@ -25,3 +25,4 @@ aliases: [CommerceOrders, CommerceOrders Namespace, B2B Commerce Order Apex, 주
 - [[Apex MOC]]
 - [[CommerceBuyGrp Namespace]] — Buyer Group 배정 커스텀 로직
 - [[CommerceExtension Namespace]] — B2B/D2C Commerce 확장 포인트 해결 전략
+- [[5 Object Interfaces]] — SalesTransaction·PriceAdjustmentGroup·PriceAdjustmentItem 인터페이스 (Order·WebCart 구현)

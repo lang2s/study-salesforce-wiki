@@ -273,6 +273,7 @@ EventBus.publishWithAccessLevel(eventList, EventBus.AccessLevel.USER);
 
 ## 관련 노트
 
+- [[Flow Interview API]] — Apex에서 Flow를 실행하는 반대 방향 패턴
 - [[Flow Screen LWC 패턴]]
 - [[멀티 패키지 구조]]
 - [[Queueable 체이닝]]

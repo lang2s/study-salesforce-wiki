@@ -48,13 +48,22 @@ created: 2026-05-21
 | UserProvisioningPlugin invoke buildDescribeCall, Process.PluginResult, reconOffset nextReconOffset reconState, 10000 DML 한도 우회 프로비저닝, Flow Builder 프로비저닝 플러그인 | `Apex/Security(보안)/UserProvisioning Namespace.md` |
 | ConnectorTestUtil.createConnectedApp, 프로비저닝 테스트, UserProvisioningRequest, @isTest 커넥티드 앱 시뮬레이션 | `Apex/Security(보안)/UserProvisioning Namespace.md` |
 
-## Apex — 데이터 / SOQL
+## Apex — SOQL / SOSL
 
 | 키워드 | 파일 |
 |---|---|
-| SOQL, 쿼리 패턴, 벌크 쿼리, 거버너 한도, Database.query, 데이터 조회, SELECT FROM WHERE | `Apex/Data(데이터)/SOQL 패턴.md` |
-| SOQL 문법 레퍼런스, SOQL SELECT 전체 문법, FIELDS ALL CUSTOM STANDARD, 날짜 리터럴, TODAY YESTERDAY LAST_N_DAYS THIS_FISCAL_YEAR, 날짜 함수, CALENDAR_YEAR DAY_ONLY HOUR_IN_DAY, GROUP BY ROLLUP CUBE, GROUPING 함수, 세미조인, 안티조인, 관계 쿼리, 자식→부모 dot, 부모→자식 서브쿼리, TYPEOF 다형성, TYPEOF 제한사항, USING SCOPE, ContentDocumentLink 제한, Big Object 쿼리, SOQL 오브젝트 제한, FORMAT() SOQL, toLabel() SOQL, convertCurrency() SOQL, DISTANCE GEOLOCATION 위치 기반 쿼리, Location-Based SOQL, 관계 쿼리 제한사항, child-to-parent 55개 제한, KnowledgeArticleVersion 바인딩변수 불가, Data 360 SOQL 제한, UserRecordAccess 쿼리, Vote 쿼리, ContentHubItem 쿼리 | `Apex/Data(데이터)/SOQL 문법 레퍼런스.md` |
-| SOSL, FIND 구문, 전문 검색, IN NAME FIELDS, RETURNING, 여러 오브젝트 검색, List<List<SObject>>, WITH SNIPPET, WITH HIGHLIGHT, SOSL 레퍼런스, SOSL 전체 문법, FIND 와일드카드, SOSL 예약문자 이스케이프, SearchQuery 문자수 제한, SOSL ORDER BY, SOSL OFFSET, SOSL FORMAT(), SOSL toLabel, SOSL convertCurrency, USING Listview SOSL, UPDATE TRACKING SOSL, UPDATE VIEWSTAT SOSL, WITH HIGHLIGHT 지원 필드, WITH METADATA LABELS, WITH DivisionFilter, WITH PricebookId, WITH SPELL_CORRECTION, SOSL 검색 알고리즘, SOSL External Object 제한, SOSL WHERE 연산자, SOSL 이스케이프 시퀀스, SOSL vs SOQL | `Apex/Data(데이터)/SOSL 패턴.md` |
+| SOQL vs SOSL, 쿼리 언어 선택, SOQL 언제, SOSL 언제, CONTAINS 성능, CJKT 검색, 한국어 일본어 검색, 쿼리 성능 고려사항 | `Apex/SOQL(SOQL)/SOQL SOSL 소개.md` |
+| SOQL, 쿼리 패턴, 벌크 쿼리, 거버너 한도, Database.query, 데이터 조회, SELECT FROM WHERE | `Apex/SOQL(SOQL)/SOQL 패턴.md` |
+| SOQL 문법 레퍼런스, SOQL SELECT 전체 문법, FIELDS ALL CUSTOM STANDARD, 날짜 리터럴, TODAY YESTERDAY LAST_N_DAYS THIS_FISCAL_YEAR, 날짜 함수, CALENDAR_YEAR DAY_ONLY HOUR_IN_DAY, GROUP BY ROLLUP CUBE, GROUPING 함수, 세미조인, 안티조인, 관계 쿼리, 자식→부모 dot, 부모→자식 서브쿼리, TYPEOF 다형성, TYPEOF 제한사항, USING SCOPE, ContentDocumentLink 제한, Big Object 쿼리, SOQL 오브젝트 제한, FORMAT() SOQL, toLabel() SOQL, convertCurrency() SOQL, DISTANCE GEOLOCATION 위치 기반 쿼리, Location-Based SOQL, 관계 쿼리 제한사항, child-to-parent 55개 제한, KnowledgeArticleVersion 바인딩변수 불가, Data 360 SOQL 제한, UserRecordAccess 쿼리, Vote 쿼리, ContentHubItem 쿼리 | `Apex/SOQL(SOQL)/SOQL 문법 레퍼런스.md` |
+| WITH DATA CATEGORY, Knowledge 카테고리 필터, KnowledgeArticleVersion 카테고리, Question 카테고리, AT ABOVE BELOW ABOVE_OR_BELOW, dataCategoryGroupName, filteringSelector, dataCategorySelection, PublishStatus online draft archived, RecordVisibilityContext, maxDescriptorPerRecord, supportsDomains supportsDelegates, VisibilityAttribute, 데이터 카테고리 SOQL | `Apex/SOQL(SOQL)/SOQL WITH DATA CATEGORY.md` |
+| Syndication Feed SOQL, 피드 SOQL, RSS Atom 피드 매핑, 공개 사이트 피드, Public Site SOQL 피드 | `Apex/SOQL(SOQL)/Syndication Feed SOQL.md` |
+| SOSL, FIND 구문, 전문 검색, IN NAME FIELDS, RETURNING, 여러 오브젝트 검색, List<List<SObject>>, WITH SNIPPET, WITH HIGHLIGHT, SOSL 레퍼런스, SOSL 전체 문법, FIND 와일드카드, SOSL 예약문자 이스케이프, SearchQuery 문자수 제한, SOSL ORDER BY, SOSL OFFSET, SOSL FORMAT(), SOSL toLabel, SOSL convertCurrency, USING Listview SOSL, UPDATE TRACKING SOSL, UPDATE VIEWSTAT SOSL, WITH HIGHLIGHT 지원 필드, WITH METADATA LABELS, WITH DivisionFilter, WITH PricebookId, WITH SPELL_CORRECTION, SOSL 검색 알고리즘, SOSL External Object 제한, SOSL WHERE 연산자, SOSL 이스케이프 시퀀스, SOSL vs SOQL | `Apex/SOQL(SOQL)/SOSL 패턴.md` |
+| Dynamic SOQL, 동적 쿼리, String.escapeSingleQuotes, 바인딩 변수 | `Apex/SOQL(SOQL)/Dynamic SOQL.md` |
+
+## Apex — 데이터 (DML / Namespace)
+
+| 키워드 | 파일 |
+|---|---|
 | FormulaEval, Formula.builder, 동적 수식 평가, 포뮬러 필드 재계산, DML 없이 수식 계산, getReferencedFields, 수식 평가 Apex, 템플릿 수식, FormulaReturnType, FormulaGlobal | `Apex/Data(데이터)/FormulaEval Namespace.md` |
 | Reports namespace, ReportManager, runReport, runAsyncReport, ReportResults, ReportMetadata, ReportFact, ReportFactWithDetails, SummaryValue, FactMap, 보고서 Apex 실행, 비동기 보고서, 보고서 필터 재정의, getFactMap, ReportFilter, BucketField, ReportInstance | `Apex/Data(데이터)/Reports Namespace.md` |
 | BusinessHours, BusinessHours.diff, 영업시간 계산, SLA 준수 여부, 업무시간 경과, isWithin, nextStartDate, SLA 초과 | `Apex/Data(데이터)/BusinessHours 패턴.md` |
@@ -64,7 +73,6 @@ created: 2026-05-21
 | Wave.QueryNode, build, foreach, group by all, order SAQL, cap, filter predicate, execute ConnectApi.LiteralJson | `Apex/Data(데이터)/Wave Namespace.md` |
 | Wave.ProjectionNode, sum avg min max unique alias, 집계 함수 체이닝 Apex, SAQL projection | `Apex/Data(데이터)/Wave Namespace.md` |
 | Wave.Templates, getTemplate, getTemplateConfig, getTemplates, TemplatesSearchOptions, CRM Analytics 템플릿 조회, filterGroup options type | `Apex/Data(데이터)/Wave Namespace.md` |
-| Dynamic SOQL, 동적 쿼리, String.escapeSingleQuotes, 바인딩 변수 | `Apex/Data(데이터)/Dynamic SOQL.md` |
 | 페이징, PagedResult, 오프셋, OFFSET LIMIT, 페이지네이션 | `Apex/Data(데이터)/PagedResult 패턴.md` |
 
 ## Apex — 비동기

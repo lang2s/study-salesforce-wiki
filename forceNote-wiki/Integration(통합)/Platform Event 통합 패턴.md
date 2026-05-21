@@ -219,6 +219,7 @@ static void testOrderEventPublish() {
 
 ## 관련 노트
 
+- [[Platform Event 발행]] — EventBus.publish 기본 발행·수신 패턴
 - [[Custom REST Endpoint]] — Inbound 동기 통합
 - [[Queueable + Callout 패턴]] — 이벤트 처리 후 외부 Callout 연결
 - [[Named Credential]] — Outbound 연동

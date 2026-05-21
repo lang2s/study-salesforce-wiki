@@ -9,7 +9,7 @@ aliases: [@track 내부, internalTrackDecorator, getReactiveProxy, observable-me
 
 > `@track`이 `vm.cmpFields`에 reactive proxy를 저장하고 중첩 객체 변경까지 추적하는 방식.
 
-**상위:** [[Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
+**상위:** [[index|Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
 
 ---
 

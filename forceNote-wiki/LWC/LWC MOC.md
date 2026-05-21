@@ -41,6 +41,7 @@ created: 2026-05-17
 > 각 컴포넌트의 속성·이벤트·코드 예시·접근성·사용 고려사항이 담긴 상세 페이지.
 
 - [[lightning-accordion]] — 접고 펼치는 아코디언, sectiontoggle 이벤트, 다중 열기
+- [[lightning-tabset]] — 탭 컨테이너, ontabchange 이벤트, variant(default/scoped/vertical)
 - [[lightning-input]] — 14가지 type 변형, 유효성 검사, change·commit 이벤트
 - [[lightning-combobox]] — 단일 선택 드롭다운, options 배열, Picklist 연동
 - [[lightning-datatable]] — 정렬·인라인 편집·행 액션·커스텀 타입, columns 전체 type 목록

@@ -9,7 +9,7 @@ aliases: [LWC 아키텍처, LWC 내부 구조, lwc monorepo, @lwc/compiler, @lwc
 
 > salesforce/lwc 모노레포 전체 구조 — Compiler·Runtime·SSR 분리 설계, 패키지 역할, 프레임워크 설계 결정.
 
-**상위:** [[Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
+**상위:** [[index|Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
 
 ---
 

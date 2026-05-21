@@ -1,4 +1,4 @@
----
+﻿---
 tags: [apex, platform-event, publish, trigger, pattern]
 source: apex-recipes/PlatformEventRecipes.cls
 created: 2026-05-17
@@ -144,7 +144,9 @@ String lastReplayId = Trigger.new[Trigger.new.size() - 1].ReplayId;
 
 ## 관련 노트
 
+- [[Platform Event 통합 패턴]] — 이벤트 기반 시스템 통합 패턴
 - [[Log 싱글턴 패턴]] — EventBus.publish 활용
 - [[Queueable]] — 이벤트 처리 후 비동기 체이닝
 - [[Custom REST Endpoint]]
+- [[3 Associated Objects]] — ChangeEvent(CDC) 패턴 비교 — Platform Event와 다른 CDC 구독 방식
 

@@ -149,5 +149,6 @@ AccountSettings settings = (AccountSettings)
 ## 관련 노트
 
 - [[SOQL 패턴]] — 반복 쿼리 최적화
+- [[Cache Namespace]] — Cache.Org/Partition/Session 메서드 전체
 - [[비동기 컨텍스트 선택]]
 

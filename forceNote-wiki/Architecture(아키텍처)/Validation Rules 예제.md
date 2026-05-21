@@ -457,6 +457,6 @@ OR(AnnualRevenue < 0, AnnualRevenue > 100000000000)
 
 ## 관련 문서
 
-- [[Governor Limits 빠른 참조]] — 수식 필드 및 검증 규칙 한도 확인
+- [[Governor Limits]] — 수식 필드 및 검증 규칙 한도 확인
 - [[Custom Metadata Types]] — CMDT를 활용한 동적 검증 임계값 관리
 - [[Schema Namespace 상세]] — `REGEX`, 수식 함수 스키마 컨텍스트

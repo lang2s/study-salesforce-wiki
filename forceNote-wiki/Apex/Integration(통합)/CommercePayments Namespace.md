@@ -1,4 +1,4 @@
----
+﻿---
 tags: [apex, namespace, commercepayments, payment-gateway, b2b-commerce, d2c-commerce, payment]
 source: salesforce_apex_reference_guide.pdf p.317–526
 created: 2026-05-20
@@ -587,3 +587,4 @@ tokenResponse.setGatewayToken(plainToken);
 - [[CommerceExtension Namespace]] — B2B/D2C 확장 포인트 해결 전략
 - [[CommerceOrders Namespace]] — B2B/D2C 주문 생성 Apex
 - [[RestClient 패턴]] — 일반 외부 HTTP 호출 패턴
+- [[5 Object Interfaces]] — SalesTransaction·PriceAdjustmentGroup 인터페이스 필드 참조

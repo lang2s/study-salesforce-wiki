@@ -1,4 +1,4 @@
----
+﻿---
 tags: [home, index, salesforce]
 created: 2026-05-17
 ---
@@ -111,6 +111,18 @@ Salesforce DX — 소스 중심 개발, Scratch Org, Unlocked Package, CI/CD
 | [[RestClient 패턴]] | virtual class, PATCH 우회 |
 | [[CSP와 RemoteSite]] | CspTrustedSite, RemoteSiteSetting, LWC vs Apex 외부 연동 |
 | [[Custom REST Endpoint]] | @RestResource, RestContext |
+
+### [[sObject/index|sObject Reference]]
+Salesforce Platform Object Reference v67.0 — Field 타입, Object 그룹, 표준 Object 카탈로그
+
+| 하위 주제 | 핵심 키워드 |
+|---|---|
+| [[1 Overview]] | Primitive 타입, Field 타입, Compound Fields, Big Objects, External Objects |
+| [[2 Object Behavior]] | Object 그룹, Data Cloud, DLO·DMO·CIO·DG, Object Types 접미사 |
+| [[3 Associated Objects]] | Feed·History·Share·OwnerSharingRule·ChangeEvent(CDC) 패턴 |
+| [[4 Custom Objects]] | __mdt 필드, __c 표준 필드, __Feed 표준 필드 |
+| [[5 Object Interfaces]] | PriceAdjustmentGroup·PriceAdjustmentItem·SalesTransaction |
+| [[6 Standard Objects]] | Account·Case·Opportunity·ApexClass 등 도메인별 카탈로그 |
 
 ### [[Release MOC|Release Notes]]
 Salesforce 연 3회 릴리즈 추적 — 신규 기능, Deprecated, 거버너 한도 변경

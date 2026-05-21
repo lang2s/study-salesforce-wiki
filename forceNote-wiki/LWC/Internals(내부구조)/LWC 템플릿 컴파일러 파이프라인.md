@@ -9,7 +9,7 @@ aliases: [LWC 템플릿 컴파일러, @lwc/template-compiler, compile() 함수, 
 
 > `.html` 파일을 LWC 런타임이 실행할 수 있는 JavaScript 모듈로 변환하는 `@lwc/template-compiler` 내부 동작 전체.
 
-**상위:** [[Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
+**상위:** [[index|Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
 
 ---
 

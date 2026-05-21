@@ -9,7 +9,7 @@ aliases: [LWC Feature Flags, lwcRuntimeFlags, setFeatureFlag, setFeatureFlagForT
 
 > `lwcRuntimeFlags` 글로벌 객체로 제어하는 LWC 런타임 동작 플래그 전체 목록과 사용법.
 
-**상위:** [[Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
+**상위:** [[index|Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
 
 ---
 

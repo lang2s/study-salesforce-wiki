@@ -145,3 +145,4 @@ export default class ApiSpread extends LightningElement {
 
 - [[컴포지션 패턴]]
 - [[CustomEvent 패턴]] — 자식 → 부모 방향
+- [[상태 관리]] — 컴포넌트 내부 상태와 공유 데이터 관리

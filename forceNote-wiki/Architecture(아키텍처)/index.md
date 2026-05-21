@@ -27,6 +27,8 @@ created: 2026-05-17
 | [[AppLauncher Namespace]] | App Launcher 앱 가시성·정렬 제어 — AppMenu.setAppVisibility, setOrgSortOrder, setUserSortOrder | #reference |
 | [[VisualEditor Namespace]] | Lightning App Builder 동적 피클리스트 — DynamicPickList 상속, DataRow, DynamicPickListRows, DesignTimePageContext | #reference |
 | [[Canvas Namespace]] | 외부 웹 앱 임베드 Apex SDK — CanvasLifecycleHandler(excludeContextTypes/onRender), RenderContext, ApplicationContext, EnvironmentContext, Canvas.Test | #reference |
+| [[Custom Metadata Types]] | CMDT 읽기·쓰기(Metadata.Operations), getInstance, SOQL 조회, isProtected 보호 설정 | #reference |
+| [[Validation Rules 예제]] | REGEX, ISBLANK, ISNUMBER, ISCHANGED, PRIORVALUE, VLOOKUP, ISPICKVAL 예제 모음 | #reference |
 
 ---
 

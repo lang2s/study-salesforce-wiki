@@ -11,7 +11,7 @@ aliases: [DataRetrieval, Engagement Transcript, RecordTranscripts, EngagementRec
 
 > [!warning] 이 노트는 Apex Reference Guide v67.0 doc p.2761의 클래스 인벤토리 목록을 기반으로 작성되었습니다. 메서드 레벨 API 시그니처는 Apex Reference Guide PDF에 수록되지 않았으며, 상세 문서는 Salesforce Service Cloud / Contact Center 개발자 가이드를 참조해야 합니다.
 
-**상위:** [[Integration(통합) index]] → [[00 Home]]
+**상위:** [[index|Integration(통합) index]] → [[00 Home]]
 
 ---
 

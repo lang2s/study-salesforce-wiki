@@ -1,4 +1,4 @@
----
+﻿---
 tags: [apex, namespace, commercebuygrp, b2b-commerce, d2c-commerce, buyer-group]
 source: salesforce_apex_reference_guide.pdf p.301-306
 created: 2026-05-20
@@ -120,3 +120,4 @@ public class MyBuyerGroupService extends CommerceBuyGrp.BuyerGroupEvaluationServ
 
 - [[Apex MOC]]
 - [[CommerceExtension Namespace]] — B2B/D2C Commerce 확장 포인트 Resolution 전략
+- [[5 Object Interfaces]] — PriceAdjustmentGroup·PriceAdjustmentItem 인터페이스 상세 필드

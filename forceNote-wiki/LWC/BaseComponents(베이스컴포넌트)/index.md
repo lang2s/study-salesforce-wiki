@@ -17,6 +17,7 @@ created: 2026-05-17
 | 파일 | 컴포넌트 | 한 줄 요약 |
 |---|---|---|
 | [[lightning-accordion]] | `lightning-accordion` | 접고 펼 수 있는 아코디언 — 섹션 토글, 다중 열기, 프로그래밍 열기 |
+| [[lightning-tabset]] | `lightning-tabset` | 탭 그룹 컨테이너 — ontabchange, variant(default/scoped/vertical), active-tab-value |
 | [[lightning-input]] | `lightning-input` | 다목적 입력 필드 — type 변형 14가지, 유효성 검사, change·commit 이벤트 |
 | [[lightning-combobox]] | `lightning-combobox` | 단일 선택 드롭다운 — options 배열, onchange, 읽기 전용 입력 |
 | [[lightning-datatable]] | `lightning-datatable` | 정렬·선택·인라인 편집 테이블 — columns 정의, 커스텀 타입, 행 액션 |
@@ -32,6 +33,7 @@ created: 2026-05-17
 ## 빠른 선택
 
 - 접고 펼치는 콘텐츠 영역? → [[lightning-accordion]]
+- 탭으로 콘텐츠 전환? → [[lightning-tabset]]
 - 텍스트·숫자·날짜·파일 입력? → [[lightning-input]]
 - 드롭다운 단일 선택? → [[lightning-combobox]]
 - 여러 행 데이터 표시 + 정렬·선택·편집? → [[lightning-datatable]]

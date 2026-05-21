@@ -9,7 +9,7 @@ aliases: [LWC VM, Virtual Machine LWC, VMState, RenderMode, ShadowMode, ViewMode
 
 > 모든 LWC 컴포넌트 인스턴스는 하나의 `VM` 객체로 관리된다. `vm.ts`에 정의된 인터페이스와 enum, 생명주기 함수 전체.
 
-**상위:** [[Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
+**상위:** [[index|Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
 
 ---
 

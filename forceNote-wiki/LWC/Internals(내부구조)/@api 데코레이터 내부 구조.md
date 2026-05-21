@@ -9,7 +9,7 @@ aliases: [@api 내부, createPublicPropertyDescriptor, createPublicAccessorDescr
 
 > `@api` 데코레이터가 내부적으로 `vm.cmpProps`에 값을 저장하고 반응성 시스템과 연결되는 방식.
 
-**상위:** [[Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
+**상위:** [[index|Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
 
 ---
 

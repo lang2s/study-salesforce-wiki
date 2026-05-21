@@ -32,12 +32,19 @@ created: 2026-05-17
 - [[TxnSecurity Namespace]] — EventCondition/AsyncCondition으로 Transaction Security Policy Apex 구현, Real-Time Event Monitoring 기반 차단·알림 정책
 - [[UserProvisioning Namespace]] — 커넥티드 앱 아웃바운드 사용자 프로비저닝: ConnectorTestUtil/UserProvisioningLog/UserProvisioningPlugin(reconOffset 청크)
 
-## 📊 데이터 (SOQL / DML)
+## 🔍 SOQL / SOSL
 
+- [[SOQL SOSL 소개]] — SOQL vs SOSL 선택 기준, 언제 무엇을 쓸지, 성능 고려사항
+- [[SOQL 문법 레퍼런스]] — SELECT 전체 문법, 날짜 리터럴, 집계 함수, 관계 쿼리, ROLLUP/CUBE, 세미조인, Object별 제한
+- [[SOQL WITH DATA CATEGORY]] — Knowledge/Question 카테고리 필터, AT/ABOVE/BELOW/ABOVE_OR_BELOW, RecordVisibilityContext
+- [[Syndication Feed SOQL]] — 커스텀 피드 동기화용 SOQL 매핑 문법
 - [[SOQL 패턴]] — WITH USER_MODE, SOQL for loop, 청크 반복
-- [[SOSL 패턴]] — FIND 구문, IN SearchGroup, RETURNING, 여러 Object 전문 검색
-- [[DML 패턴]] — insert as user/system, Database.*(accessLevel)
 - [[Dynamic SOQL]] — queryWithBinds, SOQL 인젝션 방어
+- [[SOSL 패턴]] — FIND 구문, IN SearchGroup, RETURNING, 여러 Object 전문 검색
+
+## 📊 데이터 (DML / Namespace)
+
+- [[DML 패턴]] — insert as user/system, Database.*(accessLevel)
 - [[PagedResult 패턴]] — 페이지네이션 DTO, scope='global', ?? null coalescing, LIMIT+OFFSET
 - [[BusinessHours 패턴]] — BusinessHours.diff(), isWithin(), nextStartDate(), SLA 경과 시간 계산
 - [[Database Namespace 상세]] — SaveResult/UpsertResult/MergeResult/Cursor/PaginationCursor/QueryLocator/DMLOptions/LeadConvert
@@ -72,6 +79,7 @@ created: 2026-05-17
 - [[Metadata Namespace]] — CMT 레코드 Apex 배포·조회, CustomMetadata/DeployContainer/Operations.enqueueDeployment/DeployCallback
 - [[Compression Namespace]] — ZipWriter/ZipReader로 Apex Zip 압축·해제, Spring '25 GA
 - [[DataWeave Namespace]] — DataWeave.Script.createScript/execute, JSON·XML·CSV 변환, Winter '24 GA
+- [[DataRetrieval Namespace]] — Service Cloud Contact Center 상담원-고객 인게이지먼트 트랜스크립트 조회·기록 Apex (⚠️ 스텁)
 - [[KbManagement Namespace]] — KbManagement.PublishingService, 아티클 게시·번역·보관·삭제 라이프사이클 API
 - [[Flow Namespace]] — Flow.Interview 클래스 — Apex에서 Flow 실행, createInterview(정적/동적), start(), getVariableValue()
 - [[Support Namespace]] — EmailTemplateSelector(Classic Case Feed 템플릿 자동 선택), MilestoneTriggerTimeCalculator(동적 SLA 트리거 시간)

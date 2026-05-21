@@ -9,7 +9,7 @@ aliases: [@wire 내부, WireAdapter 인터페이스, WireAdapterConstructor, cre
 
 > `@wire`가 어댑터를 인스턴스화하고, 반응형 파라미터를 감지해 `update()`를 호출하는 방식. 현대 API와 레거시 API 모두 설명.
 
-**상위:** [[Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
+**상위:** [[index|Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
 
 ---
 

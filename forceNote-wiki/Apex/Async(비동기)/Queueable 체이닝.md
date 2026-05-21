@@ -149,4 +149,5 @@ static void testQueueableChain() {
 - [[Queueable]]
 - [[비동기 컨텍스트 선택]]
 - [[RestClient 패턴]] — AllowsCallouts 패턴
+- [[Queueable + Callout 패턴]] — HTTP Callout과 체이닝 결합
 

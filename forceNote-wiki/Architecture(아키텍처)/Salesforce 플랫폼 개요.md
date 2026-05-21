@@ -1,4 +1,4 @@
----
+﻿---
 tags: [architecture, salesforce-basics, platform, org, object, record, cloud]
 source: basics.pdf
 created: 2026-05-19
@@ -113,3 +113,5 @@ Org
 - [[Admin(어드민)/Salesforce ID 인증]] — MFA 인증 설정
 - [[Architecture(아키텍처)/서비스 레이어 패턴]] — 개발 아키텍처 패턴
 - [[Apex/Security(보안)/index]] — 권한 설계
+- [[2 Object Behavior]] — Object 그룹·타입 상세 (Big Object·Data Cloud·External Object)
+- [[6 Standard Objects]] — 표준 Object 도메인별 카탈로그 (Account·Case·User 등)

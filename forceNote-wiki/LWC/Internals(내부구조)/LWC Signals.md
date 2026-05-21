@@ -9,7 +9,7 @@ aliases: [LWC Signals, @lwc/signals, Signal 인터페이스, SignalBaseClass, ad
 
 > LWC 엔진이 추적할 수 있는 외부 반응형 값(Signal) 인터페이스와 추상 기반 클래스. `ENABLE_EXPERIMENTAL_SIGNALS` 플래그로 활성화.
 
-**상위:** [[Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
+**상위:** [[index|Internals(내부구조) index]] → [[LWC MOC]] → [[00 Home]]
 
 ---
 

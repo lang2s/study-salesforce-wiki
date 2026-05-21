@@ -280,6 +280,7 @@ Step 0 검증 + 4단계를 모두 완료해야 추가 작업이 끝난 것으로
 | Apex/Async(비동기) | `Apex/Async(비동기)/index.md` |
 | Apex/Collections(컬렉션) | `Apex/Collections(컬렉션)/index.md` |
 | Apex/Data(데이터) | `Apex/Data(데이터)/index.md` |
+| Apex/SOQL(SOQL) | `Apex/SOQL(SOQL)/index.md` |
 | Apex/ExecutionContext(실행컨텍스트) | `Apex/ExecutionContext(실행컨텍스트)/index.md` |
 | Apex/Integration(통합) | `Apex/Integration(통합)/index.md` |
 | Apex/Logging(로깅) | `Apex/Logging(로깅)/index.md` |
@@ -301,6 +302,7 @@ Step 0 검증 + 4단계를 모두 완료해야 추가 작업이 끝난 것으로
 | LWC/BaseComponents(베이스컴포넌트) | `LWC/BaseComponents(베이스컴포넌트)/index.md` |
 | LWC/Internals(내부구조) | `LWC/Internals(내부구조)/index.md` |
 | Flow | `Flow/index.md` |
+| sObject | `sObject/index.md` |
 
 ---
 

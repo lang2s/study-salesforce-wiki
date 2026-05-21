@@ -164,3 +164,4 @@ static void testCDCTrigger() {
 - [[Batch Apex]] — CDC 이벤트를 Batch에서 처리하는 패턴
 - [[Queueable]] — CDC 트리거에서 비동기 처리 위임
 - [[EventBus Namespace]] — EventBus.publish 메서드 서명, TriggerContext, RetryableException 상세
+- [[3 Associated Objects]] — ChangeEvent Object 패턴 상세 (changeType·changedFields·transactionKey)

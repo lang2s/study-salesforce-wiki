@@ -1,4 +1,4 @@
----
+﻿---
 tags: [apex, dml, security, pattern]
 source: apex-recipes/DMLRecipes.cls, AccountServiceLayer.cls
 created: 2026-05-17
@@ -134,5 +134,6 @@ update as user decision.getRecords();
 - [[StripInaccessible]]
 - [[CanTheUser]]
 - [[WITH USER_MODE]] — AccessLevel 열거형 상세
+- [[4 Custom Objects]] — __c 표준 필드 목록 (DML 대상 필드 참조)
 - [[Batch Apex]] — Database.SaveResult 처리
 - [[Summer '26]] — API v67.0 DML 기본 모드 USER_MODE 변경

@@ -209,6 +209,6 @@ public class RateCardSelector implements IRateCardSelector {
 
 ## 관련 문서
 
-- [[Governor Limits 빠른 참조]] — CMDT 한도 확인
+- [[Governor Limits]] — CMDT 한도 확인
 - [[Schema Namespace 상세]] — SObject 타입 describe (CMDT도 SObject임)
 - [[Database Namespace 상세]] — DML과 CMDT 비교 (CMDT는 DML 불가)

@@ -1,4 +1,4 @@
----
+﻿---
 tags: [backlog, coverage, work-tracking]
 created: 2026-05-18
 updated: 2026-05-22
@@ -143,7 +143,7 @@ updated: 2026-05-22
 | L-01 | `[[Spring '26]]` | Release MOC, Summer '26 | `Release/Spring '26.md` | P2 (→ P2-02 중복) | 🔲 대기 | 2026-05-21 |
 | L-02 | `[[LWC API 버전 관리]]` | `Release/Winter '24.md` | `LWC/ComponentAPI(컴포넌트API)/LWC API 버전 관리.md` | P2 | ✅ 완료(2026-05-22) | 2026-05-21 |
 | L-03 | `[[Custom Metadata Types]]` | `Release/Winter '24.md` 외 | `Architecture(아키텍처)/Custom Metadata Types.md` | P2 | ✅ 완료(2026-05-22) | 2026-05-21 |
-| L-04 | `[[lightning-tabset]]` | LWC BaseComponents index | `LWC/BaseComponents(베이스컴포넌트)/lightning-tabset.md` | P3 (→ P3-05 연관) | 🔲 대기 | 2026-05-21 |
+| L-04 | `[[lightning-tabset]]` | LWC BaseComponents index | `LWC/BaseComponents(베이스컴포넌트)/lightning-tabset.md` | P3 (→ P3-05 연관) | ✅ 완료(2026-05-22) | 2026-05-21 |
 | L-05 | `[[DevOps Center]]` | Release 노트 | `Architecture(아키텍처)/DevOps Center.md` | P3 | 🔲 대기 | 2026-05-21 |
 | L-06 | `[[Enhanced Domains]]` | Release 노트 | `Architecture(아키텍처)/Enhanced Domains.md` | P3 | 🔲 대기 | 2026-05-21 |
 | L-07 | `[[External Services]]` | `Release/Winter '26.md` | `Integration(통합)/External Services.md` | P3 | 🔲 대기 | 2026-05-21 |
@@ -202,6 +202,98 @@ updated: 2026-05-22
 > - **Database** (519 → 604줄): DMLOptions.localeOptions·AssignmentRuleHeader.assignmentRuleId·DuplicateRuleHeader.runAsCurrentUser·DMLOptions 프로퍼티 전수 표·QueryLocatorIterator 클래스 메서드 문서화 추가
 > - System(V-09)·ConnectApi(V-10)·Auth 는 기존 검증 완료로 이번 사이클 스킵.
 > 🔎 **다음 권장:** ConnectApi Namespace 개요(V-10)는 2,000페이지 분량 — 깊이보다 breadth 우선이므로 현재 유지. N2-03(UI API 개요), L-02·L-03(깨진 링크) 작성이 다음 P2.
+
+---
+
+### SO — sObject Reference 챕터 세부 페이지 확장 (object_reference.pdf v67.0)
+
+> **배경:** 2026-05-22. 기존 `sObject/Ch1~Ch6` 챕터 요약 페이지를 PDF 원문 기준 세부 서브페이지로 분화.
+> Ch1~Ch5는 각 개념·오브젝트별 개별 세부 페이지(문서 많아도 OK), Ch6는 서비스 클라우드 도메인별 분류 페이지.
+> 소스: `Salesforce Documents/object_reference.pdf` (v67.0) — 물리 페이지 = 문서 페이지 + 42 (오프셋).
+> **작성 순서:** Ch1 → Ch2 → Ch3 → Ch4 → Ch5 순서로 진행. Ch6는 도메인 분류만 (상세 설명 불필요).
+
+---
+> #### ▶ 다음 세션 재개 지점
+>
+> **Ch1 완료 (10/10)** — `sObject/` 폴더에 10개 서브페이지 + 챕터 개요 `1 Overview.md` 링크 연결 완료.
+>
+> **다음 작업: SO-C2-01** — `sObject/Object Groups.md` 작성 (doc pp.40–44 / 물리 pp.82–86)
+>
+> **PDF 준비:**
+> ```
+> pdftotext -f 82 -l 96 "Salesforce Documents/object_reference.pdf" /tmp/sobject_ch2.txt
+> ```
+> *(tmp 파일은 세션 간 유지 안 됨 — 매 세션 시작 시 재추출)*
+>
+> **Ch2 완료 후 처리할 것:**
+> - `sObject/2 Object Behavior.md` 각 섹션 제목에 `→ [[서브페이지명]]` 링크 추가
+> - `sObject/index.md` Ch2 세부 페이지 표 추가
+> - `_index/sobject-reference.md` Ch2 키워드 행 업데이트
+> - `WORK_BACKLOG.md` SO-C2-01~03 상태 ✅ 완료로 변경
+---
+
+#### SO-Ch1 — Overview of Salesforce Objects and Fields (doc pp.1–39 / 물리 pp.43–81)
+
+| # | 주제 | PDF 페이지 (doc) | 권장 파일 경로 | 상태 | 추가일 |
+|---|---|---|---|---|---|
+| SO-C1-01 | Primitive Data Types — base64·boolean·byte·date·dateTime·double·int·long·string·time 10개 타입 전수 설명 | p.1–3 | `sObject/Primitive Data Types.md` | ✅ 완료 | 2026-05-22 |
+| SO-C1-02 | Field Types — address·anyType·calculated·combobox·currency·DataCategoryGroupReference·email·encryptedstring·ID·JunctionIdList·location·masterrecord·multipicklist·percent·phone·picklist·reference·textarea·url + reserved 2개 전수 | p.4–10 | `sObject/Field Types.md` | ✅ 완료 | 2026-05-22 |
+| SO-C1-03 | API Field Properties — Aggregatable·Autonumber·Create·Defaulted on create·Delete·Filter·Group·idLookup·Namepointing·Nillable·Query·Restricted picklist·Retrieve·Sort·Update 15개 전수 | p.11–12 | `sObject/API Field Properties.md` | ✅ 완료 | 2026-05-22 |
+| SO-C1-04 | System Fields & Required Fields — Id·IsDeleted·LastReferencedDate·LastViewedDate·CreatedById·CreatedDate·LastModifiedById·LastModifiedDate·SystemModstamp + Audit Fields 규칙 + Frequently Occurring Fields (OwnerId·RecordTypeId·CurrencyIsoCode) | p.12–15 | `sObject/System Fields.md` | ✅ 완료 | 2026-05-22 |
+| SO-C1-05 | Compound Fields — Address 복합 필드 (서브필드 전수·SOQL GEOLOCATION 활용·DISTANCE 예제), Geolocation 복합 필드 (Location 타입·`__latitude__s`/`__longitude__s` 표기), 복합 필드 제한사항 전수 | p.15–20 | `sObject/Compound Fields.md` | ✅ 완료 | 2026-05-22 |
+| SO-C1-06 | Custom Objects — 이름 규칙·관계(Master-Detail 불가 표준 오브젝트 목록)·Audit Fields 설정 절차·Sharing 오브젝트(__Share)·Tags 오브젝트(__Tag)·Required Fields(nillable)·Managed Packages 네임스페이스 prefix | p.21–23 | `sObject/Custom Objects.md` | ✅ 완료 | 2026-05-22 |
+| SO-C1-07 | Custom Fields — 이름 규칙·External ID(text/number/email 전용)·Uniqueness(caseSensitive)·Default Values 수식 제한·Managed Packages prefix 변환 | p.24–25 | `sObject/Custom Fields.md` | ✅ 완료 | 2026-05-22 |
+| SO-C1-08 | Object Relationships & Data Access — Master-Detail·Many-to-many(Junction)·Lookup 비교표, 데이터 접근 팩터(OLS·FLS·User Permissions·Sharing·Referential Integrity·Page Layouts 비적용), View All / Modify All 권한 | p.25–29 | `sObject/Object Relationships.md` | ✅ 완료 | 2026-05-22 |
+| SO-C1-09 | External Objects — Salesforce Connect 어댑터(Cross-org·OData 2.0·OData 4.0·Custom Apex), Files Connect 어댑터(Google Drive·Box·SharePoint·OneDrive), External Object 관계(External Lookup·Indirect Lookup) | p.29–31 | `sObject/External Objects.md` | ✅ 완료 | 2026-05-22 |
+| SO-C1-10 | Big Objects — Standard(__b) vs Custom(__b), Use Cases(360° 뷰·감사·Historical Archive), sObject와 차이(비트랜잭션·분산DB), Metadata 정의 XML 전수(CustomObject·CustomField·Index·IndexField), Deploy·View 절차 | p.31–38 | `sObject/Big Objects.md` | ✅ 완료 | 2026-05-22 |
+
+#### SO-Ch2 — Salesforce Object Behavior (doc pp.40–54 / 물리 pp.82–96)
+
+| # | 주제 | PDF 페이지 (doc) | 권장 파일 경로 | 상태 | 추가일 |
+|---|---|---|---|---|---|
+| SO-C2-01 | Object Groups — Common Objects (Original·Base Platform·Setup Platform·Custom), Cloud Objects, High-Scale Objects, External Data; 데이터 도메인별·트랜잭션 유형별(ACID/OLTP/OLAP) 분류 | p.40–44 | `sObject/Object Groups.md` | 🔲 대기 | 2026-05-22 |
+| SO-C2-02 | Data Cloud Objects — DLO·DMO·UDLO·UDMO·CIO·Data Graphs·Unified Objects·Zero Copy 정의 + DMO/UDMO 생성 흐름(DLO→DMO→Identity Resolution→UDMO→CIO→DG) | p.44–51 | `sObject/Data Cloud Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C2-03 | Object Types Reference & Cheatsheet — suffix 표 전수(__b·__c·__ChangeEvent·__chn·__cio·__dg·__DataCategorySelection·__dlm·__dlo·__dmo·__dso·__e·__Feed·__hd·__History·__mdt·__x 등), 오브젝트 타입별 Cheatsheet(Customizable·Cloud·Packaging·Documentation) | p.51–54 | `sObject/Object Types Reference.md` | 🔲 대기 | 2026-05-22 |
+
+#### SO-Ch3 — Associated Objects (doc pp.55–77 / 물리 pp.97–119)
+
+| # | 주제 | PDF 페이지 (doc) | 권장 파일 경로 | 상태 | 추가일 |
+|---|---|---|---|---|---|
+| SO-C3-01 | Feed Objects (StandardObjectNameFeed) — 전체 필드 참조표(BestCommentId·Body·CommentCount·ConnectionId·ContentData·ContentFileName·ContentSize·ContentType·FeedPostId·InsertedById·IsRichText 지원 HTML 태그·LikeCount·LinkUrl·NetworkScope·ParentId·RelatedRecordId·Title·Type·Visibility), Type picklist 20+개 값 전수, SOQL 제한 | p.55–62 | `sObject/Feed Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C3-02 | History Objects (StandardObjectNameHistory) — 필드 참조표(StandardObjectNameId·DataType·Field·NewValue·OldValue), 지원 호출 전수, v42.0+ delete() 활성화 방법 | p.63–64 | `sObject/History Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C3-03 | Share & OwnerSharingRule Objects — Share 필드(AccessLevel·ParentId·RowCause·UserOrGroupId)·OwnerSharingRule 필드(AccessLevel·Description·DeveloperName·GroupId·Name·UserOrGroupId), RowCause=Manual 전용 쓰기 규칙 | p.65–67 | `sObject/Share Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C3-04 | ChangeEvent Objects (CDC) — 전체 필드·ChangeEventHeader 상세(entityName·recordIds·changeType·changeOrigin·transactionKey·sequenceNumber·commitTimestamp·commitUser), JSON 이벤트 메시지 예제, CDC 지원 오브젝트 목록 전수(100+개), replayId·schema 필드 | p.68–77 | `sObject/ChangeEvent Objects.md` | 🔲 대기 | 2026-05-22 |
+
+#### SO-Ch4 — Custom Objects (doc pp.78–94 / 물리 pp.120–136)
+
+| # | 주제 | PDF 페이지 (doc) | 권장 파일 경로 | 상태 | 추가일 |
+|---|---|---|---|---|---|
+| SO-C4-01 | Custom Metadata Type (__mdt) — 전체 필드 참조표(Custom Field__c·DeveloperName·isProtected·Label·Language·MasterLabel·NamespacePrefix·QualifiedApiName·SystemModStamp), isProtected 관리 패키지 접근 규칙(동일 패키지·타 패키지·구독자 코드 규칙) | p.80–82 | `sObject/Custom Metadata Type (__mdt).md` | 🔲 대기 | 2026-05-22 |
+| SO-C4-02 | Custom Object Standard Fields (__c) — 전체 표준 필드 참조표(ConnectionReceivedId·ConnectionSentId·CreatedById·CreatedDate·CurrencyIsoCode·Id·IsDeleted·LastActivityDate·LastModifiedDate·LastModifiedById·LastReferencedDate·LastViewedDate·Name·OwnerId·RecordTypeId·SystemModStamp) + 지원 호출 전수 | p.83–87 | `sObject/Custom Object Standard Fields (__c).md` | 🔲 대기 | 2026-05-22 |
+| SO-C4-03 | Custom Object Feed (__Feed) — 전체 필드 참조표(BestCommentId·Body·CommentCount·ConnectionId·ContentData·ContentFileName·ContentSize·ContentType·FeedPostId·InsertedById·IsRichText·LikeCount·LinkUrl·NetworkScope·ParentId·RelatedRecordId·Title·Type·Visibility), SOQL 제한, 삭제 접근 규칙 | p.87–94 | `sObject/Custom Object Feed (__Feed).md` | 🔲 대기 | 2026-05-22 |
+
+#### SO-Ch5 — Object Interfaces (doc pp.95–104 / 물리 pp.137–146)
+
+| # | 주제 | PDF 페이지 (doc) | 권장 파일 경로 | 상태 | 추가일 |
+|---|---|---|---|---|---|
+| SO-C5-01 | PriceAdjustmentGroup Interface — 전체 필드 참조표(AdjustmentSource·AdjustmentType·AdjustmentValue·Description·ImplementorType·PriceAdjustmentCauseId·Priority·SalesTransactionId·TotalAmount), AdjustmentSource picklist 값(Discretionary·Promotion·Rule·System), 사용 조건(Subscription Management / B2B Commerce) | p.96–97 | `sObject/PriceAdjustmentGroup.md` | 🔲 대기 | 2026-05-22 |
+| SO-C5-02 | PriceAdjustmentItem Interface — 전체 필드 참조표(AdjustmentAmountScope·AdjustmentSource·AdjustmentType·AdjustmentValue·Description·ImplementorType·PriceAdjustmentCauseId·PriceAdjustmentGroupId·Priority·SalesTransactionItemId·TotalAmount), AdjustmentAmountScope (Total vs Unit) 수식 계산 예제 | p.98–102 | `sObject/PriceAdjustmentItem.md` | 🔲 대기 | 2026-05-22 |
+| SO-C5-03 | SalesTransaction Interface — 전체 필드 참조표(ImplementorType·TotalAdjustmentAmount·TotalAdjustmentDistAmount·TotalAmount·TotalListAmount·TotalProductAmount), 사용 조건(Subscription Management / B2B Commerce), 구현체 오브젝트 패턴(Order·WebCart 등) | p.103–104 | `sObject/SalesTransaction.md` | 🔲 대기 | 2026-05-22 |
+
+#### SO-Ch6 — Standard Objects 도메인 분류 (object_reference.pdf — Ch6 범위)
+
+> Ch6는 각 Standard Object별 상세 설명 없이 **서비스 클라우드 도메인별 오브젝트 목록 분류**만 작성.
+
+| # | 도메인 | 권장 파일 경로 | 상태 | 추가일 |
+|---|---|---|---|---|
+| SO-C6-01 | Core CRM — Account·Contact·Lead·Opportunity·Campaign·Case·Contract·Pricebook2·Product2·Quote 등 | `sObject/Core CRM Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C6-02 | Service Cloud — Entitlement·ServiceContract·SocialPost·LiveChatTranscript·MessagingSession·Knowledge__kav 등 | `sObject/Service Cloud Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C6-03 | B2B Commerce & Revenue — WebCart·CartItem·WebStore·OrderSummary·PendingOrderSummary 등 | `sObject/B2B Commerce Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C6-04 | Field Service — ServiceAppointment·ServiceResource·ServiceTerritory·WorkOrder·MaintenancePlan 등 | `sObject/Field Service Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C6-05 | Platform & Admin — User·Group·Profile·PermissionSet·RecordType·FlowRecord·CustomField·CustomObject 등 | `sObject/Platform Admin Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C6-06 | Files & Content — ContentDocument·ContentVersion·ContentDocumentLink·ContentFolder 등 | `sObject/Files Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C6-07 | Analytics & Data Cloud — WaveAutoInstallRequest·DataUsePurpose·DataUseLegalBasis 등 | `sObject/Analytics Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C6-08 | Experience Cloud & Collaboration — Network·CollaborationGroup·Topic·FeedItem 등 | `sObject/Experience Cloud Objects.md` | 🔲 대기 | 2026-05-22 |
 
 ---
 
