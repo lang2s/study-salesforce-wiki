@@ -19,3 +19,5 @@ created: 2026-05-22
 | [[@track 데코레이터 내부 구조]] | `internalTrackDecorator`, vm.cmpFields, observable-membrane proxy |
 | [[LWC VM 내부 구조]] | VM 인터페이스 전체 필드, VMState/RenderMode/ShadowMode enum |
 | [[@wire 어댑터 내부 구조]] | WireAdapter 인터페이스, createConnector, configWatcher, legacy API |
+| [[LWC Signals]] | Signal 인터페이스, SignalBaseClass, addTrustedSignal, ENABLE_EXPERIMENTAL_SIGNALS |
+| [[LWC 런타임 Feature Flags]] | 13개 플래그 전체 목록, setFeatureFlag, lwcRuntimeFlags 글로벌 |

@@ -75,6 +75,8 @@ created: 2026-05-21
 | @track 내부 동작, internalTrackDecorator, getReactiveProxy, observable-membrane, vm.cmpFields, @track vs @api 저장 위치, 중첩 객체 반응성, track 함수 호출 | `LWC/Internals(내부구조)/@track 데코레이터 내부 구조.md` |
 | LWC VM 인터페이스, VMState created connected disconnected, RenderMode Light Shadow, ShadowMode Native Synthetic, ViewModelReflection WeakMap, cmpProps cmpFields cmpSlots, LWC 컴포넌트 인스턴스 내부 구조 | `LWC/Internals(내부구조)/LWC VM 내부 구조.md` |
 | @wire 내부 동작, WireAdapter 인터페이스, WireAdapterConstructor, createConnector, createConfigWatcher, ReactiveObserver, ENABLE_WIRE_SYNC_EMIT, legacy register WireEventTarget ValueChangedEvent, wire 어댑터 구현 | `LWC/Internals(내부구조)/@wire 어댑터 내부 구조.md` |
+| LWC Signals, @lwc/signals, Signal 인터페이스, SignalBaseClass, addTrustedSignal, setTrustedSignalSet, isTrustedSignal, ENABLE_EXPERIMENTAL_SIGNALS, LWC 시그널, 외부 반응형 상태 | `LWC/Internals(내부구조)/LWC Signals.md` |
+| LWC 런타임 플래그, lwcRuntimeFlags, setFeatureFlag, setFeatureFlagForTest, DISABLE_NATIVE_CUSTOM_ELEMENT_LIFECYCLE, ENABLE_WIRE_SYNC_EMIT, DISABLE_SYNTHETIC_SHADOW, ENABLE_FROZEN_TEMPLATE, ENABLE_LEGACY_SCOPE_TOKENS, DISABLE_DETACHED_REHYDRATION, @lwc/features | `LWC/Internals(내부구조)/LWC 런타임 Feature Flags.md` |
 
 ---
 
