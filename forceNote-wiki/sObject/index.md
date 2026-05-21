@@ -71,3 +71,15 @@ aliases: [sObject Reference 인덱스, Object Reference 목차]
 | [[Object Groups]] | Object 선택 기준 7가지·데이터 도메인별·트랜잭션 유형별(ACID/OLTP/OLAP) 분류·4개 그룹 상세 |
 | [[Data Cloud Objects]] | DLO·DMO·CIO·DG·Unified Objects·UDLO·UDMO·Zero Copy 정의 + DMO/UDMO 생성 흐름 전체 |
 | [[Object Types Reference]] | suffix 전수 표(32개 항목)·Object Cheatsheet(Customizable·Cloud·Packaging·Documentation·Reference) |
+
+---
+
+## Chapter 3 세부 페이지
+
+| 파일 | 내용 |
+|---|---|
+| [[Feed Objects]] | 지원 호출·특수 접근 규칙·필드 참조표(19개 전수)·Type picklist 26개 전수·IsRichText HTML 태그·SOQL 제한 |
+| [[History Objects]] | 지원 호출·필드 참조표(StandardObjectNameId·DataType·Field·NewValue·OldValue)·v42.0+ delete() 활성화 방법 |
+| [[Share Objects]] | Share 필드(AccessLevel·ParentId·RowCause·UserOrGroupId)·OwnerSharingRule 필드(AccessLevel·Description·DeveloperName·GroupId·Name·UserOrGroupId)·RowCause=Manual 전용 쓰기 규칙 |
+| [[ChangeEvent Objects]] | ChangeEventHeader 전체 필드·JSON 이벤트 예제·CDC 지원 오브젝트 목록 전수(100+개)·replayId·schema |
+

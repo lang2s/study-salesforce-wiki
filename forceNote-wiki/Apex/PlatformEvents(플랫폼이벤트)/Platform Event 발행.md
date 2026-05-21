@@ -149,4 +149,5 @@ String lastReplayId = Trigger.new[Trigger.new.size() - 1].ReplayId;
 - [[Queueable]] — 이벤트 처리 후 비동기 체이닝
 - [[Custom REST Endpoint]]
 - [[3 Associated Objects]] — ChangeEvent(CDC) 패턴 비교 — Platform Event와 다른 CDC 구독 방식
+- [[ChangeEvent Objects]] — CDC 지원 오브젝트 목록 전수·ChangeEventHeader 헤더 필드 상세
 

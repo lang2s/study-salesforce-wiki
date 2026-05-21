@@ -165,3 +165,4 @@ static void testCDCTrigger() {
 - [[Queueable]] — CDC 트리거에서 비동기 처리 위임
 - [[EventBus Namespace]] — EventBus.publish 메서드 서명, TriggerContext, RetryableException 상세
 - [[3 Associated Objects]] — ChangeEvent Object 패턴 상세 (changeType·changedFields·transactionKey)
+- [[ChangeEvent Objects]] — CDC 지원 오브젝트 목록 전수·JSON 이벤트 메시지 예제·ChangeEventHeader 필드 상세

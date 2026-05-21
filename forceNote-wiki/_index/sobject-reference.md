@@ -57,14 +57,14 @@ created: 2026-05-22
 
 | 키워드 | 파일 |
 |---|---|
-| StandardObjectName Feed, AccountFeed, CaseFeed, OpportunityFeed, FeedItem, 피드 Object, Chatter 피드 | `sObject/3 Associated Objects.md` |
-| Feed Type, TextPost, ContentPost, LinkPost, TrackedChange, ActivityEvent, QuestionPost, 피드 타입 | `sObject/3 Associated Objects.md` |
-| IsRichText, Feed Rich Text, 피드 rich text, Body HTML | `sObject/3 Associated Objects.md` |
-| StandardObjectName History, AccountHistory, CaseHistory, FieldHistory, 필드 변경 이력, History Object | `sObject/3 Associated Objects.md` |
-| OldValue NewValue, Field History Tracking, 이전 값과 새 값, 히스토리 추적 | `sObject/3 Associated Objects.md` |
-| StandardObjectName OwnerSharingRule, AccountOwnerSharingRule, 소유자 공유 규칙, Owner Sharing Rule | `sObject/3 Associated Objects.md` |
-| StandardObjectName Share, AccountShare, CaseShare, RowCause, AccessLevel, Manual, 공유 오브젝트, 수동 공유 | `sObject/3 Associated Objects.md` |
-| ChangeEvent, CDC, Change Data Capture, AccountChangeEvent, changeType CREATE UPDATE DELETE UNDELETE, ChangeEventHeader, changedFields, 변경감지 | `sObject/3 Associated Objects.md` |
+| StandardObjectName Feed, AccountFeed, CaseFeed, OpportunityFeed, FeedItem, 피드 Object, Chatter 피드 | `sObject/Feed Objects.md` |
+| Feed Type, TextPost, ContentPost, LinkPost, TrackedChange, ActivityEvent, QuestionPost, AdvancedTextPost, CanvasPost, PollPost, ReplyPost, RypplePost, 피드 타입, 피드 아이템 타입 | `sObject/Feed Objects.md` |
+| IsRichText, Feed Rich Text, 피드 rich text, Body HTML, BestCommentId, CommentCount, ConnectionId, ContentData, ContentFileName, ContentSize, ContentType, FeedPostId, InsertedById, LikeCount, LinkUrl, NetworkScope, ParentId, RelatedRecordId, Visibility, CaseFeed 전용 타입 | `sObject/Feed Objects.md` |
+| StandardObjectName History, AccountHistory, CaseHistory, FieldHistory, 필드 변경 이력, History Object | `sObject/History Objects.md` |
+| OldValue NewValue, DataType, Field History Tracking, 이전 값과 새 값, 히스토리 추적, StandardObjectNameId, delete Field History v42.0 | `sObject/History Objects.md` |
+| StandardObjectName OwnerSharingRule, AccountOwnerSharingRule, 소유자 공유 규칙, Owner Sharing Rule, GroupId, DeveloperName, 공유 규칙 생성 | `sObject/Share Objects.md` |
+| StandardObjectName Share, AccountShare, CaseShare, RowCause, AccessLevel, Manual, 공유 오브젝트, 수동 공유, UserOrGroupId, ParentId, RowCause Manual 전용 쓰기 | `sObject/Share Objects.md` |
+| ChangeEvent, CDC, Change Data Capture, AccountChangeEvent, changeType CREATE UPDATE DELETE UNDELETE, ChangeEventHeader, changedFields, 변경감지, replayId, schema, entityName, recordIds, transactionKey, sequenceNumber, commitTimestamp, commitUser, CDC 지원 오브젝트 목록 | `sObject/ChangeEvent Objects.md` |
 
 ## Ch4 — Custom Objects (__mdt·__c·__Feed)
 

@@ -25,7 +25,7 @@ aliases: [3 Associated Objects, Feed Object, History Object, Share Object, Owner
 
 ---
 
-## StandardObjectName Feed
+## StandardObjectName Feed → [[Feed Objects]]
 
 ### 지원 호출
 
@@ -99,7 +99,7 @@ insert post;
 
 ---
 
-## StandardObjectName History
+## StandardObjectName History → [[History Objects]]
 
 ### 지원 호출
 
@@ -135,7 +135,7 @@ List<AccountHistory> history = [
 
 ---
 
-## StandardObjectName OwnerSharingRule
+## StandardObjectName OwnerSharingRule → [[Share Objects]]
 
 소유자가 아닌 다른 사용자에게 레코드를 공유하는 규칙.
 
@@ -153,7 +153,7 @@ List<AccountHistory> history = [
 
 ---
 
-## StandardObjectName Share
+## StandardObjectName Share → [[Share Objects]]
 
 레코드 단위 공유 항목. Org-Wide Default + 공유 규칙·수동 공유 결합.
 
@@ -196,7 +196,7 @@ insert share;
 
 ---
 
-## StandardObjectNameChangeEvent (CDC)
+## StandardObjectNameChangeEvent (CDC) → [[ChangeEvent Objects]]
 
 Change Data Capture(CDC)를 지원하는 모든 Object에 자동 생성된다.
 
@@ -249,3 +249,7 @@ trigger AccountChangeEventTrigger on AccountChangeEvent (after insert) {
 - [[4 Custom Objects]] — Custom Object의 __Feed 패턴
 - [[ChangeEventHeader]] — CDC Header 상세
 - [[Platform Event 발행]] — 이벤트 버스 관련
+- [[Feed Objects]] — StandardObjectNameFeed 필드 전수·Type 26개·SOQL 제한
+- [[History Objects]] — StandardObjectNameHistory 필드·v42.0+ delete() 활성화
+- [[Share Objects]] — Share 필드·OwnerSharingRule 필드·RowCause=Manual 쓰기 규칙
+- [[ChangeEvent Objects]] — CDC 지원 오브젝트 목록 전수·JSON 이벤트 예제·ChangeEventHeader 상세

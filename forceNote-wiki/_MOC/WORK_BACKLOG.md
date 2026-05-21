@@ -259,10 +259,10 @@ updated: 2026-05-22
 
 | # | 주제 | PDF 페이지 (doc) | 권장 파일 경로 | 상태 | 추가일 |
 |---|---|---|---|---|---|
-| SO-C3-01 | Feed Objects (StandardObjectNameFeed) — 전체 필드 참조표(BestCommentId·Body·CommentCount·ConnectionId·ContentData·ContentFileName·ContentSize·ContentType·FeedPostId·InsertedById·IsRichText 지원 HTML 태그·LikeCount·LinkUrl·NetworkScope·ParentId·RelatedRecordId·Title·Type·Visibility), Type picklist 20+개 값 전수, SOQL 제한 | p.55–62 | `sObject/Feed Objects.md` | 🔲 대기 | 2026-05-22 |
-| SO-C3-02 | History Objects (StandardObjectNameHistory) — 필드 참조표(StandardObjectNameId·DataType·Field·NewValue·OldValue), 지원 호출 전수, v42.0+ delete() 활성화 방법 | p.63–64 | `sObject/History Objects.md` | 🔲 대기 | 2026-05-22 |
-| SO-C3-03 | Share & OwnerSharingRule Objects — Share 필드(AccessLevel·ParentId·RowCause·UserOrGroupId)·OwnerSharingRule 필드(AccessLevel·Description·DeveloperName·GroupId·Name·UserOrGroupId), RowCause=Manual 전용 쓰기 규칙 | p.65–67 | `sObject/Share Objects.md` | 🔲 대기 | 2026-05-22 |
-| SO-C3-04 | ChangeEvent Objects (CDC) — 전체 필드·ChangeEventHeader 상세(entityName·recordIds·changeType·changeOrigin·transactionKey·sequenceNumber·commitTimestamp·commitUser), JSON 이벤트 메시지 예제, CDC 지원 오브젝트 목록 전수(100+개), replayId·schema 필드 | p.68–77 | `sObject/ChangeEvent Objects.md` | 🔲 대기 | 2026-05-22 |
+| SO-C3-01 | Feed Objects (StandardObjectNameFeed) — 전체 필드 참조표(BestCommentId·Body·CommentCount·ConnectionId·ContentData·ContentFileName·ContentSize·ContentType·FeedPostId·InsertedById·IsRichText 지원 HTML 태그·LikeCount·LinkUrl·NetworkScope·ParentId·RelatedRecordId·Title·Type·Visibility), Type picklist 20+개 값 전수, SOQL 제한 | p.55–62 | `sObject/Feed Objects.md` | ✅ 완료(2026-05-22) | 2026-05-22 |
+| SO-C3-02 | History Objects (StandardObjectNameHistory) — 필드 참조표(StandardObjectNameId·DataType·Field·NewValue·OldValue), 지원 호출 전수, v42.0+ delete() 활성화 방법 | p.63–64 | `sObject/History Objects.md` | ✅ 완료(2026-05-22) | 2026-05-22 |
+| SO-C3-03 | Share & OwnerSharingRule Objects — Share 필드(AccessLevel·ParentId·RowCause·UserOrGroupId)·OwnerSharingRule 필드(AccessLevel·Description·DeveloperName·GroupId·Name·UserOrGroupId), RowCause=Manual 전용 쓰기 규칙 | p.65–67 | `sObject/Share Objects.md` | ✅ 완료(2026-05-22) | 2026-05-22 |
+| SO-C3-04 | ChangeEvent Objects (CDC) — 전체 필드·ChangeEventHeader 상세(entityName·recordIds·changeType·changeOrigin·transactionKey·sequenceNumber·commitTimestamp·commitUser), JSON 이벤트 메시지 예제, CDC 지원 오브젝트 목록 전수(100+개), replayId·schema 필드 | p.68–77 | `sObject/ChangeEvent Objects.md` | ✅ 완료(2026-05-22) | 2026-05-22 |
 
 #### SO-Ch4 — Custom Objects (doc pp.78–94 / 물리 pp.120–136)
 
