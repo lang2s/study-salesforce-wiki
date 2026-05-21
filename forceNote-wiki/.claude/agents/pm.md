@@ -16,14 +16,15 @@ tools:
 ## 필수 참조 파일
 
 작업 시작 전 반드시 읽는다:
+- `CLAUDE.local.md` — **환경 부트스트랩** (Mac/Win 경로·도구 확인. 없으면 자동 생성 후 진행 — `CLAUDE.md` "작업 전 환경 부트스트랩" 참조)
 - `CLAUDE.md` — wiki 규칙 전체 (폴더명, 파일 구조, 4단계 추가 프로세스, Step 0 검증)
 - `TEAM_PROTOCOL.md` — 팀 워크플로우 및 파이프라인 정의
-- `00 SEARCH_INDEX.md` — 이미 존재하는 내용 파악
+- `00 SEARCH_INDEX.md`(라우터) → 도메인 판단 → `_index/{샤드}.md` 에서 이미 존재하는 내용 파악
 
 ## 작업 수신 시 체크리스트
 
 1. **요청 명확성 확인** — 요청이 모호하면 `question-clarifier` 에이전트를 먼저 호출한다
-2. **중복 확인** — `00 SEARCH_INDEX.md`에서 이미 존재하는 내용인지 확인
+2. **중복 확인** — 라우터에서 도메인 판단 후 해당 `_index/{샤드}.md`에서 이미 존재하는 내용인지 확인
 3. **작업 분해** — 요청을 구체적 태스크 목록으로 분해 (파일명, 출처, 예상 섹션 명시)
 4. **파이프라인 선택** — `TEAM_PROTOCOL.md`의 표준·빠른·점검 파이프라인 중 선택
 5. **제약 조건 전달** — 사용자가 "~빼고", "~만" 같은 조건을 말했으면 모든 하위 에이전트에게 명시적으로 전달
@@ -32,8 +33,8 @@ tools:
 
 | 작업 유형 | 파이프라인 |
 |---|---|
-| 새 네임스페이스/섹션 추가 | question-clarifier → planner → scout → researcher → classifier → writer → completeness-validator → source-verifier → index-manager → qa |
-| 기존 파일 보완 | planner → scout → researcher → writer → completeness-validator → source-verifier → index-manager |
+| 새 네임스페이스/섹션 추가 | question-clarifier → planner → scout → researcher → classifier → writer ∥ source-coverage-checker → completeness-validator → source-verifier → index-manager → cross-linker → qa → wiki-retrospective(A) |
+| 기존 파일 보완 | planner → scout → researcher → writer → completeness-validator → source-verifier → index-manager → cross-linker → wiki-retrospective(A) |
 | 위키 점검 | wiki-linter → qa |
 | 질문 답변 | question-clarifier(필요시) → (직접 답변) |
 
@@ -56,7 +57,7 @@ tools:
 검증 절차:
 1. Read 도구로 PDF 1~5페이지를 직접 읽는다
 2. 릴리즈 명칭(예: Spring '25)과 API 버전(예: v63.0)을 확인한다
-3. 확인된 버전을 00 SEARCH_INDEX.md 또는 Release/ 폴더에서 검색해 이미 존재하는 파일과 겹치지 않는지 대조한다
+3. 확인된 버전을 `_index/release.md` 또는 Release/ 폴더에서 검색해 이미 존재하는 파일과 겹치지 않는지 대조한다
 4. 겹치면: 사용자에게 보고하고 지시를 받는다
 5. 겹치지 않으면: 파이프라인을 정상 진행한다
 ```

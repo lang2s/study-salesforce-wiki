@@ -22,7 +22,7 @@ Salesforce 공식 오픈소스 프로젝트 + 공식 PDF 문서를 직접 분석
 
 ## 에이전트 팀 시스템
 
-`.claude/agents/` 에 16개 전문 서브에이전트 정의 (Claude Code 공식 custom agents 스펙 준수).
+`.claude/agents/` 에 15개 전문 서브에이전트 정의 (Claude Code 공식 custom agents 스펙 준수).
 
 | 역할 | 에이전트 | 도구 |
 |---|---|---|
@@ -36,12 +36,11 @@ Salesforce 공식 오픈소스 프로젝트 + 공식 PDF 문서를 직접 분석
 | **파일 작성** | `writer` | Read, Write, Edit |
 | 완결성 검증 | `completeness-validator` | Read, Bash |
 | 소스 검증 | `source-verifier` | Read, Bash |
-| **인덱스 관리** | `index-manager` | Read, Edit |
+| **인덱스 관리** | `index-manager` | Read, Edit, Write |
 | 위키링크 연결 | `cross-linker` | Read, Bash, Edit |
 | 린트 | `wiki-linter` | Read, Bash |
 | 품질 검증 | `qa` | Read, Bash |
-| 회고 | `retrospective-analyst` | Read, Bash, Edit |
-| 커버리지 분석 | `coverage-analyst` | Read, Bash |
+| 회고·개선 (회고 A / 커버리지·에이전트개선 B) | `wiki-retrospective` | Read, Bash, Edit |
 
 파이프라인 설명: `TEAM_PROTOCOL.md` 참조.
 

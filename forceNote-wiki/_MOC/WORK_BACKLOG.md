@@ -6,7 +6,7 @@ updated: 2026-05-21
 
 # WORK_BACKLOG — 커버리지 공백 추적 대장
 
-> **coverage-analyst는 분석 시작 전 이 파일을 반드시 읽는다.**
+> **wiki-retrospective(모드 B)는 분석 시작 전 이 파일을 반드시 읽는다.**
 > 이전 주기에서 P2/P3로 분류된 항목이 완료됐는지 확인하고, 미완료 항목은 보고서에 재포함시킨다.
 
 ---
@@ -21,7 +21,7 @@ updated: 2026-05-21
 
 ## 사용 방법
 
-- 새 항목 추가: coverage-analyst 또는 agent-improver가 추가
+- 새 항목 추가: wiki-retrospective(모드 B)가 추가
 - 상태 업데이트: 해당 작업을 완료한 에이전트 또는 PM이 업데이트
 - 완료 항목 정리: 분기마다 (약 30개 누적 시) archive 섹션으로 이동
 
@@ -150,6 +150,23 @@ updated: 2026-05-21
 
 ---
 
+### I — 깨진 인덱스 경로 — 샤드 등재됐으나 파일 없음 (lint 2026-05-21)
+
+> 2026-05-21 `/lint` 결과. 키워드 샤드가 존재하지 않는 파일을 가리키던 8건.
+> 2건은 실존 유사 파일로 **재연결 완료**(백로그 불필요): `Governor Limits 빠른 참조` → `Apex/ExecutionContext(실행컨텍스트)/Governor Limits.md`, `Change Data Capture` → `Apex/PlatformEvents(플랫폼이벤트)/ChangeEventHeader.md`.
+> 아래 6건은 대상 파일 없어 샤드에서 행 제거 + 신규 작성 대기. (제거된 키워드는 작성 시 복원)
+
+| # | 제거된 항목 | 제거 위치 | 권장 파일 경로 | 우선순위 | 상태 | 추가일 |
+|---|---|---|---|---|---|---|
+| I-01 | Validation Rules 예제 (키워드 7행: REGEX/SSN/우편번호/날짜/숫자/소유자 검증 등) | `_index/apex-core.md` | `Architecture(아키텍처)/Validation Rules 예제.md` | P2 | 🔲 대기 | 2026-05-21 |
+| I-02 | fsccashflow Namespace | `_index/apex-namespaces.md` | `Apex/Integration(통합)/fsccashflow Namespace.md` | P3 | 🔲 대기 | 2026-05-21 |
+| I-03 | renew_assets_summary Namespace | `_index/apex-namespaces.md` | `Apex/Integration(통합)/renew_assets_summary Namespace.md` | P3 | 🔲 대기 | 2026-05-21 |
+| I-04 | Sfdc_Checkout Namespace | `_index/apex-namespaces.md` | `Apex/Integration(통합)/Sfdc_Checkout Namespace.md` | P3 | 🔲 대기 | 2026-05-21 |
+| I-05 | Sfdc_Enablement Namespace | `_index/apex-namespaces.md` | `Apex/Integration(통합)/Sfdc_Enablement Namespace.md` | P3 | 🔲 대기 | 2026-05-21 |
+| I-06 | sfdc_surveys Namespace | `_index/apex-namespaces.md` | `Apex/Integration(통합)/sfdc_surveys Namespace.md` | P3 | 🔲 대기 | 2026-05-21 |
+
+---
+
 ### 보완 필요 기존 파일
 
 | # | 파일 | 부족한 부분 | 상태 | 추가일 | 완료일 |
@@ -222,6 +239,5 @@ updated: 2026-05-21
 
 ## 관련 에이전트
 
-- [[coverage-analyst]] — 이 백로그를 분석 시작 전에 읽음
-- [[agent-improver]] — 이 백로그를 업데이트하고 에이전트 프로토콜 개선
+- [[wiki-retrospective]] — 모드 B에서 이 백로그를 읽고 업데이트하며 에이전트 프로토콜 개선
 - [[pm]] — 백로그 항목을 실제 작업으로 스케줄링

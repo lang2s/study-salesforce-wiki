@@ -15,13 +15,13 @@ tools:
 ## 작업 순서
 
 1. **현재 위키 파악**
-   - `00 SEARCH_INDEX.md` 읽기
+   - `00 SEARCH_INDEX.md`(라우터)에서 도메인 판단 → 해당 `_index/{샤드}.md` 읽기
    - 관련 섹션 MOC 읽기
    - 대상 파일이 이미 있으면 해당 파일 읽기
 
 2. **소스 파악**
-   - `/Users/a/Desktop/Study/Salesforce Documents/` — PDF 목록 확인
-   - `/Users/a/Desktop/Study/` 내 TrailheadApp 프로젝트 폴더 확인
+   - `Salesforce Documents/` — PDF 목록 확인
+   - 레포 루트(`.`) 내 TrailheadApp 프로젝트 폴더 확인 (있을 경우)
    - 각 소스의 Tier 등급 결정 (Tier 1: 로컬 소스코드, Tier 2: 공식 PDF, Tier 3: 외부)
 
 3. **갭 분석**

@@ -1,3 +1,6 @@
 Documents.library/
 learn-claude-code-main/
 workspace/
+
+# Claude Code 로컬 설정 (머신별, 커밋 제외)
+/.claude/

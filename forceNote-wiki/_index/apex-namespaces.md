@@ -1,0 +1,68 @@
+---
+tags: [index, search, navigation]
+created: 2026-05-21
+---
+
+# SEARCH INDEX — Apex 네임스페이스 (통합/산업)
+> Metadata·통합/HTTP·Commerce·산업(Industries) 네임스페이스 키워드 → 파일. 가장 빠르게 커지는 샤드 — 상한 초과 시 commerce/industries로 재분할.
+> 루트 라우터: `00 SEARCH_INDEX.md` · 다른 샤드는 라우터에서 이동.
+
+## Apex — Metadata Namespace
+
+| 키워드 | 파일 |
+|---|---|
+| Metadata namespace, CustomMetadata, DeployCallback, DeployContainer, enqueueDeployment, CMT 배포, 메타데이터 배포 Apex, Operations.retrieve, Operations.enqueueDeployment, DeployResult, DeployStatus, 커스텀 메타데이터 레코드 생성 | `Apex/Integration(통합)/Metadata Namespace.md` |
+| Compression Namespace, ZipWriter, ZipReader, ZipEntry, Apex Zip, zip 파일, 압축 Apex, addEntry, getArchive, extract, ZipWriter.getArchive, Spring 25 GA 압축 | `Apex/Integration(통합)/Compression Namespace.md` |
+| DataWeave Namespace, DataWeave in Apex, DataWeave.Script, createScript, execute, DataWeave.Result, getValueAsString, dwl 스크립트, JSON 변환 Apex, XML 변환 Apex | `Apex/Integration(통합)/DataWeave Namespace.md` |
+| CustomMetadataValue, fullName CMT, protected_x, CMT 필드 값 Apex, MetadataType enum | `Apex/Integration(통합)/Metadata Namespace.md` |
+| KbManagement Namespace, PublishingService, Knowledge Article API, 아티클 게시 Apex, 아티클 번역 Apex, 아티클 보관 Apex, publishArticle, archiveOnlineArticle, submitForTranslation, editOnlineArticle, editArchivedArticle, restoreOldVersion, scheduleForPublication, completeTranslation, deleteDraftArticle, deleteArchivedArticle, 지식 문서 라이프사이클 | `Apex/Integration(통합)/KbManagement Namespace.md` |
+
+## Apex — 통합 / HTTP
+
+| 키워드 | 파일 |
+|---|---|
+| RestClient, HTTP 호출 추상화, makeApiCall, HttpVerb, PATCH 우회 | `Apex/Integration(통합)/RestClient 패턴.md` |
+| @RestResource, Inbound REST, HttpGet HttpPost, urlmapping, 외부→SF | `Apex/Integration(통합)/Custom REST Endpoint.md` |
+| ConnectApi, Chatter 게시, postFeedItemWithRichText, Chatter 멘션, ConnectApiHelper, 리치 텍스트 피드, getCommunities, getCommunity, ConnectApi.Communities, ConnectApi.UserProfiles, getUserProfile, getPhoto, getBannerPhoto, Experience Cloud 사이트 조회, 사용자 프로필 사진 | `Apex/Integration(통합)/ConnectApi Chatter 패턴.md` |
+| ConnectApi Namespace, Connect in Apex, ConnectApi 개요, ChatterFeeds, ChatterGroups, ChatterUsers, EinsteinLLM, CdpQuery, ConnectApi 클래스 목록, Communities, ManagedContent, CommerceCart, 커넥트API 네임스페이스 | `Apex/Integration(통합)/ConnectApi Namespace 개요.md` |
+| Dom.Document, Dom.XmlNode, XML 파싱, XML 생성, DOM XML, createRootElement, addChildElement, load, toXmlString, getChildElement, getText, SOAP XML | `Apex/Integration(통합)/Dom Namespace.md` |
+| DataSource.Connection, DataSource.Provider, Salesforce Connect, External Objects, 커스텀 어댑터, sync, query, search, upsertRows, deleteRows, TableResult, UpsertResult | `Apex/Integration(통합)/DataSource Namespace.md` |
+| ExternalService, OpenAPI Apex, 타입 안전 외부 호출, External Service Registration, 외부 서비스 등록, ExternalService namespace | `Apex/Integration(통합)/ExternalService Namespace.md` |
+| Invocable.Action, createStandardAction, createCustomAction, Apex에서 Flow 액션 호출, 동적 액션 호출, invoke invocable, addInvocation, setInvocationParameter, getDescribe, 액션 메타데이터 | `Apex/Integration(통합)/Invocable Namespace.md` |
+| Process.Plugin, PluginDescribeResult, PluginRequest, PluginResult, 레거시 플로우 플러그인, deprecated 플러그인, Flow 플러그인 Apex | `Apex/Integration(통합)/Process Namespace.md` |
+| QuickAction, performQuickAction, performQuickActions, describeAvailableQuickActions, describeQuickActions, QuickActionRequest, QuickActionResult, QuickActionDefaultsHandler, SendEmailQuickActionDefaults, Case Feed 이메일 기본값, 퀵 액션 실행, 퀵 액션 메타데이터 조회 | `Apex/Integration(통합)/QuickAction Namespace.md` |
+| Flow Namespace, Flow.Interview 클래스 레퍼런스, createInterview 시그니처, start() 메서드, getVariableValue, Apex에서 Flow 실행 API, Flow Interview 클래스 전체 메서드, User Provisioning Flow 실행 | `Apex/Integration(통합)/Flow Namespace.md` |
+| Support Namespace, Support.EmailTemplateSelector, Support.MilestoneTriggerTimeCalculator, Case Feed 이메일 기본 템플릿 Apex, 마일스톤 트리거 시간 동적 계산, getDefaultTemplateId, calculateMilestoneTriggerTime, Entitlement 마일스톤 SLA | `Apex/Integration(통합)/Support Namespace.md` |
+| LxScheduler Namespace, lxscheduler, Salesforce Scheduler Apex, 스케줄러 네임스페이스, GetAppointmentCandidates, GetAppointmentSlots, SchedulerResources, ServiceResourceScheduleHandler, 예약 후보 리소스, 예약 가능 타임슬롯, 외부 캘린더 연동, WorkTypeBuilder, SkillRequirementBuilder, ServiceResourceSchedule, UnavailableTimeslot, ServiceAppointmentRequestInfo, ServiceResourceInfo, getAppointmentCandidates, getAppointmentSlots | `Apex/Integration(통합)/LxScheduler Namespace.md` |
+| TerritoryMgmt Namespace, TerritoryMgmt, OpportunityTerritory2AssignmentFilter, 테리토리 관리 Apex, Enterprise Territory Management Apex, 영업 구역 배정 필터, Opportunity Territory Assignment | `Apex/Integration(통합)/TerritoryMgmt Namespace.md` |
+| getOpportunityTerritory2Assignments, Territory2 배정 Apex, ObjectTerritory2Association, Territory2Model Active, Territory2Type Priority, 우선순위 테리토리 배정, 동순위 테리토리 충돌 | `Apex/Integration(통합)/TerritoryMgmt Namespace.md` |
+| Slack Namespace, Slack SDK Apex, 슬랙 네임스페이스, Slack 앱 Apex, RunnableHandler, BotClient, AppClient, UserClient, Slack 봇 개발, Slack 이벤트 핸들러, Slack 커맨드 Apex, Slack 액션 Apex, Slack 단축키 Apex | `Apex/Integration(통합)/Slack Namespace.md` |
+| Slack.RunnableHandler, Slack.BotClient, Slack.UserClient, Slack.AppClient, Slack.Message, Slack.Channel, Slack.Chat, Slack.Event, Slack.Shortcut, Slack.SlackCommand, Slack.TestHarness, Slack.Workflow, Slack.UserMapping | `Apex/Integration(통합)/Slack Namespace.md` |
+| PlaceQuote Namespace, PlaceQuote, CPQ Apex, Configure Price Quote Apex, 견적 생성 Apex, CPQ 네임스페이스, Quote 생성 Apex, Pricing Preferences Apex, CPQ 가격 책정 | `Apex/Integration(통합)/PlaceQuote Namespace.md` |
+| Canvas Namespace, Canvas App Apex, 캔버스 앱 Apex, CanvasLifecycleHandler, RenderContext, ApplicationContext Canvas, EnvironmentContext Canvas, Canvas.Test, 외부 앱 임베드 Salesforce, Canvas SDK | `Architecture(아키텍처)/Canvas Namespace.md` |
+| excludeContextTypes, ContextTypeEnum, ORGANIZATION RECORD_DETAIL USER, onRender renderContext, mockRenderContext, testCanvasLifecycle, CanvasRenderException, Canvas 커스텀 파라미터, addEntityField Canvas, setParametersAsJSON Canvas | `Architecture(아키텍처)/Canvas Namespace.md` |
+| ChatterAnswers Namespace, AccountCreator Interface, chatteranswers:registration, Chatter Answers 포털 계정 생성, createAccount registrationClassName, 포털 사용자 Account 생성 Apex | `Apex/Integration(통합)/ChatterAnswers Namespace.md` |
+| CommerceBuyGrp Namespace, BuyerGroupEvaluationService, BuyerGroupRequest, BuyerGroupResponse, Buyer Group 배정 Apex, B2B Commerce Buyer Group, getBuyerGroupIds, isGuestUser 바이어 그룹, 커스텀 바이어 그룹 로직 | `Apex/Integration(통합)/CommerceBuyGrp Namespace.md` |
+| CommerceExtension Namespace, ResolutionStrategy, Resolution, ResolutionStates, ExtensionInfo, EXECUTE_DEFAULT EXECUTE_REGISTERED OFF, B2B Commerce 확장 포인트, getLocaleString ExtensionInfo, 로케일별 확장 전략 Apex | `Apex/Integration(통합)/CommerceExtension Namespace.md` |
+| CommerceOrders Namespace, B2B Commerce Order Apex, 주문 생성 Apex, Commerce Order API, 통합 가격 책정 주문 | `Apex/Integration(통합)/CommerceOrders Namespace.md` |
+| CommercePayments Namespace, PaymentGatewayAdapter, PaymentGatewayAsyncAdapter, processRequest, processNotification, PaymentGatewayContext, SalesforceResultCode, GatewayErrorResponse, GatewayNotificationResponse, PaymentsHttp, NotificationClient, 결제 게이트웨이 어댑터, ISV Payment Adapter, Apex Payment Gateway, AuthorizationRequest CaptureRequest ReferencedRefundRequest SaleRequest PostAuthorizationRequest, PaymentMethodTokenizationRequest, EnhancedPaymentDataInput Level2 Level3, SalesforceResultCode Decline Success PermanentFail Indeterminate, AdyenAdapter 비동기 결제 예시 | `Apex/Integration(통합)/CommercePayments Namespace.md` |
+| CommerceTax Namespace, TaxEngineAdapter, TaxEngineContext, TaxTransactionRequest, CalculateTaxRequest, TaxLineItemRequest, TaxSellerDetailsRequest, TaxCustomerDetailsRequest, CalculateTaxResponse, ErrorResponse, TaxDetailsResponse, LineItemResponse, ImpositionResponse, JurisdictionResponse, AmountDetailsResponse, RuleDetailsResponse, TaxTransactionStatus, TaxTransactionType, CalculateTaxType, RequestType, ResultCode, 세금 엔진 어댑터, B2B 세금 계산 Apex, ISV 세금 어댑터, Avalara, processRequest 세금, 세금 계산 ISV, 외부 세금 엔진 연동 | `Apex/Integration(통합)/CommerceTax Namespace.md` |
+| ComplianceMgmt Namespace, ComplianceEvaluation, ControlEvaluationInput, ControlInput, ComplianceEvaluationResponse, EvaluationResult, ComplianceControlLog, FSC 규정 준수 Apex, Financial Services Cloud 컴플라이언스, 컴플라이언스 룰 프로세서 | `Apex/Integration(통합)/ComplianceMgmt Namespace.md` |
+| embeddedai Namespace, ApexMap, RecordApexRepresentation, toRecordApexRep, AI 레코드 표현, embedded AI Apex, 레코드 데이터 AI 전달, 키-값 AI, relatedRecordData, objectType AI, Apex AI 직렬화 | `Apex/Integration(통합)/embeddedai Namespace.md` |
+| Functions Namespace, functions.Function, FunctionInvocation, FunctionCallback, FunctionInvokeMock, MockFunctionInvocationFactory, FunctionErrorType, FunctionInvocationStatus, Salesforce Functions Apex, 함수 호출 Apex, 함수 동기 비동기 호출, createSuccessResponse, createErrorResponse, get functionName, invoke payload | `Apex/Integration(통합)/Functions Namespace.md` |
+| ise_bots_apex Namespace, DynamicMenuItem, EntityId, EntityName, LabelValue, SummaryTextWithFormula, sortByDate, Einstein Bot 동적 메뉴, 봇 메뉴 Apex, ise_bots_apex.DynamicMenuItem | `Apex/Integration(통합)/ise_bots_apex Namespace.md` |
+| industriesNlpSvc Namespace, NlpResponse, NlpSummarizationResult, summarizationResult, errors, summary, Industries NLP Apex, transformNlpActionResult 출력, Einstein NLP 요약 Apex, SurveyLongSummarization SurveyShortSummarization, 자연어처리 Apex | `Apex/Integration(통합)/industriesNlpSvc Namespace.md` |
+| IssueCreditMemo Namespace, CreditLineRequestInputRepresentations, CreditRequestInputRepresentations, CreditResponseOutputRepresentations, Revenue Cloud 크레딧 메모 Apex, 인보이스 분쟁 조정 크레딧 | `Apex/Integration(통합)/IssueCreditMemo Namespace.md` |
+| ind_mfg_sample_mgmt_apex Namespace, ProductRequirementSpecification, ProductRequirementSpecificationItem, ProductRequirementSpecificationVersion, Manufacturing Cloud Apex, 제품 요구사양 Apex, 제조 샘플 관리 | `Apex/Integration(통합)/ind_mfg_sample_mgmt_apex Namespace.md` |
+| IndustriesDigitalLending Namespace, DigitalLendingIntakeRecordsWrapper, DigitalLendingPostIntakeRecordsWrapper, DigitalLendingProductsApi, DigitalLendingUtils, PricingExecutionWrapper, FSC Digital Lending Apex, 디지털 대출 OmniScript callable, 디지털 렌딩 FlexCards | `Apex/Integration(통합)/IndustriesDigitalLending Namespace.md` |
+| InvoiceWriteOff Namespace, WriteOffInvoiceInputList, WriteOffInvoiceInput, WriteOffInvoiceResponseList, WriteOffInvoiceResponse, WriteOffInvoiceResponseError, Revenue Cloud 인보이스 상각 Apex, 인보이스 write-off 크레딧 메모 | `Apex/Integration(통합)/InvoiceWriteOff Namespace.md` |
+| IsvPartners Namespace, AppAnalytics, logCustomInteraction, interactionLabel interactionId interactionUuid, AppExchange App Analytics Apex, ISV 커스텀 상호작용 로깅, 앱 분석 패키지 사용 로그, ISV 파트너 Apex | `Apex/Integration(통합)/IsvPartners Namespace.md` |
+| RichMessaging Namespace, Enhanced Messaging Apex SDK, Messaging for Web Apex, Messaging for In-App Apex, AuthRequestHandler, ProcessFormHandler, ProcessPaymentHandler, PaymentLineItem, PaymentMethod, ShippingMethod, RecurringTiming, DeferredTiming, AddressableContact, PostalAddress, ProcessPaymentRequest, ProcessPaymentResult, TimeSlotOption, AuthRequestResponse, AuthRequestResult, MessageDefinitionInputParameter, TimingIntervalUnit, TimingType, PaymentItemStatus, ProcessPaymentResultStatus, 채팅채널 결제 Apex, 메시징 폼 제출, 메시징 인증 요청, Enhanced Messaging 결제 처리, 메시징 배송수단, 반복결제 타이밍 | `Apex/Integration(통합)/RichMessaging Namespace.md` |
+| RevSignaling Namespace, ProcedurePlan, SignalingApexProcessor, TransactionRequest, TransactionResponse, Procedure Plan Apex, Revenue Lifecycle Management Apex, 프로시저 플랜 커스텀 로직, 수익 라이프사이클 시그널링 | `Apex/Integration(통합)/RevSignaling Namespace.md` |
+| RevSalesTrxn Namespace, ConfigurationOptionsInput, GraphRequest, PlaceSalesTransactionException, PlaceSalesTransactionExecutor, PlaceSalesTransactionResponse, RecordResource, RecordWithReferenceRequest, Revenue Cloud 판매 트랜잭션 Apex, CPQ Quote Order Apex 생성, 통합 가격 책정 구성 Apex | `Apex/Integration(통합)/RevSalesTrxn Namespace.md` |
+| RulesAppIn Namespace, RulesApplicationResponse, RulesApplicationSummaryResponse, RulesApplicationErrorResponse, applyPaymentsAndCreditsByRules, 규칙 기반 결제 크레딧 적용 Apex, Revenue Cloud 결제 규칙 출력 클래스 | `Apex/Integration(통합)/RulesAppIn Namespace.md` |
+| runtime_industries_cpq Namespace, Industries CPQ Apex, CPQ 제품 검색 Apex, 제품 카탈로그 카테고리 관리 Apex, managed package cpq namespace | `Apex/Integration(통합)/runtime_industries_cpq Namespace.md` |
+| runtime_industries_insurance Namespace, AddEligibleInsuranceClausesOptions, CreateInsuranceQuoteOptions, CreateInsuranceRatingOptions, GenerateInsuranceClausesOptions, UpdateInsuranceQuoteOptions, Industries Insurance Apex, 보험 견적 생성 Apex, 보험 조항 생성 Apex, 보험 레이팅 Apex, Insurance Cloud managed package | `Apex/Integration(통합)/runtime_industries_insurance Namespace.md` |
+| Sfc Namespace, ContentDownloadContext, ContentDownloadHandler, ContentDownloadHandlerFactory, getContentDownloadHandler, isDownloadAllowed, downloadErrorMessage, redirectUrl, Salesforce Files Apex, 파일 다운로드 커스터마이징 Apex, 콘텐츠 다운로드 제어, IRM 파일 제어, 모바일 다운로드 차단 Apex, CHATTER CONTENT DELIVERY REST_API RETRIEVE S1 SOQL | `Apex/Integration(통합)/Sfc Namespace.md` |
+| Pref_center Namespace, PreferenceCenterApexHandler, LoadFormData, LoadParameters, SubmitFormData, SubmitParameters, TokenUtility, generateToken, generateTokens, TokenType, ValidationResult, Privacy Center Apex, Preference Manager Apex, 동의 양식 커스터마이징, 개인정보 동의 관리 Apex, 양식 로드 제출 핸들러 | `Apex/Integration(통합)/Pref_center Namespace.md` |
+

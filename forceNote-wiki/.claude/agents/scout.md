@@ -21,8 +21,8 @@ tools:
 ## 탐색 대상 경로
 
 ```
-/Users/a/Desktop/Study/Salesforce Documents/   ← PDF 파일들
-/Users/a/Desktop/Study/                         ← TrailheadApp 등 소스
+Salesforce Documents/   ← PDF 파일들 ($DOCS)
+.                        ← 레포 루트 (TrailheadApp 등 소스가 있을 경우)
 ```
 
 ## PDF 탐색 표준 절차

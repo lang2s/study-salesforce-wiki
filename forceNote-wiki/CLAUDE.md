@@ -9,7 +9,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 이 wiki는 **팀 단위 에이전트 시스템**으로 운영된다. 비자명한 작업은 반드시 팀 파이프라인을 거친다.
 
 - **팀 구성 및 워크플로우:** `TEAM_PROTOCOL.md` 참조
-- **에이전트 정의:** `.claude/agents/` 폴더 (pm, question-clarifier, planner, scout, source-coverage-checker, researcher, classifier, writer, completeness-validator, source-verifier, index-manager, cross-linker, wiki-linter, qa, retrospective-analyst, coverage-analyst)
+- **에이전트 정의 (15):** `.claude/agents/` 폴더 (pm, question-clarifier, planner, scout, source-coverage-checker, researcher, classifier, writer, completeness-validator, source-verifier, index-manager, cross-linker, wiki-linter, qa, wiki-retrospective)
 
 ### 팀 투입 기준
 
@@ -19,8 +19,31 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 | 새 네임스페이스/섹션 추가 | `pm` → 표준 파이프라인 (writer + source-coverage-checker 병렬) |
 | 기존 파일 보완 | `pm` → 빠른 파이프라인 |
 | `/lint` 또는 "wiki 점검해줘" | `wiki-linter` → `qa` |
-| "뭐가 없어?" / 큰 그림 공백 파악 | `coverage-analyst` → `pm` |
+| "뭐가 없어?" / 큰 그림 공백 파악 | `wiki-retrospective`(모드 B) → `pm` |
 | 간단한 질문 답변 | 직접 답변 (팀 불필요) |
+
+---
+
+## 작업 전 환경 부트스트랩 (Mac / Windows)
+
+이 위키는 Mac·Windows 양쪽에서 작업될 수 있다. **소스 추출·파일 생성 같은 콘텐츠 작업을 시작하기 전 항상 환경을 확인**한다. 경로는 절대경로 하드코딩이 아니라 레포 루트 기준 상대경로(`forceNote-wiki/`, `Salesforce Documents/`)와 PATH의 `pdftotext`를 쓴다.
+
+```
+1. forceNote-wiki/CLAUDE.local.md 존재 확인
+   · 있으면  → 읽고 "0. 환경 감지" 실행 → 해당 env 파일(.claude/env/{windows|mac}.md) 확인
+   · 없으면  → 아래 2번으로 자동 생성
+
+2. 자동 생성 (CLAUDE.local.md 가 없을 때)
+   a. 감지:  uname -s · pwd · command -v pdftotext · "Salesforce Documents"/forceNote-wiki 폴더 존재 확인
+   b. forceNote-wiki/CLAUDE.local.md 생성 — 표준 구조(환경 감지 → env 라우팅, 상대경로 변수표, 프리플라이트 체크리스트)
+   c. 감지된 OS에 맞는 forceNote-wiki/.claude/env/{windows|mac}.md 가 없으면 생성/갱신
+      (uname 결과, 레포 루트 절대경로, pdftotext 위치, 확인한 폴더, 확인 날짜 기록)
+   d. "환경 파일이 없어 자동 생성했습니다" 한 줄 보고 후 작업 진행
+
+3. 감지 실패(레포 루트 아님 / pdftotext 없음 / 폴더 없음) → 작업 중단하고 사용자에게 보고
+```
+
+`CLAUDE.local.md`·`.claude/env/*.md`는 OS 비종속(상대경로)이라 커밋해도 무방하나, 없는 머신에서도 위 절차로 자연스럽게 재생성된다.
 
 ---
 
@@ -29,21 +52,31 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ---
 
-## 레포 구조 (4층 탐색 아키텍처)
+## 레포 구조 (5층 탐색 아키텍처)
 
 ```
-Layer 0  00 Home.md              — 전체 진입점
-Layer 1  00 SEARCH_INDEX.md      — 키워드 → 파일 경로 직접 매핑
-         Apex/Apex MOC.md        — Apex 섹션 전체 목차
-         LWC/LWC MOC.md          — LWC 섹션 전체 목차
-         Flow/Flow MOC.md        — Flow 섹션 전체 목차
-         Integration(통합)/통합 MOC.md
-Layer 2  */index.md              — 각 subfolder 로컬 인덱스 (파일 목록 + 빠른 선택)
-Layer 3  개별 패턴 노트 (.md)
+Layer 0  00 Home.md              — 전체 진입점 (사람용 큐레이션)
+Layer 1  00 SEARCH_INDEX.md      — 라우터 (도메인 → 샤드 매핑만, 개별 페이지 나열 안 함)
+Layer 2  _index/{도메인}.md      — 키워드 → 파일 경로 샤드 (frontend/apex-core/apex-namespaces/platform/release/questions)
+         Apex/Apex MOC.md        — Apex 섹션 전체 목차 (사람용 브라우즈)
+         LWC/LWC MOC.md / Flow/Flow MOC.md / Integration(통합)/통합 MOC.md
+Layer 3  */index.md              — 각 subfolder 로컬 인덱스 (파일 목록 + 빠른 선택)
+Layer 4  개별 패턴 노트 (.md)
 ```
 
 섹션: `Apex/`, `LWC/`, `Flow/`, `Integration(통합)/`, `Architecture(아키텍처)/`, `Release/`
-유틸: `_templates/` (노트 템플릿), `_MOC/WIKI_RULES.md` (규칙 상세)
+유틸: `_index/` (키워드 샤드), `_templates/` (노트 템플릿), `_MOC/WIKI_RULES.md` (규칙 상세)
+
+### 탐색 인덱스 구조 (장기 확장 규칙)
+
+키워드 인덱스를 한 파일에 두면 페이지가 늘수록 파일이 커져 결국 1회 읽기 한도를 넘긴다(truncation → 누락). 그래서 **라우터 + 도메인 샤드** 트리로 운영한다. 검색 1회 = 라우터(작고 고정) + 샤드 1개(상한 있음) → 위키 크기와 무관하게 일정.
+
+| 규칙 | 내용 |
+|---|---|
+| 라우터 불변 | `00 SEARCH_INDEX.md`는 **도메인→샤드만** 매핑. 개별 페이지를 나열하지 않으므로 크기가 페이지 수와 무관하게 일정. |
+| 샤드 상한 | 각 `_index/*.md`는 **~300줄 / ~12k 토큰** 초과 금지. 초과 시 하위 샤드로 분할(`apex-namespaces-commerce.md` 등)하고 라우터에 1줄 추가. |
+| 단일 쓰기 주체 | 라우터·샤드·MOC·index.md 등 모든 탐색 파일은 **index-manager만** 수정. |
+| 1 페이지 = 1 홈 샤드 | 한 노트는 주 도메인 샤드 1곳에만 키워드 행을 둔다. 중복 행 금지. (폴더 배치가 애매하면 주 도메인 기준으로 결정) |
 
 ---
 
@@ -51,12 +84,12 @@ Layer 3  개별 패턴 노트 (.md)
 
 | 상황 | 읽는 파일 |
 |---|---|
-| 키워드로 찾을 때 | `00 SEARCH_INDEX.md` → 해당 파일 |
+| 키워드로 찾을 때 | `00 SEARCH_INDEX.md`(라우터)에서 도메인→샤드 확인 → `_index/{샤드}.md` → 해당 파일 |
 | 섹션 전체를 훑을 때 | Section MOC (`Apex/Apex MOC.md` 등) |
 | 폴더 내에서 탐색할 때 | 해당 `subfolder/index.md` |
 
 **규칙:**
-1. 키워드가 있으면 → `00 SEARCH_INDEX.md` 먼저
+1. 키워드가 있으면 → 라우터에서 도메인 판단 → **샤드 1개만** 읽는다 (전체 샤드를 다 읽지 않는다)
 2. 섹션 개요가 필요하면 → Section MOC
 3. 특정 폴더 내 파일 목록이 필요하면 → `폴더명/index.md`
 4. grep/find 로 탐색하지 않는다
@@ -175,7 +208,23 @@ aliases: [영어키워드, 한국어키워드, ...]
 □ 코드 블록 최소 1개 있음 (구조 예시 주석 포함)
 □ ## 관련 노트 섹션 있음
 □ 모든 [[wikilink]] 가 실제 파일을 가리킴
+□ 깊이: 클래스를 나열만 하지 않고 각 클래스의 메서드/프로퍼티/enum을 소스 대비 전수 작성 (아래 "내용 깊이 원칙" 참조)
+□ 양방향 링크: 본문이 [[B]]를 링크하면 B 파일에도 이 파일로의 역링크가 있는지 (없으면 cross-linker에 위임)
 ```
+
+#### 내용 깊이 원칙 (요약 방지)
+
+소스를 **요약하지 않는다.** 큰 네임스페이스(Database, System 등)일수록 "주요 클래스만", "대표 메서드만" 추리는 함정에 빠지기 쉽다.
+
+| ❌ 얕음 (금지) | ✅ 깊음 (목표) |
+|---|---|
+| 클래스 이름만 한 줄 나열 | 각 클래스마다 메서드 표 + 시그니처 + 설명 |
+| "주요 메서드 3개" 발췌 | 소스에 있는 메서드 전수 |
+| enum 값 일부 + "등" | 모든 enum 값 |
+| "이하 동일/생략" | 생략 없이 작성 |
+
+- 깊이의 천장은 researcher의 추출 깊이가 결정한다. researcher는 요약 추출 금지(전수 추출), completeness-validator는 개수가 아니라 **깊이(클래스별 충실도)** 까지 판정한다.
+- 한 파일이 너무 커지면 분할을 고려하되, **분할 전에 내용을 줄이지 않는다.** 깊이 우선, 구조는 그다음.
 
 ---
 
@@ -183,7 +232,7 @@ aliases: [영어키워드, 한국어키워드, ...]
 
 ```
 1. 파일 생성              — 위 구조 준수
-2. SEARCH_INDEX 업데이트   — 키워드 행 추가 (영어 + 한국어 + 자연어 질문)
+2. 키워드 샤드 업데이트     — 주 도메인 `_index/{샤드}.md`에 키워드 행 추가 (영어 + 한국어 + 자연어 질문). 샤드가 상한 초과면 분할 + 라우터 1줄 추가
 3. 섹션 MOC 업데이트       — 섹션 MOC에 링크 추가
 4. 폴더 index.md 업데이트  — 해당 subfolder/index.md 파일 목록 행 추가
 ```
@@ -198,9 +247,9 @@ Step 0 검증 + 4단계를 모두 완료해야 추가 작업이 끝난 것으로
 3. 상위 MOC 업데이트    — 섹션 MOC에 새 폴더 섹션 추가
 ```
 
-### SEARCH_INDEX 키워드 작성 원칙
+### 키워드 샤드 작성 원칙
 
-한 행에 영어 API명 + 한국어 표현 + 자연어 질문을 모두 포함한다.
+한 행에 영어 API명 + 한국어 표현 + 자연어 질문을 모두 포함한다. 행은 그 페이지의 **주 도메인 샤드 한 곳**에만 둔다.
 
 ```
 | deleteRecord, updateRecord, 레코드 삭제, 레코드 수정, LWC에서 DML | `LWC/LDS/uiRecordApi.md` |
@@ -210,19 +259,20 @@ Step 0 검증 + 4단계를 모두 완료해야 추가 작업이 끝난 것으로
 
 ## 탐색 파일 위치
 
-### 글로벌 탐색 (Layer 0–1)
+### 글로벌 탐색 (Layer 0–2)
 
 | 역할 | 파일 |
 |---|---|
 | 전체 진입점 | `00 Home.md` |
-| 키워드 검색 | `00 SEARCH_INDEX.md` |
+| 키워드 라우터 | `00 SEARCH_INDEX.md` (도메인 → 샤드) |
+| 키워드 샤드 | `_index/frontend.md` · `_index/apex-core.md` · `_index/apex-namespaces.md` · `_index/platform.md` · `_index/release.md` · `_index/questions.md` |
 | Apex 섹션 | `Apex/Apex MOC.md` |
 | LWC 섹션 | `LWC/LWC MOC.md` |
 | Flow 섹션 | `Flow/Flow MOC.md` |
 | Integration 섹션 | `Integration(통합)/통합 MOC.md` |
 | 작성 규칙 상세 | `_MOC/WIKI_RULES.md` |
 
-### 폴더 로컬 인덱스 (Layer 2)
+### 폴더 로컬 인덱스 (Layer 3)
 
 | 폴더 | index.md |
 |---|---|
@@ -267,10 +317,12 @@ Step 0 검증 + 4단계를 모두 완료해야 추가 작업이 끝난 것으로
 
 ```
 1. 깨진 wikilink 탐지   — [[파일명]] 이 실제로 존재하는 파일을 가리키는지 확인
-2. 고아 파일 탐지       — SEARCH_INDEX에 등록되지 않은 .md 파일
-3. 오래된 경로 참조     — SEARCH_INDEX/CLAUDE.md 내 이동·삭제된 파일 경로
-4. MOC 누락 항목       — 파일이 존재하지만 상위 MOC나 index.md에 링크가 없는 경우
-5. 개선 제안           — 자주 참조되지만 페이지가 없는 개념, 채울 수 있는 데이터 공백
+2. 단방향 링크 탐지     — A→[[B]] 인데 B→[[A]] 가 없는 쌍 (콘텐츠 섬). 의미상 상호 관련이면 양방향으로 보완
+3. 고아 파일 탐지       — 어느 `_index/*.md` 샤드에도 등록되지 않은 .md 파일
+4. 오래된 경로 참조     — 샤드/라우터/CLAUDE.md 내 이동·삭제된 파일 경로
+5. MOC 누락 항목       — 파일이 존재하지만 상위 MOC나 index.md에 링크가 없는 경우
+6. 샤드 건강           — 각 `_index/*.md` 가 ~300줄/~12k토큰 상한 이내인지 + 라우터↔샤드 정합성(라우터의 모든 샤드가 실재, 모든 샤드가 라우터에 등재)
+7. 개선 제안           — 자주 참조되지만 페이지가 없는 개념, 채울 수 있는 데이터 공백
 ```
 
 보고 형식: 항목별 `✅ 정상` / `⚠️ 경고` / `❌ 문제` 표로 출력. 문제가 있으면 수정 여부를 묻는다.

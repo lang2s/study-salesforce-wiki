@@ -174,5 +174,6 @@ POST /services/data/v65.0/tooling/runTestsAsynchronous/
 - [[Scheduled Apex]]
 - [[testVisible 회로차단기]]
 - [[Queueable]]
+- [[Database Namespace 상세]] — Database.Batchable·QueryLocator·BatchableContext 상세
 - [[Release/Summer '24]]
 - [[Release/Winter '26]]
