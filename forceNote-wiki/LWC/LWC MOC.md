@@ -74,6 +74,18 @@ created: 2026-05-17
 
 ---
 
+## 🔧 LWC 내부 구조 (Internals)
+
+> 소스: `lwc-master/` (salesforce/lwc 오픈소스, Tier 1)
+
+- [[LWC 오픈소스 아키텍처]] — 패키지 전체 구조, Compiler/Runtime/SSR 분리, static content optimization
+- [[@api 데코레이터 내부 구조]] — `createPublicPropertyDescriptor`, vm.cmpProps, 반응성 연결
+- [[@track 데코레이터 내부 구조]] — `internalTrackDecorator`, vm.cmpFields, observable-membrane reactive proxy
+- [[LWC VM 내부 구조]] — VM 인터페이스 전체, VMState/RenderMode/ShadowMode enum, lifecycle 함수
+- [[@wire 어댑터 내부 구조]] — WireAdapter 인터페이스, createConnector, configWatcher, legacy register()
+
+---
+
 ## 🧪 테스트
 
 - [[Jest 테스트 패턴]] — @wire 어댑터 mock, DOM 이벤트 검증, @salesforce/apex mock 3종 패턴

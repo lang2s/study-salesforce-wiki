@@ -66,6 +66,16 @@ created: 2026-05-21
 | LWC DOM 이벤트 테스트, querySelector, dispatchEvent, CustomEvent 검증, 버튼 클릭 테스트 | `LWC/Testing(테스트)/Jest 테스트 패턴.md` |
 | @salesforce/apex mock, jest.mock, mockResolvedValue, mockRejectedValue, virtual true, Apex 모킹 LWC | `LWC/Testing(테스트)/Jest 테스트 패턴.md` |
 
+## LWC — 내부 구조 (Internals, Tier 1 오픈소스 소스)
+
+| 키워드 | 파일 |
+|---|---|
+| LWC 오픈소스 아키텍처, lwc monorepo, @lwc/compiler, @lwc/engine-core, @lwc/engine-dom, @lwc/ssr-compiler, @lwc/ssr-runtime, @lwc/template-compiler, static content optimization, virtual DOM LWC, shadow DOM light DOM, LWC 패키지 구조 | `LWC/Internals(내부구조)/LWC 오픈소스 아키텍처.md` |
+| @api 내부 동작, createPublicPropertyDescriptor, createPublicAccessorDescriptor, vm.cmpProps, @api 반응성 구현, 생성자에서 @api 읽기 금지, registerDecorators, PropType Field Set Get GetSet | `LWC/Internals(내부구조)/@api 데코레이터 내부 구조.md` |
+| @track 내부 동작, internalTrackDecorator, getReactiveProxy, observable-membrane, vm.cmpFields, @track vs @api 저장 위치, 중첩 객체 반응성, track 함수 호출 | `LWC/Internals(내부구조)/@track 데코레이터 내부 구조.md` |
+| LWC VM 인터페이스, VMState created connected disconnected, RenderMode Light Shadow, ShadowMode Native Synthetic, ViewModelReflection WeakMap, cmpProps cmpFields cmpSlots, LWC 컴포넌트 인스턴스 내부 구조 | `LWC/Internals(내부구조)/LWC VM 내부 구조.md` |
+| @wire 내부 동작, WireAdapter 인터페이스, WireAdapterConstructor, createConnector, createConfigWatcher, ReactiveObserver, ENABLE_WIRE_SYNC_EMIT, legacy register WireEventTarget ValueChangedEvent, wire 어댑터 구현 | `LWC/Internals(내부구조)/@wire 어댑터 내부 구조.md` |
+
 ---
 
 ## Aura(오라) — Aura 컴포넌트

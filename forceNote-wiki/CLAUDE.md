@@ -299,6 +299,7 @@ Step 0 검증 + 4단계를 모두 완료해야 추가 작업이 끝난 것으로
 | LWC/Testing(테스트) | `LWC/Testing(테스트)/index.md` |
 | LWC/UIPatterns(UI패턴) | `LWC/UIPatterns(UI패턴)/index.md` |
 | LWC/BaseComponents(베이스컴포넌트) | `LWC/BaseComponents(베이스컴포넌트)/index.md` |
+| LWC/Internals(내부구조) | `LWC/Internals(내부구조)/index.md` |
 | Flow | `Flow/index.md` |
 
 ---
