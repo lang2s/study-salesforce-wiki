@@ -94,6 +94,41 @@ find forceNote-wiki/ -type d | grep -v "\(.*\)"
 
 순한글 폴더명 또는 규칙 미준수 폴더 탐지.
 
+### 8. 파일 위치 적절성 검사
+
+각 `.md` 파일이 **내용 도메인과 일치하는 폴더**에 있는지 확인한다. 더 적합한 위치가 있으면 이동 제안으로 보고한다.
+
+#### 판단 기준
+
+파일의 **tags frontmatter** + **제목** + **본문 핵심 키워드**를 종합해 도메인을 추론한다.
+
+| 도메인 키워드 | 기대 폴더 |
+|---|---|
+| apex, trigger, soql, governor limit, batch, future, queueable, scheduled | `Apex/` 또는 하위 |
+| lwc, lightning web component, @wire, @api, html template | `LWC/` 또는 하위 |
+| flow, screen flow, autolaunched flow, record-triggered flow | `Flow/` |
+| metadata api, deploy, retrieve, package.xml, mdapi | `DevOps(데브옵스)/MetadataAPI/` |
+| sfdx, scratch org, unlocked package, ci/cd, sf cli | `DevOps(데브옵스)/` |
+| sobject, standard object, custom object, object reference | `sObject/` |
+| integration, rest api, soap api, callout, external service | `Integration(통합)/` 또는 `Apex/Integration(통합)/` |
+| architecture, governor limits, multi-tenant, platform architecture | `Architecture(아키텍처)/` |
+| release, summer, winter, spring 릴리즈 | `Release/` |
+
+#### 판정 방법
+
+1. 파일의 tags와 제목에서 도메인 키워드를 추출한다
+2. 현재 폴더 경로와 대조한다
+3. **명백한 불일치** (예: LWC 내용이 Apex 폴더에 있음, Metadata API 내용이 Integration 폴더에 있음) → ❌ 이동 제안
+4. **애매한 위치** (경계선 주제, 중복 도메인) → ⚠️ 검토 제안 (이동 강제 안 함)
+5. **위치 적절** → ✅
+
+#### 판단 시 주의 사항
+
+- `Apex/Integration(통합)/` vs `Integration(통합)/` — Apex 코드 중심이면 전자, 플랫폼 수준이면 후자
+- `_templates/`, `_index/`, `_MOC/`, `00 Home.md`, `00 SEARCH_INDEX.md` — 위치 검사 제외
+- `index.md` 파일 — 위치 검사 제외 (로컬 인덱스는 폴더에 고정)
+- 파일 하나가 여러 도메인을 다루는 비교 노트(예: "Flow vs Apex 비교") — ⚠️ 현재 위치 유지 권고로 표시
+
 ## 출력 형식 (CLAUDE.md 기준)
 
 ```
@@ -109,6 +144,7 @@ find forceNote-wiki/ -type d | grep -v "\(.*\)"
 | 단방향 링크 (백링크 누락) | ✅/⚠️/❌ | N건 |
 | 샤드 건강 (크기·정합성·중복) | ✅/⚠️/❌ | N건 |
 | 폴더명 규칙 위반 | ✅/⚠️/❌ | N건 |
+| 파일 위치 적절성 | ✅/⚠️/❌ | N건 |
 
 ### ❌ 문제 상세
 
@@ -120,6 +156,12 @@ find forceNote-wiki/ -type d | grep -v "\(.*\)"
 
 **고아 파일:**
 - `Apex/X/Y.md` — 어느 `_index/` 샤드에도 미등록
+
+**파일 위치 이동 제안 (❌ 명백한 불일치):**
+- `Apex/LWC기초.md` → 권장 위치: `LWC/LWC기초.md` (이유: LWC 도메인 내용이 Apex 폴더에 위치)
+
+**파일 위치 검토 제안 (⚠️ 경계선):**
+- `Integration(통합)/Apex Callout.md` → 현재 위치 유지 또는 `Apex/Integration(통합)/Apex Callout.md` 고려 (이유: Apex 코드 중심 vs 통합 플랫폼 시각 경계)
 
 ### 개선 제안
 - [자주 참조되지만 페이지 없는 개념]
