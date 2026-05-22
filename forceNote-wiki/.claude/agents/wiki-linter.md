@@ -90,10 +90,13 @@ grep -rL "^tags:" forceNote-wiki/ --include="*.md"
 | ⚠️ 검토 | 위 둘로 명확히 안 갈림 | 보고 후 판단 |
 
 **허브 판정 (저유지보수 휴리스틱 — 수동 목록 없음):**
-- 파일명이 `… 개요` · `… MOC` · `index` · `… 빠른 참조` · `… 카탈로그`로 끝남, 또는
-- 인바운드 링크 수(fan-in): **≥8 = 강한 허브 / 5–7 = de-facto 레퍼런스 허브**(여러 페이지가 가리키는 공용 코어 네임스페이스 — 예: Invocable·Search·Context). 둘 다 spoke→hub 단방향이 정상이므로 ❌ 아님
+- **1차 신호 (이름/역할 — PRIMARY):** 파일명이 `… 개요` · `… MOC` · `index` · `… 빠른 참조` · `… 카탈로그`로 끝나거나, 여러 네임스페이스가 공유하는 **공통 코어**(예: Dom · QuickAction · PlaceQuote · Custom Fields · Custom Metadata Types · Flow) → 허브. spoke→hub 단방향이 정상이므로 ❌ 아님.
+- **2차 신호 (spoke fan-in — 보조, nav 제외):** 인바운드 링크를 셀 때 **nav 소스(index · MOC · 00 Home · SEARCH_INDEX)를 제외**하고 센다. nav 링크가 fan-in을 부풀려 오분류를 유발하기 때문. nav 제외 후 **서로 다른 형제 spoke ≥2개**가 단방향으로 가리키면 de-facto 레퍼런스 허브로 본다.
+- ⚠️ **경고:** raw fan-in(nav 포함)을 허브 임계로 쓰지 말 것. 이 위키 규모에선 모든 페이지가 자기 index/MOC로 링크해 숫자가 부풀려지고, 진짜 허브도 nav 제외 spoke fan-in은 2~3에 불과하다. (예전 "≥8 강한 허브 / 5–7 de-facto" 숫자 밴드는 nav 오염으로 오분류를 냈다 — 폐기.)
 
 aliases로 연결된 경우(`[[SaveResult]]` 가 `Database Namespace 상세`의 alias)도 역링크 존재로 인정.
+
+**보고 규칙 (단방향 항목 — raw 총량 헤드라인 금지):** 단방향 링크는 **raw 총량을 헤드라인 숫자로 쓰지 않는다.** raw 단방향 총량은 실행마다 디렉티드 그래프 카운팅 방식이 달라져 흔들리므로(같은 위키가 550/317/1200/214로 보고됨) 비교 불가하다. 항상 **3분류(❌ genuine peer / ✅ spoke→hub 의도적 / ⚠️ 검토) 카운트로만** 보고하고, 추세 비교는 **❌ 카운트로만** 한다.
 
 > ⚠️ **일관성 잠금:** 이 검사와 `writer.md`의 작성 시점 역링크 규칙은 **같은 hub-spoke 예외**를 공유한다. 한쪽만 바꾸면 linter가 writer가 의도한 단방향을 결함으로 재검출한다 → [[SEAM_MAP]] "규칙 쌍 일관성 잠금" 참조. 보고 시 ✅ 의도된 단방향은 ❌ 카운트에 넣지 말고 별도 표기("❌ N건 + ✅ M건(의도적 hub-spoke, 정상)").
 
