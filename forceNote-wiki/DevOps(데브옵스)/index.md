@@ -58,6 +58,10 @@ created: 2026-05-18
 | [[2GP — LMA Part 1 Get Started]] | LMA 설치·패키지 연결·권한 설정·Lead·License 레코드 관리·License Custom Object Fields 전수 | #reference |
 | [[2GP — LMA Part 2 Troubleshoot]] | LMA 트러블슈팅·구독자 Org 로그인·ISV Customer Debugger·LMA 이전·모범 사례 | #reference |
 | [[2GP — Feature Management App]] | FMA 개요·Feature Parameters 3종·XML 예제·System.FeatureManagement API·Custom Objects 숨기기·Considerations | #reference |
+| [[2GP — App Analytics Part 1: Overview & Setup]] | AppExchange App Analytics 개요·활성화·Use Cases·제품 기능 매핑·CustomInteractions 구현 (LWC+Apex 전체 예제) | #reference |
+| [[2GP — App Analytics Part 2: Best Practices & Query Strategy]] | 데이터 흐름·FileType/FileCompression 조합·쿼리 자동화·Catch-Up Queries·AvailableSince·소/중/대 파트너 권장 전수 | #reference |
+| [[2GP — App Analytics Part 3: Data Types & Schemas]] | Package Usage Logs·Summaries·Subscriber Snapshots 전수 스키마·log_record_type 11종·custom_entity_type 전수·Simulation Mode | #reference |
+| [[2GP — App Analytics Part 4: Developer Cookbook]] | CRM Analytics 레시피(LMAJoin·DailyAggregation) 전수 단계·Daily/Weekly/Monthly Unique Users SAQL·Custom Object CRUD SAQL | #reference |
 | [[2GP — Advanced Features Part 1]] | Package Ancestors·비선형 버전·Patch Version 제약·Dependencies·calculateTransitiveDependencies·Advanced sfdx-project.json 파라미터·Keywords(NEXT/LATEST/RELEASED/HIGHEST/NONE)·Target Release·Branches·Unpackaged Metadata 전수 | #reference |
 | [[2GP — Advanced Features Part 2]] | Package IDs 4종(033/04t/0Ho/08c)·Namespace Collision 설치 조합 테이블·Remove Metadata Components deprecated/hard-deleted 전수·Delete Package·Frequently Used Operations·Transfer Dev Hub 전 과정·Partner Support 케이스 | #reference |
 | [[CI 통합 전수 (CircleCI·Jenkins·Travis)]] | CircleCI 환경 설정·서버키 암호화·Dev Hub 연결, Jenkins Jenkinsfile 전체 코드, Travis CI, Sample CI 레포 전수 표 | #reference |
@@ -291,6 +295,20 @@ created: 2026-05-18
 - System.FeatureManagement API 메서드 전수? → [[2GP — Feature Management App]] → 섹션 6
 - Custom Objects/Permissions를 구독자에게 숨기는 방법? → [[2GP — Feature Management App]] → 섹션 7
 - Feature Parameters 200개 한도·24시간 지연 등 Considerations? → [[2GP — Feature Management App]] → 섹션 9
+- AppExchange App Analytics란? ISV 사용량 데이터 개요? → [[2GP — App Analytics Part 1: Overview & Setup]]
+- App Analytics 활성화 CLI 명령? → [[2GP — App Analytics Part 1: Overview & Setup]] → App Analytics 활성화 (2GP 패키지)
+- logCustomInteraction 구현 전체 예제 (LWC + Apex)? → [[2GP — App Analytics Part 1: Overview & Setup]] → 완전한 커스텀 인터랙션 구현 예제
+- App Analytics 쿼리 전략·FileType/FileCompression 선택? → [[2GP — App Analytics Part 2: Best Practices & Query Strategy]]
+- Catch-Up Query란? AvailableSince 사용법? → [[2GP — App Analytics Part 2: Best Practices & Query Strategy]] → Create Catch-Up Queries
+- 소/중/대 파트너 쿼리 전략 권장 사항? → [[2GP — App Analytics Part 2: Best Practices & Query Strategy]] → Recommendations
+- Package Usage Logs 전체 스키마 필드? → [[2GP — App Analytics Part 3: Data Types & Schemas]] → Package Usage Logs Schema (전수 필드)
+- log_record_type별 Standard/Supplemental 데이터 필드? → [[2GP — App Analytics Part 3: Data Types & Schemas]] → Custom Object and External Object Interactions
+- Subscriber Snapshots 스키마·UsersWithMFA 필드? → [[2GP — App Analytics Part 3: Data Types & Schemas]] → Subscriber Snapshots
+- App Analytics Simulation Mode 설정·패키지 ID 전수? → [[2GP — App Analytics Part 3: Data Types & Schemas]] → Test Custom Integrations (Simulation Mode)
+- CRM Analytics LMAJoin 레시피 생성 전체 단계? → [[2GP — App Analytics Part 4: Developer Cookbook]] → Create the LMAJoin CRM Analytics Recipe
+- DailyAggregation 레시피 집계 필드 목록? → [[2GP — App Analytics Part 4: Developer Cookbook]] → Create Your DailyAggregation CRM Analytics Recipe
+- Daily/Weekly/Monthly Unique Users SAQL? → [[2GP — App Analytics Part 4: Developer Cookbook]] → Customer Success Recipes
+- Custom Object Creates/Updates/Reads Per Day SAQL? → [[2GP — App Analytics Part 4: Developer Cookbook]] → Custom Object Usage Recipes
 - CircleCI 서버 키 암호화 설정? → [[CI 통합 전수 (CircleCI·Jenkins·Travis)]] → CircleCI
 - Jenkins Jenkinsfile 전체 코드 보기? → [[CI 통합 전수 (CircleCI·Jenkins·Travis)]] → Sample Jenkinsfile
 - Sample CI 레포 전체 목록? → [[CI 통합 전수 (CircleCI·Jenkins·Travis)]] → Sample CI Repos

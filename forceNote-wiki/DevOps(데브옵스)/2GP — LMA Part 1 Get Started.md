@@ -332,3 +332,4 @@ Field-Level Security → User Profiles or Permission Sets
 - [[2GP — Push Upgrade]] — 구독자 org 강제 업그레이드 관리
 - [[2GP — Best Practices]] — 2GP 개발·배포 모범 사례 전수
 - [[2GP Managed Package 개념과 1GP 비교]] — managed 2GP 개념·LMO·Partner Business Org
+- [[2GP — App Analytics Part 1: Overview & Setup]] — AppExchange App Analytics 개요·활성화·CustomInteractions (LMO 기반 사용량 데이터)

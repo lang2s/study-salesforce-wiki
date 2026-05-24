@@ -89,4 +89,5 @@ p.407 하단의 LMA 기능별 접근 요약 표:
 - [[2GP — Advanced Features Part 2]] — Package IDs Aliases (사용자 친화적 Alias 생성)
 - [[2GP — LMA Part 1 Get Started]] — License Management App 설치·권한·레코드
 - [[2GP — Feature Management App]] — Feature Parameters 설정·운영
+- [[2GP — App Analytics Part 2: Best Practices & Query Strategy]] — App Analytics 쿼리 Best Practices·파트너 규모별 전략
 - [[Metadata Coverage 보고서]] — 컴포넌트별 지원 채널 확인 (GA 여부 판단)

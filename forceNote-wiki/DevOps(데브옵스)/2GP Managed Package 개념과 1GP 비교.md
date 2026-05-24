@@ -203,3 +203,4 @@ managed 2GP와 Unlocked Package는 **둘 다 2GP 패키징 모델**을 공유한
 - [[DX 인증 방식]] — Dev Hub에 CLI로 로그인하는 방법
 - [[2GP — LMA Part 1 Get Started]] — LMA 설치·권한·Lead·License 레코드·LMO 설정
 - [[2GP — Feature Management App]] — Feature Parameters 3종·구독자별 기능 제어·FMA 전체
+- [[2GP — App Analytics Part 1: Overview & Setup]] — AppExchange App Analytics 개요·ISV 사용량 데이터·CustomInteractions

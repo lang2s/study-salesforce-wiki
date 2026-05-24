@@ -4,8 +4,8 @@ created: 2026-05-18
 updated: 2026-05-24
 ---
 
-> **세션 인계 메모 (2026-05-24 세션 8 종료 시점):**
-> 2GP-11(Best Practices + LMA + FMA, pkg2_dev.pdf p.407-427) 완료 — 4분할(Best Practices·LMA Part1·LMA Part2·Feature Management App). pdftoppm 고해상도 이미지로 dataFlowDirection 값 정정 포함. 역링크 6건·platform.md·index.md 업데이트. **2GP 시리즈 p.427까지 완료.** 다음 세션은 **2GP-12**(AppExchange App Analytics, p.428-504)부터 시작.
+> **세션 인계 메모 (2026-05-25 세션 종료 시점):**
+> 2GP-12(AppExchange App Analytics, pkg2_dev.pdf p.428-504) 완료 — 4분할(Part1 Overview&Setup·Part2 Best Practices&Query·Part3 Data Types&Schemas·Part4 Developer Cookbook). 전체 스키마 필드 전수(Package Usage Logs ~65개·Summaries 13개·Subscriber Snapshots 12개), log_record_type 20종, SAQL 6개, CRM Analytics 레시피 2개. 역링크 5건·platform.md(4행)·index.md 업데이트. 다음 세션은 **2GP-13**(1GP vs 2GP Feature Gaps, p.505-517)부터 시작.
 
 # WORK_BACKLOG — 활성 작업 추적
 
@@ -71,7 +71,7 @@ updated: 2026-05-24
 | 2GP-9 | `2GP — Push Upgrade` | pkg2_dev.pdf p.364-373 | ✅ 완료 | 2026-05-23 |
 | 2GP-10 | `2GP — Advanced Features` | pkg2_dev.pdf p.374-406 | ✅ 완료 | 2026-05-23 |
 | 2GP-11 | `2GP — Best Practices + License Management + Feature Management` | pkg2_dev.pdf p.407-427 | ✅ 완료 | 2026-05-23 |
-| 2GP-12 | `2GP — AppExchange App Analytics` (~76쪽 — 분할 검토) | pkg2_dev.pdf p.428-504 | 🔲 대기 | 2026-05-23 |
+| 2GP-12 | `2GP — AppExchange App Analytics` (~76쪽 — 분할 검토) | pkg2_dev.pdf p.428-504 | ✅ 완료 | 2026-05-23 |
 | 2GP-13 | `2GP — 1GP vs 2GP Feature Gaps` | pkg2_dev.pdf p.505-517 | 🔲 대기 | 2026-05-23 |
 
 ### 🔵 P3 — 중기 (다른 작업 사이에 의식적 실험)
