@@ -236,3 +236,4 @@ public class SampleController {
 - [[@InvocableMethod 패턴]] — 반대 방향: Flow에서 Apex를 호출하는 패턴
 - [[Flowtesting Namespace]] — Flow Builder로 만든 Flow 테스트를 Apex에서 실행
 - [[Invocable Namespace]] — Apex에서 Flow Action을 동적으로 호출하는 별도 API
+- [[Sfdc_Enablement Namespace]] — Enablement 프로그램이 Flow를 트리거·실행하는 호출자

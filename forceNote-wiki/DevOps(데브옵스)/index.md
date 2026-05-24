@@ -40,6 +40,15 @@ created: 2026-05-18
 | [[2GP Managed Package 개념과 1GP 비교]] | managed 2GP 개념·1GP 8가지 변화·Dev Hub/PBO/namespace org·권한 세트·Limited Access 라이선스·Unlocked와의 차이 | #reference |
 | [[2GP Managed Package 개발 환경과 사전 준비]] | Limited Access User 추가·Know Your Orgs·namespace 생성과 Link to Dev Hub·Key Concepts(app/package/metadata, version, install/upgrade)·Manageability Rules·Package Ancestry·의존성 매트릭스 전수 | #reference |
 | [[2GP Managed Package Scratch Org 워크플로]] | Develop(namespaced) vs Test(no-namespace)·ancestor seeding·Definition File vs Org Shape·Snapshot(+managed promote 불가)·Agentforce·Data Cloud scratch org·PBO 할당량·Partner edition 전수 | #reference |
+| [[2GP Managed Package — Workflow]] | 2GP 표준 CLI 워크플로 10단계(sf project generate~sf org open)·sfdx-project.json 자동 업데이트·Manageability Rules 4속성·Editable Properties 3카테고리·Supported Components 전수 목록 | #reference |
+| [[2GP — Components: Apex & Code]] | Apex Class·Trigger·Sharing Reason·Aura·LWC·Static Resource·Visualforce 컴포넌트·페이지 8종 Manageability Rules 4속성 전수·Editable Properties·패키징 고려사항·IP Protection | #reference |
+| [[2GP — Components: Automation]] | Flow·Workflow·Decision Table·Expression Set·Batch·Business Process Group 등 자동화 컴포넌트 Manageability Rules 4속성 전수·IP Protection·2GP-only 제한 | #reference |
+| [[2GP — Components: Einstein & Analytics]] | AffinityScoreDefinition·AIApplication·AIUsecaseDefinition·BotTemplate·Dashboard·DiscoveryAI·GenAiFunction·GenAiPlugin·GenAiPlannerBundle·GenAiPromptTemplate·RecommendationStrategy·Report·ReportType 등 Einstein·Analytics·Agentforce 도메인 Manageability Rules 4속성 전수 | #reference |
+| [[2GP — Components: Integration & Platform]] | AppFrameworkTemplateBundle·CareBenefitVerifySettings·ChatterExtension·ContextDefinition·ConversationVendorInfo·EmbeddedServiceConfig·EventRelayConfig·ExternalDataSource·ExternalServiceRegistration·FeatureParameter 3종·GatewayProviderPaymentMethodType·InboundNetworkConnection·IndustriesEinsteinFeatureSettings·IntegrationProviderDef·NamedCredential·PlatformCachePartition·RemoteSiteSetting 21종 Manageability Rules 4속성 전수 | #reference |
+| [[2GP — Components: Objects & Fields]] | AssessmentQuestion·BriefcaseDefinition·CareLimitType·CareRequestConfiguration·CustomField·CustomIndex·CustomLabels·CustomMetadata·CustomObject·CustomPermission·Document·FieldMappingConfig·FieldSet·FieldSourceTargetRelationship·Folder·GlobalValueSet·RelationshipGraphDefinition 등 오브젝트·필드 도메인 컴포넌트 Manageability Rules 4속성 전수 | #reference |
+| [[2GP — Components: Security & Access]] | AccountRelationshipShareRule·ConnectedApp·CorsWhitelistOrigin·CspTrustedSite·ExternalAuthIdentityProvider·ExternalCredential·IdentityVerificationProcDef·LiveChatSensitiveDataRule(1GP only)·PermissionSet·PermissionSetGroup 10종 Manageability Rules 4속성 전수·Certificate 패키징 불가·Profile 2GP 미지원 상세·Permission Set vs Profile Settings 비교 | #reference |
+| [[2GP — Components: UI & Layout]] | FlexiPage·CustomApplication·CustomTab·BrandingSet·CommunityTemplateDefinition·CommunityThemeDefinition·DigitalExperienceBundle·LightningMessageChannel·LightningBolt·LightningTypeBundle·ManagedContentType·PathAssistant·QuickAction·HomePageComponent·HomePageLayout·Layout·CompactLayout·ActionLinkGroupTemplate·ActionableListDefinition·Prompt 21종 UI 레이아웃 도메인 Manageability Rules 4속성 전수 | #reference |
+| [[2GP — Components: Other]] | FuelType·EmailTemplate·Letterhead·Translation·ServiceCatalog·SlackApp·WebStoreTemplate·SustainabilityUom 등 Other 도메인 컴포넌트 Manageability Rules 4속성 전수 | #reference |
 | [[CI 통합 전수 (CircleCI·Jenkins·Travis)]] | CircleCI 환경 설정·서버키 암호화·Dev Hub 연결, Jenkins Jenkinsfile 전체 코드, Travis CI, Sample CI 레포 전수 표 | #reference |
 | [[DX 도구 개요와 워크플로 전환]] | DX가 개발 방식을 바꾸는 이유·샘플 레포 시작·신규 프로젝트·마이그레이션 3가지 시작 경로 전수 | #reference |
 | [[Metadata Coverage 보고서]] | Metadata API·Scratch Org Source Tracking·Unlocked Package 등 채널별 메타데이터 지원 여부 공식 참조 | #reference |
@@ -137,6 +146,36 @@ created: 2026-05-18
 - Agentforce·Data Cloud scratch org 만들기? → [[2GP Managed Package Scratch Org 워크플로]] → Agentforce·Data Cloud
 - Active PBO 할당량 / --skipvalidation 한도? → [[2GP Managed Package Scratch Org 워크플로]] → Allocations
 - ActiveScratchOrg vs ScratchOrgInfo 차이? → [[2GP Managed Package Scratch Org 워크플로]] → Dev Hub에서 관리
+- managed 2GP 패키지를 처음 만드는 10단계 CLI 워크플로? → [[2GP Managed Package — Workflow]] → 전체 10단계
+- sf package create 실행 후 sfdx-project.json 자동 업데이트 예시? → [[2GP Managed Package — Workflow]] → 1-1. 전체 10단계 (Step 6 이후)
+- Manageability Rules 4속성 전수 (Can Be Updated / Subscriber Can Delete / IP Protection)? → [[2GP Managed Package — Workflow]] → Manageability Rules
+- 패키지 promote 후 편집 가능 속성 3카테고리? → [[2GP Managed Package — Workflow]] → Editable Properties
+- 2GP managed 패키지에 넣을 수 있는 컴포넌트 목록? → [[2GP Managed Package — Workflow]] → Supported Components
+- Flow 컴포넌트의 2GP Manageability Rules (IP Protection·Subscriber Delete 가능 여부)? → [[2GP — Components: Automation]] → Flow
+- Workflow 컴포넌트를 2GP 패키지에 넣을 수 있나? (Deprecation 경고 포함) → [[2GP — Components: Automation]] → Workflow Rule
+- BatchCalcJobDefinition / BatchProcessJobDefinition 2GP 패키징 규칙? → [[2GP — Components: Automation]] → Batch Calc Job Definition
+- Decision Matrix Definition / Expression Set Definition이 2GP에서 BETA인가? → [[2GP — Components: Automation]] → Decision Matrix Definition
+- FlowCategory·FlowTest·InvocableActionExtension는 2GP-only? → [[2GP — Components: Automation]] → Flow Category
+- BusinessProcessGroup 2GP에서 IP Protection 있나? → [[2GP — Components: Automation]] → Business Process Group
+- PermissionSet을 2GP 패키지에 포함하는 규칙? → [[2GP — Components: Security & Access]] → Permission Set
+- ConnectedApp 2GP 패키징 시 Push Upgrade OAuth 제한은? → [[2GP — Components: Security & Access]] → Connected App → Considerations When Packaging
+- Certificate를 2GP 패키지에 포함할 수 있나? → [[2GP — Components: Security & Access]] → 2GP 미지원 컴포넌트 ("Certificates aren't packageable")
+- CspTrustedSite를 패키지에 포함하면 안 되는 이유? → [[2GP — Components: Security & Access]] → CSP Trusted Site → Considerations When Packaging
+- ExternalCredential 패키지 설치 후 Post Install Steps? → [[2GP — Components: Security & Access]] → External Credential → Post Install Steps
+- Profile이 2GP 패키지에 포함되는 방식? → [[2GP — Components: Security & Access]] → 2GP 지원 컴포넌트 목록 (Profile 관련 주의) + Permission Set vs Profile Settings 비교
+- SharingRules / Territory / ModerationRule / OauthCustomScope을 2GP에서 패키징 가능한가? → [[2GP — Components: Security & Access]] → 2GP 미지원 컴포넌트 목록
+- FuelType / SustainabilityUom / SustnUomConversion 2GP Net Zero Cloud 패키징 규칙? → [[2GP — Components: Other]] → Sustainability / Net Zero Cloud
+- Service Catalog 4종 컴포넌트 2GP 패키징 규칙? → [[2GP — Components: Other]] → Service Catalog
+- Translation 2GP 패키징 (Language Extension Package Beta)? → [[2GP — Components: Other]] → Translation
+- Letterhead / EmailTemplate (Classic·Lightning) 2GP/1GP 패키징 차이? → [[2GP — Components: Other]] → Email / Letterhead / Document
+- SlackApp 2GP IP Protection + ViewDefinition 2GP Beta? → [[2GP — Components: Other]] → Slack 통합
+- WebStoreTemplate / PricingActionParameters / PricingRecipe 2GP 패키징? → [[2GP — Components: Other]] → Commerce & Pricing
+- FundraisingConfig 2GP 패키징? → [[2GP — Components: Other]] → Fundraising
+- VirtualVisitConfig / LifeSciConfigCategory / LifeSciConfigRecord 2GP 패키징? → [[2GP — Components: Other]] → Healthcare / Life Sciences
+- EnablementProgramDefinition / EnablementMeasureDefinition 2GP 패키징? → [[2GP — Components: Other]] → Enablement & Learning
+- BenefitAction 2GP IP Protection (Loyalty Management)? → [[2GP — Components: Other]] → Benefit Action
+- TransactionProcessingType 2GP 패키징·언인스톨 시 주의사항? → [[2GP — Components: Other]] → Transaction Processing Type
+- ActivationPlatform 1GP 패키징 (Data Cloud)? → [[2GP — Components: Other]] → Activation Platform
 - sf package create 명령 상세? → [[Unlocked Package 생성과 설정]]
 - sfdx-project.json 패키지 파라미터 전수? → [[Unlocked Package 생성과 설정]] → sfdx-project.json 패키지 설정 파라미터
 - packageDirectories Keywords NEXT LATEST RELEASED HIGHEST NONE? → [[Unlocked Package 생성과 설정]] → Keywords

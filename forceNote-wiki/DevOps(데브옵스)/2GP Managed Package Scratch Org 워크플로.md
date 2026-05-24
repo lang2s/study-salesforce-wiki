@@ -420,3 +420,4 @@ To enable this functionality, please log a case in the Partner Community.
 - [[sfdx-project.json 레퍼런스]] — `namespace`·`ancestorId`·`ancestorVersion`·`dependencies` 필드
 - [[DX 인증 방식]] — Dev Hub 로그인
 - [[Unlocked Package 개발과 버전]] — Unlocked는 snapshot 기반 버전 promote 가능 (managed와 대조)
+- [[2GP Managed Package — Workflow]] — scratch org 준비 이후 단계: 표준 CLI 워크플로 10단계 + Supported Components

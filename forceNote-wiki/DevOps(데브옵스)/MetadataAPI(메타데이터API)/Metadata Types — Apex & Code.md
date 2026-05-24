@@ -341,3 +341,4 @@ Lightning Message Channel. LWC, Aura, Visualforce 간 크로스-UI 통신을 위
 - [[Metadata API File-Based 호출]] — package.xml에 ApexClass, LightningComponentBundle 등 지정
 - [[Metadata API CRUD 호출]] — createMetadata()로 Apex 클래스 생성
 - [[Metadata API 에러 처리]] — Apex 배포 오류 처리
+- [[2GP — Components: Apex & Code]] — 동일 컴포넌트의 2GP 패키징 관점 Manageability Rules 전수

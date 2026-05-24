@@ -1,12 +1,11 @@
 ---
 tags: [backlog, coverage, work-tracking]
 created: 2026-05-18
-updated: 2026-05-23
+updated: 2026-05-24
 ---
 
-> **세션 인계 메모 (2026-05-23 저녁 세션 종료 시점):**
-> 2GP Managed Package 시리즈 작업 진행 중. Task #1·#2 작성 완료 + 평가→수정 완료. PDF 작성 pipeline 4 패턴(A·B·C·D) protocol 강화 완료(2차 진화 포함). Portability 복구 완료(L1 훅·script·신규 페이지·.gitignore·6 agent 정의 모두 staged). **모든 변경 사항이 git staged 상태이지만 commit 안 됨** — 다음 세션 시작 시 commit 결정.
-> 회고는 [[RETROSPECTIVE_PDF_PIPELINE_2026-05-23]] 참조.
+> **세션 인계 메모 (2026-05-24 세션 종료 시점):**
+> 2GP Components Available 8분할 전체 완료 (4a~4h). PIPE-2(writer.md Bash 추가)·2GP-3(Workflow)·2GP-4(Apex & Code)·2GP-4b(Automation)·2GP-4c(Einstein & Analytics)·2GP-4d(Integration & Platform)·2GP-4e(Objects & Fields)·2GP-4f(Security & Access)·2GP-4g(UI & Layout)·2GP-4h(Other) 전부 완료. 다음 세션은 2GP-5(Specific Metadata Behavior, p.314-333)부터 시작. 미commit 상태 — 다음 세션 시작 시 commit 결정.
 
 # WORK_BACKLOG — 활성 작업 추적
 
@@ -48,7 +47,7 @@ updated: 2026-05-23
 
 | # | 항목 | 소스/사유 | 상태 | 추가일 |
 |---|---|---|---|---|
-| DEC-1 | Components Available 카탈로그(288쪽) 분할 전략 결정 | 한 페이지로 담기 비현실적. (a) 알파벳 분할 (b) 산업/도메인별 분할 (c) "managed 2GP에서의 차이 매트릭스만" 등 옵션 결정 필요. 기존 `MetadataAPI/Metadata Types — *.md`와 분업 명시 필요. | 🔲 대기 | 2026-05-23 |
+| DEC-1 | ~~Components Available 카탈로그(288쪽) 분할 전략 결정~~ | **✅ 결정 완료 (2026-05-23)**: 도메인 8분할 — MetadataAPI/Metadata Types 구조 미러. 파일명: `2GP — Components: Apex & Code.md` 등 8개. MetadataAPI는 API 구조, 2GP Components는 패키징 동작(Manageability+Editable Properties) 역할 분업. | ✅ 완료 | 2026-05-23 |
 | PIPE-3 | researcher dump 정책 — large PDF 시 raw inline vs file reference | 강화 protocol이 "raw sed 출력을 dump에 포함" 의무인데 큰 PDF에서 LLM context 한계 초과 위험. file reference 방식 보완 필요. | 🔲 대기 | 2026-05-23 |
 | PIPE-4 | scout ↔ researcher handoff contract 명시 | 두 agent 모두 강화됐지만 "시각 자료 경고" 정확한 출력 형식과 researcher의 ⚠️ 표시 형식 사이 인터페이스 계약이 별도 문서로 정리 안 됨. | 🔲 대기 | 2026-05-23 |
 | PIPE-5 | classifier `D-3 depth balance` 한계 명시 | classifier는 콘텐츠 미작성 단계라 섹션 분량 예측 정확도가 낮음. protocol에 "writer 사후 점검과 함께 운영"이라는 안내 필요. | 🔲 대기 | 2026-05-23 |
@@ -57,7 +56,14 @@ updated: 2026-05-23
 
 | # | 항목 | 소스 | 상태 | 추가일 |
 |---|---|---|---|---|
-| 2GP-4 | `2GP — Components Available 카탈로그` (DEC-1 결정 후 분할) | pkg2_dev.pdf p.25-313 | 🔲 대기 | 2026-05-23 |
+| 2GP-4 | `2GP — Components: Apex & Code.md` (도메인 8분할 중 1번째) | pkg2_dev.pdf p.25-313 전체에서 Apex Class·Trigger·Sharing Reason 등 추출 | 🔲 대기 | 2026-05-23 |
+| 2GP-4b | `2GP — Components: Automation.md` (Flow/Process/Workflow) | pkg2_dev.pdf p.25-313 | 🔲 대기 | 2026-05-23 |
+| 2GP-4c | `2GP — Components: Einstein & Analytics.md` | pkg2_dev.pdf p.25-313 | 🔲 대기 | 2026-05-23 |
+| 2GP-4d | `2GP — Components: Integration & Platform.md` | pkg2_dev.pdf p.25-313 | 🔲 대기 | 2026-05-23 |
+| 2GP-4e | `2GP — Components: Objects & Fields.md` | pkg2_dev.pdf p.25-313 | 🔲 대기 | 2026-05-23 |
+| 2GP-4f | `2GP — Components: Security & Access.md` | pkg2_dev.pdf p.25-313 | 🔲 대기 | 2026-05-23 |
+| 2GP-4g | `2GP — Components: UI & Layout.md` | pkg2_dev.pdf p.25-313 | 🔲 대기 | 2026-05-23 |
+| 2GP-4h | `2GP — Components: Other.md` | pkg2_dev.pdf p.25-313 | 🔲 대기 | 2026-05-23 |
 | 2GP-5 | `2GP — Specific Metadata Behavior` (Apex/Protected/Permission Sets/Profile) | pkg2_dev.pdf p.314-333 | 🔲 대기 | 2026-05-23 |
 | 2GP-6 | `2GP — Develop (Apex·버전 생성)` | pkg2_dev.pdf p.334-347 | 🔲 대기 | 2026-05-23 |
 | 2GP-7 | `2GP — Install · Uninstall` | pkg2_dev.pdf p.348-359 | 🔲 대기 | 2026-05-23 |

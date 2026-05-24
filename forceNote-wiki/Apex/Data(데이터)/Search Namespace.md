@@ -201,3 +201,4 @@ List<Search.SearchResult> acctResults = dynamic.get('Account');
 - [[SOQL 패턴]] — 정적/동적 SOQL (SELECT 기반 검색)
 - [[Dynamic SOQL]] — `Database.queryWithBinds`, SOQL 인젝션 방어
 - [[SOSL 테스트 패턴]] — `Test.setFixedSearchResults` 상세
+- [[KbManagement Namespace]] — Knowledge Article 검색·번역 관리 (Search와 함께 KB 조회 시 연계)

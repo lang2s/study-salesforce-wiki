@@ -1,8 +1,17 @@
-# SEAM_MAP — 스쿼드 경계 책임 지도
+# SEAM_MAP (DEPRECATED — 위키 루트로 이동)
+
+> ⚠️ **이 파일은 2026-05-24부터 deprecated.** 정본은 **[wiki 루트의 SEAM_MAP.md](../../SEAM_MAP.md)** ([[SEAM_MAP]]).
+> 새 파일은 이 파일 내용 + AP-04 회고에서 추가된 규칙들(상위 카탈로그 역링크 RACI, escape backtick 룰 등)을 통합했다.
+> 이 위치(`.claude/teams/`)는 wiki 스코프 외부라 L1 lint·wiki-linter가 인덱싱 못 함 → wikilink 깨진 링크 false positive 4건 유발 (TEAM_PROTOCOL.md). 위키 루트가 올바른 위치.
+> 호환성을 위해 이 파일 자체는 남겨두되, 모든 신규 갱신은 [[SEAM_MAP]] (wiki 루트)에 한다.
+
+---
+
+# (이하 보존된 원본 — 참조용)
 
 > **팀을 나누면 일이 팀 '안'이 아니라 팀 '사이(seam)'에서 샌다.** 이 문서는 모든 경계 책임을 *주담당 + 백업* 스쿼드로 고정해, "걔네가 한 줄 알았어 / 아무 팀 일도 아님" 두 실패를 차단한다.
 >
-> 상위: [[TEAM_PROTOCOL]] — 스쿼드 멤버십·파이프라인. **이 문서가 스쿼드 경계·핸드오프 계약의 정본이다** (별도 헌장 파일 없음).
+> 상위: [[TEAM_PROTOCOL]] — 스쿼드 멤버십·파이프라인.
 
 ---
 

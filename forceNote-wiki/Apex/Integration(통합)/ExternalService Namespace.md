@@ -105,3 +105,4 @@ if (response.Code == 200) {
 - [[Named Credential]] — ExternalService 인증 기반
 - [[HttpCalloutMock]] — 테스트 모킹
 - [[External Services]] — Admin 설정 기반 외부 서비스 등록 가이드
+- [[LxScheduler Namespace]] — Lightning Scheduler가 외부 캘린더 시스템을 ExternalService로 연동하는 호출자

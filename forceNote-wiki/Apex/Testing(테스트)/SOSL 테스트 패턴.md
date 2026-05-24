@@ -79,3 +79,4 @@ static void testSearch() {
 - [[테스트 전략]]
 - [[HttpCalloutMock]]
 - [[StubProvider]]
+- [[Search Namespace]] — SOSL `Search.find()` 본체 API (이 페이지는 그 테스트 픽스처 전용 분기)

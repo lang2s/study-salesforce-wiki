@@ -131,3 +131,4 @@ public Boolean isSlaBreach(Id caseId) {
 
 - [[Scheduled Apex]] — 영업시간 외 스케줄 실행
 - [[Flow 유틸리티 액션 모음]] — CalculateBusinessHours Invocable Action
+- [[LxScheduler Namespace]] — Lightning Scheduler 약속 슬롯 계산이 BusinessHours를 기준으로 동작

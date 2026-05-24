@@ -229,3 +229,4 @@ Messaging.ActionResult result =
 
 - [[SingleEmailMessage]] — 단일 이메일 발송 상세
 - [[CustomNotification]] — 인앱 알림 상세
+- [[Compression Namespace]] — 이메일 첨부파일 압축/해제 시 함께 사용되는 gzip/zip API
