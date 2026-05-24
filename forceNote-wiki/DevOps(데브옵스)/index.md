@@ -53,6 +53,7 @@ created: 2026-05-18
 | [[2GP — Develop]] | sf package create·sf package version create 3가지 옵션·MAJOR.MINOR.PATCH.BUILD·NEXT 키워드·Project Configuration File 파라미터 전수·Package Ancestor(HIGHEST/NONE)·beta→released 75% 커버리지·sf package version promote 전수 | #reference |
 | [[2GP — Install · Uninstall]] | sf package install·sf package uninstall·--publish-wait/--wait 타임아웃·Installation URL·InstallHandler·InstallContext·System.Version·PostInstallScript·의존성 설치 스크립트·Uninstall 제약사항 전수 | #reference |
 | [[2GP — Prepare to Distribute]] | beta→released 승격 전 코드 커버리지 75%·Installation Key 설정·sf package version promote·Release Notes URL·postInstallUrl·AppExchange 파트너 콘솔 연결·패키지 등록·권장 버전 설정 전수 | #reference |
+| [[2GP — Push Upgrade]] | ISV가 subscriber org에 강제 업그레이드를 Push하는 전 과정·CLI 명령·SOAP API·Customized Push Upgrade·Best Practices 전수 | #reference |
 | [[CI 통합 전수 (CircleCI·Jenkins·Travis)]] | CircleCI 환경 설정·서버키 암호화·Dev Hub 연결, Jenkins Jenkinsfile 전체 코드, Travis CI, Sample CI 레포 전수 표 | #reference |
 | [[DX 도구 개요와 워크플로 전환]] | DX가 개발 방식을 바꾸는 이유·샘플 레포 시작·신규 프로젝트·마이그레이션 3가지 시작 경로 전수 | #reference |
 | [[Metadata Coverage 보고서]] | Metadata API·Scratch Org Source Tracking·Unlocked Package 등 채널별 메타데이터 지원 여부 공식 참조 | #reference |
@@ -228,6 +229,13 @@ created: 2026-05-18
 - Dev Hub를 AppExchange 파트너 콘솔에 연결하는 방법? → [[2GP — Prepare to Distribute]] → 섹션 6
 - Register Managed 2GP Package / License Management Org (LMO)? → [[2GP — Prepare to Distribute]] → 섹션 6
 - 구독자에게 특정 버전 업그레이드 권장 (sf package update --recommended-version-id)? → [[2GP — Prepare to Distribute]] → 섹션 7
+- 2GP Push Upgrade로 subscriber org에 강제 업그레이드하기? → [[2GP — Push Upgrade]]
+- sf package push-upgrade schedule / list / report / abort 명령? → [[2GP — Push Upgrade]] → 섹션 2
+- PackagePushRequest / PackagePushJob / PackagePushError 오브젝트 쿼리? → [[2GP — Push Upgrade]] → 섹션 2
+- 고객이 Push Upgrade를 차단하게 하려면? → [[2GP — Push Upgrade]] → 섹션 4
+- PushUpgradeCustomizationRepository 만료 기간 설정·변경? → [[2GP — Push Upgrade]] → 4-3
+- Push Upgrade 후 신규 기능 접근 권한 자동 할당 스크립트? → [[2GP — Push Upgrade]] → 섹션 6
+- Push Upgrade Best Practices (단계적 배포·고객 신뢰)? → [[2GP — Push Upgrade]] → 섹션 7
 - sf package create 명령 상세? → [[Unlocked Package 생성과 설정]]
 - sfdx-project.json 패키지 파라미터 전수? → [[Unlocked Package 생성과 설정]] → sfdx-project.json 패키지 설정 파라미터
 - packageDirectories Keywords NEXT LATEST RELEASED HIGHEST NONE? → [[Unlocked Package 생성과 설정]] → Keywords

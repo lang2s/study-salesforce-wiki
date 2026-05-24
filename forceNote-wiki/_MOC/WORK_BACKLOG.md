@@ -4,8 +4,8 @@ created: 2026-05-18
 updated: 2026-05-24
 ---
 
-> **세션 인계 메모 (2026-05-24 세션 5 종료 시점):**
-> 2GP-8(Prepare to Distribute, pkg2_dev.pdf p.359-363) 완료 — sf package version promote·Code Coverage 75%·Installation Key·AppExchange 등록·postInstallUrl/releaseNotesUrl 전수 작성. 역링크 3건·platform.md·index.md·00 Home.md 업데이트. 다음 세션은 **2GP-9**(Push Upgrade, p.364-373)부터 시작.
+> **세션 인계 메모 (2026-05-24 세션 6 종료 시점):**
+> 2GP-9(Push Upgrade, pkg2_dev.pdf p.364-373) 완료 — PackagePushRequest·PackagePushJob·PackagePushError·SOAP API·CLI 방식·Customized Push Upgrade·Best Practices 전수 작성(7섹션, 코드블록 18개). 역링크 3건·platform.md·index.md 업데이트. 다음 세션은 **2GP-10**(Advanced Features, p.374-406)부터 시작.
 
 # WORK_BACKLOG — 활성 작업 추적
 
@@ -68,7 +68,7 @@ updated: 2026-05-24
 | 2GP-6 | `2GP — Develop (Apex·버전 생성)` | pkg2_dev.pdf p.334-347 | ✅ 완료 | 2026-05-23 |
 | 2GP-7 | `2GP — Install · Uninstall` | pkg2_dev.pdf p.348-359 | ✅ 완료 | 2026-05-23 |
 | 2GP-8 | `2GP — Prepare to Distribute` | pkg2_dev.pdf p.360-363 | ✅ 완료 | 2026-05-23 |
-| 2GP-9 | `2GP — Push Upgrade` | pkg2_dev.pdf p.364-373 | 🔲 대기 | 2026-05-23 |
+| 2GP-9 | `2GP — Push Upgrade` | pkg2_dev.pdf p.364-373 | ✅ 완료 | 2026-05-23 |
 | 2GP-10 | `2GP — Advanced Features` | pkg2_dev.pdf p.374-406 | 🔲 대기 | 2026-05-23 |
 | 2GP-11 | `2GP — Best Practices + License Management + Feature Management` | pkg2_dev.pdf p.407-427 | 🔲 대기 | 2026-05-23 |
 | 2GP-12 | `2GP — AppExchange App Analytics` (~76쪽 — 분할 검토) | pkg2_dev.pdf p.428-504 | 🔲 대기 | 2026-05-23 |

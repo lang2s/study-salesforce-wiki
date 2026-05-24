@@ -471,3 +471,4 @@ sf org open -u me@my.org
 - [[2GP — Specific Metadata Behavior]] — Permission Set/Profile Settings, IP 보호, post/uninstall script 지정 (sfdx-project.json)
 - [[Unlocked Package 릴리스와 설치]] — Unlocked Package 설치·업그레이드 타입·의존성 스크립트 비교
 - [[2GP — Prepare to Distribute]] — 설치 이전 단계: 코드 커버리지 75%·Installation Key·sf package version promote·AppExchange 등록
+- [[2GP — Push Upgrade]] — subscriber org에 강제 Push Upgrade·CLI·SOAP API·Customized Push Upgrade·Best Practices
