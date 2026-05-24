@@ -150,5 +150,7 @@ Flow Builder에서 flow test를 생성할 때 다루는 주요 검증 요소:
 ## 관련 노트
 
 - [[Flow Interview API]] — Apex에서 Flow를 직접 실행하는 Flow.Interview 클래스
+- [[Flow Namespace]] — Apex에서 Flow를 호출하는 본체 API (이 페이지는 그 테스트 전용 분기)
 - [[테스트 전략]] — @isTest, TestSetup, Given-When-Then 구조
 - [[System Namespace]] — System.enqueueJob, Test 클래스 관련 API
+- [[Sfdc_Enablement Namespace]] — Enablement Flow의 단위 테스트 시 Flowtesting API를 사용

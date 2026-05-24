@@ -101,6 +101,7 @@ Salesforce DX — 소스 중심 개발, Scratch Org, Unlocked Package, CI/CD
 | [[Scratch Org 패턴]] | Dev Hub, org create scratch, Snapshot |
 | [[Unlocked Package 패턴]] | sf package create/install, 2GP |
 | [[CI CD 패턴]] | Jenkins, CircleCI, JWT 인증 자동화 |
+| [[2GP — Prepare to Distribute]] | sf package version promote, AppExchange 등록, 코드 커버리지 75%, Installation Key |
 
 ### [[통합 MOC|Integration(통합)]]
 외부 시스템 연동 — Named Credential, Callout, REST/SOAP

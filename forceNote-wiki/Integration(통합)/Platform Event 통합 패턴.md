@@ -223,3 +223,4 @@ static void testOrderEventPublish() {
 - [[Custom REST Endpoint]] — Inbound 동기 통합
 - [[Queueable + Callout 패턴]] — 이벤트 처리 후 외부 Callout 연결
 - [[Named Credential]] — Outbound 연동
+- [[sfdc_surveys Namespace]] — Survey 응답 이벤트를 Platform Event로 발행하는 사례

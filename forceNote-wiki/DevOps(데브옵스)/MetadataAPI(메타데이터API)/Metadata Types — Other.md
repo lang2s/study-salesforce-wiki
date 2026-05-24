@@ -131,6 +131,7 @@ Internal use only.
 - [[Metadata Types — 개요 및 분류]] — 전체 타입 목록 및 분류
 - [[Metadata Types — Apex & Code]] — MetadataWithContent를 상속하는 Apex 타입
 - [[Metadata API 개요]] — Metadata API 전체 개념
+- [[2GP — Components: Other]] — 같은 타입(Sustainability·Service Catalog·Translation·Slack 등 60+)의 2GP 패키징 동작
 
 ---
 

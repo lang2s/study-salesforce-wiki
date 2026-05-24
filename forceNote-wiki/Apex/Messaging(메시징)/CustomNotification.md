@@ -159,3 +159,4 @@ public without sharing class NotificationService {
 - [[SingleEmailMessage]] — 이메일 발송 대안
 - [[Platform Event 발행]] — 비동기 이벤트 기반 알림
 - [[서비스 레이어 패턴]] — 알림 로직 캡슐화
+- [[Messaging Namespace]] — CustomNotification이 속한 상위 네임스페이스 (이메일·SMS·푸시 통합 카탈로그)

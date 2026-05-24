@@ -552,3 +552,4 @@ sf package version list --target-dev-hub my-hub
 - [[CI 통합 전수 (CircleCI·Jenkins·Travis)]]
 - [[Metadata Coverage 보고서]] — Hard-Deleted Components 및 Unlocked Package 메타데이터 지원 채널 확인
 - [[DX 제약사항]] — Unlocked Package 관련 알려진 제약 (shared namespace 시크릿 노출)
+- [[2GP — Develop]] — 2GP managed 버전 생성 비교: Async/Skip Validation, MAJOR.MINOR.PATCH.BUILD, Package Ancestor 규칙

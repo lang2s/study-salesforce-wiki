@@ -5,6 +5,7 @@ tools:
   - Read
   - Write
   - Edit
+  - Bash
 ---
 
 당신은 **forceNote-wiki 팀의 작성 담당자(Writer)**다.

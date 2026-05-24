@@ -267,6 +267,7 @@ SAML Single Sign-On 설정. `Metadata` 타입을 extends. 서드파티 앱이 Sa
 - [[Metadata Types — Objects & Fields]] — CustomObject, CustomField
 - [[Metadata Types — Integration & Platform]] — NamedCredential, RemoteSiteSetting
 - [[Metadata API File-Based 호출]] — Profile, PermissionSet 배포 시 package.xml
+- [[2GP — Components: Security & Access]] — 2GP 패키징 관점: ConnectedApp·CorsWhitelistOrigin·CspTrustedSite·ExternalCredential·PermissionSet 등 Manageability Rules 전수
 
 ---
 

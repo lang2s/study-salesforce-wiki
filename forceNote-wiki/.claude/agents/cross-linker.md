@@ -24,6 +24,51 @@ tools:
 
 예: `Database Namespace 상세`의 Batchable 섹션이 `[[Batch Apex]]`를 링크한다면, `Batch Apex.md`에도 `[[Database Namespace 상세]]` 역링크가 있어야 한다. 한쪽만 있으면 추가한다.
 
+## 허브·카탈로그 페이지 우선 점검 (시리즈 작업 필수)
+
+새 파일이 **시리즈의 일부**(예: `2GP — Components: Apex & Code`처럼 같은 prefix 형제 7+개)일 때, 형제 노트 역링크에만 집중하면 **상위 허브·카탈로그 페이지**(MetadataAPI 도메인 파일·Workflow 파일·MOC·index)에 역링크 추가를 잊는 경향이 있다. 회고(2026-05-24)에서 11건 누락 발견.
+
+### 시리즈 작성 시 필수 점검 절차
+
+```
+1. 형제 파일 N개 → 새 파일 역링크 (지금까지 잘 하던 것)
+2. **+ 상위 카탈로그 페이지 점검 (새로 추가된 룰)**
+   a. 새 파일이 기존 파일 X를 링크한다면, X의 "도메인/카테고리 친척" 파일도 함께 점검
+      예: 2GP — Components: Einstein & Analytics가 Metadata Types — Einstein & Analytics를 링크하면,
+          시리즈의 다른 7개(Apex & Code·Automation 등)도 같은 패턴이어야 한다 → 전수 확인
+   b. 시리즈의 "허브 페이지"(예: 2GP Managed Package — Workflow.md)에서 첫 번째 형제만 링크돼 있다면, 
+      나머지 7개 형제도 같은 자리에 추가
+   c. 점검 명령:
+      for s in "${siblings[@]}"; do
+        grep -c "\[\[새파일패턴: ${s}\]\]" 허브파일
+      done
+      → 0이 하나라도 있으면 보완 필요
+3. ❌ **금지**: "형제 7개 역링크 했으니 끝" → 허브가 빠지면 콘텐츠 섬은 아니지만 **카탈로그가 부분 노출** 상태
+```
+
+### 적용 대상 허브·카탈로그 페이지 (예시)
+
+| 시리즈 유형 | 점검해야 할 허브 |
+|---|---|
+| `2GP — Components: *` 시리즈 | `MetadataAPI/Metadata Types — *` 동일 도메인 파일 + `2GP Managed Package — Workflow.md` |
+| `Metadata Types — *` 시리즈 | `Metadata Types — 개요 및 분류`·`MetadataAPI 개요` |
+| `Apex Namespace *` 시리즈 | `Apex/Apex MOC.md` + `_index/apex-namespaces.md`(라우터는 index-manager만, 콘텐츠 역링크만) |
+| `Trailhead App` 시리즈 | 해당 앱 README + `Apex/Apex MOC.md` |
+| `LWC LDS *` 시리즈 | `LWC/LDS/index.md` + `LWC/LWC MOC.md` |
+
+### 자가 체크 후 회고
+
+작업 종료 직전 마지막 명령:
+```bash
+# 새 파일의 모든 직접 링크 대상에서, 그 시리즈의 다른 형제도 동일하게 링크하는지 확인
+for target_file in $(grep -oE '\[\[[^]]+\]\]' 새파일.md | sed 's/\[\[//;s/\]\]//'); do
+  # target_file의 "이웃 카탈로그"가 시리즈 형제도 링크하는지 확인
+  ...
+done
+```
+
+발견된 누락 = bug. 그 자리에서 fix 하지 않으면 **다음 cross-linker도 같은 실수 반복** (회고 AP-04 → 2026-05-24).
+
 ## 사용 가능한 도구
 
 - `Read` — 위키 파일들

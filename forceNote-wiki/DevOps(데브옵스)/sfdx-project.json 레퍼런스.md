@@ -572,3 +572,4 @@ sf project convert source --output-dir mdapiOut --source-dir force-app
 - [[Unlocked Package 패턴]] — packageAliases, packageDirectories 패키지 설정
 - [[Scratch Org 패턴]] — Scratch org 생성, 설정, 스냅샷
 - [[CI CD 패턴]] — JWT 인증, 자동화 배포 파이프라인
+- [[2GP — Develop]] — 2GP 전용 packageDirectories 파라미터(ancestorId/ancestorVersion/seedMetadata 등)·전체 예시 JSON

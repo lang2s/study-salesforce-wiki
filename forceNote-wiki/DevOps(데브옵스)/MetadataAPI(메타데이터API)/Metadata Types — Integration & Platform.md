@@ -248,3 +248,4 @@ Platform Cache 파티션. `Metadata` 타입을 extends.
 - [[Metadata Types — Security & Access]] — ConnectedApp, CspTrustedSite, CorsWhitelistOrigin
 - [[Metadata API File-Based 호출]] — package.xml Settings 배포
 - [[CI CD 패턴]] — 통합 타입 CI/CD 자동화
+- [[2GP — Components: Integration & Platform]] — 같은 타입의 2GP 패키징 동작 (Manageability Rules·Editable Properties)

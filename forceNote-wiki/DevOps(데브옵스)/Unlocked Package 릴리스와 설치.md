@@ -450,3 +450,5 @@ sf package update --error-notification-username me@devhub.org
 - [[CI 통합 전수 (CircleCI·Jenkins·Travis)]]
 - [[DX 인증 방식]]
 - [[Scratch Org 배포·유저·에러코드]]
+- [[2GP — Push Upgrade]] — 2GP managed package Push Upgrade 전용 CLI·SOAP API·Customized Push Upgrade·Best Practices
+- [[2GP — Install · Uninstall]] — managed 2GP 설치·업그레이드·제거 전수 (비교: Unlocked과 동일 sf package install 명령 사용)

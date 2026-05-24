@@ -460,3 +460,4 @@ DML 경로에서는 `SaveResult.getErrors()` → `instanceof Database.DuplicateE
 
 - [[DML 패턴]] — Database.insert(allOrNone), partial success 처리, DuplicateError 포함
 - [[Database Namespace 상세]] — SaveResult, Database.Error, DMLOptions 전체 레퍼런스
+- [[Wave Namespace]] — CRM Analytics(구 Wave) — Datacloud 데이터를 분석·시각화하는 자매 분석 플랫폼

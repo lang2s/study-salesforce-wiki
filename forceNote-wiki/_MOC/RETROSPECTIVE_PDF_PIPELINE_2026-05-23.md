@@ -258,3 +258,30 @@ D. 장기 — 다른 PDF 작업에서 새 패턴 수집
 - [[2GP Managed Package 개념과 1GP 비교]] — Task #1 결과물
 - [[2GP Managed Package 개발 환경과 사전 준비]] — Task #1 결과물
 - [[2GP Managed Package Scratch Org 워크플로]] — Task #2 결과물
+
+---
+
+## 부록 — AP-04: cross-linker 허브 누락 (2026-05-24)
+
+### 문제
+2GP Components 8분할(4a~4h) 8개 파일 작업 후 다각도 검사에서 다음 누락 발견:
+- MetadataAPI 역링크 4건 누락: Einstein & Analytics, Integration & Platform, UI & Layout, Other
+- `2GP Managed Package — Workflow.md` → 8개 형제 링크 중 7건 누락 (Apex & Code 1개만 있었음)
+
+### 원인
+cross-linker가 형제 노트(같은 시리즈 다른 파일) 역링크는 100% 챙기나, **상위 허브·카탈로그 페이지**(MetadataAPI 도메인 파일·Workflow MOC 등) 역링크는 가끔 빠짐. 형제 중심으로 동작하느라 "이미 존재하던 카탈로그"를 잊는 경향.
+
+### 영향
+- 콘텐츠 섬은 아님 (형제 간 링크로 다른 형제로 도달 가능)
+- 하지만 사용자가 카탈로그 페이지(예: `Metadata Types — Other.md`)를 보고 있을 때 같은 도메인의 2GP 패키징 동작 페이지로 점프 불가 → 발견성 저하
+
+### 처리
+- 누락된 11건 모두 보완 (2026-05-24)
+- `.claude/agents/cross-linker.md`에 "허브·카탈로그 페이지 우선 점검 (시리즈 작업 필수)" 섹션 추가:
+  - 시리즈 작성 시 형제 + 상위 카탈로그 양쪽 점검 의무화
+  - 적용 대상 허브 매트릭스 명시 (2GP Components·Metadata Types·Apex Namespace·Trailhead·LWC LDS)
+  - 자가 체크 명령 패턴 제공
+
+### 검증
+- 5개 수정 파일 L1 lint 통과 ✅
+- 11건 역링크 grep 재검증 ✅

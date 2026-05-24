@@ -53,7 +53,7 @@ case "$FILE_PATH" in
 esac
 BASENAME=$(basename "$FILE_PATH")
 case "$BASENAME" in
-  index.md|CLAUDE.md|CLAUDE.local.md|TEAM_PROTOCOL.md|README.md|WIKI_RULES.md) exit 0 ;;
+  index.md|CLAUDE.md|CLAUDE.local.md|TEAM_PROTOCOL.md|README.md|WIKI_RULES.md|SEAM_MAP.md) exit 0 ;;
   "00 SEARCH_INDEX.md"|"00 Home.md") exit 0 ;;
 esac
 # Skip MOC files (e.g. "Apex MOC.md", "통합 MOC.md")
@@ -102,6 +102,16 @@ fi
 # ── Check 4: '## 관련 노트' section ─────────────────────────────────────────
 if ! grep -q '^## 관련 노트' "$FILE_PATH"; then
   ISSUES+=("'## 관련 노트' 섹션 없음")
+fi
+
+# ── Check 4b: escaped backtick (raw \` in path/code cell) ──────────────────
+# Common index-manager typo: when writing | ... | \`path/file.md\` |, the
+# backslash leaks through markdown rendering and breaks grep-based path lookup.
+# Real backticks should be \` is escape-sequence only inside code fences, never
+# in inline code cells. Detect to prevent escape-backtick regression (AP-04 회고).
+if grep -nE '\\\`' "$FILE_PATH" >/dev/null 2>&1; then
+  ESC_LINE=$(grep -nE '\\\`' "$FILE_PATH" | head -1 | cut -d: -f1)
+  ISSUES+=("escape backtick(\\\`) 발견 (line ${ESC_LINE}) — 인라인 코드는 정상 backtick(\`) 사용. grep 경로 매칭이 깨져 고아 false positive 발생 위험")
 fi
 
 # ── Check 5: broken wikilinks ──────────────────────────────────────────────

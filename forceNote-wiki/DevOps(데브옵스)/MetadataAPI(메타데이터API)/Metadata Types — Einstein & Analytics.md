@@ -335,6 +335,7 @@ Einstein for Service 기능(Einstein Article Recommendations 등) 설정 및 관
 - [[Metadata Types — 개요 및 분류]] — 전체 타입 목록
 - [[Metadata API MCP Tool]] — AI 도구로 타입 컨텍스트 조회
 - [[Metadata API File-Based 호출]] — Wave/Analytics 배포
+- [[2GP — Components: Einstein & Analytics]] — 같은 타입의 2GP 패키징 동작 (Manageability Rules·Editable Properties)
 
 ---
 

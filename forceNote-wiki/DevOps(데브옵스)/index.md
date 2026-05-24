@@ -40,6 +40,30 @@ created: 2026-05-18
 | [[2GP Managed Package 개념과 1GP 비교]] | managed 2GP 개념·1GP 8가지 변화·Dev Hub/PBO/namespace org·권한 세트·Limited Access 라이선스·Unlocked와의 차이 | #reference |
 | [[2GP Managed Package 개발 환경과 사전 준비]] | Limited Access User 추가·Know Your Orgs·namespace 생성과 Link to Dev Hub·Key Concepts(app/package/metadata, version, install/upgrade)·Manageability Rules·Package Ancestry·의존성 매트릭스 전수 | #reference |
 | [[2GP Managed Package Scratch Org 워크플로]] | Develop(namespaced) vs Test(no-namespace)·ancestor seeding·Definition File vs Org Shape·Snapshot(+managed promote 불가)·Agentforce·Data Cloud scratch org·PBO 할당량·Partner edition 전수 | #reference |
+| [[2GP Managed Package — Workflow]] | 2GP 표준 CLI 워크플로 10단계(sf project generate~sf org open)·sfdx-project.json 자동 업데이트·Manageability Rules 4속성·Editable Properties 3카테고리·Supported Components 전수 목록 | #reference |
+| [[2GP — Components: Apex & Code]] | Apex Class·Trigger·Sharing Reason·Aura·LWC·Static Resource·Visualforce 컴포넌트·페이지 8종 Manageability Rules 4속성 전수·Editable Properties·패키징 고려사항·IP Protection | #reference |
+| [[2GP — Components: Automation]] | Flow·Workflow·Decision Table·Expression Set·Batch·Business Process Group 등 자동화 컴포넌트 Manageability Rules 4속성 전수·IP Protection·2GP-only 제한 | #reference |
+| [[2GP — Components: Einstein & Analytics]] | AffinityScoreDefinition·AIApplication·AIUsecaseDefinition·BotTemplate·Dashboard·DiscoveryAI·GenAiFunction·GenAiPlugin·GenAiPlannerBundle·GenAiPromptTemplate·RecommendationStrategy·Report·ReportType 등 Einstein·Analytics·Agentforce 도메인 Manageability Rules 4속성 전수 | #reference |
+| [[2GP — Components: Integration & Platform]] | AppFrameworkTemplateBundle·CareBenefitVerifySettings·ChatterExtension·ContextDefinition·ConversationVendorInfo·EmbeddedServiceConfig·EventRelayConfig·ExternalDataSource·ExternalServiceRegistration·FeatureParameter 3종·GatewayProviderPaymentMethodType·InboundNetworkConnection·IndustriesEinsteinFeatureSettings·IntegrationProviderDef·NamedCredential·PlatformCachePartition·RemoteSiteSetting 21종 Manageability Rules 4속성 전수 | #reference |
+| [[2GP — Components: Objects & Fields]] | AssessmentQuestion·BriefcaseDefinition·CareLimitType·CareRequestConfiguration·CustomField·CustomIndex·CustomLabels·CustomMetadata·CustomObject·CustomPermission·Document·FieldMappingConfig·FieldSet·FieldSourceTargetRelationship·Folder·GlobalValueSet·RelationshipGraphDefinition 등 오브젝트·필드 도메인 컴포넌트 Manageability Rules 4속성 전수 | #reference |
+| [[2GP — Components: Security & Access]] | AccountRelationshipShareRule·ConnectedApp·CorsWhitelistOrigin·CspTrustedSite·ExternalAuthIdentityProvider·ExternalCredential·IdentityVerificationProcDef·LiveChatSensitiveDataRule(1GP only)·PermissionSet·PermissionSetGroup 10종 Manageability Rules 4속성 전수·Certificate 패키징 불가·Profile 2GP 미지원 상세·Permission Set vs Profile Settings 비교 | #reference |
+| [[2GP — Components: UI & Layout]] | FlexiPage·CustomApplication·CustomTab·BrandingSet·CommunityTemplateDefinition·CommunityThemeDefinition·DigitalExperienceBundle·LightningMessageChannel·LightningBolt·LightningTypeBundle·ManagedContentType·PathAssistant·QuickAction·HomePageComponent·HomePageLayout·Layout·CompactLayout·ActionLinkGroupTemplate·ActionableListDefinition·Prompt 21종 UI 레이아웃 도메인 Manageability Rules 4속성 전수 | #reference |
+| [[2GP — Components: Other]] | FuelType·EmailTemplate·Letterhead·Translation·ServiceCatalog·SlackApp·WebStoreTemplate·SustainabilityUom 등 Other 도메인 컴포넌트 Manageability Rules 4속성 전수 | #reference |
+| [[2GP — Specific Metadata Behavior]] | Agentforce Agent Template 패키징·Data Cloud 패키지 요건·보호 컴포넌트·Platform Cache Provider Free 3MB·Metadata Access Apex·Permission Set vs Profile Settings 전수·IP 보호·Salesforce URL DomainCreator·@NamespaceAccessible·외부 서비스·Connected App 패키징·New Order Save Behavior 대응 | #reference |
+| [[2GP — Develop]] | sf package create·sf package version create 3가지 옵션·MAJOR.MINOR.PATCH.BUILD·NEXT 키워드·Project Configuration File 파라미터 전수·Package Ancestor(HIGHEST/NONE)·beta→released 75% 커버리지·sf package version promote 전수 | #reference |
+| [[2GP — Install · Uninstall]] | sf package install·sf package uninstall·--publish-wait/--wait 타임아웃·Installation URL·InstallHandler·InstallContext·System.Version·PostInstallScript·의존성 설치 스크립트·Uninstall 제약사항 전수 | #reference |
+| [[2GP — Prepare to Distribute]] | beta→released 승격 전 코드 커버리지 75%·Installation Key 설정·sf package version promote·Release Notes URL·postInstallUrl·AppExchange 파트너 콘솔 연결·패키지 등록·권장 버전 설정 전수 | #reference |
+| [[2GP — Push Upgrade]] | ISV가 subscriber org에 강제 업그레이드를 Push하는 전 과정·CLI 명령·SOAP API·Customized Push Upgrade·Best Practices 전수 | #reference |
+| [[2GP — Best Practices]] | Dev Hub owner 지정·--tag 옵션·Alias 생성·non-GA 컴포넌트 주의·LMA 기능별 접근 요약 | #reference |
+| [[2GP — LMA Part 1 Get Started]] | LMA 설치·패키지 연결·권한 설정·Lead·License 레코드 관리·License Custom Object Fields 전수 | #reference |
+| [[2GP — LMA Part 2 Troubleshoot]] | LMA 트러블슈팅·구독자 Org 로그인·ISV Customer Debugger·LMA 이전·모범 사례 | #reference |
+| [[2GP — Feature Management App]] | FMA 개요·Feature Parameters 3종·XML 예제·System.FeatureManagement API·Custom Objects 숨기기·Considerations | #reference |
+| [[2GP — App Analytics Part 1: Overview & Setup]] | AppExchange App Analytics 개요·활성화·Use Cases·제품 기능 매핑·CustomInteractions 구현 (LWC+Apex 전체 예제) | #reference |
+| [[2GP — App Analytics Part 2: Best Practices & Query Strategy]] | 데이터 흐름·FileType/FileCompression 조합·쿼리 자동화·Catch-Up Queries·AvailableSince·소/중/대 파트너 권장 전수 | #reference |
+| [[2GP — App Analytics Part 3: Data Types & Schemas]] | Package Usage Logs·Summaries·Subscriber Snapshots 전수 스키마·log_record_type 11종·custom_entity_type 전수·Simulation Mode | #reference |
+| [[2GP — App Analytics Part 4: Developer Cookbook]] | CRM Analytics 레시피(LMAJoin·DailyAggregation) 전수 단계·Daily/Weekly/Monthly Unique Users SAQL·Custom Object CRUD SAQL | #reference |
+| [[2GP — Advanced Features Part 1]] | Package Ancestors·비선형 버전·Patch Version 제약·Dependencies·calculateTransitiveDependencies·Advanced sfdx-project.json 파라미터·Keywords(NEXT/LATEST/RELEASED/HIGHEST/NONE)·Target Release·Branches·Unpackaged Metadata 전수 | #reference |
+| [[2GP — Advanced Features Part 2]] | Package IDs 4종(033/04t/0Ho/08c)·Namespace Collision 설치 조합 테이블·Remove Metadata Components deprecated/hard-deleted 전수·Delete Package·Frequently Used Operations·Transfer Dev Hub 전 과정·Partner Support 케이스 | #reference |
 | [[CI 통합 전수 (CircleCI·Jenkins·Travis)]] | CircleCI 환경 설정·서버키 암호화·Dev Hub 연결, Jenkins Jenkinsfile 전체 코드, Travis CI, Sample CI 레포 전수 표 | #reference |
 | [[DX 도구 개요와 워크플로 전환]] | DX가 개발 방식을 바꾸는 이유·샘플 레포 시작·신규 프로젝트·마이그레이션 3가지 시작 경로 전수 | #reference |
 | [[Metadata Coverage 보고서]] | Metadata API·Scratch Org Source Tracking·Unlocked Package 등 채널별 메타데이터 지원 여부 공식 참조 | #reference |
@@ -137,6 +161,104 @@ created: 2026-05-18
 - Agentforce·Data Cloud scratch org 만들기? → [[2GP Managed Package Scratch Org 워크플로]] → Agentforce·Data Cloud
 - Active PBO 할당량 / --skipvalidation 한도? → [[2GP Managed Package Scratch Org 워크플로]] → Allocations
 - ActiveScratchOrg vs ScratchOrgInfo 차이? → [[2GP Managed Package Scratch Org 워크플로]] → Dev Hub에서 관리
+- managed 2GP 패키지를 처음 만드는 10단계 CLI 워크플로? → [[2GP Managed Package — Workflow]] → 전체 10단계
+- sf package create 실행 후 sfdx-project.json 자동 업데이트 예시? → [[2GP Managed Package — Workflow]] → 1-1. 전체 10단계 (Step 6 이후)
+- Manageability Rules 4속성 전수 (Can Be Updated / Subscriber Can Delete / IP Protection)? → [[2GP Managed Package — Workflow]] → Manageability Rules
+- 패키지 promote 후 편집 가능 속성 3카테고리? → [[2GP Managed Package — Workflow]] → Editable Properties
+- 2GP managed 패키지에 넣을 수 있는 컴포넌트 목록? → [[2GP Managed Package — Workflow]] → Supported Components
+- Flow 컴포넌트의 2GP Manageability Rules (IP Protection·Subscriber Delete 가능 여부)? → [[2GP — Components: Automation]] → Flow
+- Workflow 컴포넌트를 2GP 패키지에 넣을 수 있나? (Deprecation 경고 포함) → [[2GP — Components: Automation]] → Workflow Rule
+- BatchCalcJobDefinition / BatchProcessJobDefinition 2GP 패키징 규칙? → [[2GP — Components: Automation]] → Batch Calc Job Definition
+- Decision Matrix Definition / Expression Set Definition이 2GP에서 BETA인가? → [[2GP — Components: Automation]] → Decision Matrix Definition
+- FlowCategory·FlowTest·InvocableActionExtension는 2GP-only? → [[2GP — Components: Automation]] → Flow Category
+- BusinessProcessGroup 2GP에서 IP Protection 있나? → [[2GP — Components: Automation]] → Business Process Group
+- PermissionSet을 2GP 패키지에 포함하는 규칙? → [[2GP — Components: Security & Access]] → Permission Set
+- ConnectedApp 2GP 패키징 시 Push Upgrade OAuth 제한은? → [[2GP — Components: Security & Access]] → Connected App → Considerations When Packaging
+- Certificate를 2GP 패키지에 포함할 수 있나? → [[2GP — Components: Security & Access]] → 2GP 미지원 컴포넌트 ("Certificates aren't packageable")
+- CspTrustedSite를 패키지에 포함하면 안 되는 이유? → [[2GP — Components: Security & Access]] → CSP Trusted Site → Considerations When Packaging
+- ExternalCredential 패키지 설치 후 Post Install Steps? → [[2GP — Components: Security & Access]] → External Credential → Post Install Steps
+- Profile이 2GP 패키지에 포함되는 방식? → [[2GP — Components: Security & Access]] → 2GP 지원 컴포넌트 목록 (Profile 관련 주의) + Permission Set vs Profile Settings 비교
+- SharingRules / Territory / ModerationRule / OauthCustomScope을 2GP에서 패키징 가능한가? → [[2GP — Components: Security & Access]] → 2GP 미지원 컴포넌트 목록
+- FuelType / SustainabilityUom / SustnUomConversion 2GP Net Zero Cloud 패키징 규칙? → [[2GP — Components: Other]] → Sustainability / Net Zero Cloud
+- Service Catalog 4종 컴포넌트 2GP 패키징 규칙? → [[2GP — Components: Other]] → Service Catalog
+- Translation 2GP 패키징 (Language Extension Package Beta)? → [[2GP — Components: Other]] → Translation
+- Letterhead / EmailTemplate (Classic·Lightning) 2GP/1GP 패키징 차이? → [[2GP — Components: Other]] → Email / Letterhead / Document
+- SlackApp 2GP IP Protection + ViewDefinition 2GP Beta? → [[2GP — Components: Other]] → Slack 통합
+- WebStoreTemplate / PricingActionParameters / PricingRecipe 2GP 패키징? → [[2GP — Components: Other]] → Commerce & Pricing
+- FundraisingConfig 2GP 패키징? → [[2GP — Components: Other]] → Fundraising
+- VirtualVisitConfig / LifeSciConfigCategory / LifeSciConfigRecord 2GP 패키징? → [[2GP — Components: Other]] → Healthcare / Life Sciences
+- EnablementProgramDefinition / EnablementMeasureDefinition 2GP 패키징? → [[2GP — Components: Other]] → Enablement & Learning
+- BenefitAction 2GP IP Protection (Loyalty Management)? → [[2GP — Components: Other]] → Benefit Action
+- TransactionProcessingType 2GP 패키징·언인스톨 시 주의사항? → [[2GP — Components: Other]] → Transaction Processing Type
+- ActivationPlatform 1GP 패키징 (Data Cloud)? → [[2GP — Components: Other]] → Activation Platform
+- Agentforce Agent Template를 managed 2GP 패키지로 만들기? → [[2GP — Specific Metadata Behavior]] → 2. Develop and Package Agent Templates Using Scratch Orgs
+- sf agent generate template 명령 사용법? → [[2GP — Specific Metadata Behavior]] → 2-4. Agentforce 패키지 개발 단계
+- Data Cloud 메타데이터를 managed 패키지에 포함하는 요건? → [[2GP — Specific Metadata Behavior]] → 3. Package Data Cloud Metadata Components
+- Data Cloud One Companion Org에 패키지 설치 가능한가? → [[2GP — Specific Metadata Behavior]] → 3-4. Data Cloud One Companion Connected Orgs 제약
+- Protected Components란? 어떤 컴포넌트를 보호 가능? → [[2GP — Specific Metadata Behavior]] → 4. Protected Components in Managed Packages
+- Platform Cache 3MB Provider Free 용량 할당 절차? → [[2GP — Specific Metadata Behavior]] → 5. Set Up a Platform Cache Partition with Provider Free Capacity
+- Apex에서 메타데이터 접근 제약? Metadata namespace? → [[2GP — Specific Metadata Behavior]] → 6. Metadata Access in Apex Code
+- Permission Set vs Profile Settings 패키지에서 차이? → [[2GP — Specific Metadata Behavior]] → 7. Permission Sets and Profile Settings in Packages
+- Install for Admins Only / All Users / Specific Profiles CLI 명령? → [[2GP — Specific Metadata Behavior]] → 7-4. 2GP에서 Profile Settings 처리 방식
+- 패키지에서 Apex 코드 IP 보호 방법? 난독화 예외? → [[2GP — Specific Metadata Behavior]] → 8. Protecting Your Intellectual Property
+- 패키지에서 Salesforce URL 처리 방법? DomainCreator 사용? → [[2GP — Specific Metadata Behavior]] → 9. Call Salesforce URLs Within a Package
+- getOrgMyDomainHostname / getVisualforceHostname / DomainParser? → [[2GP — Specific Metadata Behavior]] → 9. Call Salesforce URLs Within a Package
+- @NamespaceAccessible annotation 사용 조건과 예외? → [[2GP — Specific Metadata Behavior]] → 10. Namespace-Based Visibility for Apex Classes
+- 2GP 패키지에 Connected App 포함하는 절차? → [[2GP — Specific Metadata Behavior]] → 12. Package Connected Apps in Second-Generation Managed Packaging
+- New Order Save Behavior 패키지 대응 (scratch org definition file)? → [[2GP — Specific Metadata Behavior]] → 13. Test and Respond to the New Order Save Behavior
+- OrderSaveLogicEnabled / OrderSaveBehaviorBoth feature 설정? → [[2GP — Specific Metadata Behavior]] → 13-3. Order Save Behavior 설정 옵션
+- 2GP managed 패키지 처음 생성하는 CLI 명령? → [[2GP — Develop]] → sf package create
+- sf package version create 3가지 옵션(Default/Async/Skip) 비교? → [[2GP — Develop]] → Create Versions
+- MAJOR.MINOR.PATCH.BUILD 버전 번호 체계? → [[2GP — Develop]] → Guidance for Package Version Numbering
+- NEXT 키워드로 build number 자동 증가? → [[2GP — Develop]] → NEXT 키워드
+- sfdx-project.json packageDirectories 파라미터 전수 (2GP용)? → [[2GP — Develop]] → Project Configuration File
+- Package Ancestor 지정 방법 3가지 (HIGHEST/직접 지정/ancestorId)? → [[2GP — Develop]] → Specify a Package Ancestor
+- beta 버전을 released로 promote하는 75% 커버리지 요건? → [[2GP — Develop]] → Get Ready to Promote
+- sf package version promote 명령? → [[2GP — Develop]] → Promote 명령
+- --skip-ancestor-check 플래그 언제 사용? → [[2GP — Develop]] → Override Linear Package Ancestry
+- NONE 키워드 ancestor 미지정 시 upgrade path 영향? → [[2GP — Develop]] → NONE 키워드
+- managed 2GP 패키지를 scratch org에 설치하는 CLI 명령? → [[2GP — Install · Uninstall]] → 섭션 2-1
+- --publish-wait 와 --wait 파라미터 인터렉션? → [[2GP — Install · Uninstall]] → 2-2. 설치 타임아웃 제어
+- Installation URL로 패키지 설치하는 방법? → [[2GP — Install · Uninstall]] → 섭션 3
+- AppExchange 미승인 패키지 설치 알림은? → [[2GP — Install · Uninstall]] → 섭션 4
+- managed 2GP 패키지 업그레이드 시 메타데이터 변경 동작? → [[2GP — Install · Uninstall]] → 섭션 5
+- Apex 테스트 실패로 설치 실패 시 진단 방법? → [[2GP — Install · Uninstall]] → 섭션 6
+- InstallHandler / InstallContext 인터페이스? → [[2GP — Install · Uninstall]] → 7-2 ~ 7-3
+- System.Version compareTo / major / minor / patch 메서드? → [[2GP — Install · Uninstall]] → 7-4. System.Version 클래스 메서드
+- Post Install Script 예시 코드 (PostInstallClass)? → [[2GP — Install · Uninstall]] → 7-5. Post Install Script 예시
+- Test.testInstall 사용법? → [[2GP — Install · Uninstall]] → 7-5. Post Install Script 예시 (테스트 코드)
+- sfdx-project.json에서 postInstallScript / uninstallScript 지정? → [[2GP — Install · Uninstall]] → 섭션 8
+- 의존성 패키지 자동 설치 bash 스크립트? → [[2GP — Install · Uninstall]] → 섭션 9
+- sf package uninstall 명령 / Setup UI 제거 절차? → [[2GP — Install · Uninstall]] → 섭션 10
+- 2GP 패키지 제거 시 제약사항 전수 (커스텀 오브젝트 서브컴포넌트 삭제 등)? → [[2GP — Install · Uninstall]] → 10-3. 제거 시 제약사항
+- 2GP 패키지를 AppExchange에 배포하기 전 단계 전체? → [[2GP — Prepare to Distribute]]
+- beta 패키지 버전을 released로 promote하는 상세 절차? → [[2GP — Prepare to Distribute]] → 섹션 4
+- 코드 커버리지 75% 계산 방법 (--code-coverage)? → [[2GP — Prepare to Distribute]] → 섹션 2
+- Installation Key 설정·변경·bypass 명령 전수? → [[2GP — Prepare to Distribute]] → 섹션 3
+- postInstallUrl / releaseNotesUrl sfdx-project.json 설정? → [[2GP — Prepare to Distribute]] → 섹션 5
+- Dev Hub를 AppExchange 파트너 콘솔에 연결하는 방법? → [[2GP — Prepare to Distribute]] → 섹션 6
+- Register Managed 2GP Package / License Management Org (LMO)? → [[2GP — Prepare to Distribute]] → 섹션 6
+- 구독자에게 특정 버전 업그레이드 권장 (sf package update --recommended-version-id)? → [[2GP — Prepare to Distribute]] → 섹션 7
+- 2GP Push Upgrade로 subscriber org에 강제 업그레이드하기? → [[2GP — Push Upgrade]]
+- sf package push-upgrade schedule / list / report / abort 명령? → [[2GP — Push Upgrade]] → 섹션 2
+- PackagePushRequest / PackagePushJob / PackagePushError 오브젝트 쿼리? → [[2GP — Push Upgrade]] → 섹션 2
+- 고객이 Push Upgrade를 차단하게 하려면? → [[2GP — Push Upgrade]] → 섹션 4
+- PushUpgradeCustomizationRepository 만료 기간 설정·변경? → [[2GP — Push Upgrade]] → 4-3
+- Push Upgrade 후 신규 기능 접근 권한 자동 할당 스크립트? → [[2GP — Push Upgrade]] → 섹션 6
+- Push Upgrade Best Practices (단계적 배포·고객 신뢰)? → [[2GP — Push Upgrade]] → 섹션 7
+- Package Ancestors·비선형 버전 관리·ancestry tree 시각화? → [[2GP — Advanced Features Part 1]] → Package Ancestors
+- Patch Version 생성 규칙·할 수 없는 작업 전수? → [[2GP — Advanced Features Part 1]] → Patch Versions
+- 2GP 패키지 간 Dependencies 설정 (calculateTransitiveDependencies)? → [[2GP — Advanced Features Part 1]] → Create Dependencies
+- sfdx-project.json 고급 파라미터 전수 (apexTestAccess·scopeProfiles·unpackagedMetadata·branch)? → [[2GP — Advanced Features Part 1]] → Advanced Project Configuration Parameters
+- LATEST/NEXT/RELEASED/HIGHEST/NONE 키워드 용도? → [[2GP — Advanced Features Part 1]] → Keywords
+- 브랜치별 패키지 버전 태깅 (--branch) + 브랜치 의존성? → [[2GP — Advanced Features Part 1]] → Use Branches
+- preview/previous Salesforce 릴리즈 기반 패키지 버전 생성? → [[2GP — Advanced Features Part 1]] → Target Specific Release
+- Package ID 4종 (033/04t/0Ho/08c) 용도? → [[2GP — Advanced Features Part 2]] → Package IDs and Aliases
+- Namespace Collision 설치 가능 조합 테이블? → [[2GP — Advanced Features Part 2]] → Avoid Namespace Collisions
+- 패키지에서 메타데이터 컴포넌트 제거 (deprecated vs hard-deleted)? → [[2GP — Advanced Features Part 2]] → Remove Metadata Components
+- sf package version delete / sf package delete 명령? → [[2GP — Advanced Features Part 2]] → Delete Package
+- 패키지를 다른 Dev Hub org로 이전 (Transfer Dev Hub)? → [[2GP — Advanced Features Part 2]] → Transfer Dev Hub
+- Partner Support에 케이스 등록 필요한 기능 목록? → [[2GP — Advanced Features Part 2]] → Contact Partner Support
 - sf package create 명령 상세? → [[Unlocked Package 생성과 설정]]
 - sfdx-project.json 패키지 파라미터 전수? → [[Unlocked Package 생성과 설정]] → sfdx-project.json 패키지 설정 파라미터
 - packageDirectories Keywords NEXT LATEST RELEASED HIGHEST NONE? → [[Unlocked Package 생성과 설정]] → Keywords
@@ -161,6 +283,32 @@ created: 2026-05-18
 - consumer key already taken 오류? → [[DX 트러블슈팅]] → Error: The consumer key is already taken
 - DX 알려진 제약사항 전수? → [[DX 제약사항]]
 - RecordType data import 불가 우회 방법? → [[DX 제약사항]] → Salesforce CLI
+- 2GP 개발 모범 사례 전수? → [[2GP — Best Practices]]
+- LMA란? AppExchange 패키지 라이선스 관리? → [[2GP — LMA Part 1 Get Started]]
+- LMA 설치·패키지 연결 절차? → [[2GP — LMA Part 1 Get Started]] → 섹션 3-4
+- License Custom Object 필드 전수? → [[2GP — LMA Part 1 Get Started]] → 섹션 10
+- LMA에서 lead/license 레코드가 생성 안 됨? → [[2GP — LMA Part 2 Troubleshoot]] → 섹션 1
+- 구독자 org에 로그인해 디버그? ISV Customer Debugger 사용법? → [[2GP — LMA Part 2 Troubleshoot]] → 섹션 3
+- LMA를 다른 org로 이전하는 절차? → [[2GP — LMA Part 2 Troubleshoot]] → 섹션 4
+- Feature Parameters(FMA)란? 구독자별 기능 제어? → [[2GP — Feature Management App]]
+- FeatureParameterBoolean XML 예제? → [[2GP — Feature Management App]] → 섹션 5
+- System.FeatureManagement API 메서드 전수? → [[2GP — Feature Management App]] → 섹션 6
+- Custom Objects/Permissions를 구독자에게 숨기는 방법? → [[2GP — Feature Management App]] → 섹션 7
+- Feature Parameters 200개 한도·24시간 지연 등 Considerations? → [[2GP — Feature Management App]] → 섹션 9
+- AppExchange App Analytics란? ISV 사용량 데이터 개요? → [[2GP — App Analytics Part 1: Overview & Setup]]
+- App Analytics 활성화 CLI 명령? → [[2GP — App Analytics Part 1: Overview & Setup]] → App Analytics 활성화 (2GP 패키지)
+- logCustomInteraction 구현 전체 예제 (LWC + Apex)? → [[2GP — App Analytics Part 1: Overview & Setup]] → 완전한 커스텀 인터랙션 구현 예제
+- App Analytics 쿼리 전략·FileType/FileCompression 선택? → [[2GP — App Analytics Part 2: Best Practices & Query Strategy]]
+- Catch-Up Query란? AvailableSince 사용법? → [[2GP — App Analytics Part 2: Best Practices & Query Strategy]] → Create Catch-Up Queries
+- 소/중/대 파트너 쿼리 전략 권장 사항? → [[2GP — App Analytics Part 2: Best Practices & Query Strategy]] → Recommendations
+- Package Usage Logs 전체 스키마 필드? → [[2GP — App Analytics Part 3: Data Types & Schemas]] → Package Usage Logs Schema (전수 필드)
+- log_record_type별 Standard/Supplemental 데이터 필드? → [[2GP — App Analytics Part 3: Data Types & Schemas]] → Custom Object and External Object Interactions
+- Subscriber Snapshots 스키마·UsersWithMFA 필드? → [[2GP — App Analytics Part 3: Data Types & Schemas]] → Subscriber Snapshots
+- App Analytics Simulation Mode 설정·패키지 ID 전수? → [[2GP — App Analytics Part 3: Data Types & Schemas]] → Test Custom Integrations (Simulation Mode)
+- CRM Analytics LMAJoin 레시피 생성 전체 단계? → [[2GP — App Analytics Part 4: Developer Cookbook]] → Create the LMAJoin CRM Analytics Recipe
+- DailyAggregation 레시피 집계 필드 목록? → [[2GP — App Analytics Part 4: Developer Cookbook]] → Create Your DailyAggregation CRM Analytics Recipe
+- Daily/Weekly/Monthly Unique Users SAQL? → [[2GP — App Analytics Part 4: Developer Cookbook]] → Customer Success Recipes
+- Custom Object Creates/Updates/Reads Per Day SAQL? → [[2GP — App Analytics Part 4: Developer Cookbook]] → Custom Object Usage Recipes
 - CircleCI 서버 키 암호화 설정? → [[CI 통합 전수 (CircleCI·Jenkins·Travis)]] → CircleCI
 - Jenkins Jenkinsfile 전체 코드 보기? → [[CI 통합 전수 (CircleCI·Jenkins·Travis)]] → Sample Jenkinsfile
 - Sample CI 레포 전체 목록? → [[CI 통합 전수 (CircleCI·Jenkins·Travis)]] → Sample CI Repos
